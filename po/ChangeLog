@@ -1,3 +1,8 @@
+2008-04-04  Claude Paroz  <claude@2xlibre.net>
+
+	* fr.po: Added French translation.
+	* LINGUAS: Added fr.
+
 2007-08-01  David Zeuthen  <davidz@redhat.com>
 
 	* da.po: Added Danish translations (feel free to fix these, I just
