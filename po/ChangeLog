@@ -1,0 +1,5 @@
+2007-08-01  David Zeuthen  <davidz@redhat.com>
+
+	* da.po: Added Danish translations (feel free to fix these, I just
+	added them to ensure that i18n works)
+
