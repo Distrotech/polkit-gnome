@@ -1,3 +1,8 @@
+2008-04-04  Simos Xenitellis  <simos@gnome.org>
+
+	* LINGUAS: Addded el (Greek).
+	* el.po: Added Greek translation (move from Launchpad).
+
 2008-04-04  Philip Withnall  <pwithnall@svn.gnome.org>
 
 	* LINGUAS: Added en_GB (British English).
