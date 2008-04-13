@@ -1,3 +1,8 @@
+2008-04-13  Takeshi AIHANA <takeshi.aihana@gmail.com>
+
+	* ja.po: Added Japanese translation.
+	* LINGUAS: Added 'ja' (Japanese).
+
 2008-04-09  Gabor Kelemen  <kelemeng@gnome.hu>
 
 	* hu.po: Translation added by Máté Őry
