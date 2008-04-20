@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-05 04:17+0100\n"
-"PO-Revision-Date: 2008-04-05 15:52+0200\n"
+"POT-Creation-Date: 2008-04-06 12:03+0100\n"
+"PO-Revision-Date: 2008-04-20 17:51+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -96,7 +96,7 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.c:275
 msgid "Jump!"
-msgstr ""
+msgstr "Saltar"
 
 #: ../examples/polkit-gnome-example.c:290
 msgid ""
@@ -176,11 +176,11 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.c:401
 msgid "Click to make changes..."
-msgstr ""
+msgstr "Pulse para realizar los cambios…"
 
 #: ../examples/polkit-gnome-example.c:402
 msgid "Click to prevent changes"
-msgstr ""
+msgstr "Pulse para prevenir los cambios"
 
 #: ../examples/polkit-gnome-example.c:422
 msgid ""
@@ -194,7 +194,7 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.policy.in.h:2
 msgid "Jump"
-msgstr ""
+msgstr "Saltar"
 
 #: ../examples/polkit-gnome-example.policy.in.h:3
 msgid "Kick bar"
@@ -250,7 +250,7 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.policy.in.h:16
 msgid "Toggle"
-msgstr ""
+msgstr "Conmutar"
 
 #: ../examples/polkit-gnome-example.policy.in.h:18
 msgid "Twiddle"
@@ -259,25 +259,25 @@ msgstr ""
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
 msgid "Authenticating..."
-msgstr ""
+msgstr "Autenticando…"
 
 #: ../src/main.c:139
 msgid "Don't exit after 30 seconds of inactivity"
-msgstr ""
+msgstr "No salir tras 30 segundos de inactividad"
 
 #: ../src/main.c:148
 msgid "PolicyKit GNOME session daemon"
-msgstr ""
+msgstr "Demonio de sesión PoliciKit GNOME"
 
 #: ../src/main.c:174
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
-msgstr ""
+msgstr "Iniciando el demonio de sesión PolicyKit GNOME versión %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
 #: ../tools/polkit-gnome-authorization.c:649
 msgid "Select user..."
-msgstr ""
+msgstr "Seleccione usuario…"
 
 #: ../src/polkit-gnome-auth-dialog.c:211
 #: ../tools/polkit-gnome-authorization.c:665
@@ -601,12 +601,12 @@ msgstr "Debe estar _en una sesión activa en una consola local"
 #: ../tools/polkit-gnome-authorization.c:957
 #: ../tools/polkit-gnome-authorization.c:2133
 msgid "_Block..."
-msgstr "_Bloquear..."
+msgstr "_Bloquear…"
 
 #: ../tools/polkit-gnome-authorization.c:961
 #: ../tools/polkit-gnome-authorization.c:2126
 msgid "_Grant..."
-msgstr "_Conceder..."
+msgstr "_Conceder…"
 
 #: ../tools/polkit-gnome-authorization.c:1155
 msgid "Edit Implicit Authorizations"
@@ -671,7 +671,7 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
-msgstr "_Editar..."
+msgstr "_Editar…"
 
 #: ../tools/polkit-gnome-authorization.c:2009
 msgid "Revert To _Defaults..."
@@ -715,11 +715,11 @@ msgstr "_Revocar"
 
 #: ../tools/polkit-gnome-authorization.c:2154
 msgid "_Revoke..."
-msgstr "_Revocar..."
+msgstr "_Revocar…"
 
 #: ../tools/polkit-gnome-authorization.c:2174
 msgid "_Show authorizations from all users..."
-msgstr "_Mostrar autorizaciones de todos los usuarios..."
+msgstr "_Mostrar autorizaciones de todos los usuarios…"
 
 #: ../tools/polkit-gnome-authorization.c:2175
 msgid "_Show authorizations from all users"
