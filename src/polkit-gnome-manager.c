@@ -32,6 +32,7 @@
 #include <glib.h>
 #include <glib/gi18n-lib.h>
 #include <glib-object.h>
+#include <gdk/gdkx.h>
 
 #define DBUS_API_SUBJECT_TO_CHANGE
 #include <dbus/dbus-glib.h>
@@ -634,6 +635,16 @@ user_selected (PolkitGnomeAuthDialog *auth_dialog, const char *user_name, gpoint
         }
 }
 
+static void
+do_show_dialog (UserData *ud)
+{
+        guint32 server_time;
+        gtk_widget_realize (ud->dialog);
+        server_time = gdk_x11_get_server_time (ud->dialog->window);
+        gtk_window_present_with_time (GTK_WINDOW (ud->dialog), server_time);
+        gtk_widget_show_all (ud->dialog);
+}
+
 static char *
 conversation_select_admin_user (PolKitGrant *polkit_grant, char **admin_users, void *user_data)
 {
@@ -679,8 +690,8 @@ conversation_select_admin_user (PolKitGrant *polkit_grant, char **admin_users, v
 
         polkit_gnome_auth_dialog_set_prompt (POLKIT_GNOME_AUTH_DIALOG (ud->dialog), _("_Password:"), FALSE);
 	response_id = g_signal_connect (GTK_WIDGET (ud->dialog), "response", G_CALLBACK (dialog_response), ud);
-        gtk_window_present (GTK_WINDOW (ud->dialog));
-        gtk_widget_show_all (ud->dialog);
+
+        do_show_dialog (ud);
 
         /* run the mainloop waiting for the user to be selected */
         while (ud->admin_user_selected == NULL)
@@ -746,7 +757,7 @@ conversation_pam_prompt (PolKitGrant *polkit_grant, const char *request, void *u
         polkit_gnome_auth_dialog_set_prompt (POLKIT_GNOME_AUTH_DIALOG (ud->dialog), request2, echo_on);
         g_free (request2);
 
-        gtk_widget_show_all (ud->dialog);
+        do_show_dialog (ud);
 
         response = gtk_dialog_run (GTK_DIALOG (ud->dialog));
 

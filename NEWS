@@ -1,4 +1,38 @@
 ==========
+PolicyKit-gnome 0.8
+==========
+
+Released on April 16th 2008.
+
+Highlights of this release
+
+ o  Bug fixes
+ o  Translations: el, en_GB, es, fi, fr, he, hu, ja, sv
+
+David Zeuthen (9):
+      post release version bump to 0.8
+      add support for new constraint types: exe and selinux_context
+      don't crash when showing block authorizations for a user without .face
+      use gtk_window_present() to show the dialog
+      fix a few g_warnings when handling icons
+      test commit
+      use gtk_window_present_with_time() to circumvent focus stealing prevention
+      comment out check for policy file until SCM situation is under control
+      merge translations from svn.gnome.org
+
+Michael Biebl (1):
+      make sure build works with -Wl,--as-needed
+
+Requirements for PolicyKit-gnome 0.8
+
+ - PolicyKit        == 0.8
+ - GTK+             >= 2.12
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - gnome-vfs        >= 2.4
+ - libsexy          >= 0.1.11
+
+==========
 PolicyKit-gnome 0.7
 ==========
 

@@ -2345,6 +2345,10 @@ main (int argc, char **argv)
                                                        (GBoxedCopyFunc) polkit_policy_file_entry_ref,
                                                        (GBoxedFreeFunc) polkit_policy_file_entry_unref);
 
+        bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+        textdomain (GETTEXT_PACKAGE);
+
         loop = g_main_loop_new (NULL, FALSE);
 
         pkgc = polkit_gnome_context_get (NULL);

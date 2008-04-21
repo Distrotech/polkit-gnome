@@ -39,8 +39,8 @@ dist_polkit_policy_DATA =  polkit-gnome-example.policy
 # http://bugzilla.gnome.org/show_bug.cgi?id=462312
 @INTLTOOL_POLICY_RULE@
 
-check:
-	$(POLKIT_POLICY_FILE_VALIDATE) $(dist_polkit_policy_DATA)
+#check:
+#	$(POLKIT_POLICY_FILE_VALIDATE) $(dist_polkit_policy_DATA)
 
 EXTRA_DIST = polkit-gnome-example.policy.in
 
