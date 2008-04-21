@@ -359,22 +359,13 @@ get_exe_for_pid (pid_t pid)
 {
         char *result;
         char buf[PATH_MAX];
-        ssize_t len;
-        char proc_name[32];
 
-        result = NULL;
-
-        snprintf (proc_name, sizeof (proc_name), "/proc/%d/exe", pid);
-        len = readlink (proc_name, buf, sizeof (buf) - 1);
-        if (len == -1) {
-                goto out;
+        if (polkit_sysdeps_get_exe_for_pid_with_helper (pid, buf, sizeof buf) < 0) {
+                result = g_strdup (_("(unknown"));
+        } else {
+                result =  g_strdup (buf);
         }
-        g_assert (len >= 0 && len < PATH_MAX - 1);
 
-        buf[len] = '\0';
-        result = g_strdup (buf);
-
-out:
         return result;
 }
 
