@@ -33,19 +33,19 @@ polkit_gnome_example_LDADD = 				\
 # PolicyKit action definitions for this example
 #
 polkit_policydir = $(datadir)/PolicyKit/policy
-dist_polkit_policy_DATA =  polkit-gnome-example.policy
+dist_polkit_policy_DATA = org.gnome.policykit.examples.policy
 
 # You will need a recent intltool or the patch from this bug
 # http://bugzilla.gnome.org/show_bug.cgi?id=462312
 @INTLTOOL_POLICY_RULE@
 
-#check:
-#	$(POLKIT_POLICY_FILE_VALIDATE) $(dist_polkit_policy_DATA)
+check:
+	$(POLKIT_POLICY_FILE_VALIDATE) $(dist_polkit_policy_DATA)
 
-EXTRA_DIST = polkit-gnome-example.policy.in
+EXTRA_DIST = org.gnome.policykit.examples.policy.in
 
 CLEANFILES = $(BUILT_SOURCES)
-DISTCLEANFILES = polkit-gnome-example.policy
+DISTCLEANFILES = org.gnome.policykit.examples.policy
 
 clean-local :
 	rm -f *~
