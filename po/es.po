@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-06 12:03+0100\n"
-"PO-Revision-Date: 2008-04-20 17:51+0200\n"
+"POT-Creation-Date: 2008-04-21 18:00+0000\n"
+"PO-Revision-Date: 2008-05-10 20:58+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2439
+#: ../tools/polkit-gnome-authorization.c:2443
 msgid "Authorizations"
 msgstr "Autorizaciones"
 
@@ -111,7 +111,7 @@ msgid "Tweak!"
 msgstr ""
 
 #: ../examples/polkit-gnome-example.c:306
-#: ../examples/polkit-gnome-example.policy.in.h:17
+#: ../examples/org.gnome.policykit.examples.policy.in.h:17
 msgid "Tweak"
 msgstr ""
 
@@ -188,71 +188,71 @@ msgid ""
 "update in real-time.</i>."
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:1
+#: ../examples/org.gnome.policykit.examples.policy.in.h:1
 msgid "Frobnicate"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:2
+#: ../examples/org.gnome.policykit.examples.policy.in.h:2
 msgid "Jump"
 msgstr "Saltar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:3
+#: ../examples/org.gnome.policykit.examples.policy.in.h:3
 msgid "Kick bar"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:4
+#: ../examples/org.gnome.policykit.examples.policy.in.h:4
 msgid "Kick baz"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:5
+#: ../examples/org.gnome.policykit.examples.policy.in.h:5
 msgid "Kick foo"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:6
+#: ../examples/org.gnome.policykit.examples.policy.in.h:6
 msgid "Punch"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:7
+#: ../examples/org.gnome.policykit.examples.policy.in.h:7
 msgid "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:8
+#: ../examples/org.gnome.policykit.examples.policy.in.h:8
 msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:9
+#: ../examples/org.gnome.policykit.examples.policy.in.h:9
 msgid "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:10
+#: ../examples/org.gnome.policykit.examples.policy.in.h:10
 msgid "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:11
+#: ../examples/org.gnome.policykit.examples.policy.in.h:11
 msgid "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:12
+#: ../examples/org.gnome.policykit.examples.policy.in.h:12
 msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:13
+#: ../examples/org.gnome.policykit.examples.policy.in.h:13
 msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:14
+#: ../examples/org.gnome.policykit.examples.policy.in.h:14
 msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:15
+#: ../examples/org.gnome.policykit.examples.policy.in.h:15
 msgid "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:16
+#: ../examples/org.gnome.policykit.examples.policy.in.h:16
 msgid "Toggle"
 msgstr "Conmutar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:18
+#: ../examples/org.gnome.policykit.examples.policy.in.h:18
 msgid "Twiddle"
 msgstr ""
 
@@ -283,15 +283,15 @@ msgstr "Seleccione usuario…"
 #: ../tools/polkit-gnome-authorization.c:665
 #, c-format
 msgid "%s (%s)"
-msgstr ""
+msgstr "%s (%s)"
 
 #: ../src/polkit-gnome-auth-dialog.c:292
 msgid "_Remember authorization for this session"
-msgstr ""
+msgstr "_Recordar autorización durante esta sesión"
 
 #: ../src/polkit-gnome-auth-dialog.c:298
 msgid "_Remember authorization"
-msgstr ""
+msgstr "_Recordar autorización"
 
 #: ../src/polkit-gnome-auth-dialog.c:313
 msgid ""
@@ -314,66 +314,70 @@ msgstr ""
 #: ../src/polkit-gnome-auth-dialog.c:348
 #, c-format
 msgid "Click to edit %s"
-msgstr ""
+msgstr "Pulse para editar %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:371
 #: ../tools/polkit-gnome-authorization.c:1391
 #, c-format
 msgid "Click to open %s"
-msgstr ""
+msgstr "Pulse para abrir %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:600
 msgid "_Authenticate"
-msgstr ""
+msgstr "_Autenticar"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:680
-#: ../src/polkit-gnome-manager.c:729
+#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:682
+#: ../src/polkit-gnome-manager.c:731
 msgid "_Password:"
-msgstr ""
+msgstr "_Contraseña:"
 
 #: ../src/polkit-gnome-auth-dialog.c:681
 msgid "For this _session only"
-msgstr ""
+msgstr "Sólo para esta _sesión"
 
 #: ../src/polkit-gnome-auth-dialog.c:689
 msgid "<small><b>_Details</b></small>"
-msgstr ""
+msgstr "<small><b>_Detalles</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:710
 msgid "<small><b>Application:</b></small>"
-msgstr ""
+msgstr "<small><b>Aplicación:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:714
 msgid "<small><b>Action:</b></small>"
-msgstr ""
+msgstr "<small><b>Acción:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:719
 msgid "<small><b>Vendor:</b></small>"
-msgstr ""
+msgstr "<small><b>Fabricante:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:848
 msgid "Authenticate"
 msgstr "Autenticar"
 
-#: ../src/polkit-gnome-manager.c:724
+#: ../src/polkit-gnome-manager.c:364
+msgid "(unknown"
+msgstr "(desconocido"
+
+#: ../src/polkit-gnome-manager.c:726
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Contraseña para %s:"
 
-#: ../src/polkit-gnome-manager.c:726
+#: ../src/polkit-gnome-manager.c:728
 msgid "_Password for root:"
 msgstr "_Contraseña para el superusuario:"
 
-#: ../src/polkit-gnome-manager.c:734
+#: ../src/polkit-gnome-manager.c:736
 #, c-format
 msgid "_Password or swipe finger for %s:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:737
+#: ../src/polkit-gnome-manager.c:739
 msgid "_Password or swipe finger for root:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:740
+#: ../src/polkit-gnome-manager.c:742
 msgid "_Password or swipe finger:"
 msgstr ""
 
@@ -407,11 +411,11 @@ msgstr "Autenticación"
 
 #: ../tools/polkit-gnome-authorization.c:126
 msgid "Authentication (keep session)"
-msgstr ""
+msgstr "Autenticación (mantener esta la sesión)"
 
 #: ../tools/polkit-gnome-authorization.c:127
 msgid "Authentication (keep indefinitely)"
-msgstr ""
+msgstr "Autenticación (mantener indefinidamente)"
 
 #: ../tools/polkit-gnome-authorization.c:129
 msgid "Yes"
@@ -488,7 +492,7 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:389
 #, c-format
 msgid "Blocked by uid %d"
-msgstr ""
+msgstr "Bloqueado por el uid %d"
 
 #: ../tools/polkit-gnome-authorization.c:392
 #, c-format
@@ -562,11 +566,11 @@ msgstr "<b>Beneficiario</b>"
 
 #: ../tools/polkit-gnome-authorization.c:887
 msgid "Select the user that will receive the negative authorization."
-msgstr ""
+msgstr "Seleccione el usuario que recibirá la autorización negativa."
 
 #: ../tools/polkit-gnome-authorization.c:889
 msgid "Select the user that will receive the authorization."
-msgstr ""
+msgstr "Seleccione el usuario que recibirá la autorización."
 
 #: ../tools/polkit-gnome-authorization.c:898
 msgid "_Show system users"
@@ -610,11 +614,11 @@ msgstr "_Conceder…"
 
 #: ../tools/polkit-gnome-authorization.c:1155
 msgid "Edit Implicit Authorizations"
-msgstr ""
+msgstr "Editar las autorizaciones implícitas nuevas"
 
 #: ../tools/polkit-gnome-authorization.c:1176
 msgid "<b><big>Choose new implicit authorizations</big></b>"
-msgstr ""
+msgstr "<b><big>Elija autorizaciones implícitas nuevas</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:1190
 #, c-format
@@ -627,41 +631,41 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:1215
 #: ../tools/polkit-gnome-authorization.c:1974
 msgid "<i>Anyone:</i>"
-msgstr ""
+msgstr "<i>Cualquiera:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1222
 #: ../tools/polkit-gnome-authorization.c:1978
 msgid "<i>Console:</i>"
-msgstr ""
+msgstr "<i>Consola:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1229
 #: ../tools/polkit-gnome-authorization.c:1982
 msgid "<i>Active Console:</i>"
-msgstr ""
+msgstr "<i>Consola activa:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1258
 msgid "_Modify..."
-msgstr ""
+msgstr "_Modificar..."
 
 #: ../tools/polkit-gnome-authorization.c:1890
 msgid "<b>Action</b>"
-msgstr ""
+msgstr "<b>Acción</b>"
 
 #: ../tools/polkit-gnome-authorization.c:1905
 msgid "<i>Identifier:</i>"
-msgstr ""
+msgstr "<i>Identificador:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1915
 msgid "<i>Description:</i>"
-msgstr ""
+msgstr "<i>Descripción:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1925
 msgid "<i>Vendor:</i>"
-msgstr ""
+msgstr "<i>Fabricante:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1951
 msgid "<b>Implicit Authorizations</b>"
-msgstr ""
+msgstr "<b>Autorizaciones implícitas</b>"
 
 #: ../tools/polkit-gnome-authorization.c:1959
 msgid ""
@@ -675,11 +679,11 @@ msgstr "_Editar…"
 
 #: ../tools/polkit-gnome-authorization.c:2009
 msgid "Revert To _Defaults..."
-msgstr ""
+msgstr "Revertir a los valores pre_determinados..."
 
 #: ../tools/polkit-gnome-authorization.c:2032
 msgid "<b>Explicit Authorizations</b>"
-msgstr ""
+msgstr "<b>Autorizaciones explícitas</b>"
 
 #: ../tools/polkit-gnome-authorization.c:2043
 msgid ""
@@ -725,7 +729,7 @@ msgstr "_Mostrar autorizaciones de todos los usuarios…"
 msgid "_Show authorizations from all users"
 msgstr "_Mostrar autorizaciones de todos los usuarios"
 
-#: ../tools/polkit-gnome-authorization.c:2413
+#: ../tools/polkit-gnome-authorization.c:2417
 msgid "Select an action"
 msgstr "Seleccionar una acción"
 
