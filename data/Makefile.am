@@ -1,3 +1,18 @@
+schema_in_files =  polkit-gnome.schemas.in
+schemadir   = $(GCONF_SCHEMA_FILE_DIR)
+schema_DATA = $(schema_in_files:.schemas.in=.schemas)
+
+@INTLTOOL_SCHEMAS_RULE@
+
+# don't do this if we are building in eg. rpm
+if GCONF_SCHEMAS_INSTALL
+install-data-local:
+	if test -z "$(DESTDIR)" ; then \
+		for p in $(schema_DATA) ; do \
+			GCONF_CONFIG_SOURCE=$(GCONF_SCHEMA_CONFIG_SOURCE) $(GCONFTOOL) --makefile-install-rule $$p; \
+		done \
+	fi
+endif
 
 @INTLTOOL_DESKTOP_RULE@
 desktopdir = $(datadir)/applications
@@ -24,7 +39,11 @@ pkgconfig_DATA = polkit-gnome.pc
 
 DISTCLEANFILES = $(service_DATA) $(desktop_DATA) $(pkgconfig_DATA)
 
-EXTRA_DIST = $(service_in_files) $(desktop_in_files) polkit-gnome.pc.in
+EXTRA_DIST =			\
+	$(service_in_files)	\
+	$(desktop_in_files)	\
+	$(schema_in_files)	\
+	polkit-gnome.pc.in
 
 clean-local :
-	rm -f *~ $(service_DATA) $(pkgconfig_DATA)
+	rm -f *~ $(service_DATA) $(pkgconfig_DATA) $(schema_DATA)

@@ -1,0 +1,22 @@
+<gconfschemafile>
+  <schemalist>
+
+    <schema>
+      <key>/schemas/desktop/gnome/policykit/auth_dialog_grab_keyboard</key>
+      <applyto>/desktop/gnome/policykit/auth_dialog_grab_keyboard</applyto>
+      <owner>policykit-gnome</owner>
+      <type>bool</type>
+      <default>true</default>
+      <locale name="C">
+         <short>Whether the authentication dialog should grab the keyboard</short>
+         <long>
+          If set to true, the authentication dialog from PolicyKit-gnome will grab the keyboard,
+          so that you will not be able to type in other programs while the dialog is active.
+	  Use this if your window manager does not focus the authentication dialog automatically,
+	  and you want to avoid accidentally typing passwords in other programs.
+         </long>
+      </locale>
+    </schema>
+
+  </schemalist>
+</gconfschemafile>

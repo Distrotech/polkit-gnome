@@ -33,6 +33,7 @@
 #include <glib/gi18n-lib.h>
 #include <glib-object.h>
 #include <gdk/gdkx.h>
+#include <gconf/gconf-client.h>
 
 #define DBUS_API_SUBJECT_TO_CHANGE
 #include <dbus/dbus-glib.h>
@@ -46,6 +47,8 @@
 #include "polkit-gnome-manager-glue.h"
 
 #include "polkit-gnome-auth-dialog.h"
+
+#define KEY_AUTH_DIALOG_GRAB_KEYBOARD "/desktop/gnome/policykit/auth_dialog_grab_keyboard"
 
 static void do_cancel_auth (void);
 
@@ -516,6 +519,8 @@ typedef struct {
         char **admin_users;
 
         char *admin_user_selected;
+
+        gboolean got_keyboard_grab;
 } UserData;
 
 static void
@@ -571,26 +576,25 @@ conversation_type (PolKitGrant *polkit_grant, PolKitResult auth_type, void *user
 static void
 _do_grab (GtkWidget *widget, GdkEvent *event, gpointer user_data)
 {
-        GdkGrabStatus ret;
+        UserData *ud = user_data;
+        GConfClient *client;
 
-        ret = gdk_pointer_grab (widget->window, 
-                                TRUE,
-                                GDK_POINTER_MOTION_MASK|GDK_BUTTON_MOTION_MASK,
-                                NULL,
-                                NULL,
-                                GDK_CURRENT_TIME);
-        if (ret != GDK_GRAB_SUCCESS) {
-                g_warning ("Couldn't grab the pointer; ret = %d", ret);
+        ud->got_keyboard_grab = FALSE;
+
+        client = gconf_client_get_default ();
+        if (gconf_client_get_bool (client, KEY_AUTH_DIALOG_GRAB_KEYBOARD, NULL)) { /* NULL-GError */
+                GdkGrabStatus ret;
+
+                ret = gdk_keyboard_grab (widget->window, 
+                                         FALSE,
+                                         GDK_CURRENT_TIME); /* FIXME: ideally we need a real timestamp */
+                if (ret != GDK_GRAB_SUCCESS) {
+                        g_warning ("Couldn't grab the keyboard; ret = %d", ret);
+                } else {
+                        g_debug ("Grabbed keyboard");
+                        ud->got_keyboard_grab = TRUE;
+                }
         }
-
-        ret = gdk_keyboard_grab (widget->window, 
-                                FALSE,
-                                GDK_CURRENT_TIME);
-        if (ret != GDK_GRAB_SUCCESS) {
-                g_warning ("Couldn't grab the pointer; ret = %d", ret);
-        }
-
-        g_debug ("Grabbed pointer and keyboard");
 }
 
 /*--------------------------------------------------------------------------------------------------------------*/
@@ -1082,9 +1086,10 @@ try_again:
 error:
 
         /* Ungrab keyboard and pointer */
-        gdk_keyboard_ungrab (GDK_CURRENT_TIME);
-        gdk_pointer_ungrab (GDK_CURRENT_TIME);
-        g_debug ("Ungrabbed pointer and keyboard");
+        if (ud->got_keyboard_grab) {
+                gdk_keyboard_ungrab (GDK_CURRENT_TIME);
+                g_debug ("Ungrabbed keyboard");
+        }
 
         if (ud->dialog != NULL) {
                 gtk_widget_destroy (ud->dialog);
