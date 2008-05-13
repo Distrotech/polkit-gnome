@@ -1,3 +1,8 @@
+2008-05-13  Gil Forcada  <gforcada@gnome.org>
+
+	* ca.po: Added Catalan translation by David Planella.
+	* LINGUAS: Added 'ca' (Catalan).
+
 2008-05-10  Jorge Gonzalez  <jorgegonz@svn.gnome.org>
 
 	* es.po: Updated Spanish translation
