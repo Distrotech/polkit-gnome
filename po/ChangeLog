@@ -1,3 +1,8 @@
+2008-05-18  Wadim Dziedzic  <wadimd@svn.gnome.org>
+
+	* pl.po: Added Polish translation
+	* LINGUAS: Added Polish language (pl)
+
 2008-05-13  Gil Forcada  <gforcada@gnome.org>
 
 	* ca.po: Added Catalan translation by David Planella.
