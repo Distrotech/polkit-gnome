@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-21 18:00+0000\n"
-"PO-Revision-Date: 2008-05-10 20:58+0200\n"
+"POT-Creation-Date: 2008-05-12 18:35+0000\n"
+"PO-Revision-Date: 2008-05-25 12:33+0200\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -25,6 +25,19 @@ msgstr "Autorizaciones"
 #: ../data/polkit-gnome-authorization.desktop.in.h:2
 msgid "Configure authorizations"
 msgstr "Configure sus autorizaciones"
+
+#: ../data/polkit-gnome.schemas.in.h:1
+msgid ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr ""
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid "Whether the authentication dialog should grab the keyboard"
+msgstr "Indica si el diálogo de autenticación debería obtener el teclado"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -187,6 +200,8 @@ msgid ""
 "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
 "update in real-time.</i>."
 msgstr ""
+"<i>Consejo: intente editar /etc/PolicyKit/Policy.conf y vea las actualizaciones de los "
+"widgets del proxy en tiempo real.</i>"
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:1
 msgid "Frobnicate"
@@ -326,8 +341,8 @@ msgstr "Pulse para abrir %s"
 msgid "_Authenticate"
 msgstr "_Autenticar"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:682
-#: ../src/polkit-gnome-manager.c:731
+#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "_Contraseña:"
 
@@ -355,29 +370,29 @@ msgstr "<small><b>Fabricante:</b></small>"
 msgid "Authenticate"
 msgstr "Autenticar"
 
-#: ../src/polkit-gnome-manager.c:364
+#: ../src/polkit-gnome-manager.c:367
 msgid "(unknown"
 msgstr "(desconocido"
 
-#: ../src/polkit-gnome-manager.c:726
+#: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Contraseña para %s:"
 
-#: ../src/polkit-gnome-manager.c:728
+#: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
 msgstr "_Contraseña para el superusuario:"
 
-#: ../src/polkit-gnome-manager.c:736
+#: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:739
+#: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:742
+#: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
 msgstr ""
 
@@ -487,7 +502,7 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:387
 #, c-format
 msgid "Blocked by %s (uid %d)"
-msgstr ""
+msgstr "Bloqueado por %s (uid %d)"
 
 #: ../tools/polkit-gnome-authorization.c:389
 #, c-format
@@ -497,12 +512,12 @@ msgstr "Bloqueado por el uid %d"
 #: ../tools/polkit-gnome-authorization.c:392
 #, c-format
 msgid "Granted by %s (uid %d)"
-msgstr ""
+msgstr "Autorizado por %s (uid %d)"
 
 #: ../tools/polkit-gnome-authorization.c:394
 #, c-format
 msgid "Granted by uid %d"
-msgstr ""
+msgstr "Autorizado por uid %d"
 
 #: ../tools/polkit-gnome-authorization.c:409
 #, c-format
@@ -672,6 +687,8 @@ msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
 msgstr ""
+"Las autorizaciones implícitas son autorizaciones automáticamente otorgadas a "
+"los usuarios basadas en ciertos criterios tales como si están en una consola local."
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
@@ -691,6 +708,9 @@ msgid ""
 "authentication or specifically given to the entity in question. Blocked "
 "authorizations are marked with a STOP sign."
 msgstr ""
+"Esta lista muestra las autorizaciones obtenidas tanto a través "
+"de autenticación o específicamente otorgadas a la entidad en cuestión. Las "
+"autorizaciones bloqueadas se marcan con una signo de STOP."
 
 #: ../tools/polkit-gnome-authorization.c:2073
 msgid "Entity"
