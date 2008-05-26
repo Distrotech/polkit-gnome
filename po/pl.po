@@ -5,9 +5,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: pl\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-18 13:37+0200\n"
-"PO-Revision-Date: 2008-05-18 13:39+0100\n"
-"Last-Translator: wadim dziedzic <nikdo@aviary.pl>\n"
+"POT-Creation-Date: 2008-05-26 22:14+0200\n"
+"PO-Revision-Date: 2008-05-24 17:59+0200\n"
+"Last-Translator: Piotr Drąg <piotrdrag@gmail.com>\n"
 "Language-Team: Polish <pl@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,12 +23,23 @@ msgid "Configure authorizations"
 msgstr "Konfiguracja upoważnień"
 
 #: ../data/polkit-gnome.schemas.in.h:1
-msgid "If set to true, the authentication dialog from PolicyKit-gnome will grab the keyboard, so that you will not be able to type in other programs while the dialog is active. Use this if your window manager does not focus the authentication dialog automatically, and you want to avoid accidentally typing passwords in other programs."
-msgstr "Jeśli włączone, to okno dialogowe uwierzytelniania programu PolicyKit-gnome przejmie klawiaturę tak, że nie będzie możliwe korzystanie z niej dopóki okno to jest aktywne. Opcja przydatna jest gdy menedżer okien nie aktywuje automatycznie okna uwierzytelniania i użytkownik chce zabezpieczyć się przed przypadkowym wpisaniem hasła w innym programie."
+msgid ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr ""
+"Jeśli włączone, to okno dialogowe uwierzytelniania programu PolicyKit-gnome "
+"przejmie klawiaturę tak, że nie będzie możliwe korzystanie z niej dopóki "
+"okno to jest aktywne. Opcja przydatna jest gdy menedżer okien nie aktywuje "
+"automatycznie okna uwierzytelniania i użytkownik chce zabezpieczyć się przed "
+"przypadkowym wpisaniem hasła w innym programie."
 
 #: ../data/polkit-gnome.schemas.in.h:2
 msgid "Whether the authentication dialog should grab the keyboard"
-msgstr "Określa, czy okno dialogowe uwierzytelniania ma przechwytywać klawiaturę"
+msgstr ""
+"Określa, czy okno dialogowe uwierzytelniania ma przechwytywać klawiaturę"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -83,24 +94,38 @@ msgid "About"
 msgstr "Informacje"
 
 #: ../examples/polkit-gnome-example.c:243
-msgid "Making the helper <b>Frobnicate</b> requires the user to authenticate. The authorization is kept for the life time of the process"
-msgstr "Aby aplikacja pomocnicza wykonała <b>Frobnicate</b>, użytkownik musi się uwierzytelnić. Upoważnienie jest zachowane w czasie trwania procesu"
+msgid ""
+"Making the helper <b>Frobnicate</b> requires the user to authenticate. The "
+"authorization is kept for the life time of the process"
+msgstr ""
+"Aby program pomocniczy wykonał <b>Frobnicate</b>, użytkownik musi się "
+"uwierzytelnić. Upoważnienie jest zachowane w czasie trwania procesu"
 
 #: ../examples/polkit-gnome-example.c:252
 msgid "Frobnicate!"
 msgstr "Wykonaj \"Frobnicate\"!"
 
 #: ../examples/polkit-gnome-example.c:267
-msgid "Making the helper <b>Jump</b> requires the user to authenticate. This is a one-shot authorization."
-msgstr "Aby aplikacja pomocnicza wykonała <b>Jump</b>, użytkownik musi się uwierzytelnić. Upoważnienie jest jednorazowe."
+msgid ""
+"Making the helper <b>Jump</b> requires the user to authenticate. This is a "
+"one-shot authorization."
+msgstr ""
+"Aby program pomocniczy wykonał <b>Jump</b>, użytkownik musi się "
+"uwierzytelnić. Upoważnienie jest jednorazowe."
 
 #: ../examples/polkit-gnome-example.c:275
 msgid "Jump!"
 msgstr "Wykonaj \"Jump\"!"
 
 #: ../examples/polkit-gnome-example.c:290
-msgid "Making the helper <b>Tweak</b> requires a system administrator to authenticate. This instance overrides the defaults set in polkit_gnome_action_new()."
-msgstr "Aby aplikacja pomocnicza wykonała <b>Frobnicate</b>, administrator systemu musi się uwierzytelnić. Domyślne ustawienia w polkit_gnome_action_new() zostaną zastąpione."
+msgid ""
+"Making the helper <b>Tweak</b> requires a system administrator to "
+"authenticate. This instance overrides the defaults set in "
+"polkit_gnome_action_new()."
+msgstr ""
+"Aby program pomocniczy wykonał <b>Frobnicate</b>, administrator systemu musi "
+"się uwierzytelnić. Domyślne ustawienia w polkit_gnome_action_new() zostaną "
+"zastąpione."
 
 #: ../examples/polkit-gnome-example.c:299
 #: ../examples/polkit-gnome-example.c:320
@@ -140,24 +165,46 @@ msgid "Go ahead, tweak tweak tweak!"
 msgstr "No dalej, zrób \"tweak\", \"tweak\", \"tweak\"!"
 
 #: ../examples/polkit-gnome-example.c:339
-msgid "Making the helper <b>Twiddle</b> requires a system administrator to authenticate. Once authenticated, this privilege can be retained indefinitely."
-msgstr "Aby aplikacja pomocnicza wykonała <b>Twiddle</b>, administrator systemu musi się uwierzytelnić. Po uwierzytelnieniu to uprawnienie może być utrzymywane w nieskończoność."
+msgid ""
+"Making the helper <b>Twiddle</b> requires a system administrator to "
+"authenticate. Once authenticated, this privilege can be retained "
+"indefinitely."
+msgstr ""
+"Aby program pomocniczy wykonał <b>Twiddle</b>, administrator systemu musi "
+"się uwierzytelnić. Po uwierzytelnieniu to uprawnienie może być utrzymywane w "
+"nieskończoność."
 
 #: ../examples/polkit-gnome-example.c:348
 msgid "Twiddle!"
 msgstr "Wykonaj \"Twiddle\"!"
 
 #: ../examples/polkit-gnome-example.c:363
-msgid "Making the helper <b>Punch</b> requires the user to authenticate. Once authenticated, this privilege can be retained for the remainder of the desktop session."
-msgstr "Aby aplikacja pomocnicza wykonała <b>Punch</b>, użytkownik musi się uwierzytelnić. Po uwierzytelnieniu to uprawnienie może być utrzymywane przez całą sesję pulpitu."
+msgid ""
+"Making the helper <b>Punch</b> requires the user to authenticate. Once "
+"authenticated, this privilege can be retained for the remainder of the "
+"desktop session."
+msgstr ""
+"Aby program pomocniczy wykonał <b>Punch</b>, użytkownik musi się "
+"uwierzytelnić. Po uwierzytelnieniu to uprawnienie może być utrzymywane przez "
+"całą sesję pulpitu."
 
 #: ../examples/polkit-gnome-example.c:372
 msgid "Punch!"
 msgstr "Wykonaj \"Punch\"!"
 
 #: ../examples/polkit-gnome-example.c:387
-msgid "The <b>Toggle</b> action demonstrates the use of PolicyKit to drive a GtkToggleButton; it's an intuitive way to ask users to give up authorizations when they are done with them. E.g. the button is 'pressed in' exactlywhen the authorization is held. Toggling the button means obtaining resp. revoking the authorization in question."
-msgstr "Działanie <b>Toggle</b> pokazuje użycie PolicyKit do sterowania GtkToggleButton. Jest to intuicyjny sposób na odbieranie upoważnień użytkowników, gdy nie są one im już dłużej potrzebne. Na przykład przycisk jest \"naciśnięty\" właśnie wtedy, kiedy upoważnienie jest utrzymane. Przełączenie przycisku oznacza uzyskanie odebrania upoważnienia."
+msgid ""
+"The <b>Toggle</b> action demonstrates the use of PolicyKit to drive a "
+"GtkToggleButton; it's an intuitive way to ask users to give up "
+"authorizations when they are done with them. E.g. the button is 'pressed in' "
+"exactlywhen the authorization is held. Toggling the button means obtaining "
+"resp. revoking the authorization in question."
+msgstr ""
+"Działanie <b>Toggle</b> pokazuje użycie PolicyKit do sterowania "
+"GtkToggleButton. Jest to intuicyjny sposób na odbieranie upoważnień "
+"użytkowników, gdy nie są one im już dłużej potrzebne. Na przykład przycisk "
+"jest \"naciśnięty\" właśnie wtedy, kiedy upoważnienie jest utrzymane. "
+"Przełączenie przycisku oznacza uzyskanie odebrania upoważnienia."
 
 #: ../examples/polkit-gnome-example.c:401
 msgid "Click to make changes..."
@@ -168,8 +215,12 @@ msgid "Click to prevent changes"
 msgstr "Naciśnij, aby powstrzymać zmiany"
 
 #: ../examples/polkit-gnome-example.c:422
-msgid "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets update in real-time.</i>."
-msgstr "<i>Wskazówka: można spróbować zmodyfikować /etc/PolicyKit/Policy.conf i zobaczyć aktualizację widgetów pośredniczących w czasie rzeczywistym.</i>."
+msgid ""
+"<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
+"update in real-time.</i>."
+msgstr ""
+"<i>Wskazówka: można spróbować zmodyfikować /etc/PolicyKit/Policy.conf i "
+"zobaczyć aktualizację widgetów pośredniczących w czasie rzeczywistym.</i>."
 
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
@@ -209,16 +260,28 @@ msgid "_Remember authorization"
 msgstr "_Zapamiętaj upoważnienie"
 
 #: ../src/polkit-gnome-auth-dialog.c:313
-msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
-msgstr "Aplikacja próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest uwierzytelnienie jako jeden z poniższych użytkowników."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Program próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest "
+"uwierzytelnienie jako jeden z poniższych użytkowników."
 
 #: ../src/polkit-gnome-auth-dialog.c:320
-msgid "An application is attempting to perform an action that requires privileges. Authentication as the super user is required to perform this action."
-msgstr "Aplikacja próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest uwierzytelnienie jako super użytkownik."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Program próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest "
+"uwierzytelnienie jako super użytkownik."
 
 #: ../src/polkit-gnome-auth-dialog.c:324
-msgid "An application is attempting to perform an action that requires privileges. Authentication is required to perform this action."
-msgstr "Aplikacja próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest uwierzytelnienie."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Program próbuje wykonać działanie, które wymaga uprawnień. Wymagane jest "
+"uwierzytelnienie."
 
 #: ../src/polkit-gnome-auth-dialog.c:348
 #, c-format
@@ -235,8 +298,7 @@ msgstr "Naciśnij, aby otworzyć %s"
 msgid "_Authenticate"
 msgstr "_Uwierzytelnij"
 
-#: ../src/polkit-gnome-auth-dialog.c:659
-#: ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:686
 #: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "_Hasło:"
@@ -251,7 +313,7 @@ msgstr "<small><b>S_zczegóły</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:710
 msgid "<small><b>Application:</b></small>"
-msgstr "<small><b>Aplikacja:</b></small>"
+msgstr "<small><b>Program:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:714
 msgid "<small><b>Action:</b></small>"
@@ -272,20 +334,20 @@ msgstr "(nieznane"
 #: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
-msgstr "_Hasło %s:"
+msgstr "_Hasło użytkownika %s:"
 
 #: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
-msgstr "_Hasło roota:"
+msgstr "_Hasło użytkownika root:"
 
 #: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
-msgstr "_Hasło lub odcisk palca dla %s:"
+msgstr "_Hasło lub odcisk palca użytkownika %s:"
 
 #: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
-msgstr "_Hasło lub odcisk palca dla roota:"
+msgstr "_Hasło lub odcisk palca użytkownika root:"
 
 #: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
@@ -446,21 +508,37 @@ msgstr "Udziel upoważnienie"
 
 #: ../tools/polkit-gnome-authorization.c:850
 #, c-format
-msgid "<b><big>Granting a negative authorization for the <i>%s</i> action requires more information</big></b>"
-msgstr "<b><big>Udzielenie upoważnienia negatywnego dla działania <i>%s</i> wymaga więcej informacji</big></b>"
+msgid ""
+"<b><big>Granting a negative authorization for the <i>%s</i> action requires "
+"more information</big></b>"
+msgstr ""
+"<b><big>Udzielenie upoważnienia negatywnego dla działania <i>%s</i> wymaga "
+"więcej informacji</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:851
 #, c-format
-msgid "<b><big>Granting an authorization for the <i>%s</i> action requires more information</big></b>"
-msgstr "<b><big>Udzielenie upoważnienia dla działania <i>%s</i> wymaga więcej informacji</big></b>"
+msgid ""
+"<b><big>Granting an authorization for the <i>%s</i> action requires more "
+"information</big></b>"
+msgstr ""
+"<b><big>Udzielenie upoważnienia dla działania <i>%s</i> wymaga więcej "
+"informacji</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:862
-msgid "Select the user to block for the action and, optionally, any constraints on the negative authorization that you are about to grant."
-msgstr "Proszę wybrać użytkownika, aby zablokować działanie i opcjonalnie wszystkie ograniczenia negatywnego upoważnienia, które zostanie udzielone."
+msgid ""
+"Select the user to block for the action and, optionally, any constraints on "
+"the negative authorization that you are about to grant."
+msgstr ""
+"Proszę wybrać użytkownika, aby zablokować działanie i opcjonalnie wszystkie "
+"ograniczenia negatywnego upoważnienia, które zostanie udzielone."
 
 #: ../tools/polkit-gnome-authorization.c:864
-msgid "Select the beneficiary and, optionally, how to constrain the authorization that you are about to grant."
-msgstr "Proszę wybrać beneficjenta i opcjonalnie jak ograniczyć upoważnienie, które zostanie udzielone."
+msgid ""
+"Select the beneficiary and, optionally, how to constrain the authorization "
+"that you are about to grant."
+msgstr ""
+"Proszę wybrać beneficjenta i opcjonalnie jak ograniczyć upoważnienie, które "
+"zostanie udzielone."
 
 #: ../tools/polkit-gnome-authorization.c:875
 msgid "<b>Beneficiary</b>"
@@ -483,8 +561,12 @@ msgid "<b>Constraints</b>"
 msgstr "<b>Ograniczenia</b>"
 
 #: ../tools/polkit-gnome-authorization.c:924
-msgid "Constraints limits the authorization such that it only applies under certain circumstances."
-msgstr "Ogranicza to upoważnienie, aby można je było zastosować w szczególnych okolicznościach."
+msgid ""
+"Constraints limits the authorization such that it only applies under certain "
+"circumstances."
+msgstr ""
+"Ogranicza to upoważnienie, aby można je było zastosować w szczególnych "
+"okolicznościach."
 
 #: ../tools/polkit-gnome-authorization.c:930
 msgid "_None"
@@ -522,8 +604,13 @@ msgstr "<b><big>Proszę wybrać nowe niejawne upoważnienia</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:1190
 #, c-format
-msgid "Implicit authorizations are authorizations that are granted automatically to users under certain circumstances. Choose what is required for the action <i>%s</i>."
-msgstr "Niejawne upoważnienia są automatycznie udzielane użytkownikom w szczególnych okolicznościach. Proszę wybrać, co jest wymagane dla działania <i>%s</i>."
+msgid ""
+"Implicit authorizations are authorizations that are granted automatically to "
+"users under certain circumstances. Choose what is required for the action <i>"
+"%s</i>."
+msgstr ""
+"Niejawne upoważnienia są automatycznie udzielane użytkownikom w szczególnych "
+"okolicznościach. Proszę wybrać, co jest wymagane dla działania <i>%s</i>."
 
 #: ../tools/polkit-gnome-authorization.c:1215
 #: ../tools/polkit-gnome-authorization.c:1974
@@ -565,8 +652,12 @@ msgid "<b>Implicit Authorizations</b>"
 msgstr "<b>Niejawne upoważnienia</b>"
 
 #: ../tools/polkit-gnome-authorization.c:1959
-msgid "Implicit authorizations are authorizations automatically given to users based on certain criteria such as if they are on the local console."
-msgstr "Niejawne upoważnienia są automatycznie udzielane użytkownikom na podstawie szczególnych kryteriów, takich jak obecność na lokalnej konsoli."
+msgid ""
+"Implicit authorizations are authorizations automatically given to users "
+"based on certain criteria such as if they are on the local console."
+msgstr ""
+"Niejawne upoważnienia są automatycznie udzielane użytkownikom na podstawie "
+"szczególnych kryteriów, takich jak obecność na lokalnej konsoli."
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
@@ -581,8 +672,14 @@ msgid "<b>Explicit Authorizations</b>"
 msgstr "<b>Jawne upoważnienia</b>"
 
 #: ../tools/polkit-gnome-authorization.c:2043
-msgid "This list displays authorizations that are either obtained through authentication or specifically given to the entity in question. Blocked authorizations are marked with a STOP sign."
-msgstr "Ta lista wyświetla upoważnienia uzyskane przez uwierzytelnianie lub specjalnie danym jednostkom. Zablokowane upoważnienia są oznaczone znakiem STOP."
+msgid ""
+"This list displays authorizations that are either obtained through "
+"authentication or specifically given to the entity in question. Blocked "
+"authorizations are marked with a STOP sign."
+msgstr ""
+"Ta lista wyświetla upoważnienia uzyskane przez uwierzytelnianie lub "
+"specjalnie danym jednostkom. Zablokowane upoważnienia są oznaczone znakiem "
+"STOP."
 
 #: ../tools/polkit-gnome-authorization.c:2073
 msgid "Entity"
@@ -627,64 +724,79 @@ msgstr "Wybór działania"
 
 #~ msgid "Frobnicate"
 #~ msgstr "Wykonaj \"Frobnicate\""
+
 #~ msgid "Jump"
 #~ msgstr "Wykonaj \"Jump\""
+
 #~ msgid "Kick bar"
 #~ msgstr "Wykonaj \"Kick\" na bar"
+
 #~ msgid "Kick baz"
 #~ msgstr "Wykonaj \"Kick\" na baz"
+
 #~ msgid "Kick foo"
 #~ msgstr "Wykonaj \"Kick\" na foo"
+
 #~ msgid "Punch"
 #~ msgstr "Wykonaj \"Punch\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from "
 #~ "Frobnicating"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Frobnicate\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Jumping"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Jump\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Kick\" na bar"
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Kick\" na baz"
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Kick\" na foo"
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Punching"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Punch\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Toggling"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Toggle\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Tweak\""
+
 #~ msgid ""
 #~ "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 #~ msgstr ""
-#~ "Zasady systemu powstrzymują przykładową aplikację pomocniczą PolicyKit-"
+#~ "Zasady systemu powstrzymują przykładowy program pomocniczy PolicyKit-"
 #~ "gnome przed wykonaniem \"Twiddle\""
+
 #~ msgid "Toggle"
 #~ msgstr "Wykonaj \"Toggle\""
+
 #~ msgid "Twiddle"
 #~ msgstr "Wykonaj \"Twiddle\""
-
