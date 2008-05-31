@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-06 04:34+0100\n"
-"PO-Revision-Date: 2008-04-06 13:35+0200\n"
+"POT-Creation-Date: 2008-05-12 18:35+0000\n"
+"PO-Revision-Date: 2008-05-24 16:53+0200\n"
 "Last-Translator: Mark Krapivner <mark125@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -18,12 +18,25 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2439
+#: ../tools/polkit-gnome-authorization.c:2443
 msgid "Authorizations"
 msgstr "הרשאות"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:2
 msgid "Configure authorizations"
+msgstr "הגדרת הרשאות"
+
+#: ../data/polkit-gnome.schemas.in.h:1
+msgid ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr ""
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid "Whether the authentication dialog should grab the keyboard"
 msgstr ""
 
 #: ../examples/polkit-gnome-example.c:137
@@ -111,7 +124,7 @@ msgid "Tweak!"
 msgstr ""
 
 #: ../examples/polkit-gnome-example.c:306
-#: ../examples/polkit-gnome-example.policy.in.h:17
+#: ../examples/org.gnome.policykit.examples.policy.in.h:17
 msgid "Tweak"
 msgstr ""
 
@@ -180,7 +193,7 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.c:402
 msgid "Click to prevent changes"
-msgstr ""
+msgstr "לחץ כדי למנוע שינויים"
 
 #: ../examples/polkit-gnome-example.c:422
 msgid ""
@@ -188,83 +201,83 @@ msgid ""
 "update in real-time.</i>."
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:1
+#: ../examples/org.gnome.policykit.examples.policy.in.h:1
 msgid "Frobnicate"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:2
+#: ../examples/org.gnome.policykit.examples.policy.in.h:2
 msgid "Jump"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:3
+#: ../examples/org.gnome.policykit.examples.policy.in.h:3
 msgid "Kick bar"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:4
+#: ../examples/org.gnome.policykit.examples.policy.in.h:4
 msgid "Kick baz"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:5
+#: ../examples/org.gnome.policykit.examples.policy.in.h:5
 msgid "Kick foo"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:6
+#: ../examples/org.gnome.policykit.examples.policy.in.h:6
 msgid "Punch"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:7
+#: ../examples/org.gnome.policykit.examples.policy.in.h:7
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:8
+#: ../examples/org.gnome.policykit.examples.policy.in.h:8
 msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:9
+#: ../examples/org.gnome.policykit.examples.policy.in.h:9
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:10
+#: ../examples/org.gnome.policykit.examples.policy.in.h:10
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:11
+#: ../examples/org.gnome.policykit.examples.policy.in.h:11
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:12
+#: ../examples/org.gnome.policykit.examples.policy.in.h:12
 msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:13
+#: ../examples/org.gnome.policykit.examples.policy.in.h:13
 msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:14
+#: ../examples/org.gnome.policykit.examples.policy.in.h:14
 msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:15
+#: ../examples/org.gnome.policykit.examples.policy.in.h:15
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:16
+#: ../examples/org.gnome.policykit.examples.policy.in.h:16
 msgid "Toggle"
 msgstr ""
 
-#: ../examples/polkit-gnome-example.policy.in.h:18
+#: ../examples/org.gnome.policykit.examples.policy.in.h:18
 msgid "Twiddle"
 msgstr ""
 
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
 msgid "Authenticating..."
-msgstr ""
+msgstr "מאמת..."
 
 #: ../src/main.c:139
 msgid "Don't exit after 30 seconds of inactivity"
@@ -292,24 +305,32 @@ msgstr "%s (%s)"
 
 #: ../src/polkit-gnome-auth-dialog.c:292
 msgid "_Remember authorization for this session"
-msgstr ""
+msgstr "_זכור הרשאה עבור הפעלה זו"
 
 #: ../src/polkit-gnome-auth-dialog.c:298
 msgid "_Remember authorization"
-msgstr ""
+msgstr "_זכור הרשאה"
 
 #: ../src/polkit-gnome-auth-dialog.c:313
-msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
 msgstr ""
-"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כאחד המשתמשים למטה כדי לבצע את פעולה זאת."
+"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כאחד המשתמשים למטה כדי לבצע "
+"את פעולה זאת."
 
 #: ../src/polkit-gnome-auth-dialog.c:320
-msgid "An application is attempting to perform an action that requires privileges. Authentication as the super user is required to perform this action."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
 msgstr ""
-"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות של כמנהל המערכת כדי לבצע את פעולה זאת."
+"היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות של כמנהל המערכת כדי לבצע את "
+"פעולה זאת."
 
 #: ../src/polkit-gnome-auth-dialog.c:324
-msgid "An application is attempting to perform an action that requires privileges. Authentication is required to perform this action."
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
 msgstr ""
 "היישום מנסה לבצע פעולה שדורשת הרשאות. נדרש אימות כדי לבצע את פעולה זאת."
 
@@ -328,14 +349,14 @@ msgstr ""
 msgid "_Authenticate"
 msgstr "_אימות"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:680
-#: ../src/polkit-gnome-manager.c:729
+#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "_סיסמה:"
 
 #: ../src/polkit-gnome-auth-dialog.c:681
 msgid "For this _session only"
-msgstr ""
+msgstr "עבור _הפעלה נוכחית בלבד"
 
 #: ../src/polkit-gnome-auth-dialog.c:689
 msgid "<small><b>_Details</b></small>"
@@ -357,25 +378,29 @@ msgstr "<small><b>ספק:</b></small>"
 msgid "Authenticate"
 msgstr "אימות"
 
-#: ../src/polkit-gnome-manager.c:724
+#: ../src/polkit-gnome-manager.c:367
+msgid "(unknown"
+msgstr ""
+
+#: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
 msgstr "_סיסמה עבור %s:"
 
-#: ../src/polkit-gnome-manager.c:726
+#: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
 msgstr "_סיסמה עבור מנהל המערכת:"
 
-#: ../src/polkit-gnome-manager.c:734
+#: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:737
+#: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
 msgstr ""
 
-#: ../src/polkit-gnome-manager.c:740
+#: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
 msgstr ""
 
@@ -514,7 +539,7 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:418
 msgid "This session"
-msgstr ""
+msgstr "הפעלה נוכחית"
 
 #: ../tools/polkit-gnome-authorization.c:421
 msgid "Always"
@@ -586,19 +611,19 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:930
 msgid "_None"
-msgstr ""
+msgstr "_ללא"
 
 #: ../tools/polkit-gnome-authorization.c:932
 msgid "Must be _in active session"
-msgstr ""
+msgstr "חייב להיות _בהפעלה פעילה"
 
 #: ../tools/polkit-gnome-authorization.c:934
 msgid "Must be on _local console"
-msgstr ""
+msgstr "חייב להיות על מסוף _מקומי"
 
 #: ../tools/polkit-gnome-authorization.c:936
 msgid "Must be in _active session on local console"
-msgstr ""
+msgstr "חייב להיות בהפעלה _פעילה או על מסוף מקומי"
 
 #: ../tools/polkit-gnome-authorization.c:957
 #: ../tools/polkit-gnome-authorization.c:2133
@@ -629,21 +654,21 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:1215
 #: ../tools/polkit-gnome-authorization.c:1974
 msgid "<i>Anyone:</i>"
-msgstr ""
+msgstr "<i>כל אחד:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1222
 #: ../tools/polkit-gnome-authorization.c:1978
 msgid "<i>Console:</i>"
-msgstr ""
+msgstr "<i>מסוף:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1229
 #: ../tools/polkit-gnome-authorization.c:1982
 msgid "<i>Active Console:</i>"
-msgstr ""
+msgstr "<i>מסוף פעיל:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1258
 msgid "_Modify..."
-msgstr ""
+msgstr "_שינוי..."
 
 #: ../tools/polkit-gnome-authorization.c:1890
 msgid "<b>Action</b>"
@@ -673,7 +698,7 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
-msgstr ""
+msgstr "_ערוך..."
 
 #: ../tools/polkit-gnome-authorization.c:2009
 msgid "Revert To _Defaults..."
@@ -681,7 +706,7 @@ msgstr "החזר ל_ברירת מחדל"
 
 #: ../tools/polkit-gnome-authorization.c:2032
 msgid "<b>Explicit Authorizations</b>"
-msgstr ""
+msgstr "<b>הרשאות מוגדרות</b>"
 
 #: ../tools/polkit-gnome-authorization.c:2043
 msgid ""
@@ -692,32 +717,32 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:2073
 msgid "Entity"
-msgstr ""
+msgstr "ישות"
 
 #: ../tools/polkit-gnome-authorization.c:2081
 msgid "Scope"
-msgstr ""
+msgstr "תחום"
 
 #: ../tools/polkit-gnome-authorization.c:2089
 msgid "Obtained"
-msgstr ""
+msgstr "התקבל"
 
 #: ../tools/polkit-gnome-authorization.c:2097
 msgid "How"
-msgstr ""
+msgstr "איך"
 
 #: ../tools/polkit-gnome-authorization.c:2105
 msgid "Constraints"
-msgstr ""
+msgstr "אילוצים"
 
 #: ../tools/polkit-gnome-authorization.c:2147
 #: ../tools/polkit-gnome-authorization.c:2161
 msgid "_Revoke"
-msgstr ""
+msgstr "_שלילה"
 
 #: ../tools/polkit-gnome-authorization.c:2154
 msgid "_Revoke..."
-msgstr ""
+msgstr "_שלילה..."
 
 #: ../tools/polkit-gnome-authorization.c:2174
 msgid "_Show authorizations from all users..."
@@ -727,7 +752,6 @@ msgstr ""
 msgid "_Show authorizations from all users"
 msgstr ""
 
-#: ../tools/polkit-gnome-authorization.c:2413
+#: ../tools/polkit-gnome-authorization.c:2417
 msgid "Select an action"
 msgstr "בחר פעולה"
-
