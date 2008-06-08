@@ -1,14 +1,14 @@
-# translation of ru.po to Russian
+# translation of policykit-gnome.HEAD.ru.po to Russian
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Leonid Kanter <leon@asplinux.ru>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: ru\n"
+"Project-Id-Version: policykit-gnome.HEAD.ru\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-06 16:36+0300\n"
-"PO-Revision-Date: 2008-06-08 20:12+0300\n"
+"POT-Creation-Date: 2008-06-08 17:18+0000\n"
+"PO-Revision-Date: 2008-06-08 20:22+0300\n"
 "Last-Translator: Leonid Kanter <leon@asplinux.ru>\n"
 "Language-Team: Russian <en@li.org>\n"
 "MIME-Version: 1.0\n"
@@ -33,7 +33,12 @@ msgid ""
 "dialog is active. Use this if your window manager does not focus the "
 "authentication dialog automatically, and you want to avoid accidentally "
 "typing passwords in other programs."
-msgstr "Если установлено, диалог аутентификации программы PolicyKit-gnome будет перехватывать клавиатуру, то есть вы не сможете вводить текст в другой программе, пока диалог активен.  Используйте этот менеджер окон не передаёт фокус диалогу аутентификации автоматически и если вы не хотите случайно набрать пароль в другой программе."
+msgstr ""
+"Если установлено, диалог аутентификации программы PolicyKit-gnome будет "
+"перехватывать клавиатуру, то есть вы не сможете вводить текст в другой "
+"программе, пока диалог активен.  Используйте этот менеджер окон не передаёт "
+"фокус диалогу аутентификации автоматически и если вы не хотите случайно "
+"набрать пароль в другой программе."
 
 #: ../data/polkit-gnome.schemas.in.h:2
 msgid "Whether the authentication dialog should grab the keyboard"
@@ -131,6 +136,7 @@ msgid "Tweak!"
 msgstr "Tweak!"
 
 #: ../examples/polkit-gnome-example.c:306
+#: ../examples/org.gnome.policykit.examples.policy.in.h:17
 msgid "Tweak"
 msgstr "Tweak"
 
@@ -220,6 +226,74 @@ msgstr ""
 "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
 "update in real-time.</i>."
 
+#: ../examples/org.gnome.policykit.examples.policy.in.h:1
+msgid "Frobnicate"
+msgstr "Frobnicate"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:2
+msgid "Jump"
+msgstr "Jump"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:3
+msgid "Kick bar"
+msgstr "Kick bar"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:4
+msgid "Kick baz"
+msgstr "Kick baz"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:5
+msgid "Kick foo"
+msgstr "Kick foo"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:6
+msgid "Punch"
+msgstr "Punch"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:7
+msgid "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:8
+msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Jumping"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:9
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:10
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:11
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:12
+msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Punching"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:13
+msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Toggling"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:14
+msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Tweaking"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:15
+msgid "System policy prevents the PolicyKit-gnome example helper from Twiddling"
+msgstr "System policy prevents the PolicyKit-gnome example helper from Twiddling"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:16
+msgid "Toggle"
+msgstr "Toggle"
+
+#: ../examples/org.gnome.policykit.examples.policy.in.h:18
+msgid "Twiddle"
+msgstr "Twiddle"
+
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
 msgid "Authenticating..."
@@ -261,19 +335,27 @@ msgstr "_Запомнить авторизацию"
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
-msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия необходима аутентификация под именем одного из перечисленных ниже пользователей."
+msgstr ""
+"Приложение пытается выполнить действие, которое требует дополнительных "
+"привилегий. Для выполнения этого действия необходима аутентификация под "
+"именем одного из перечисленных ниже пользователей."
 
 #: ../src/polkit-gnome-auth-dialog.c:320
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
-msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия необходима аутентификация пользователя root."
+msgstr ""
+"Приложение пытается выполнить действие, которое требует дополнительных "
+"привилегий. Для выполнения этого действия необходима аутентификация "
+"пользователя root."
 
 #: ../src/polkit-gnome-auth-dialog.c:324
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
-msgstr "Приложение пытается выполнить действие, которое требует дополнительных привилегий. Для выполнения этого действия требуется аутентификация."
+msgstr ""
+"Приложение пытается выполнить действие, которое требует дополнительных "
+"привилегий. Для выполнения этого действия требуется аутентификация."
 
 #: ../src/polkit-gnome-auth-dialog.c:348
 #, c-format
@@ -503,26 +585,34 @@ msgstr "Предоставление авторизации"
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%s</i> action requires "
 "more information</big></b>"
-msgstr "<b><big>Предоставление негативной авторизации пользователю <i>%s</i> требует дополнительной информации</big></b>"
+msgstr ""
+"<b><big>Предоставление негативной авторизации пользователю <i>%s</i> требует "
+"дополнительной информации</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:851
 #, c-format
 msgid ""
 "<b><big>Granting an authorization for the <i>%s</i> action requires more "
 "information</big></b>"
-msgstr "<b><big>Предоставление авторизации пользователю <i>%s</i> требует дополнительной информации</big></b>"
+msgstr ""
+"<b><big>Предоставление авторизации пользователю <i>%s</i> требует "
+"дополнительной информации</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:862
 msgid ""
 "Select the user to block for the action and, optionally, any constraints on "
 "the negative authorization that you are about to grant."
-msgstr "Выберите пользователя для блокирования действия и, опционально, любые принуждения для негативной авторизации, которую вы собираетесь предоставить."
+msgstr ""
+"Выберите пользователя для блокирования действия и, опционально, любые "
+"принуждения для негативной авторизации, которую вы собираетесь предоставить."
 
 #: ../tools/polkit-gnome-authorization.c:864
 msgid ""
 "Select the beneficiary and, optionally, how to constrain the authorization "
 "that you are about to grant."
-msgstr "Выберите получателя и, опционально, как ограничить авторизацию, которую вы собираетесь предоставить."
+msgstr ""
+"Выберите получателя и, опционально, как ограничить авторизацию, которую вы "
+"собираетесь предоставить."
 
 #: ../tools/polkit-gnome-authorization.c:875
 msgid "<b>Beneficiary</b>"
@@ -548,7 +638,9 @@ msgstr "<b>Принуждения</b>"
 msgid ""
 "Constraints limits the authorization such that it only applies under certain "
 "circumstances."
-msgstr "Принуждения ограничивают авторизацию так, что она действует только в определённых обстоятельствах."
+msgstr ""
+"Принуждения ограничивают авторизацию так, что она действует только в "
+"определённых обстоятельствах."
 
 #: ../tools/polkit-gnome-authorization.c:930
 msgid "_None"
@@ -590,7 +682,10 @@ msgid ""
 "Implicit authorizations are authorizations that are granted automatically to "
 "users under certain circumstances. Choose what is required for the action <i>"
 "%s</i>."
-msgstr "Неявные авторизации - авторизации, предоставляемые пользователям автоматически при некоторых обстоятельствах. Выберите, что требуется для действия <i>%s</i>."
+msgstr ""
+"Неявные авторизации - авторизации, предоставляемые пользователям "
+"автоматически при некоторых обстоятельствах. Выберите, что требуется для "
+"действия <i>%s</i>."
 
 #: ../tools/polkit-gnome-authorization.c:1215
 #: ../tools/polkit-gnome-authorization.c:1974
@@ -635,7 +730,10 @@ msgstr "<b>Неявные авторизации</b>"
 msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
-msgstr "Неявные авторизации - авторизации, предоставляемые пользователям автоматически на основе определенных критериев, например таких, как нахождение на локальной консоли."
+msgstr ""
+"Неявные авторизации - авторизации, предоставляемые пользователям "
+"автоматически на основе определенных критериев, например таких, как "
+"нахождение на локальной консоли."
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
@@ -654,7 +752,10 @@ msgid ""
 "This list displays authorizations that are either obtained through "
 "authentication or specifically given to the entity in question. Blocked "
 "authorizations are marked with a STOP sign."
-msgstr "Этот список отображает авторизации, которые были либо получены путём аутентификации, либо были специально предоставлены объекту по запросу. Заблокированные авторизации помечены знаком STOP."
+msgstr ""
+"Этот список отображает авторизации, которые были либо получены путём "
+"аутентификации, либо были специально предоставлены объекту по запросу. "
+"Заблокированные авторизации помечены знаком STOP."
 
 #: ../tools/polkit-gnome-authorization.c:2073
 msgid "Entity"
