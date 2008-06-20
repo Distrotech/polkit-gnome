@@ -26,10 +26,10 @@
 G_BEGIN_DECLS
 
 #define POLKIT_GNOME_TYPE_AUTH_DIALOG            (polkit_gnome_auth_dialog_get_type ())
-#define POLKIT_GNOME_AUTH_DIALOG(obj)            (GTK_CHECK_CAST ((obj), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialog))
-#define POLKIT_GNOME_AUTH_DIALOG_CLASS(klass)    (GTK_CHECK_CLASS_CAST ((klass), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialogClass))
-#define POLKIT_GNOME_IS_AUTH_DIALOG(obj)         (GTK_CHECK_TYPE ((obj), POLKIT_GNOME_TYPE_AUTH_DIALOG))
-#define POLKIT_GNOME_IS_AUTH_DIALOG_CLASS(klass) (GTK_CHECK_CLASS_TYPE ((klass), POLKIT_GNOME_TYPE_AUTH_DIALOG))
+#define POLKIT_GNOME_AUTH_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialog))
+#define POLKIT_GNOME_AUTH_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialogClass))
+#define POLKIT_GNOME_IS_AUTH_DIALOG(obj)         (G_TYPE_CHECK_INSTANCE_TYPE ((obj), POLKIT_GNOME_TYPE_AUTH_DIALOG))
+#define POLKIT_GNOME_IS_AUTH_DIALOG_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), POLKIT_GNOME_TYPE_AUTH_DIALOG))
 
 typedef struct _PolkitGnomeAuthDialog        PolkitGnomeAuthDialog;
 typedef struct _PolkitGnomeAuthDialogClass   PolkitGnomeAuthDialogClass;
@@ -50,7 +50,7 @@ struct _PolkitGnomeAuthDialogClass
 	void (*user_selected) (PolkitGnomeAuthDialog *auth_dialog, const char *user_name);
 };
 
-GtkType    polkit_gnome_auth_dialog_get_type      (void);
+GType    polkit_gnome_auth_dialog_get_type      (void);
 GtkWidget *polkit_gnome_auth_dialog_new (const char *path_to_program,
 					 const char *action_id,
 					 const char *vendor,
