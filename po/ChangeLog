@@ -1,3 +1,9 @@
+2008-06-21  Petr Kovar  <pknbe@volny.cz>
+
+	* cs.po: Added Czech translation by Adrian Gunis
+	(bug #538982).
+	* LINGUAS: Added 'cs'.
+
 2008-06-19  Marcel Telka  <marcel@telka.sk>
 
 	* sk.po: Added Slovak translation by Pavol Šimo.
