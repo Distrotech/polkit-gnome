@@ -380,16 +380,18 @@ static void
 polkit_gnome_auth_dialog_set_icon_name (PolkitGnomeAuthDialog *auth_dialog, const char *icon_name)
 {
 	GdkPixbuf *pixbuf;
+	GdkPixbuf *copy_pixbuf;
 	GdkPixbuf *vendor_pixbuf;
 
 	pixbuf = NULL;
+	copy_pixbuf = NULL;
 	vendor_pixbuf = NULL;
 
 	vendor_pixbuf = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
-					   icon_name,
-					   48,
-					   0,
-					   NULL);
+						  icon_name,
+						  48,
+						  0,
+						  NULL);
 	if (vendor_pixbuf == NULL)
 		goto out;
 
@@ -401,21 +403,27 @@ polkit_gnome_auth_dialog_set_icon_name (PolkitGnomeAuthDialog *auth_dialog, cons
 	if (pixbuf == NULL)
 		goto out;
 
+	/* need to copy the pixbuf since we're modifying it */
+	copy_pixbuf = gdk_pixbuf_copy (pixbuf);
+	if (copy_pixbuf == NULL)
+		goto out;
+
 	/* blend the vendor icon in the bottom right quarter */
 	gdk_pixbuf_composite (vendor_pixbuf,
-			      pixbuf,
+			      copy_pixbuf,
 			      24, 24, 24, 24,
 			      24, 24, 0.5, 0.5,
 			      GDK_INTERP_BILINEAR,
 			      255);
-	
+
 	gtk_image_set_from_pixbuf (GTK_IMAGE (auth_dialog->priv->icon),
-				   pixbuf);
+				   copy_pixbuf);
 
 out:
-
 	if (pixbuf != NULL)
 		g_object_unref (pixbuf);
+	if (copy_pixbuf != NULL)
+		g_object_unref (copy_pixbuf);
 	if (vendor_pixbuf != NULL)
 		g_object_unref (vendor_pixbuf);
 }
