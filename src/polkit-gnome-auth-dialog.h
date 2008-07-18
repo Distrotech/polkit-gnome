@@ -25,6 +25,9 @@
 
 G_BEGIN_DECLS
 
+#define KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION "/desktop/gnome/policykit/auth_dialog_retain_authorization"
+#define KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST "/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist"
+
 #define POLKIT_GNOME_TYPE_AUTH_DIALOG            (polkit_gnome_auth_dialog_get_type ())
 #define POLKIT_GNOME_AUTH_DIALOG(obj)            (G_TYPE_CHECK_INSTANCE_CAST ((obj), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialog))
 #define POLKIT_GNOME_AUTH_DIALOG_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), POLKIT_GNOME_TYPE_AUTH_DIALOG, PolkitGnomeAuthDialogClass))

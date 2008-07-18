@@ -34,6 +34,7 @@
 #include <errno.h>
 #include <libsexy/sexy.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
+#include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
@@ -336,6 +337,63 @@ polkit_gnome_auth_dialog_set_message (PolkitGnomeAuthDialog *auth_dialog, const 
 }
 
 static void
+retain_checkbox_set_defaults (PolkitGnomeAuthDialog *auth_dialog, const char *action_id)
+{
+	gboolean retain_authorization;
+        GConfClient *client;
+	GError *error;
+	GSList *action_list, *l;
+
+        client = gconf_client_get_default ();
+	retain_authorization = TRUE;
+
+	if (client == NULL) {
+		g_warning ("Error getting GConfClient");
+		goto out;
+	}
+
+	error = NULL;
+	retain_authorization = gconf_client_get_bool (client, KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION, &error);
+	if (error != NULL) {
+		g_warning ("Error getting key %s: %s",
+			   KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION,
+			   error->message);
+		g_error_free (error);
+		goto out;
+	}
+
+	/* check the blacklist */
+	if (!retain_authorization)
+		goto out;
+
+	action_list = gconf_client_get_list (client,
+					     KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+					     GCONF_VALUE_STRING,
+					     &error);
+	if (error != NULL) {
+		g_warning ("Error getting key %s: %s",
+			   KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+			   error->message);
+		g_error_free (error);
+		goto out;
+	}
+
+	for (l = action_list; l != NULL; l = l->next) {
+		const char *str = l->data;
+		if (strcmp (str, action_id) == 0) {
+			retain_authorization = FALSE;
+			break;
+		}
+	}
+	g_slist_foreach (action_list, (GFunc) g_free, NULL);
+	g_slist_free (action_list);
+
+out:
+	gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (auth_dialog->priv->keep_privilege_check_button),
+				      retain_authorization);
+}
+
+static void
 polkit_gnome_auth_dialog_set_action_id (PolkitGnomeAuthDialog *auth_dialog, const char *action_id)
 {
 	char *str;
@@ -348,6 +406,8 @@ polkit_gnome_auth_dialog_set_action_id (PolkitGnomeAuthDialog *auth_dialog, cons
 	str = g_strdup_printf (_("Click to edit %s"), action_id);
 	gtk_widget_set_tooltip_markup (auth_dialog->priv->privilege_desc_label, str);
 	g_free (str);
+
+	retain_checkbox_set_defaults (auth_dialog, action_id);
 }
 
 static void

@@ -933,6 +933,76 @@ remove_watch (PolKitGrant *polkit_auth, int watch_id)
 static PolKitGrant *grant = NULL;
 static UserData *ud = NULL;
 
+static void
+add_to_blacklist (UserData *ud, const char *action_id)
+{
+        GSList *action_list, *l;
+        GConfClient *client;
+        GError *error;
+        gboolean never_retain_authorization;
+
+        client = gconf_client_get_default ();
+	if (client == NULL) {
+		g_warning ("Error getting GConfClient");
+		goto out;
+	}
+
+	error = NULL;
+	never_retain_authorization = !gconf_client_get_bool (client, KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION, &error);
+	if (error != NULL) {
+		g_warning ("Error getting key %s: %s",
+			   KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION,
+			   error->message);
+		g_error_free (error);
+		goto out;
+	}
+
+        if (never_retain_authorization)
+                goto out;
+
+        error = NULL;
+        action_list = gconf_client_get_list (client,
+                                             KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+                                             GCONF_VALUE_STRING,
+                                             &error);
+        if (error != NULL) {
+                g_warning ("Error getting key %s: %s",
+                           KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+                           error->message);
+                g_error_free (error);
+                goto out;
+        }
+
+        for (l = action_list; l != NULL; l = l->next) {
+                const char *str = l->data;
+                if (strcmp (str, action_id) == 0) {
+                        /* already there */
+                        goto done;
+                }
+        }
+
+        action_list = g_slist_append (action_list, g_strdup (action_id));
+
+        if (!gconf_client_set_list (client,
+                                    KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+                                    GCONF_VALUE_STRING,
+                                    action_list,
+                                    &error)) {
+                g_warning ("Error setting key %s: %s",
+                           KEY_AUTH_DIALOG_RETAIN_AUTHORIZATION_BLACKLIST,
+                           error->message);
+                g_error_free (error);
+                error = NULL;
+        }
+
+done:
+        g_slist_foreach (action_list, (GFunc) g_free, NULL);
+        g_slist_free (action_list);
+
+out:
+        ;
+}
+
 static gboolean
 do_polkit_auth (PolKitContext  *pk_context,
                 DBusConnection *system_bus_connection,
@@ -1078,6 +1148,16 @@ try_again:
                                 grant = NULL;
                                 goto try_again;
                         }
+                }
+        }
+
+        if (ud->gained_privilege) {
+                /* add to blacklist if the user unchecked the "remember authorization" check box */
+                if ((ud->remember_always &&
+                     !polkit_gnome_auth_dialog_get_remember_always (POLKIT_GNOME_AUTH_DIALOG (ud->dialog))) ||
+                    (ud->remember_session &&
+                     !polkit_gnome_auth_dialog_get_remember_session (POLKIT_GNOME_AUTH_DIALOG (ud->dialog)))) {
+                        add_to_blacklist (ud, action_id);
                 }
         }
 
