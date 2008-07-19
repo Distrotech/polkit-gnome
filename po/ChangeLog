@@ -1,3 +1,8 @@
+2008-07-19  Denis Washington  <dwashington@gmx.net>
+
+	* de.po: Added German translation.
+	* LINGUAS: Added "de".
+
 2008-06-28  甘露(Lu Gan) <ganlu@svn.gnome.org>
 
 	* zh_CN.po: Add Simplified Chinese translation.
