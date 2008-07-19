@@ -744,8 +744,8 @@ msgid ""
 "based on certain criteria such as if they are on the local console."
 msgstr ""
 "Implizite Berechtigungen sind Berechtigungen, die basierend auf bestimmten "
-"Kriterien an Benutzer vergeben vergeben, beispielsweise ob sie an der "
-"lokalen Konsole sind."
+"Kriterien automatisch an Benutzer vergeben werden, beispielsweise ob sie an "
+"der lokalen Konsole sind."
 
 #: ../tools/polkit-gnome-authorization.c:2002
 msgid "_Edit..."
@@ -753,7 +753,7 @@ msgstr "_Bearbeiten …"
 
 #: ../tools/polkit-gnome-authorization.c:2009
 msgid "Revert To _Defaults..."
-msgstr "_Auf Standardeinstellungen zurückstellen …"
+msgstr "_Standardeinstellungen …"
 
 #: ../tools/polkit-gnome-authorization.c:2032
 msgid "<b>Explicit Authorizations</b>"
