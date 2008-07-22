@@ -11,7 +11,7 @@ Highlights of this release
  o Remember state for "remember authorization" check box per action.
  o New translations: ca, po, pt, ru, sk, cs, pt_BR, zh_CN, de
 
-Requirements for PolicyKit-gnome 0.8
+Requirements for PolicyKit-gnome 0.9
 
  - PolicyKit        == 0.9
  - GTK+             >= 2.12
