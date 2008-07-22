@@ -6,6 +6,9 @@ PolicyKit-gnome provides
  - A shared library to easily integrate usage of PolicyKit into GTK+
    applications
 
+ - A proof-of-concept applet (that is subject to change) for managing
+   authorizations
+
 See http://www.freedesktop.org/wiki/Software/PolicyKit for lots of
 documentation, mailing lists, etc. about PolicyKit.
 
