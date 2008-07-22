@@ -1,4 +1,4 @@
-AC_INIT([PolicyKit-gnome],[0.8],[mailto:david@fubar.dk],[PolicyKit-gnome])
+AC_INIT([PolicyKit-gnome],[0.9],[mailto:david@fubar.dk],[PolicyKit-gnome])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 

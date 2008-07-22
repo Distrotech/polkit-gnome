@@ -1,4 +1,27 @@
 ==========
+PolicyKit-gnome 0.9
+==========
+
+Release on July 22th 2008.
+
+Highlights of this release
+
+ o Bug fixes
+ o Avoid grabbing the pointer when showing dialog
+ o Remember state for "remember authorization" check box per action.
+ o New translations: ca, po, pt, ru, sk, cs, pt_BR, zh_CN, de
+
+Requirements for PolicyKit-gnome 0.8
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.12
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - gnome-vfs        >= 2.4
+ - libsexy          >= 0.1.11
+ - GConf            >= 2.8
+
+==========
 PolicyKit-gnome 0.8
 ==========
 
