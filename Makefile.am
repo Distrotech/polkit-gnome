@@ -12,9 +12,7 @@ ChangeLog: $(srcdir)/ChangeLog
 
 $(srcdir)/ChangeLog:
 	if test -d $(srcdir)/.svn ; then \
-	  if test ! -e $(srcdir)/ChangeLog ; then \
-	    svn2cl --authors=AUTHORS -o $(srcdir)/ChangeLog ; \
-	  fi \
+	  svn up && svn2cl --authors=AUTHORS -o $(srcdir)/ChangeLog ; \
 	fi
 
 .PHONY: ChangeLog $(srcdir)/ChangeLog
