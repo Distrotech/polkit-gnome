@@ -11,24 +11,20 @@ SUBDIRS += doc po
 ChangeLog: $(srcdir)/ChangeLog
 
 $(srcdir)/ChangeLog:
-	rm -f $(srcdir)/ChangeLog && svn2cl --authors=AUTHORS -o $(srcdir)/ChangeLog
+	if test -d $(srcdir)/.svn ; then \
+	  if test ! -e $(srcdir)/ChangeLog ; then \
+	    svn2cl --authors=AUTHORS -o $(srcdir)/ChangeLog ; \
+	  fi \
+	fi
 
 .PHONY: ChangeLog $(srcdir)/ChangeLog
 
 
 EXTRA_DIST = \
 	autogen.sh		\
-	intltool-extract.in	\
-	intltool-merge.in	\
-	intltool-update.in	\
 	TODO			\
 	HACKING			\
 	ChangeLog
-
-DISTCLEANFILES = \
-	intltool-extract	\
-	intltool-merge		\
-	intltool-update
 
 clean-local :
 	rm -f *~ po/*~

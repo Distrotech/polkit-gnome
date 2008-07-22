@@ -40,7 +40,7 @@ dist_polkit_policy_DATA = org.gnome.policykit.examples.policy
 @INTLTOOL_POLICY_RULE@
 
 check:
-	$(POLKIT_POLICY_FILE_VALIDATE) $(dist_polkit_policy_DATA)
+	$(POLKIT_POLICY_FILE_VALIDATE) $(top_srcdir)/examples/$(dist_polkit_policy_DATA)
 
 EXTRA_DIST = org.gnome.policykit.examples.policy.in
 
