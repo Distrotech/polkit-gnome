@@ -1,3 +1,8 @@
+2008-07-31  Djihed Afifi <djihed@gmail.com> 
+
+	* ar.po: Added Arabic Translation.
+	* LINGUAS: Added ar.
+
 2008-07-29  Leonardo Ferreira Fontenelle  <leonardof@gnome.org>
 
 	* pt_BR.po: Translation updated by Igor Pires Soares. (Yes, again!)
