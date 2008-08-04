@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-05-25 19:08+0100\n"
-"PO-Revision-Date: 2008-04-30 21:11-0100\n"
+"POT-Creation-Date: 2008-08-04 01:32+0100\n"
+"PO-Revision-Date: 2008-08-01 20:41-0100\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,28 @@ msgstr "Configurar autorizações"
 
 #: ../data/polkit-gnome.schemas.in.h:1
 msgid ""
+"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
+"checked by default; this list is maintained by the authentication dialog "
+"code itself. For example, if a user unchecks the \"retain authorization\" "
+"check box for an action and successfully obtains an authorization for the "
+"action, the action will be added to this list."
+msgstr ""
+"Uma lista de acções do PolicyKit onde a caixa de selecção \"Reter Autorização"
+"\" não se encontra marcada por omissão; esta lista é mantida pelo próprio "
+"código de diálogo da autenticação. Por exemplo, se um utilizador desmarca a "
+"caixa de selecção \"Reter Autorização\" para uma determinada acção e obtém "
+"uma autorização para esta, a acção será adicionada à lista."
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid ""
+"A list of actions where the \"retain authorization\" checkbox isn't checked "
+"by default"
+msgstr ""
+"Uma lista de acções onde a caixa de selecção \"Reter Autorização\" não se "
+"encontra marcada por omissão"
+
+#: ../data/polkit-gnome.schemas.in.h:3
+msgid ""
 "If set to true, the authentication dialog from PolicyKit-gnome will grab the "
 "keyboard, so that you will not be able to type in other programs while the "
 "dialog is active. Use this if your window manager does not focus the "
@@ -41,9 +63,26 @@ msgstr ""
 "de autenticação, e deseja evitar introduzir acidentalmente a sua senha "
 "noutra aplicação."
 
-#: ../data/polkit-gnome.schemas.in.h:2
+#: ../data/polkit-gnome.schemas.in.h:4
+msgid ""
+"If set to true, then \"retain authorization\" check box (if present) is "
+"checked by default in the authentication dialog unless the action is "
+"mentioned in the \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" key."
+msgstr ""
+"Se definido como verdadeiro, então a caixa de selecção \"Reter Autorização"
+"\" (caso esteja presente) encontra-se marcada por omissão, excepto se a "
+"acção está mencionada na chave  \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\"."
+
+#: ../data/polkit-gnome.schemas.in.h:5
 msgid "Whether the authentication dialog should grab the keyboard"
 msgstr "Se o diálogo de autenticação deverá ou não capturar o teclado"
+
+#: ../data/polkit-gnome.schemas.in.h:6
+msgid "Whether the retain authorization check box is checked by default"
+msgstr ""
+"Se a caixa de selecção \"reter autorização\" encontra-se marcada por omissão"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -188,9 +227,8 @@ msgid ""
 "authenticated, this privilege can be retained for the remainder of the "
 "desktop session."
 msgstr ""
-"Fazer o assistente <b>Premir</b> requer que o utilizador se autentique. "
-"Uma vez autenticado, este privilégio pode ser retido durante o resto da "
-"sessão."
+"Fazer o assistente <b>Premir</b> requer que o utilizador se autentique. Uma "
+"vez autenticado, este privilégio pode ser retido durante o resto da sessão."
 
 #: ../examples/polkit-gnome-example.c:372
 msgid "Punch!"
@@ -206,8 +244,8 @@ msgid ""
 msgstr ""
 "A acção <b>Alternar</b> demonstra a utilização do PolicyKit para dirigir um "
 "botão GtkToggleButton; é uma forma intuitiva de pedir aos utilizadores para "
-"dispensarem as autorizações quando terminarem a sua utilização. Por ex. o botão "
-"encontra-se 'pressionado' exactamente quando a autorização é detida. "
+"dispensarem as autorizações quando terminarem a sua utilização. Por ex. o "
+"botão encontra-se 'pressionado' exactamente quando a autorização é detida. "
 "Alternar o botão significa revogar a autorização em questão."
 
 #: ../examples/polkit-gnome-example.c:401
@@ -244,26 +282,26 @@ msgstr "Daemon de sessão do PolicyKit GNOME"
 msgid "Starting PolicyKit GNOME session daemon version %s"
 msgstr "A iniciar o daemon de sessão do PolicyKit GNOME, versão %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:190
+#: ../src/polkit-gnome-auth-dialog.c:191
 #: ../tools/polkit-gnome-authorization.c:649
 msgid "Select user..."
 msgstr "Seleccionar utilizador..."
 
-#: ../src/polkit-gnome-auth-dialog.c:211
+#: ../src/polkit-gnome-auth-dialog.c:212
 #: ../tools/polkit-gnome-authorization.c:665
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkit-gnome-auth-dialog.c:292
+#: ../src/polkit-gnome-auth-dialog.c:293
 msgid "_Remember authorization for this session"
 msgstr "_Recordar autorização para esta sessão"
 
-#: ../src/polkit-gnome-auth-dialog.c:298
+#: ../src/polkit-gnome-auth-dialog.c:299
 msgid "_Remember authorization"
 msgstr "_Recordar autorização"
 
-#: ../src/polkit-gnome-auth-dialog.c:313
+#: ../src/polkit-gnome-auth-dialog.c:314
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -272,7 +310,7 @@ msgstr ""
 "necessária uma autenticação como um dos utilizadores para executar esta "
 "acção."
 
-#: ../src/polkit-gnome-auth-dialog.c:320
+#: ../src/polkit-gnome-auth-dialog.c:321
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -280,7 +318,7 @@ msgstr ""
 "Uma aplicação está a tentar executar uma acção que requer privilégios. É "
 "necessária autenticação como super utilizador para executar esta acção."
 
-#: ../src/polkit-gnome-auth-dialog.c:324
+#: ../src/polkit-gnome-auth-dialog.c:325
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -288,47 +326,47 @@ msgstr ""
 "Uma aplicação está a tentar executar uma acção que requer privilégios. É "
 "necessária autenticação para executar esta acção."
 
-#: ../src/polkit-gnome-auth-dialog.c:348
+#: ../src/polkit-gnome-auth-dialog.c:406
 #, c-format
 msgid "Click to edit %s"
 msgstr "Clique para editar %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:371
+#: ../src/polkit-gnome-auth-dialog.c:431
 #: ../tools/polkit-gnome-authorization.c:1391
 #, c-format
 msgid "Click to open %s"
 msgstr "Clique para abrir %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:600
+#: ../src/polkit-gnome-auth-dialog.c:668
 msgid "_Authenticate"
 msgstr "_Autenticar"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-auth-dialog.c:727 ../src/polkit-gnome-manager.c:686
 #: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "_Senha:"
 
-#: ../src/polkit-gnome-auth-dialog.c:681
+#: ../src/polkit-gnome-auth-dialog.c:749
 msgid "For this _session only"
 msgstr "Apenas para esta _sessão"
 
-#: ../src/polkit-gnome-auth-dialog.c:689
+#: ../src/polkit-gnome-auth-dialog.c:757
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Detalhes</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:710
+#: ../src/polkit-gnome-auth-dialog.c:778
 msgid "<small><b>Application:</b></small>"
 msgstr "<small><b>Aplicação:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:714
+#: ../src/polkit-gnome-auth-dialog.c:782
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Acção:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:719
+#: ../src/polkit-gnome-auth-dialog.c:787
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Fornecedor:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:848
+#: ../src/polkit-gnome-auth-dialog.c:916
 msgid "Authenticate"
 msgstr "Autenticar"
 
