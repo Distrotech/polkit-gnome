@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome trunk\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-13 12:56+0900\n"
-"PO-Revision-Date: 2008-04-13 12:55+0900\n"
+"POT-Creation-Date: 2008-08-04 23:13+0900\n"
+"PO-Revision-Date: 2008-08-04 23:12+0900\n"
 "Last-Translator: Takeshi AIHANA <takeshi.aihana@gmail.com>\n"
 "Language-Team: Japanese <takeshi.aihana@gmail.com>\n"
 "MIME-Version: 1.0\n"
@@ -16,13 +16,71 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2439
+#: ../tools/polkit-gnome-authorization.c:2443
 msgid "Authorizations"
 msgstr "権限の管理"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:2
 msgid "Configure authorizations"
 msgstr "いろいろな権限を設定します"
+
+#: ../data/polkit-gnome.schemas.in.h:1
+msgid ""
+"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
+"checked by default; this list is maintained by the authentication dialog "
+"code itself. For example, if a user unchecks the \"retain authorization\" "
+"check box for an action and successfully obtains an authorization for the "
+"action, the action will be added to this list."
+msgstr ""
+"\"認証結果を使用し続ける\" のチェックボックスをデフォルトで OFF にしておく "
+"PolicyKit アクションを並べたリストです。このリストは認証ダイアログのオブジェ"
+"クトよって管理されます。例えば、ユーザが任意のアクションに対して \"認証結果を"
+"使用し続ける\" のチェックを外し、そのアクションを実行する権限を手に入れたら、"
+"このリストにそのアクションが追加されるということです。"
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid ""
+"A list of actions where the \"retain authorization\" checkbox isn't checked "
+"by default"
+msgstr ""
+"デフォルトで \"認証結果を使用し続ける\" のチェックボックスを OFF にしておくア"
+"クション"
+
+#: ../data/polkit-gnome.schemas.in.h:3
+msgid ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr ""
+"TRUE にすると、PolicyKit-gnome の認証ダイアログでキーボード入力をつかんだまま"
+"にするので、このダイアログが表示されている間は他のアプリでキーボードを利用す"
+"ることができなくなります。この機能を使えば、お使いのウィンドウ・マネージャが"
+"認証ダイアログにフォーカスを与えなかった場合、キーボードからパスワードを入力"
+"した時にフォーカスが当たっている他のプログラムに誤って表示されるという危険性"
+"を回避することができます。"
+
+#: ../data/polkit-gnome.schemas.in.h:4
+msgid ""
+"If set to true, then \"retain authorization\" check box (if present) is "
+"checked by default in the authentication dialog unless the action is "
+"mentioned in the \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" key."
+msgstr ""
+"TRUE にすると、\"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" キーに格納したアクションを除き、"
+"認証ダイアログで \"認証結果を使用し続ける\" のチェックボックスをデフォルトで "
+"ON にしておきます。"
+
+#: ../data/polkit-gnome.schemas.in.h:5
+msgid "Whether the authentication dialog should grab the keyboard"
+msgstr "認証ダイアログでキーボード入力をつかんだままにするかどうか"
+
+#: ../data/polkit-gnome.schemas.in.h:6
+msgid "Whether the retain authorization check box is checked by default"
+msgstr ""
+"\"認証結果を使用し続ける\" のチェックボックスをデフォルトで ON にするかどうか"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -115,7 +173,7 @@ msgid "Tweak!"
 msgstr "Tweak!"
 
 #: ../examples/polkit-gnome-example.c:306
-#: ../examples/polkit-gnome-example.policy.in.h:17
+#: ../examples/org.gnome.policykit.examples.policy.in.h:17
 msgid "Tweak"
 msgstr "Tweak"
 
@@ -202,84 +260,84 @@ msgstr ""
 "<i>メモ: /etc/PolicyKit/Policy.conf というファイルを編集して時債に代理ウィ"
 "ジェットが更新しているか確認してみて下さい。</i>"
 
-#: ../examples/polkit-gnome-example.policy.in.h:1
+#: ../examples/org.gnome.policykit.examples.policy.in.h:1
 msgid "Frobnicate"
 msgstr "Frobnicate"
 
-#: ../examples/polkit-gnome-example.policy.in.h:2
+#: ../examples/org.gnome.policykit.examples.policy.in.h:2
 msgid "Jump"
 msgstr "Jump"
 
-#: ../examples/polkit-gnome-example.policy.in.h:3
+#: ../examples/org.gnome.policykit.examples.policy.in.h:3
 msgid "Kick bar"
 msgstr "Kick bar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:4
+#: ../examples/org.gnome.policykit.examples.policy.in.h:4
 msgid "Kick baz"
 msgstr "Kick baz"
 
-#: ../examples/polkit-gnome-example.policy.in.h:5
+#: ../examples/org.gnome.policykit.examples.policy.in.h:5
 msgid "Kick foo"
 msgstr "Kick foo"
 
-#: ../examples/polkit-gnome-example.policy.in.h:6
+#: ../examples/org.gnome.policykit.examples.policy.in.h:6
 msgid "Punch"
 msgstr "Punch"
 
-#: ../examples/polkit-gnome-example.policy.in.h:7
+#: ../examples/org.gnome.policykit.examples.policy.in.h:7
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 
-#: ../examples/polkit-gnome-example.policy.in.h:8
+#: ../examples/org.gnome.policykit.examples.policy.in.h:8
 msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
 msgstr "System policy prevents the PolicyKit-gnome example helper from Jumping"
 
-#: ../examples/polkit-gnome-example.policy.in.h:9
+#: ../examples/org.gnome.policykit.examples.policy.in.h:9
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:10
+#: ../examples/org.gnome.policykit.examples.policy.in.h:10
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 
-#: ../examples/polkit-gnome-example.policy.in.h:11
+#: ../examples/org.gnome.policykit.examples.policy.in.h:11
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 
-#: ../examples/polkit-gnome-example.policy.in.h:12
+#: ../examples/org.gnome.policykit.examples.policy.in.h:12
 msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Punching"
 
-#: ../examples/polkit-gnome-example.policy.in.h:13
+#: ../examples/org.gnome.policykit.examples.policy.in.h:13
 msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Toggling"
 
-#: ../examples/polkit-gnome-example.policy.in.h:14
+#: ../examples/org.gnome.policykit.examples.policy.in.h:14
 msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 
-#: ../examples/polkit-gnome-example.policy.in.h:15
+#: ../examples/org.gnome.policykit.examples.policy.in.h:15
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 msgstr ""
 "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 
-#: ../examples/polkit-gnome-example.policy.in.h:16
+#: ../examples/org.gnome.policykit.examples.policy.in.h:16
 msgid "Toggle"
 msgstr "Toggle"
 
-#: ../examples/polkit-gnome-example.policy.in.h:18
+#: ../examples/org.gnome.policykit.examples.policy.in.h:18
 msgid "Twiddle"
 msgstr "Twiddle"
 
@@ -301,26 +359,26 @@ msgstr "PolicyKit GNOME のセッション・デーモン"
 msgid "Starting PolicyKit GNOME session daemon version %s"
 msgstr "PolicyKit の GNOME セッション・デーモン (バージョン %s) の起動中..."
 
-#: ../src/polkit-gnome-auth-dialog.c:190
+#: ../src/polkit-gnome-auth-dialog.c:191
 #: ../tools/polkit-gnome-authorization.c:649
 msgid "Select user..."
 msgstr "ユーザの選択..."
 
-#: ../src/polkit-gnome-auth-dialog.c:211
+#: ../src/polkit-gnome-auth-dialog.c:212
 #: ../tools/polkit-gnome-authorization.c:665
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkit-gnome-auth-dialog.c:292
+#: ../src/polkit-gnome-auth-dialog.c:293
 msgid "_Remember authorization for this session"
 msgstr "このセッションに対する権限を記憶しておく(_R)"
 
-#: ../src/polkit-gnome-auth-dialog.c:298
+#: ../src/polkit-gnome-auth-dialog.c:299
 msgid "_Remember authorization"
 msgstr "権限を記憶しておく(_R)"
 
-#: ../src/polkit-gnome-auth-dialog.c:313
+#: ../src/polkit-gnome-auth-dialog.c:314
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -329,7 +387,7 @@ msgstr ""
 "クションを実行するには、次に示すいずれかのユーザとしての認証が必要になりま"
 "す。"
 
-#: ../src/polkit-gnome-auth-dialog.c:320
+#: ../src/polkit-gnome-auth-dialog.c:321
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -337,7 +395,7 @@ msgstr ""
 "あるアプリケーションが特権の必要なアクションを実行しようとしています。このア"
 "クションを実行するには root 権限としての認証が必要になります。"
 
-#: ../src/polkit-gnome-auth-dialog.c:324
+#: ../src/polkit-gnome-auth-dialog.c:325
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -345,69 +403,73 @@ msgstr ""
 "あるアプリケーションが特権の必要なアクションを実行しようとしています。このア"
 "クションを実行するには認証が必要になります。"
 
-#: ../src/polkit-gnome-auth-dialog.c:348
+#: ../src/polkit-gnome-auth-dialog.c:406
 #, c-format
 msgid "Click to edit %s"
 msgstr "ここをクリックして %s を編集して下さい"
 
-#: ../src/polkit-gnome-auth-dialog.c:371
+#: ../src/polkit-gnome-auth-dialog.c:431
 #: ../tools/polkit-gnome-authorization.c:1391
 #, c-format
 msgid "Click to open %s"
 msgstr "ここをクリックして %s を開いて下さい"
 
-#: ../src/polkit-gnome-auth-dialog.c:600
+#: ../src/polkit-gnome-auth-dialog.c:668
 msgid "_Authenticate"
 msgstr "認証する(_A)"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:680
-#: ../src/polkit-gnome-manager.c:729
+#: ../src/polkit-gnome-auth-dialog.c:727 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "パスワード(_P):"
 
-#: ../src/polkit-gnome-auth-dialog.c:681
+#: ../src/polkit-gnome-auth-dialog.c:749
 msgid "For this _session only"
 msgstr "このセッションだけ有効にする(_S)"
 
-#: ../src/polkit-gnome-auth-dialog.c:689
+#: ../src/polkit-gnome-auth-dialog.c:757
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>詳細(_D)</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:710
+#: ../src/polkit-gnome-auth-dialog.c:778
 msgid "<small><b>Application:</b></small>"
 msgstr "<small><b>アプリケーション:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:714
+#: ../src/polkit-gnome-auth-dialog.c:782
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>アクション:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:719
+#: ../src/polkit-gnome-auth-dialog.c:787
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>ベンダ:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:848
+#: ../src/polkit-gnome-auth-dialog.c:916
 msgid "Authenticate"
 msgstr "認証"
 
-#: ../src/polkit-gnome-manager.c:724
+#: ../src/polkit-gnome-manager.c:367
+msgid "(unknown"
+msgstr "(不明"
+
+#: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
 msgstr "%s のパスワード(_P):"
 
-#: ../src/polkit-gnome-manager.c:726
+#: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
 msgstr "root のパスワード(_P):"
 
-#: ../src/polkit-gnome-manager.c:734
+#: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
 msgstr "%s のパスワードまたは指紋認証(_P):"
 
-#: ../src/polkit-gnome-manager.c:737
+#: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
 msgstr "root のパスワードまたは指紋認証(_P):"
 
-#: ../src/polkit-gnome-manager.c:740
+#: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
 msgstr "パスワードまたは指紋認証(_P):"
 
@@ -774,6 +836,6 @@ msgstr "全てのユーザの権限を表示する(_S)"
 msgid "_Show authorizations from all users"
 msgstr "全てのユーザの権限を表示する(_S)"
 
-#: ../tools/polkit-gnome-authorization.c:2413
+#: ../tools/polkit-gnome-authorization.c:2417
 msgid "Select an action"
 msgstr "アクションを選択して下さい"
