@@ -334,9 +334,9 @@ polkit_gnome_toggle_action_new (const gchar *name)
  * user. By toggling the action again, the negative authorization will
  * be revoked.
  *
- * Default behavior is defined as having the icon_name be 'stock_lock'
+ * Default behavior is defined as having the icon_name be 'security-medium'
  * by default except for the YES PolicyKit answer where it's set to
- * 'stock_lock-open'. No tooltips are set. The label and short-label
+ * 'security-low'. No tooltips are set. The label and short-label
  * will be 'locked_label' everywhere except in the YES state where
  * it's set to 'unlocked-label'. When authentication is underway, the
  * label will be "Authenticating..." and icon_name is untouched. If
@@ -372,35 +372,35 @@ polkit_gnome_toggle_action_new_default (const gchar  *name,
                                       "self-blocked-short-label", locked_label,
                                       "self-blocked-label",       locked_label,
                                       "self-blocked-tooltip",     NULL,
-                                      "self-blocked-icon-name",   "stock_lock",
+                                      "self-blocked-icon-name",   "security-medium",
 
                                       "no-visible",       TRUE,
                                       "no-sensitive",     FALSE,
                                       "no-short-label",   locked_label,
                                       "no-label",         locked_label,
                                       "no-tooltip",       NULL,
-                                      "no-icon-name",     "stock_lock",
+                                      "no-icon-name",     "security-medium",
                                       
                                       "auth-visible",     TRUE,
                                       "auth-sensitive",   TRUE,
                                       "auth-short-label", locked_label,
                                       "auth-label",       locked_label,
                                       "auth-tooltip",     NULL,
-                                      "auth-icon-name",   "stock_lock",
+                                      "auth-icon-name",   "security-medium",
                                       
                                       "yes-visible",      TRUE,
                                       "yes-sensitive",    TRUE,
                                       "yes-short-label",  unlocked_label,
                                       "yes-label",        unlocked_label,
                                       "yes-tooltip",      NULL,
-                                      "yes-icon-name",    "stock_lock-open",
+                                      "yes-icon-name",    "security-low",
 
                                       "auth-underway-visible",      TRUE,
                                       "auth-underway-sensitive",    TRUE,
                                       "auth-underway-short-label",  _("Authenticating..."),
                                       "auth-underway-label",        _("Authenticating..."),
                                       "auth-underway-tooltip",      NULL,
-                                      "auth-underway-icon-name",    "stock_lock",
+                                      "auth-underway-icon-name",    "security-medium",
                                       
                                       "master-visible",   TRUE,
                                       "master-sensitive", TRUE,
@@ -408,7 +408,7 @@ polkit_gnome_toggle_action_new_default (const gchar  *name,
         return toggle_action;
 }
 
-/*----------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------security-medium-------------------*/
 
 static void
 polkit_gnome_toggle_action_set_auth_underway_visible (PolKitGnomeToggleAction *action, gboolean visible)
