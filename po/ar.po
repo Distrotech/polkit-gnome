@@ -8,15 +8,14 @@ msgstr ""
 "Project-Id-Version: policykit-gnome.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-07-31 11:08+0100\n"
-"PO-Revision-Date: 2008-05-23 01:35+0300\n"
+"PO-Revision-Date: 2008-08-09 12:58+0300\n"
 "Last-Translator: Khaled Hosny <khaledhosny@eglug.org>\n"
 "Language-Team: Arabic <doc@arabeyes.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
 #: ../tools/polkit-gnome-authorization.c:2443
@@ -137,7 +136,7 @@ msgstr ""
 
 #: ../examples/polkit-gnome-example.c:275
 msgid "Jump!"
-msgstr ""
+msgstr "اقفز!"
 
 #: ../examples/polkit-gnome-example.c:290
 msgid ""
@@ -254,8 +253,7 @@ msgid "Punch"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:7
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Frobnicating"
+msgid "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:8
@@ -263,18 +261,15 @@ msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:9
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking bar"
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:10
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking baz"
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:11
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking foo"
+msgid "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:12
@@ -290,8 +285,7 @@ msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:15
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Twiddling"
+msgid "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 msgstr ""
 
 #: ../examples/org.gnome.policykit.examples.policy.in.h:16
@@ -423,15 +417,15 @@ msgstr "_كلمة سر الجذر:"
 #: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
-msgstr ""
+msgstr "_كلمة سر أو طرقة إصبع %s:"
 
 #: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
-msgstr ""
+msgstr "_كلمة سر أو طرقة إصبع الجذر:"
 
 #: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
-msgstr ""
+msgstr "_كلمة السر أو طرقة الإصبع:"
 
 #: ../tools/polkit-gnome-authorization.c:117
 msgid "No"
@@ -591,8 +585,7 @@ msgstr "امنح تخويلا"
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%s</i> action requires "
 "more information</big></b>"
-msgstr ""
-"<b><big>يتطلب منح تخويل سالب للإجراء <i>%s</i> مزيدا من المعلومات</big></b>"
+msgstr "<b><big>يتطلب منح تخويل سالب للإجراء <i>%s</i> مزيدا من المعلومات</big></b>"
 
 #: ../tools/polkit-gnome-authorization.c:851
 #, c-format
@@ -605,13 +598,13 @@ msgstr "<b><big>يتطلب منح تخويل للإجراء <i>%s</i> مزيدا
 msgid ""
 "Select the user to block for the action and, optionally, any constraints on "
 "the negative authorization that you are about to grant."
-msgstr ""
+msgstr "اختر مستخدما لمنعه من هذا الإجراء و -اختياريا- أي قيود على التخويل السلبي الذي ستمنحه."
 
 #: ../tools/polkit-gnome-authorization.c:864
 msgid ""
 "Select the beneficiary and, optionally, how to constrain the authorization "
 "that you are about to grant."
-msgstr ""
+msgstr "اختر مستفيدا و -اختياريا- كيف تقيد التخويل الذي ستمنحه."
 
 #: ../tools/polkit-gnome-authorization.c:875
 msgid "<b>Beneficiary</b>"
@@ -791,3 +784,4 @@ msgstr "ا_عرض تخويلات كل المستخدمين"
 #: ../tools/polkit-gnome-authorization.c:2417
 msgid "Select an action"
 msgstr "اختر إجراء"
+
