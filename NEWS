@@ -1,4 +1,26 @@
 ==========
+PolicyKit-gnome 0.9.1
+==========
+
+Release on August 19th 2008.
+
+Highlights of this release
+
+ o Avoid libsexy dep; ship with local copies of SexyURLLabel
+ o Avoid libgnome-vfs dep; use recent GTK+ instead
+ o Use standard icon names (Matthias Clasen)
+ o New translations: ar
+ o Updated translations: pt_BR, pt, ja, ar, pl
+
+Requirements for PolicyKit-gnome 0.9
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.13.6
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - GConf            >= 2.8
+
+==========
 PolicyKit-gnome 0.9
 ==========
 

@@ -36,7 +36,6 @@
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
 #include <polkit-gnome/polkit-gnome.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
 
 #include "sexy-url-label.h"
 
@@ -1328,7 +1327,7 @@ static void
 summary_action_vendor_url_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
 {
         if (url != NULL) {
-                gnome_vfs_url_show (url);
+                gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
         }
 }
 
@@ -2380,7 +2379,7 @@ main (int argc, char **argv)
                                                   NULL);
 
         namespace_pixbuf = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (), 
-                                                     "gnome-mime-application-x-archive", 
+                                                     "package-x-generic", 
                                                      24, 
                                                      0, 
                                                      NULL);

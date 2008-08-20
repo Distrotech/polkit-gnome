@@ -15,7 +15,7 @@ polkit_gnome_authorization_CPPFLAGS = 			\
 
 polkit_gnome_authorization_CFLAGS = 			\
 	$(GTK_CFLAGS)					\
-	$(GNOME_VFS_CFLAGS)				\
+	$(GCONF_CFLAGS)					\
 	$(DBUS_GLIB_CFLAGS)				\
 	$(POLKIT_DBUS_CFLAGS)				\
 	$(POLKIT_GRANT_CFLAGS)				\
@@ -27,7 +27,7 @@ polkit_gnome_authorization_LDFLAGS = 			\
 
 polkit_gnome_authorization_LDADD = 			\
 	$(GTK_LIBS)					\
-	$(GNOME_VFS_LIBS)				\
+	$(GCONF_LIBS)					\
 	$(DBUS_GLIB_LIBS)				\
 	$(POLKIT_DBUS_LIBS)				\
 	$(POLKIT_GRANT_LIBS)				\

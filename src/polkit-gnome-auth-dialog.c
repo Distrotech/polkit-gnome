@@ -33,7 +33,6 @@
 #include <pwd.h>
 #include <errno.h>
 #include <libsexy/sexy.h>
-#include <libgnomevfs/gnome-vfs-utils.h>
 #include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
@@ -610,7 +609,7 @@ static void
 vendor_url_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
 {
         if (url != NULL) {
-                gnome_vfs_url_show (url);
+                gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
         }
 }
 
