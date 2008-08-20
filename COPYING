@@ -1,8 +1,9 @@
 
 The polkit-gnome library (polkit-gnome/*) is licensed to you under the
 GNU Lesser General Public License version 2 or later. The PolicyKit
-GNOME authentication D-Bus service (src/*) is licensed to you under
-the GNU General Public License version 2 or later.
+GNOME authentication D-Bus service (src/*) and authorization tool
+(tools/*) is licensed to you under the GNU General Public License
+version 2 or later.
 
 Both licenses are included here. Each source code file is marked with
 the proper copyright and license information.
