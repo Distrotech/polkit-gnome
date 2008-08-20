@@ -36,8 +36,9 @@
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
 #include <polkit-gnome/polkit-gnome.h>
-#include <libsexy/sexy.h>
 #include <libgnomevfs/gnome-vfs-utils.h>
+
+#include "sexy-url-label.h"
 
 static GType boxed_pfe_type;
 

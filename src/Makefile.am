@@ -10,6 +10,7 @@ libexec_PROGRAMS = polkit-gnome-manager
 polkit_gnome_manager_SOURCES = 						\
 	polkit-gnome-manager.h		polkit-gnome-manager.c		\
 	polkit-gnome-auth-dialog.h	polkit-gnome-auth-dialog.c	\
+	sexy-url-label.h 		sexy-url-label.c		\
 	main.c								\
 	$(BUILT_SOURCES)
 
@@ -23,7 +24,6 @@ polkit_gnome_manager_CPPFLAGS = 			\
 
 polkit_gnome_manager_CFLAGS = 				\
 	$(GTK_CFLAGS)					\
-	$(SEXY_CFLAGS)					\
 	$(GNOME_VFS_CFLAGS)				\
 	$(DBUS_GLIB_CFLAGS)				\
 	$(POLKIT_DBUS_CFLAGS)				\
@@ -36,7 +36,6 @@ polkit_gnome_manager_LDFLAGS = 				\
 
 polkit_gnome_manager_LDADD = 				\
 	$(GTK_LIBS)					\
-	$(SEXY_LIBS)					\
 	$(GNOME_VFS_LIBS)				\
 	$(DBUS_GLIB_LIBS)				\
 	$(POLKIT_DBUS_LIBS)				\

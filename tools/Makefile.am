@@ -1,8 +1,9 @@
 
 bin_PROGRAMS = polkit-gnome-authorization
 
-polkit_gnome_authorization_SOURCES = 			\
-	polkit-gnome-authorization.c
+polkit_gnome_authorization_SOURCES = 						\
+						polkit-gnome-authorization.c	\
+	sexy-url-label.h 			sexy-url-label.c
 
 polkit_gnome_authorization_CPPFLAGS = 			\
 	-I$(top_srcdir)					\
@@ -14,7 +15,6 @@ polkit_gnome_authorization_CPPFLAGS = 			\
 
 polkit_gnome_authorization_CFLAGS = 			\
 	$(GTK_CFLAGS)					\
-	$(SEXY_CFLAGS)					\
 	$(GNOME_VFS_CFLAGS)				\
 	$(DBUS_GLIB_CFLAGS)				\
 	$(POLKIT_DBUS_CFLAGS)				\
@@ -27,7 +27,6 @@ polkit_gnome_authorization_LDFLAGS = 			\
 
 polkit_gnome_authorization_LDADD = 			\
 	$(GTK_LIBS)					\
-	$(SEXY_LIBS)					\
 	$(GNOME_VFS_LIBS)				\
 	$(DBUS_GLIB_LIBS)				\
 	$(POLKIT_DBUS_LIBS)				\
