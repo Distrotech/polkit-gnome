@@ -1,4 +1,4 @@
-AC_INIT([PolicyKit-gnome],[0.9.1],[mailto:david@fubar.dk],[PolicyKit-gnome])
+AC_INIT([PolicyKit-gnome],[0.9.2],[mailto:david@fubar.dk],[PolicyKit-gnome])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
@@ -125,8 +125,8 @@ GTK_DOC_CHECK([1.3])
 GTK_REQUIRED=2.13.6
 GCONF_REQUIRED=2.8
 DBUS_GLIB_REQUIRED=0.71
-POLKIT_DBUS_REQUIRED=0.7
-POLKIT_GRANT_REQUIRED=0.7
+POLKIT_DBUS_REQUIRED=0.9
+POLKIT_GRANT_REQUIRED=0.9
 
 PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
