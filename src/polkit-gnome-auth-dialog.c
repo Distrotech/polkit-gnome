@@ -32,7 +32,6 @@
 #include <stdlib.h>
 #include <pwd.h>
 #include <errno.h>
-#include <libsexy/sexy.h>
 #include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
@@ -40,6 +39,7 @@
 #include <dbus/dbus-glib.h>
 #include <dbus/dbus-glib-lowlevel.h>
 
+#include "sexy-url-label.h"
 #include "polkit-gnome-auth-dialog.h"
 
 struct _PolkitGnomeAuthDialogPrivate

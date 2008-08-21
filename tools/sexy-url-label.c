@@ -18,10 +18,11 @@
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
  * Boston, MA  02111-1307, USA.
  */
-#include <libsexy/sexy-url-label.h>
 #include <gtk/gtk.h>
 #include <string.h>
 #include <stdio.h>
+
+#include "sexy-url-label.h"
 
 #define SEXY_URL_LABEL_GET_PRIVATE(obj) \
 	(G_TYPE_INSTANCE_GET_PRIVATE((obj), SEXY_TYPE_URL_LABEL, \
