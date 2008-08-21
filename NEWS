@@ -1,4 +1,22 @@
 ==========
+PolicyKit-gnome 0.9.2
+==========
+
+Released on August 20th 2008.
+
+Highlights of this release
+
+ o Don't rely on libsexy headers (Michael Biebl)
+
+Requirements for PolicyKit-gnome 0.9.2
+
+ - PolicyKit        == 0.9
+ - GTK+             >= 2.13.6
+ - dbus             >= 1.0
+ - dbus-glib        >= 0.71
+ - GConf            >= 2.8
+
+==========
 PolicyKit-gnome 0.9.1
 ==========
 
@@ -12,7 +30,7 @@ Highlights of this release
  o New translations: ar
  o Updated translations: pt_BR, pt, ja, ar, pl
 
-Requirements for PolicyKit-gnome 0.9
+Requirements for PolicyKit-gnome 0.9.1
 
  - PolicyKit        == 0.9
  - GTK+             >= 2.13.6
