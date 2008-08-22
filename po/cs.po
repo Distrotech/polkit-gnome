@@ -8,14 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-06-21 13:43+0200\n"
-"PO-Revision-Date: 2008-06-21 13:21+0100\n"
+"POT-Creation-Date: 2008-08-23 01:34+0200\n"
+"PO-Revision-Date: 2008-08-23 01:32+0200\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Poedit-Language: Czech\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
 #: ../tools/polkit-gnome-authorization.c:2443
@@ -28,20 +29,59 @@ msgstr "Nastavit oprávnění"
 
 #: ../data/polkit-gnome.schemas.in.h:1
 msgid ""
+"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
+"checked by default; this list is maintained by the authentication dialog "
+"code itself. For example, if a user unchecks the \"retain authorization\" "
+"check box for an action and successfully obtains an authorization for the "
+"action, the action will be added to this list."
+msgstr ""
+"Seznam akcí PolicyKit, kde zaškrtávací políčko \"zachovat oprávnění\" není "
+"standardně zaškrtnuto; tento seznam se udržuje sám přes ověřovací okno. "
+"Například, pokud uživatel odškrtne zaškrtávací políčko \"zachovat oprávnění"
+"\" pro akci a získá k ní úspěšně oprávnění, bude akce přidána do tohoto "
+"seznamu."
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid ""
+"A list of actions where the \"retain authorization\" checkbox isn't checked "
+"by default"
+msgstr ""
+"Seznam akcí, kde zaškrtávací políčko \"zachovat oprávnění\" není standardně "
+"zaškrtnuto"
+
+#: ../data/polkit-gnome.schemas.in.h:3
+msgid ""
 "If set to true, the authentication dialog from PolicyKit-gnome will grab the "
 "keyboard, so that you will not be able to type in other programs while the "
 "dialog is active. Use this if your window manager does not focus the "
 "authentication dialog automatically, and you want to avoid accidentally "
 "typing passwords in other programs."
 msgstr ""
-"Pokud nastavíte jako pravdivé, ověřovací okno PolicyKit-gnome převezme "
+"Pokud nastavíte na hodnotu pravda, ověřovací okno PolicyKit-gnome převezme "
 "klávesnici, takže nebudete schopni psát v jiných programech, dokud bude okno "
 "aktivní. Toto použijte, pokud váš správce oken automaticky nezaregistruje "
 "ověřovací okno a chcete se vyhnout nechtěnému psaní hesla do jiných programů."
 
-#: ../data/polkit-gnome.schemas.in.h:2
+#: ../data/polkit-gnome.schemas.in.h:4
+msgid ""
+"If set to true, then \"retain authorization\" check box (if present) is "
+"checked by default in the authentication dialog unless the action is "
+"mentioned in the \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" key."
+msgstr ""
+"Pokud nastavíte na hodnotu pravda, pak je zaškrtávací políčko \"zachovat "
+"oprávnění\" (pokud je přítomno) v ověřovacím okně standardně zaškrtnuto, "
+"pokud ne, akce je uvedena v klíči \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\"."
+
+#: ../data/polkit-gnome.schemas.in.h:5
 msgid "Whether the authentication dialog should grab the keyboard"
 msgstr "Jestli by mělo ověřovací okno převzít klávesnici"
+
+#: ../data/polkit-gnome.schemas.in.h:6
+msgid "Whether the retain authorization check box is checked by default"
+msgstr ""
+"Jestli je zaškrtávací políčko \"zachovat oprávnění\" standardně zaškrtnuto"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -301,7 +341,7 @@ msgstr ""
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
 msgid "Authenticating..."
-msgstr "Ověřuji..."
+msgstr "Ověřuje se..."
 
 #: ../src/main.c:139
 msgid "Don't exit after 30 seconds of inactivity"
@@ -314,7 +354,7 @@ msgstr "Démon sezení PolicyKit GNOME"
 #: ../src/main.c:174
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
-msgstr "Spouštím démona sezení PolicyKit GNOME verze %s"
+msgstr "Spouští se démon sezení PolicyKit GNOME verze %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
 #: ../tools/polkit-gnome-authorization.c:649
@@ -359,47 +399,47 @@ msgstr ""
 "Aplikace se pokouší provést akci, která vyžaduje oprávnění. K provedení této "
 "akce je vyžadováno ověření."
 
-#: ../src/polkit-gnome-auth-dialog.c:348
+#: ../src/polkit-gnome-auth-dialog.c:405
 #, c-format
 msgid "Click to edit %s"
 msgstr "Kliknout pro úpravu %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:371
+#: ../src/polkit-gnome-auth-dialog.c:430
 #: ../tools/polkit-gnome-authorization.c:1391
 #, c-format
 msgid "Click to open %s"
 msgstr "Kliknout pro otevření %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:600
+#: ../src/polkit-gnome-auth-dialog.c:667
 msgid "_Authenticate"
 msgstr "_Ověřit"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-auth-dialog.c:726 ../src/polkit-gnome-manager.c:686
 #: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "_Heslo:"
 
-#: ../src/polkit-gnome-auth-dialog.c:681
+#: ../src/polkit-gnome-auth-dialog.c:748
 msgid "For this _session only"
 msgstr "Jen pro toto _sezení"
 
-#: ../src/polkit-gnome-auth-dialog.c:689
+#: ../src/polkit-gnome-auth-dialog.c:756
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Podrobnosti</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:710
+#: ../src/polkit-gnome-auth-dialog.c:777
 msgid "<small><b>Application:</b></small>"
 msgstr "<small><b>Aplikace:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:714
+#: ../src/polkit-gnome-auth-dialog.c:781
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Akce:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:719
+#: ../src/polkit-gnome-auth-dialog.c:786
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Dodavatel:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:848
+#: ../src/polkit-gnome-auth-dialog.c:915
 msgid "Authenticate"
 msgstr "Ověření"
 
@@ -497,12 +537,12 @@ msgstr "Před chvílí"
 
 #: ../tools/polkit-gnome-authorization.c:348
 msgid "1 minute ago"
-msgstr "Před 1 min."
+msgstr "Před 1 min"
 
 #: ../tools/polkit-gnome-authorization.c:350
 #, c-format
 msgid "%d minutes ago"
-msgstr "Před %d min."
+msgstr "Před %d min"
 
 #: ../tools/polkit-gnome-authorization.c:354
 msgid "1 hour ago"
