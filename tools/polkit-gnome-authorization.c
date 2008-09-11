@@ -365,8 +365,12 @@ add_authorization (PolKitAuthorizationDB *authdb,
         for_uid = polkit_authorization_get_uid (auth);
         pw = getpwuid (for_uid);
         if (pw != NULL)
-                if (pw->pw_gecos != NULL && strlen (pw->pw_gecos) > 0)
-                        for_user = g_strdup_printf ("%s (%s)", pw->pw_gecos, pw->pw_name);
+                if (pw->pw_gecos != NULL && strlen (pw->pw_gecos) > 0) {
+                        char *locale_gecos;
+                        locale_gecos = g_locale_to_utf8 (pw->pw_gecos, -1, NULL, NULL, NULL);
+                        for_user = g_strdup_printf ("%s (%s)", locale_gecos, pw->pw_name);
+                        g_free (locale_gecos);
+                }
                 else
                         for_user = g_strdup_printf ("%s", pw->pw_name);
         else
@@ -661,8 +665,13 @@ _create_entity_combobox_populate (GtkListStore *store, gboolean show_system_user
                         continue;
 
 		/* Real name */
-		if (pw->pw_gecos != NULL && strlen (pw->pw_gecos) > 0)
-			real_name = g_strdup_printf (_("%s (%s)"), pw->pw_gecos, pw->pw_name);
+		if (pw->pw_gecos != NULL && strlen (pw->pw_gecos) > 0) {
+                        char *locale_gecos;
+
+                        locale_gecos = g_locale_to_utf8 (pw->pw_gecos, -1, NULL, NULL, NULL);
+			real_name = g_strdup_printf (_("%s (%s)"), locale_gecos, pw->pw_name);
+                        g_free (locale_gecos);
+                }
 		else
 			real_name = g_strdup (pw->pw_name);
 
