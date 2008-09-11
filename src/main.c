@@ -33,7 +33,7 @@
 #include <fcntl.h>
 
 #include <glib.h>
-#include <glib/gi18n-lib.h>
+#include <glib/gi18n.h>
 #include <glib-object.h>
 
 #include <gtk/gtk.h>
@@ -144,6 +144,12 @@ main (int argc, char **argv)
 
         g_type_init ();
         gtk_init (&argc, &argv);
+
+        bindtextdomain (GETTEXT_PACKAGE, GNOMELOCALEDIR);
+#if HAVE_BIND_TEXTDOMAIN_CODESET
+        bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
+#endif
+        textdomain (GETTEXT_PACKAGE);
 
         context = g_option_context_new (_("PolicyKit GNOME session daemon"));
         g_option_context_add_main_entries (context, entries, NULL);
