@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-21 13:51+0300\n"
-"PO-Revision-Date: 2008-09-21 13:50+0300\n"
-"Last-Translator: Timo Jyrinki <timo.jyrinki@iki.fi>\n"
+"POT-Creation-Date: 2008-09-21 14:02+0300\n"
+"PO-Revision-Date: 2008-09-21 14:00+0300\n"
+"Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
 "Language-Team: Finnish <laatu@lokalisointi.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,12 +34,19 @@ msgid ""
 "check box for an action and successfully obtains an authorization for the "
 "action, the action will be added to this list."
 msgstr ""
+"Luettelo PolicyKitin toiminnoista joiden ”säilytä todennus” -valintaruutu ei "
+"ole valittu oletuksena. Todennusikkunan koodi päivittää tätä luetteloa "
+"automaattisesti. Jos käyttäjä esimerkiksi poistaa valinnan jonkin toiminnon "
+"”säilytä todennus” -valintaruudusta ja todennus onnistuu, toiminto lisätään "
+"tähän luetteloon."
 
 #: ../data/polkit-gnome.schemas.in.h:2
 msgid ""
 "A list of actions where the \"retain authorization\" checkbox isn't checked "
 "by default"
 msgstr ""
+"Luettelo toiminnoista joiden ”säilytä todennus” -valintaruutu ei ole valittu "
+"oletuksena."
 
 #: ../data/polkit-gnome.schemas.in.h:3
 msgid ""
@@ -49,6 +56,11 @@ msgid ""
 "authentication dialog automatically, and you want to avoid accidentally "
 "typing passwords in other programs."
 msgstr ""
+"Jos otettu käyttöön, Policykit-gnomen todennusikkuna kaappaa "
+"näppäimistosyötteen, jolloin muihin ohjelmiin ei voi kirjoittaa, kun ikkuna "
+"on aktiivinen. Käytä tätä, jos ikkunankäsittelijä ei aseta kohdistusta "
+"todennusikkunaan automaattisesti ja haluat välttää salasanojen "
+"kirjoittamista vahingossa vääriin ikkunoihin."
 
 #: ../data/polkit-gnome.schemas.in.h:4
 msgid ""
@@ -57,14 +69,18 @@ msgid ""
 "mentioned in the \"/desktop/gnome/policykit/"
 "auth_dialog_retain_authorization_blacklist\" key."
 msgstr ""
+"Jos otettu käyttöön, ”säilytä todennus” -valintaruutu (jos käytettävissä) on "
+"valittu oletuksena todennusikkunassa, paitsi jos toiminto on luetteloitu ”/"
+"desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist”-"
+"avaimessa."
 
 #: ../data/polkit-gnome.schemas.in.h:5
 msgid "Whether the authentication dialog should grab the keyboard"
-msgstr ""
+msgstr "Kaappaako todennusikkuna näppäimistösyötteen"
 
 #: ../data/polkit-gnome.schemas.in.h:6
 msgid "Whether the retain authorization check box is checked by default"
-msgstr ""
+msgstr "Onko säilytä todennus -valintaruutu valittu oletuksena"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -436,9 +452,10 @@ msgstr "<small><b>Valmistaja:</b></small>"
 msgid "Authenticate"
 msgstr "Tunnistaudu"
 
+# virheellinen?
 #: ../src/polkit-gnome-manager.c:367
 msgid "(unknown"
-msgstr ""
+msgstr "(tuntematon"
 
 #: ../src/polkit-gnome-manager.c:730
 #, c-format
