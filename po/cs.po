@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-08-23 01:34+0200\n"
-"PO-Revision-Date: 2008-08-23 01:32+0200\n"
+"POT-Creation-Date: 2008-10-26 16:27+0100\n"
+"PO-Revision-Date: 2008-10-26 16:26+0100\n"
 "Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,9 +17,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Poedit-Language: Czech\n"
+"X-Generator: KBabel 1.11.4\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2443
+#: ../tools/polkit-gnome-authorization.c:2452
 msgid "Authorizations"
 msgstr "Oprávnění"
 
@@ -35,19 +36,19 @@ msgid ""
 "check box for an action and successfully obtains an authorization for the "
 "action, the action will be added to this list."
 msgstr ""
-"Seznam akcí PolicyKit, kde zaškrtávací políčko \"zachovat oprávnění\" není "
-"standardně zaškrtnuto; tento seznam se udržuje sám přes ověřovací okno. "
-"Například, pokud uživatel odškrtne zaškrtávací políčko \"zachovat oprávnění"
-"\" pro akci a získá k ní úspěšně oprávnění, bude akce přidána do tohoto "
-"seznamu."
+"Seznam akcí PolicyKit, u kterých není zaškrtávací políčko \"zachovat "
+"oprávnění\" standardně zaškrtnuto; tento seznam se udržuje sám přes "
+"ověřovací okno. Například, pokud uživatel odškrtne zaškrtávací políčko "
+"\"zachovat oprávnění\" pro akci a pak k ní toto oprávnění úspěšně získá, "
+"bude akce přidána do tohoto seznamu."
 
 #: ../data/polkit-gnome.schemas.in.h:2
 msgid ""
 "A list of actions where the \"retain authorization\" checkbox isn't checked "
 "by default"
 msgstr ""
-"Seznam akcí, kde zaškrtávací políčko \"zachovat oprávnění\" není standardně "
-"zaškrtnuto"
+"Seznam akcí, u kterých není zaškrtávací políčko \"zachovat oprávnění\" "
+"standardně zaškrtnuto"
 
 #: ../data/polkit-gnome.schemas.in.h:3
 msgid ""
@@ -57,8 +58,8 @@ msgid ""
 "authentication dialog automatically, and you want to avoid accidentally "
 "typing passwords in other programs."
 msgstr ""
-"Pokud nastavíte na hodnotu pravda, ověřovací okno PolicyKit-gnome převezme "
-"klávesnici, takže nebudete schopni psát v jiných programech, dokud bude okno "
+"Pokud nastavíte na hodnotu PRAVDA, ověřovací okno PolicyKit-gnome převezme "
+"klávesnici, takže nebudete moci psát v jiných programech, dokud bude okno "
 "aktivní. Toto použijte, pokud váš správce oken automaticky nezaregistruje "
 "ověřovací okno a chcete se vyhnout nechtěnému psaní hesla do jiných programů."
 
@@ -69,14 +70,14 @@ msgid ""
 "mentioned in the \"/desktop/gnome/policykit/"
 "auth_dialog_retain_authorization_blacklist\" key."
 msgstr ""
-"Pokud nastavíte na hodnotu pravda, pak je zaškrtávací políčko \"zachovat "
+"Pokud nastavíte na hodnotu PRAVDA, pak je zaškrtávací políčko \"zachovat "
 "oprávnění\" (pokud je přítomno) v ověřovacím okně standardně zaškrtnuto, "
 "pokud ne, akce je uvedena v klíči \"/desktop/gnome/policykit/"
 "auth_dialog_retain_authorization_blacklist\"."
 
 #: ../data/polkit-gnome.schemas.in.h:5
 msgid "Whether the authentication dialog should grab the keyboard"
-msgstr "Jestli by mělo ověřovací okno převzít klávesnici"
+msgstr "Jestli má ověřovací okno převzít klávesnici"
 
 #: ../data/polkit-gnome.schemas.in.h:6
 msgid "Whether the retain authorization check box is checked by default"
@@ -118,7 +119,7 @@ msgstr "_Nápověda"
 #. name, stock id
 #: ../examples/polkit-gnome-example.c:156
 msgid "_Quit"
-msgstr "_Ukončit"
+msgstr "U_končit"
 
 #. label, accelerator
 #: ../examples/polkit-gnome-example.c:157
@@ -136,13 +137,12 @@ msgid "About"
 msgstr "O aplikaci"
 
 #: ../examples/polkit-gnome-example.c:243
-#, fuzzy
 msgid ""
 "Making the helper <b>Frobnicate</b> requires the user to authenticate. The "
 "authorization is kept for the life time of the process"
 msgstr ""
 "Vytvoření pomocníka <b>Frobnicate</b> vyžaduje ověření uživatele. Oprávnění "
-"je zachováno po dobu životnosti procesu"
+"je zachováno po dobu trvání procesu"
 
 #: ../examples/polkit-gnome-example.c:252
 msgid "Frobnicate!"
@@ -185,7 +185,7 @@ msgstr "Přizpůsobit (dlouho)"
 
 #: ../examples/polkit-gnome-example.c:308
 msgid "If your admin wasn't annoying, you could do this"
-msgstr "Pokud nebyl váš administrátor mrzutý, mohli byste tohle provádět"
+msgstr "Pokud nebyl váš administrátor proti, mohli byste tohle provádět"
 
 #: ../examples/polkit-gnome-example.c:313
 msgid "Tweak..."
@@ -197,7 +197,7 @@ msgstr "Přizpůsobit... (dlouho)"
 
 #: ../examples/polkit-gnome-example.c:315
 msgid "Only card carrying tweakers can do this!"
-msgstr "Toto mohou provádět pouze osoby provádějící úpravy, které mají kartu!"
+msgstr ""
 
 #: ../examples/polkit-gnome-example.c:321
 msgid "Tweak! (long)"
@@ -208,7 +208,6 @@ msgid "Go ahead, tweak tweak tweak!"
 msgstr "Pokračujte a přizpůsobujte!"
 
 #: ../examples/polkit-gnome-example.c:339
-#, fuzzy
 msgid ""
 "Making the helper <b>Twiddle</b> requires a system administrator to "
 "authenticate. Once authenticated, this privilege can be retained "
@@ -222,14 +221,13 @@ msgid "Twiddle!"
 msgstr ""
 
 #: ../examples/polkit-gnome-example.c:363
-#, fuzzy
 msgid ""
 "Making the helper <b>Punch</b> requires the user to authenticate. Once "
 "authenticated, this privilege can be retained for the remainder of the "
 "desktop session."
 msgstr ""
 "Vytvoření pomocníka <b>Punch</b> vyžaduje ověření uživatele. Jakmile je "
-"ověřen, toto oprávnění může být zachováno pro zbytek sezení."
+"ověřen, toto oprávnění může být zachováno po zbytek sezení."
 
 #: ../examples/polkit-gnome-example.c:372
 msgid "Punch!"
@@ -243,11 +241,11 @@ msgid ""
 "exactlywhen the authorization is held. Toggling the button means obtaining "
 "resp. revoking the authorization in question."
 msgstr ""
-"Akce <b>Přepnout</b> ukazuje použití PolicyKit při řízení GtkToggleButton, "
-"je to intuitivní způsob dotázání se uživatelů na přerušení procesu "
-"oprávnění, když jsou s ním hotovi. Např. když je tlačítko \"stlačeno\" "
-"přesně ve chvíli, kdy se provádí oprávnění. Přepnutí tlačítka znamená "
-"získání, popř. zrušení příslušného oprávnění."
+"Akce <b>Přepnout</b> ukazuje použití PolicyKit při ovládání GtkToggleButton, "
+"je to intuitivní způsob požádání uživatele o zřeknutí se oprávnění, která už "
+"nepotřebuje. Např. tlačítko je \"stlačeno\" přesně ve chvíli, kdy už jsou "
+"oprávnění vlastněna. Přepnutí tlačítka znamená získání, popř. zrušení "
+"příslušného oprávnění."
 
 #: ../examples/polkit-gnome-example.c:401
 msgid "Click to make changes..."
@@ -347,33 +345,33 @@ msgstr "Ověřuje se..."
 msgid "Don't exit after 30 seconds of inactivity"
 msgstr "Neukončujte po 30 sekundách nečinnosti"
 
-#: ../src/main.c:148
+#: ../src/main.c:154
 msgid "PolicyKit GNOME session daemon"
 msgstr "Démon sezení PolicyKit GNOME"
 
-#: ../src/main.c:174
+#: ../src/main.c:180
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
 msgstr "Spouští se démon sezení PolicyKit GNOME verze %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
-#: ../tools/polkit-gnome-authorization.c:649
+#: ../tools/polkit-gnome-authorization.c:653
 msgid "Select user..."
-msgstr "Vybrat uživatele..."
+msgstr "Vyberte uživatele..."
 
 #: ../src/polkit-gnome-auth-dialog.c:211
-#: ../tools/polkit-gnome-authorization.c:665
+#: ../tools/polkit-gnome-authorization.c:672
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
 #: ../src/polkit-gnome-auth-dialog.c:292
 msgid "_Remember authorization for this session"
-msgstr "_Pamatovat oprávnění pro toto sezení"
+msgstr "_Pamatovat si oprávnění pro toto sezení"
 
 #: ../src/polkit-gnome-auth-dialog.c:298
 msgid "_Remember authorization"
-msgstr "_Pamatovat oprávnění"
+msgstr "_Pamatovat si oprávnění"
 
 #: ../src/polkit-gnome-auth-dialog.c:313
 msgid ""
@@ -405,7 +403,7 @@ msgid "Click to edit %s"
 msgstr "Kliknout pro úpravu %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:430
-#: ../tools/polkit-gnome-authorization.c:1391
+#: ../tools/polkit-gnome-authorization.c:1400
 #, c-format
 msgid "Click to open %s"
 msgstr "Kliknout pro otevření %s"
@@ -450,11 +448,11 @@ msgstr "(neznámý"
 #: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
-msgstr "_Heslo pro %s:"
+msgstr "_Heslo %s:"
 
 #: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
-msgstr "_Heslo pro root:"
+msgstr "_Heslo root:"
 
 #: ../src/polkit-gnome-manager.c:740
 #, c-format
@@ -475,19 +473,19 @@ msgstr "Ne"
 
 #: ../tools/polkit-gnome-authorization.c:119
 msgid "Admin Authentication (one shot)"
-msgstr "Ověření administrátora (jednorázové)"
+msgstr "Administrátorské ověření (jednorázové)"
 
 #: ../tools/polkit-gnome-authorization.c:120
 msgid "Admin Authentication"
-msgstr "Ověření administrátora"
+msgstr "Administrátorské ověření"
 
 #: ../tools/polkit-gnome-authorization.c:121
 msgid "Admin Authentication (keep session)"
-msgstr "Ověření administrátora (jen pro toto sezení)"
+msgstr "Administrátorské ověření (jen pro toto sezení)"
 
 #: ../tools/polkit-gnome-authorization.c:122
 msgid "Admin Authentication (keep indefinitely)"
-msgstr "Ověření administrátora (zachovat natrvalo)"
+msgstr "Administrátorské ověření (zachovat natrvalo)"
 
 #: ../tools/polkit-gnome-authorization.c:124
 msgid "Authentication (one shot)"
@@ -524,12 +522,12 @@ msgstr "Musí být v aktivním sezení"
 #: ../tools/polkit-gnome-authorization.c:282
 #, c-format
 msgid "Must be program %s"
-msgstr "Musí běžet program %s"
+msgstr "Jen pokud jde o program %s"
 
 #: ../tools/polkit-gnome-authorization.c:286
 #, c-format
 msgid "Must be SELinux Context %s"
-msgstr "Musí být dostupná kontextová nabídka SELinux %s"
+msgstr "Jen pokud jde o kontext SELinux %s"
 
 #: ../tools/polkit-gnome-authorization.c:344
 msgid "A moment ago"
@@ -562,161 +560,162 @@ msgstr "Před 1 dnem"
 msgid "%d days ago"
 msgstr "Před %d dny"
 
-#: ../tools/polkit-gnome-authorization.c:379
+#: ../tools/polkit-gnome-authorization.c:383
 #, c-format
 msgid "Auth as %s (uid %d)"
 msgstr "Ověření jako %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:381
+#: ../tools/polkit-gnome-authorization.c:385
 #, c-format
 msgid "Auth as uid %d"
 msgstr "Ověření jako uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:387
+#: ../tools/polkit-gnome-authorization.c:391
 #, c-format
 msgid "Blocked by %s (uid %d)"
 msgstr "Blokováno od %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:389
+#: ../tools/polkit-gnome-authorization.c:393
 #, c-format
 msgid "Blocked by uid %d"
 msgstr "Blokováno od uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:392
+#: ../tools/polkit-gnome-authorization.c:396
 #, c-format
 msgid "Granted by %s (uid %d)"
 msgstr "Uděleno od %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:394
+#: ../tools/polkit-gnome-authorization.c:398
 #, c-format
 msgid "Granted by uid %d"
 msgstr "Uděleno od uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:409
+#: ../tools/polkit-gnome-authorization.c:413
 #, c-format
 msgid "Single shot pid %d (%s)"
 msgstr "Jednorázové pid %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:415
+#: ../tools/polkit-gnome-authorization.c:419
 #, c-format
 msgid "pid %d (%s)"
 msgstr "pid %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:418
+#: ../tools/polkit-gnome-authorization.c:422
 msgid "This session"
 msgstr "Toto sezení"
 
-#: ../tools/polkit-gnome-authorization.c:421
+#: ../tools/polkit-gnome-authorization.c:425
 msgid "Always"
 msgstr "Vždy"
 
-#: ../tools/polkit-gnome-authorization.c:431
+#: ../tools/polkit-gnome-authorization.c:435
 msgid "None"
 msgstr "Žádné"
 
-#: ../tools/polkit-gnome-authorization.c:827
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Negative Authorization"
 msgstr "Udělit záporné oprávnění"
 
-#: ../tools/polkit-gnome-authorization.c:827
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Authorization"
 msgstr "Udělit oprávnění"
 
-#: ../tools/polkit-gnome-authorization.c:850
+#: ../tools/polkit-gnome-authorization.c:859
 #, c-format
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%s</i> action requires "
 "more information</big></b>"
 msgstr ""
-"<b><big>Udělení záporného oprávnění pro akci <i>%s</i> vyžaduje více "
+"<b><big>K udělení záporného oprávnění pro akci <i>%s</i> je potřeba více "
 "informací</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:851
+#: ../tools/polkit-gnome-authorization.c:860
 #, c-format
 msgid ""
 "<b><big>Granting an authorization for the <i>%s</i> action requires more "
 "information</big></b>"
 msgstr ""
-"<b><big>Udělení oprávnění pro akci <i>%s</i> vyžaduje více informací</big></"
-"b>"
+"<b><big>K udělení oprávnění pro akci <i>%s</i> je potřeba více informací</"
+"big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:862
+#: ../tools/polkit-gnome-authorization.c:871
 msgid ""
 "Select the user to block for the action and, optionally, any constraints on "
 "the negative authorization that you are about to grant."
 msgstr ""
 "Vyberte uživatele, kterého chcete blokovat pro akci a volitelně nějaká "
-"omezení při záporném oprávnění, která jste právě udělili."
+"omezení při záporném oprávnění, které se chystáte udělit."
 
-#: ../tools/polkit-gnome-authorization.c:864
+#: ../tools/polkit-gnome-authorization.c:873
 msgid ""
 "Select the beneficiary and, optionally, how to constrain the authorization "
 "that you are about to grant."
 msgstr ""
-"Vyberte příjemce a volitelně způsob omezení oprávnění, které jste udělili."
+"Vyberte příjemce a volitelně způsob omezení oprávnění, které se chystáte "
+"udělit."
 
-#: ../tools/polkit-gnome-authorization.c:875
+#: ../tools/polkit-gnome-authorization.c:884
 msgid "<b>Beneficiary</b>"
 msgstr "<b>Příjemce</b>"
 
-#: ../tools/polkit-gnome-authorization.c:887
+#: ../tools/polkit-gnome-authorization.c:896
 msgid "Select the user that will receive the negative authorization."
 msgstr "Vyberte uživatele, který dostane záporné oprávnění."
 
-#: ../tools/polkit-gnome-authorization.c:889
+#: ../tools/polkit-gnome-authorization.c:898
 msgid "Select the user that will receive the authorization."
 msgstr "Vyberte uživatele, který dostane oprávnění."
 
-#: ../tools/polkit-gnome-authorization.c:898
+#: ../tools/polkit-gnome-authorization.c:907
 msgid "_Show system users"
 msgstr "_Zobrazit uživatele systému"
 
-#: ../tools/polkit-gnome-authorization.c:913
+#: ../tools/polkit-gnome-authorization.c:922
 msgid "<b>Constraints</b>"
 msgstr "<b>Omezení</b>"
 
-#: ../tools/polkit-gnome-authorization.c:924
+#: ../tools/polkit-gnome-authorization.c:933
 msgid ""
 "Constraints limits the authorization such that it only applies under certain "
 "circumstances."
 msgstr ""
 "Hranice omezení oprávnění taková, že se použije jen za určitých okolností."
 
-#: ../tools/polkit-gnome-authorization.c:930
+#: ../tools/polkit-gnome-authorization.c:939
 msgid "_None"
 msgstr "Žád_né"
 
-#: ../tools/polkit-gnome-authorization.c:932
+#: ../tools/polkit-gnome-authorization.c:941
 msgid "Must be _in active session"
 msgstr "Musí být v akt_ivním sezení"
 
-#: ../tools/polkit-gnome-authorization.c:934
+#: ../tools/polkit-gnome-authorization.c:943
 msgid "Must be on _local console"
 msgstr "Musí být v místní konzo_le"
 
-#: ../tools/polkit-gnome-authorization.c:936
+#: ../tools/polkit-gnome-authorization.c:945
 msgid "Must be in _active session on local console"
 msgstr "Musí být v _aktivním sezení v místní konzole"
 
-#: ../tools/polkit-gnome-authorization.c:957
-#: ../tools/polkit-gnome-authorization.c:2133
+#: ../tools/polkit-gnome-authorization.c:966
+#: ../tools/polkit-gnome-authorization.c:2142
 msgid "_Block..."
 msgstr "_Blokovat..."
 
-#: ../tools/polkit-gnome-authorization.c:961
-#: ../tools/polkit-gnome-authorization.c:2126
+#: ../tools/polkit-gnome-authorization.c:970
+#: ../tools/polkit-gnome-authorization.c:2135
 msgid "_Grant..."
 msgstr "_Udělit..."
 
-#: ../tools/polkit-gnome-authorization.c:1155
+#: ../tools/polkit-gnome-authorization.c:1164
 msgid "Edit Implicit Authorizations"
 msgstr "Upravte implicitní oprávnění"
 
-#: ../tools/polkit-gnome-authorization.c:1176
+#: ../tools/polkit-gnome-authorization.c:1185
 msgid "<b><big>Choose new implicit authorizations</big></b>"
 msgstr "<b><big>Zvolte nová implicitní oprávnění</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:1190
+#: ../tools/polkit-gnome-authorization.c:1199
 #, c-format
 msgid ""
 "Implicit authorizations are authorizations that are granted automatically to "
@@ -726,46 +725,46 @@ msgstr ""
 "Implicitní oprávnění jsou oprávnění, která jsou uživatelům automaticky "
 "udělena za určitých okolností. Zvolte, co je vyžadováno pro akci <i>%s</i>."
 
-#: ../tools/polkit-gnome-authorization.c:1215
-#: ../tools/polkit-gnome-authorization.c:1974
+#: ../tools/polkit-gnome-authorization.c:1224
+#: ../tools/polkit-gnome-authorization.c:1983
 msgid "<i>Anyone:</i>"
 msgstr "<i>Kdokoliv:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1222
-#: ../tools/polkit-gnome-authorization.c:1978
+#: ../tools/polkit-gnome-authorization.c:1231
+#: ../tools/polkit-gnome-authorization.c:1987
 msgid "<i>Console:</i>"
 msgstr "<i>Konzola:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1229
-#: ../tools/polkit-gnome-authorization.c:1982
+#: ../tools/polkit-gnome-authorization.c:1238
+#: ../tools/polkit-gnome-authorization.c:1991
 msgid "<i>Active Console:</i>"
 msgstr "<i>Aktivní konzola:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1258
+#: ../tools/polkit-gnome-authorization.c:1267
 msgid "_Modify..."
 msgstr "_Změnit..."
 
-#: ../tools/polkit-gnome-authorization.c:1890
+#: ../tools/polkit-gnome-authorization.c:1899
 msgid "<b>Action</b>"
 msgstr "<b>Akce</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1905
+#: ../tools/polkit-gnome-authorization.c:1914
 msgid "<i>Identifier:</i>"
 msgstr "<i>Identifikátor:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1915
+#: ../tools/polkit-gnome-authorization.c:1924
 msgid "<i>Description:</i>"
 msgstr "<i>Popis:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1925
+#: ../tools/polkit-gnome-authorization.c:1934
 msgid "<i>Vendor:</i>"
 msgstr "<i>Dodavatel:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1951
+#: ../tools/polkit-gnome-authorization.c:1960
 msgid "<b>Implicit Authorizations</b>"
 msgstr "<b>Implicitní oprávnění</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1959
+#: ../tools/polkit-gnome-authorization.c:1968
 msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
@@ -773,19 +772,19 @@ msgstr ""
 "Implicitní oprávnění jsou oprávnění, která jsou uživatelům automaticky "
 "udělena na základě určitých kritérií, jako např. zda jsou v místní konzole."
 
-#: ../tools/polkit-gnome-authorization.c:2002
+#: ../tools/polkit-gnome-authorization.c:2011
 msgid "_Edit..."
-msgstr "_Upravit..."
+msgstr "U_pravit..."
 
-#: ../tools/polkit-gnome-authorization.c:2009
+#: ../tools/polkit-gnome-authorization.c:2018
 msgid "Revert To _Defaults..."
 msgstr "Obnovit výchozí ho_dnoty..."
 
-#: ../tools/polkit-gnome-authorization.c:2032
+#: ../tools/polkit-gnome-authorization.c:2041
 msgid "<b>Explicit Authorizations</b>"
 msgstr "<b>Explicitní oprávnění</b>"
 
-#: ../tools/polkit-gnome-authorization.c:2043
+#: ../tools/polkit-gnome-authorization.c:2052
 msgid ""
 "This list displays authorizations that are either obtained through "
 "authentication or specifically given to the entity in question. Blocked "
@@ -795,43 +794,43 @@ msgstr ""
 "specificky udělena příslušnému subjektu. Blokovaná oprávnění jsou označena "
 "znakem STOP."
 
-#: ../tools/polkit-gnome-authorization.c:2073
+#: ../tools/polkit-gnome-authorization.c:2082
 msgid "Entity"
 msgstr "Subjekt"
 
-#: ../tools/polkit-gnome-authorization.c:2081
+#: ../tools/polkit-gnome-authorization.c:2090
 msgid "Scope"
 msgstr "Rozsah"
 
-#: ../tools/polkit-gnome-authorization.c:2089
+#: ../tools/polkit-gnome-authorization.c:2098
 msgid "Obtained"
 msgstr "Získáno"
 
-#: ../tools/polkit-gnome-authorization.c:2097
+#: ../tools/polkit-gnome-authorization.c:2106
 msgid "How"
 msgstr "Jak"
 
-#: ../tools/polkit-gnome-authorization.c:2105
+#: ../tools/polkit-gnome-authorization.c:2114
 msgid "Constraints"
 msgstr "Omezení"
 
-#: ../tools/polkit-gnome-authorization.c:2147
-#: ../tools/polkit-gnome-authorization.c:2161
+#: ../tools/polkit-gnome-authorization.c:2156
+#: ../tools/polkit-gnome-authorization.c:2170
 msgid "_Revoke"
 msgstr "_Zrušit"
 
-#: ../tools/polkit-gnome-authorization.c:2154
+#: ../tools/polkit-gnome-authorization.c:2163
 msgid "_Revoke..."
 msgstr "_Zrušit..."
 
-#: ../tools/polkit-gnome-authorization.c:2174
+#: ../tools/polkit-gnome-authorization.c:2183
 msgid "_Show authorizations from all users..."
 msgstr "_Zobrazit oprávnění všech uživatelů..."
 
-#: ../tools/polkit-gnome-authorization.c:2175
+#: ../tools/polkit-gnome-authorization.c:2184
 msgid "_Show authorizations from all users"
 msgstr "_Zobrazit oprávnění všech uživatelů"
 
-#: ../tools/polkit-gnome-authorization.c:2417
+#: ../tools/polkit-gnome-authorization.c:2426
 msgid "Select an action"
 msgstr "Vyberte akci"
