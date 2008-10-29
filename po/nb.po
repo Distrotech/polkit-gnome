@@ -8,9 +8,9 @@ msgstr ""
 "Project-Id-Version: PolicyKit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2008-04-21 20:26+0200\n"
-"PO-Revision-Date: 2008-04-21 20:32+0200\n"
-"Last-Translator: FULL NAME <kmaraas@gnome.org>\n"
-"Language-Team: LANGUAGE <i18n-nb@lister.ping.uio.no>\n"
+"PO-Revision-Date: 2008-10-29 10:05+0100\n"
+"Last-Translator: Kjartan Maraas <kmaraas@gnome.org>\n"
+"Language-Team: Norwegian bokmål <i18n-nb@lister.ping.uio.no>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -18,28 +18,28 @@ msgstr ""
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
 #: ../tools/polkit-gnome-authorization.c:2439
 msgid "Authorizations"
-msgstr ""
+msgstr "Autorisasjoner"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:2
 msgid "Configure authorizations"
-msgstr ""
+msgstr "Konfigurer autorisasjoner"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
-msgstr ""
+msgstr "Opphavsrett © 2007 David Zeuthen"
 
 #: ../examples/polkit-gnome-example.c:138
 msgid "PolicyKit-gnome Website"
-msgstr ""
+msgstr "Nettsted for PolicyKit-gnome"
 
 #: ../examples/polkit-gnome-example.c:140
 #: ../examples/polkit-gnome-example.c:446
 msgid "PolicyKit-gnome demo"
-msgstr ""
+msgstr "Demo av PolicyKit-gnome"
 
 #: ../examples/polkit-gnome-example.c:141
 msgid "PolicyKit for the GNOME desktop"
-msgstr ""
+msgstr "PolicyKit for GNOME"
 
 #: ../examples/polkit-gnome-example.c:151
 msgid "_File"
@@ -266,16 +266,16 @@ msgstr "Autentiserer"
 
 #: ../src/main.c:139
 msgid "Don't exit after 30 seconds of inactivity"
-msgstr ""
+msgstr "Ikke avslutt etter 30 sekunders pause"
 
 #: ../src/main.c:148
 msgid "PolicyKit GNOME session daemon"
-msgstr ""
+msgstr "GNOME sesjonstjeneste for PolicyKit"
 
 #: ../src/main.c:174
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
-msgstr ""
+msgstr "Starter GNOME sesjonstjeneste for PolicyKit versjon %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
 #: ../tools/polkit-gnome-authorization.c:649
@@ -301,18 +301,24 @@ msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
+"Et program prøver å utføre en handling som krever rettigheter. Du må "
+"autentisere som en av brukerene under for å utføre denne handlingen."
 
 #: ../src/polkit-gnome-auth-dialog.c:320
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
 msgstr ""
+"Et program prøver å utføre en handling som krever rettigheter. Du må "
+"autentisere som superbruker for å utføre denne handlingen."
 
 #: ../src/polkit-gnome-auth-dialog.c:324
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
 msgstr ""
+"Et program prøver å utføre en handling som krever rettigheter. Du må "
+"autentisere deg for å utføre denne handlingen."
 
 #: ../src/polkit-gnome-auth-dialog.c:348
 #, c-format
@@ -352,7 +358,7 @@ msgstr "<small><b>Handling:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:719
 msgid "<small><b>Vendor:</b></small>"
-msgstr ""
+msgstr "<small><b>Leverandør:</b></small>"
 
 #: ../src/polkit-gnome-auth-dialog.c:848
 msgid "Authenticate"
@@ -370,15 +376,15 @@ msgstr "_Passord for root:"
 #: ../src/polkit-gnome-manager.c:745
 #, c-format
 msgid "_Password or swipe finger for %s:"
-msgstr ""
+msgstr "_Passord eller dra fingeren for %s:"
 
 #: ../src/polkit-gnome-manager.c:748
 msgid "_Password or swipe finger for root:"
-msgstr ""
+msgstr "_Passord eller dra fingeren for root:"
 
 #: ../src/polkit-gnome-manager.c:751
 msgid "_Password or swipe finger:"
-msgstr ""
+msgstr "_Passord eller dra fingeren:"
 
 #: ../tools/polkit-gnome-authorization.c:117
 msgid "No"
@@ -386,23 +392,23 @@ msgstr "Nei"
 
 #: ../tools/polkit-gnome-authorization.c:119
 msgid "Admin Authentication (one shot)"
-msgstr ""
+msgstr "Autentisering for administrator (en gang)"
 
 #: ../tools/polkit-gnome-authorization.c:120
 msgid "Admin Authentication"
-msgstr ""
+msgstr "Autentisering for administrator"
 
 #: ../tools/polkit-gnome-authorization.c:121
 msgid "Admin Authentication (keep session)"
-msgstr ""
+msgstr "Autentisering for administrator (husk for sesjon)"
 
 #: ../tools/polkit-gnome-authorization.c:122
 msgid "Admin Authentication (keep indefinitely)"
-msgstr ""
+msgstr "Autentisering for administrator (husk for alltid)"
 
 #: ../tools/polkit-gnome-authorization.c:124
 msgid "Authentication (one shot)"
-msgstr ""
+msgstr "Autentisering (en gang)"
 
 #: ../tools/polkit-gnome-authorization.c:125
 msgid "Authentication"
@@ -410,11 +416,11 @@ msgstr "Autentisering"
 
 #: ../tools/polkit-gnome-authorization.c:126
 msgid "Authentication (keep session)"
-msgstr ""
+msgstr "Autentisering (husk for sesjon)"
 
 #: ../tools/polkit-gnome-authorization.c:127
 msgid "Authentication (keep indefinitely)"
-msgstr ""
+msgstr "Autentisering (husk for alltid)"
 
 #: ../tools/polkit-gnome-authorization.c:129
 msgid "Yes"
@@ -426,25 +432,25 @@ msgstr ", "
 
 #: ../tools/polkit-gnome-authorization.c:276
 msgid "Must be on console"
-msgstr ""
+msgstr "Må være på konsollet"
 
 #: ../tools/polkit-gnome-authorization.c:279
 msgid "Must be in active session"
-msgstr ""
+msgstr "Må være i en aktiv sesjon"
 
 #: ../tools/polkit-gnome-authorization.c:282
 #, c-format
 msgid "Must be program %s"
-msgstr ""
+msgstr "Må være program %s"
 
 #: ../tools/polkit-gnome-authorization.c:286
 #, c-format
 msgid "Must be SELinux Context %s"
-msgstr ""
+msgstr "Må være SELinux-kontekst %s"
 
 #: ../tools/polkit-gnome-authorization.c:344
 msgid "A moment ago"
-msgstr ""
+msgstr "Et øyeblikk siden"
 
 #: ../tools/polkit-gnome-authorization.c:348
 msgid "1 minute ago"
@@ -476,32 +482,32 @@ msgstr "%d dager siden"
 #: ../tools/polkit-gnome-authorization.c:379
 #, c-format
 msgid "Auth as %s (uid %d)"
-msgstr ""
+msgstr "Autentiser som %s (uid %d)"
 
 #: ../tools/polkit-gnome-authorization.c:381
 #, c-format
 msgid "Auth as uid %d"
-msgstr ""
+msgstr "Autentiser som uid %d"
 
 #: ../tools/polkit-gnome-authorization.c:387
 #, c-format
 msgid "Blocked by %s (uid %d)"
-msgstr ""
+msgstr "Blokkert av %s (uid %d)"
 
 #: ../tools/polkit-gnome-authorization.c:389
 #, c-format
 msgid "Blocked by uid %d"
-msgstr ""
+msgstr "Blokkert av uid %d"
 
 #: ../tools/polkit-gnome-authorization.c:392
 #, c-format
 msgid "Granted by %s (uid %d)"
-msgstr ""
+msgstr "Gitt av %s (uid %d)"
 
 #: ../tools/polkit-gnome-authorization.c:394
 #, c-format
 msgid "Granted by uid %d"
-msgstr ""
+msgstr "Gitt av uid %d"
 
 #: ../tools/polkit-gnome-authorization.c:409
 #, c-format
@@ -511,7 +517,7 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:415
 #, c-format
 msgid "pid %d (%s)"
-msgstr ""
+msgstr "pid %d (%s)"
 
 #: ../tools/polkit-gnome-authorization.c:418
 msgid "This session"
@@ -573,11 +579,11 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:898
 msgid "_Show system users"
-msgstr ""
+msgstr "Vi_s systembrukere"
 
 #: ../tools/polkit-gnome-authorization.c:913
 msgid "<b>Constraints</b>"
-msgstr ""
+msgstr "<b>Begrensninger</b>"
 
 #: ../tools/polkit-gnome-authorization.c:924
 msgid ""
@@ -591,25 +597,25 @@ msgstr "I_ngen"
 
 #: ../tools/polkit-gnome-authorization.c:932
 msgid "Must be _in active session"
-msgstr ""
+msgstr "Må være _i en aktiv sesjon"
 
 #: ../tools/polkit-gnome-authorization.c:934
 msgid "Must be on _local console"
-msgstr ""
+msgstr "Må være på _lokalt konsoll"
 
 #: ../tools/polkit-gnome-authorization.c:936
 msgid "Must be in _active session on local console"
-msgstr ""
+msgstr "Må være i en _aktiv sesjon på lokalt konsoll"
 
 #: ../tools/polkit-gnome-authorization.c:957
 #: ../tools/polkit-gnome-authorization.c:2133
 msgid "_Block..."
-msgstr ""
+msgstr "_Blokker"
 
 #: ../tools/polkit-gnome-authorization.c:961
 #: ../tools/polkit-gnome-authorization.c:2126
 msgid "_Grant..."
-msgstr ""
+msgstr "_Gi"
 
 #: ../tools/polkit-gnome-authorization.c:1155
 msgid "Edit Implicit Authorizations"
@@ -630,21 +636,21 @@ msgstr ""
 #: ../tools/polkit-gnome-authorization.c:1215
 #: ../tools/polkit-gnome-authorization.c:1974
 msgid "<i>Anyone:</i>"
-msgstr ""
+msgstr "<i>Alle:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1222
 #: ../tools/polkit-gnome-authorization.c:1978
 msgid "<i>Console:</i>"
-msgstr ""
+msgstr "<i>Konsoll:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1229
 #: ../tools/polkit-gnome-authorization.c:1982
 msgid "<i>Active Console:</i>"
-msgstr ""
+msgstr "<i>Aktivt konsoll:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1258
 msgid "_Modify..."
-msgstr ""
+msgstr "E_ndre..."
 
 #: ../tools/polkit-gnome-authorization.c:1890
 msgid "<b>Action</b>"
@@ -660,11 +666,11 @@ msgstr "<i>Beskrivelse:</b>"
 
 #: ../tools/polkit-gnome-authorization.c:1925
 msgid "<i>Vendor:</i>"
-msgstr ""
+msgstr "<i>Leverandør:</i>"
 
 #: ../tools/polkit-gnome-authorization.c:1951
 msgid "<b>Implicit Authorizations</b>"
-msgstr ""
+msgstr "<b>Implisitte autorisasjoner</b>"
 
 #: ../tools/polkit-gnome-authorization.c:1959
 msgid ""
@@ -705,28 +711,28 @@ msgstr ""
 
 #: ../tools/polkit-gnome-authorization.c:2097
 msgid "How"
-msgstr ""
+msgstr "Hvordan"
 
 #: ../tools/polkit-gnome-authorization.c:2105
 msgid "Constraints"
-msgstr ""
+msgstr "Begrensninger"
 
 #: ../tools/polkit-gnome-authorization.c:2147
 #: ../tools/polkit-gnome-authorization.c:2161
 msgid "_Revoke"
-msgstr ""
+msgstr "T_rekk tilbake"
 
 #: ../tools/polkit-gnome-authorization.c:2154
 msgid "_Revoke..."
-msgstr ""
+msgstr "T_rekk tilbake..."
 
 #: ../tools/polkit-gnome-authorization.c:2174
 msgid "_Show authorizations from all users..."
-msgstr ""
+msgstr "Vi_s autorisasjoner fra alle brukere..."
 
 #: ../tools/polkit-gnome-authorization.c:2175
 msgid "_Show authorizations from all users"
-msgstr ""
+msgstr "Vi_s autorisasjoner fra alle brukere"
 
 #: ../tools/polkit-gnome-authorization.c:2413
 msgid "Select an action"
