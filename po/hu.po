@@ -1,24 +1,26 @@
 # Hungarian translation for policykit-gnome
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the policykit-gnome package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# Gabor Kelemen <kelemeng@gnome.hu>, 2008.
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
-"Report-Msgid-Bugs-To: FULL NAME <EMAIL@ADDRESS>\n"
-"POT-Creation-Date: 2008-01-16 01:09+0000\n"
-"PO-Revision-Date: 2008-03-23 18:27+0000\n"
-"Last-Translator: ŐRY Máté <orymate@gmail.com>\n"
-"Language-Team: Hungarian <hu@li.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2008-12-29 15:53+0100\n"
+"PO-Revision-Date: 2008-12-29 16:31+0100\n"
+"Last-Translator: Gabor Kelemen <kelemeng@gnome.hu>\n"
+"Language-Team: Hungarian <gnome@fsf.hu>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Launchpad-Export-Date: 2008-04-09 07:28+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2423
+#: ../tools/polkit-gnome-authorization.c:2452
 msgid "Authorizations"
 msgstr "Jogosultságok"
 
@@ -26,244 +28,45 @@ msgstr "Jogosultságok"
 msgid "Configure authorizations"
 msgstr "Jogosultságok beállítása"
 
-#: ../examples/polkit-gnome-example.c:137
-msgid "Copyright © 2007 David Zeuthen"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:138
-msgid "PolicyKit-gnome Website"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:140
-#: ../examples/polkit-gnome-example.c:446
-msgid "PolicyKit-gnome demo"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:141
-msgid "PolicyKit for the GNOME desktop"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:151
-msgid "_File"
-msgstr ""
-
-#. name, stock id, label
-#: ../examples/polkit-gnome-example.c:152
-msgid "_Actions"
-msgstr ""
-
-#. name, stock id, label
-#: ../examples/polkit-gnome-example.c:153
-msgid "_Help"
-msgstr ""
-
-#. name, stock id, label
-#. name, stock id
-#: ../examples/polkit-gnome-example.c:156
-msgid "_Quit"
-msgstr ""
-
-#. label, accelerator
-#: ../examples/polkit-gnome-example.c:157
-msgid "Quit"
-msgstr ""
-
-#. name, stock id
-#: ../examples/polkit-gnome-example.c:161
-msgid "_About"
-msgstr ""
-
-#. label, accelerator
-#: ../examples/polkit-gnome-example.c:162
-msgid "About"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:243
+#: ../data/polkit-gnome.schemas.in.h:1
 msgid ""
-"Making the helper <b>Frobnicate</b> requires the user to authenticate. The "
-"authorization is kept for the life time of the process"
-msgstr ""
+"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
+"checked by default; this list is maintained by the authentication dialog "
+"code itself. For example, if a user unchecks the \"retain authorization\" "
+"check box for an action and successfully obtains an authorization for the "
+"action, the action will be added to this list."
+msgstr "PolicyKit műveletek listája, ahol a „Jogosultságok megjegyzése” jelölőnégyzet nincs alapértelmezésben bejelölve; ezt a listát a hitelesítési párbeszédablak kódja tartja karban. Ha például a felhasználó törli a „Jogosultságok megjegyzése” jelölőnégyzetet egy művelethez és sikeresen jogosultságot szerez a műveletre, akkor a művelet felkerül erre a listára."
 
-#: ../examples/polkit-gnome-example.c:252
-msgid "Frobnicate!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:267
+#: ../data/polkit-gnome.schemas.in.h:2
 msgid ""
-"Making the helper <b>Jump</b> requires the user to authenticate. This is a "
-"one-shot authorization."
-msgstr ""
+"A list of actions where the \"retain authorization\" checkbox isn't checked "
+"by default"
+msgstr "Műveletek listája, amelyekhez a „Jogosultságok megjegyzése” jelölőnégyzet nincs alapértelmezésben bejelölve"
 
-#: ../examples/polkit-gnome-example.c:275
-msgid "Jump!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:290
+#: ../data/polkit-gnome.schemas.in.h:3
 msgid ""
-"Making the helper <b>Tweak</b> requires a system administrator to "
-"authenticate. This instance overrides the defaults set in "
-"polkit_gnome_action_new()."
-msgstr ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr "Ha igazra van állítva, a PolicyKit-gnome hitelesítési párbeszédablaka zárolja a billentyűzetet, így nem lehet majd más programokba gépelni, mialatt az ablak aktív. Ez akkor hasznos, ha az ablakkezelő nem viszi előtérbe automatikusan a hitelesítési párbeszédablakot és el akarja kerülni a jelszavak véletlen beírását más programokba."
 
-#: ../examples/polkit-gnome-example.c:299
-#: ../examples/polkit-gnome-example.c:320
-msgid "Tweak!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:306
-#: ../examples/polkit-gnome-example.policy.in.h:17
-msgid "Tweak"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:307
-msgid "Tweak (long)"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:308
-msgid "If your admin wasn't annoying, you could do this"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:313
-msgid "Tweak..."
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:314
-msgid "Tweak... (long)"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:315
-msgid "Only card carrying tweakers can do this!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:321
-msgid "Tweak! (long)"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:322
-msgid "Go ahead, tweak tweak tweak!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:339
+#: ../data/polkit-gnome.schemas.in.h:4
 msgid ""
-"Making the helper <b>Twiddle</b> requires a system administrator to "
-"authenticate. Once authenticated, this privilege can be retained "
-"indefinitely."
-msgstr ""
+"If set to true, then \"retain authorization\" check box (if present) is "
+"checked by default in the authentication dialog unless the action is "
+"mentioned in the \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" key."
+msgstr "Ha igazra van állítva, akkor a „Jogosultságok megjegyzése” jelölőnégyzet automatikusan be van jelölve a hitelesítési párbeszédablakban, hacsak a művelet nem szerepel a „/desktop/gnome/policykit/auth_dialog_retain_authorization_blacklist” kulcsban."
 
-#: ../examples/polkit-gnome-example.c:348
-msgid "Twiddle!"
-msgstr ""
+#: ../data/polkit-gnome.schemas.in.h:5
+msgid "Whether the authentication dialog should grab the keyboard"
+msgstr "A hitelesítési párbeszédablak zárolja-e a billentyűzetet?"
 
-#: ../examples/polkit-gnome-example.c:363
-msgid ""
-"Making the helper <b>Punch</b> requires the user to authenticate. Once "
-"authenticated, this privilege can be retained for the remainder of the "
-"desktop session."
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:372
-msgid "Punch!"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:387
-msgid ""
-"The <b>Toggle</b> action demonstrates the use of PolicyKit to drive a "
-"GtkToggleButton; it's an intuitive way to ask users to give up "
-"authorizations when they are done with them. E.g. the button is 'pressed in' "
-"exactlywhen the authorization is held. Toggling the button means obtaining "
-"resp. revoking the authorization in question."
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:401
-msgid "Click to make changes..."
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:402
-msgid "Click to prevent changes"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.c:422
-msgid ""
-"<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
-"update in real-time.</i>."
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:1
-msgid "Frobnicate"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:2
-msgid "Jump"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:3
-msgid "Kick bar"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:4
-msgid "Kick baz"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:5
-msgid "Kick foo"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:6
-msgid "Punch"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:7
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Frobnicating"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:8
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Jumping"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:9
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking bar"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:10
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking baz"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:11
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking foo"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:12
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Punching"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:13
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Toggling"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:14
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Tweaking"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:15
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Twiddling"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:16
-msgid "Toggle"
-msgstr ""
-
-#: ../examples/polkit-gnome-example.policy.in.h:18
-msgid "Twiddle"
-msgstr ""
+#: ../data/polkit-gnome.schemas.in.h:6
+msgid "Whether the retain authorization check box is checked by default"
+msgstr "A Jogosultságok megjegyzése jelölőnégyzet be van-e jelölve alapértelmezésben?"
 
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
@@ -274,22 +77,22 @@ msgstr "Jogosultság ellenőrzése…"
 msgid "Don't exit after 30 seconds of inactivity"
 msgstr "30 másodperc tétlenség után ne lépjen ki"
 
-#: ../src/main.c:148
+#: ../src/main.c:154
 msgid "PolicyKit GNOME session daemon"
 msgstr "PolicyKit GNOME munkafolyamat-démon"
 
-#: ../src/main.c:174
+#: ../src/main.c:180
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
 msgstr "PolicyKit GNOME munkafolyamat-démon %s indítása"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
-#: ../tools/polkit-gnome-authorization.c:637
+#: ../tools/polkit-gnome-authorization.c:653
 msgid "Select user..."
-msgstr "Felhasználó választása…"
+msgstr "Válasszon felhasználót…"
 
 #: ../src/polkit-gnome-auth-dialog.c:211
-#: ../tools/polkit-gnome-authorization.c:653
+#: ../tools/polkit-gnome-authorization.c:672
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -328,69 +131,73 @@ msgstr ""
 "Egy alkalmazás olyan műveletet próbál végrehajtani, amely speciális "
 "jogosultságot igényel. A művelet végrehajtásához hitelesítés szükséges."
 
-#: ../src/polkit-gnome-auth-dialog.c:348
+#: ../src/polkit-gnome-auth-dialog.c:405
 #, c-format
 msgid "Click to edit %s"
 msgstr "Kattintson %s művelet jogosultságbeállításainak módosításához"
 
-#: ../src/polkit-gnome-auth-dialog.c:371
-#: ../tools/polkit-gnome-authorization.c:1379
+#: ../src/polkit-gnome-auth-dialog.c:430
+#: ../tools/polkit-gnome-authorization.c:1400
 #, c-format
 msgid "Click to open %s"
 msgstr "Kattintson %s megnyitásához"
 
-#: ../src/polkit-gnome-auth-dialog.c:600
+#: ../src/polkit-gnome-auth-dialog.c:667
 msgid "_Authenticate"
 msgstr "_Hitelesítés"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:680
-#: ../src/polkit-gnome-manager.c:728
+#: ../src/polkit-gnome-auth-dialog.c:726 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
 msgstr "Jel_szó:"
 
-#: ../src/polkit-gnome-auth-dialog.c:681
+#: ../src/polkit-gnome-auth-dialog.c:748
 msgid "For this _session only"
 msgstr "Csak erre a _munkamenetre"
 
-#: ../src/polkit-gnome-auth-dialog.c:689
+#: ../src/polkit-gnome-auth-dialog.c:756
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Részletek</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:710
+#: ../src/polkit-gnome-auth-dialog.c:777
 msgid "<small><b>Application:</b></small>"
 msgstr "<small><b>Alkalmazás:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:714
+#: ../src/polkit-gnome-auth-dialog.c:781
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Művelet:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:719
+#: ../src/polkit-gnome-auth-dialog.c:786
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Gyártó:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:848
+#: ../src/polkit-gnome-auth-dialog.c:915
 msgid "Authenticate"
 msgstr "Hitelesítés"
 
-#: ../src/polkit-gnome-manager.c:723
+#: ../src/polkit-gnome-manager.c:367
+msgid "(unknown"
+msgstr "(ismeretlen"
+
+#: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
 msgstr "%s jel_szava:"
 
-#: ../src/polkit-gnome-manager.c:725
+#: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
 msgstr "Adminisztrátor jel_szava"
 
-#: ../src/polkit-gnome-manager.c:733
+#: ../src/polkit-gnome-manager.c:740
 #, c-format
 msgid "_Password or swipe finger for %s:"
 msgstr "%s jel_szava vagy ujjlenyomata:"
 
-#: ../src/polkit-gnome-manager.c:736
+#: ../src/polkit-gnome-manager.c:743
 msgid "_Password or swipe finger for root:"
 msgstr "Adminisztrátor jel_szava vagy ujjlenyomata:"
 
-#: ../src/polkit-gnome-manager.c:739
+#: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
 msgstr "Jel_szó vagy ujjlenyomat:"
 
@@ -446,98 +253,108 @@ msgstr "Csak helyi gépről"
 msgid "Must be in active session"
 msgstr "Csak aktív munkamenetben"
 
-#: ../tools/polkit-gnome-authorization.c:336
+#: ../tools/polkit-gnome-authorization.c:282
+#, c-format
+msgid "Must be program %s"
+msgstr "Programnak kell lennie: %s"
+
+#: ../tools/polkit-gnome-authorization.c:286
+#, c-format
+msgid "Must be SELinux Context %s"
+msgstr "SELinux környezetnek kell lennie: %s"
+
+#: ../tools/polkit-gnome-authorization.c:344
 msgid "A moment ago"
 msgstr "Nincs 1 perce"
 
-#: ../tools/polkit-gnome-authorization.c:340
+#: ../tools/polkit-gnome-authorization.c:348
 msgid "1 minute ago"
 msgstr "1 perce"
 
-#: ../tools/polkit-gnome-authorization.c:342
+#: ../tools/polkit-gnome-authorization.c:350
 #, c-format
 msgid "%d minutes ago"
 msgstr "%d perce"
 
-#: ../tools/polkit-gnome-authorization.c:346
+#: ../tools/polkit-gnome-authorization.c:354
 msgid "1 hour ago"
 msgstr "1 órája"
 
-#: ../tools/polkit-gnome-authorization.c:348
+#: ../tools/polkit-gnome-authorization.c:356
 #, c-format
 msgid "%d hours ago"
 msgstr "%d órája"
 
-#: ../tools/polkit-gnome-authorization.c:352
+#: ../tools/polkit-gnome-authorization.c:360
 msgid "1 day ago"
 msgstr "1 napja"
 
-#: ../tools/polkit-gnome-authorization.c:354
+#: ../tools/polkit-gnome-authorization.c:362
 #, c-format
 msgid "%d days ago"
 msgstr "%d napja"
 
-#: ../tools/polkit-gnome-authorization.c:371
+#: ../tools/polkit-gnome-authorization.c:383
 #, c-format
 msgid "Auth as %s (uid %d)"
 msgstr "%s (%d) hitelesítése"
 
-#: ../tools/polkit-gnome-authorization.c:373
+#: ../tools/polkit-gnome-authorization.c:385
 #, c-format
 msgid "Auth as uid %d"
 msgstr "Uid: %d hitelesítése"
 
-#: ../tools/polkit-gnome-authorization.c:379
+#: ../tools/polkit-gnome-authorization.c:391
 #, c-format
 msgid "Blocked by %s (uid %d)"
 msgstr "%s (%d) által tiltva"
 
-#: ../tools/polkit-gnome-authorization.c:381
+#: ../tools/polkit-gnome-authorization.c:393
 #, c-format
 msgid "Blocked by uid %d"
 msgstr "Uid: %d által tiltva"
 
-#: ../tools/polkit-gnome-authorization.c:384
+#: ../tools/polkit-gnome-authorization.c:396
 #, c-format
 msgid "Granted by %s (uid %d)"
 msgstr "%s (%d) által engedélyezve"
 
-#: ../tools/polkit-gnome-authorization.c:386
+#: ../tools/polkit-gnome-authorization.c:398
 #, c-format
 msgid "Granted by uid %d"
 msgstr "Uid: %d által engedélyezve"
 
-#: ../tools/polkit-gnome-authorization.c:401
+#: ../tools/polkit-gnome-authorization.c:413
 #, c-format
 msgid "Single shot pid %d (%s)"
 msgstr "Egyedi pid: %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:407
+#: ../tools/polkit-gnome-authorization.c:419
 #, c-format
 msgid "pid %d (%s)"
 msgstr "Pid: %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:410
+#: ../tools/polkit-gnome-authorization.c:422
 msgid "This session"
 msgstr "Ezen munkamenetre"
 
-#: ../tools/polkit-gnome-authorization.c:413
+#: ../tools/polkit-gnome-authorization.c:425
 msgid "Always"
 msgstr "Mindig"
 
-#: ../tools/polkit-gnome-authorization.c:423
+#: ../tools/polkit-gnome-authorization.c:435
 msgid "None"
 msgstr "Nincs"
 
-#: ../tools/polkit-gnome-authorization.c:815
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Negative Authorization"
 msgstr "Jogosultság megtagadása"
 
-#: ../tools/polkit-gnome-authorization.c:815
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Authorization"
 msgstr "Jogosultság megadása"
 
-#: ../tools/polkit-gnome-authorization.c:838
+#: ../tools/polkit-gnome-authorization.c:859
 #, c-format
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%s</i> action requires "
@@ -546,7 +363,7 @@ msgstr ""
 "<b><big>A jogosultság megtagadása <i>%s</i> művelethez további információt "
 "igényel</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:839
+#: ../tools/polkit-gnome-authorization.c:860
 #, c-format
 msgid ""
 "<b><big>Granting an authorization for the <i>%s</i> action requires more "
@@ -555,7 +372,7 @@ msgstr ""
 "<b><big>A jogosultság megadása <i>%s</i> művelethez további információt "
 "igényel</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:850
+#: ../tools/polkit-gnome-authorization.c:871
 msgid ""
 "Select the user to block for the action and, optionally, any constraints on "
 "the negative authorization that you are about to grant."
@@ -563,7 +380,7 @@ msgstr ""
 "Válassza ki, hogy melyik felhasználó jogosultsága kerüljön megtagadásra, és "
 "szükség esetén állítson be megkötéseket."
 
-#: ../tools/polkit-gnome-authorization.c:852
+#: ../tools/polkit-gnome-authorization.c:873
 msgid ""
 "Select the beneficiary and, optionally, how to constrain the authorization "
 "that you are about to grant."
@@ -571,29 +388,27 @@ msgstr ""
 "Válassza ki a kedvezményezettet, és szükség esetén a megadandó jogosultság "
 "megkötéseit"
 
-#: ../tools/polkit-gnome-authorization.c:863
+#: ../tools/polkit-gnome-authorization.c:884
 msgid "<b>Beneficiary</b>"
 msgstr "<b>Kedvezményezett</b>"
 
-#: ../tools/polkit-gnome-authorization.c:875
+#: ../tools/polkit-gnome-authorization.c:896
 msgid "Select the user that will receive the negative authorization."
-msgstr ""
-"Válassza ki azt a felhasználót, akinek a jogosultsága megtagadásra kerül."
+msgstr "Válassza ki azt a felhasználót, akinek a jogosultsága megtagadásra kerül."
 
-#: ../tools/polkit-gnome-authorization.c:877
+#: ../tools/polkit-gnome-authorization.c:898
 msgid "Select the user that will receive the authorization."
-msgstr ""
-"Válassza ki azt a felhasználót, akinek a jogosultsága megadásra kerül."
+msgstr "Válassza ki azt a felhasználót, akinek a jogosultsága megadásra kerül."
 
-#: ../tools/polkit-gnome-authorization.c:886
+#: ../tools/polkit-gnome-authorization.c:907
 msgid "_Show system users"
 msgstr "_Rendszerfelhasználók megjelenítése"
 
-#: ../tools/polkit-gnome-authorization.c:901
+#: ../tools/polkit-gnome-authorization.c:922
 msgid "<b>Constraints</b>"
 msgstr "<b>Megkötések</b>"
 
-#: ../tools/polkit-gnome-authorization.c:912
+#: ../tools/polkit-gnome-authorization.c:933
 msgid ""
 "Constraints limits the authorization such that it only applies under certain "
 "circumstances."
@@ -601,91 +416,91 @@ msgstr ""
 "A megkötések úgy korlátozzák a jogosultságot, hogy az csak bizonyos "
 "körülmények közt lesz érvényes."
 
-#: ../tools/polkit-gnome-authorization.c:918
+#: ../tools/polkit-gnome-authorization.c:939
 msgid "_None"
 msgstr "_Nincs"
 
-#: ../tools/polkit-gnome-authorization.c:920
+#: ../tools/polkit-gnome-authorization.c:941
 msgid "Must be _in active session"
 msgstr "Csak aktív _munkamenetben"
 
-#: ../tools/polkit-gnome-authorization.c:922
+#: ../tools/polkit-gnome-authorization.c:943
 msgid "Must be on _local console"
 msgstr "Csak _helyi számítógépnél"
 
-#: ../tools/polkit-gnome-authorization.c:924
+#: ../tools/polkit-gnome-authorization.c:945
 msgid "Must be in _active session on local console"
 msgstr "Csak helyi számítógépnél _aktív munkamenetben"
 
-#: ../tools/polkit-gnome-authorization.c:945
-#: ../tools/polkit-gnome-authorization.c:2117
+#: ../tools/polkit-gnome-authorization.c:966
+#: ../tools/polkit-gnome-authorization.c:2142
 msgid "_Block..."
 msgstr "_Tiltás…"
 
-#: ../tools/polkit-gnome-authorization.c:949
-#: ../tools/polkit-gnome-authorization.c:2110
+#: ../tools/polkit-gnome-authorization.c:970
+#: ../tools/polkit-gnome-authorization.c:2135
 msgid "_Grant..."
 msgstr "_Engedélyezés…"
 
-#: ../tools/polkit-gnome-authorization.c:1143
+#: ../tools/polkit-gnome-authorization.c:1164
 msgid "Edit Implicit Authorizations"
 msgstr "Implicit jogosultságok szerkesztése"
 
-#: ../tools/polkit-gnome-authorization.c:1164
+#: ../tools/polkit-gnome-authorization.c:1185
 msgid "<b><big>Choose new implicit authorizations</big></b>"
 msgstr "<b><big>Új implicit jogosultságok választása</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:1178
+#: ../tools/polkit-gnome-authorization.c:1199
 #, c-format
 msgid ""
 "Implicit authorizations are authorizations that are granted automatically to "
-"users under certain circumstances. Choose what is required for the action "
-"<i>%s</i>."
+"users under certain circumstances. Choose what is required for the action <i>"
+"%s</i>."
 msgstr ""
 "Az implicit jogosultságok olyan jogosultságok, melyeket automatikusan "
-"megkapnak a felhasználók bizonyos körülmények közt. Válassza ki a(z) "
-"<i>%s</i> művelet engedélyezéséhez szükséges körülményeket."
+"megkapnak a felhasználók bizonyos körülmények közt. Válassza ki a(z) <i>%s</"
+"i> művelet engedélyezéséhez szükséges körülményeket."
 
-#: ../tools/polkit-gnome-authorization.c:1203
-#: ../tools/polkit-gnome-authorization.c:1958
+#: ../tools/polkit-gnome-authorization.c:1224
+#: ../tools/polkit-gnome-authorization.c:1983
 msgid "<i>Anyone:</i>"
 msgstr "<i>Mindenki:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1210
-#: ../tools/polkit-gnome-authorization.c:1962
+#: ../tools/polkit-gnome-authorization.c:1231
+#: ../tools/polkit-gnome-authorization.c:1987
 msgid "<i>Console:</i>"
 msgstr "<i>Helyi számítógépnél:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1217
-#: ../tools/polkit-gnome-authorization.c:1966
+#: ../tools/polkit-gnome-authorization.c:1238
+#: ../tools/polkit-gnome-authorization.c:1991
 msgid "<i>Active Console:</i>"
 msgstr "<i>Aktív helyi számítógépnél:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1246
+#: ../tools/polkit-gnome-authorization.c:1267
 msgid "_Modify..."
 msgstr "_Módosítás…"
 
-#: ../tools/polkit-gnome-authorization.c:1874
+#: ../tools/polkit-gnome-authorization.c:1899
 msgid "<b>Action</b>"
 msgstr "<b>Művelet</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1889
+#: ../tools/polkit-gnome-authorization.c:1914
 msgid "<i>Identifier:</i>"
 msgstr "<i>Azonosító:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1899
+#: ../tools/polkit-gnome-authorization.c:1924
 msgid "<i>Description:</i>"
 msgstr "<i>Leírás:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1909
+#: ../tools/polkit-gnome-authorization.c:1934
 msgid "<i>Vendor:</i>"
 msgstr "<i>Gyártó:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1935
+#: ../tools/polkit-gnome-authorization.c:1960
 msgid "<b>Implicit Authorizations</b>"
 msgstr "<b>Implicit jogosultságok</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1943
+#: ../tools/polkit-gnome-authorization.c:1968
 msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
@@ -693,19 +508,19 @@ msgstr ""
 "Az implicit jogosultságokat automatikusan megkapják a felhasználók bizonyos "
 "körülmények között, például ha helyi számítógépet használnak."
 
-#: ../tools/polkit-gnome-authorization.c:1986
+#: ../tools/polkit-gnome-authorization.c:2011
 msgid "_Edit..."
 msgstr "_Szerkesztés…"
 
-#: ../tools/polkit-gnome-authorization.c:1993
+#: ../tools/polkit-gnome-authorization.c:2018
 msgid "Revert To _Defaults..."
 msgstr "_Visszaállítás az alapértelmezésre"
 
-#: ../tools/polkit-gnome-authorization.c:2016
+#: ../tools/polkit-gnome-authorization.c:2041
 msgid "<b>Explicit Authorizations</b>"
 msgstr "<b>Explicit jogosultságok</b>"
 
-#: ../tools/polkit-gnome-authorization.c:2027
+#: ../tools/polkit-gnome-authorization.c:2052
 msgid ""
 "This list displays authorizations that are either obtained through "
 "authentication or specifically given to the entity in question. Blocked "
@@ -715,43 +530,44 @@ msgstr ""
 "útján, vagy konkrét engedélyezés során kapott a kérdéses felhasználó. A "
 "letiltott jogosultságok STOP jelzéssel vannak jelölve."
 
-#: ../tools/polkit-gnome-authorization.c:2057
+#: ../tools/polkit-gnome-authorization.c:2082
 msgid "Entity"
 msgstr "Felhasználó"
 
-#: ../tools/polkit-gnome-authorization.c:2065
+#: ../tools/polkit-gnome-authorization.c:2090
 msgid "Scope"
 msgstr "Hatókör"
 
-#: ../tools/polkit-gnome-authorization.c:2073
+#: ../tools/polkit-gnome-authorization.c:2098
 msgid "Obtained"
 msgstr "Idő"
 
-#: ../tools/polkit-gnome-authorization.c:2081
+#: ../tools/polkit-gnome-authorization.c:2106
 msgid "How"
 msgstr "Mód"
 
-#: ../tools/polkit-gnome-authorization.c:2089
+#: ../tools/polkit-gnome-authorization.c:2114
 msgid "Constraints"
 msgstr "Megszorítások"
 
-#: ../tools/polkit-gnome-authorization.c:2131
-#: ../tools/polkit-gnome-authorization.c:2145
+#: ../tools/polkit-gnome-authorization.c:2156
+#: ../tools/polkit-gnome-authorization.c:2170
 msgid "_Revoke"
 msgstr "_Eltörlés"
 
-#: ../tools/polkit-gnome-authorization.c:2138
+#: ../tools/polkit-gnome-authorization.c:2163
 msgid "_Revoke..."
 msgstr "_Eltörlés…"
 
-#: ../tools/polkit-gnome-authorization.c:2158
+#: ../tools/polkit-gnome-authorization.c:2183
 msgid "_Show authorizations from all users..."
 msgstr "Minde_n felhasználó jogosultságainak megjelenítése…"
 
-#: ../tools/polkit-gnome-authorization.c:2159
+#: ../tools/polkit-gnome-authorization.c:2184
 msgid "_Show authorizations from all users"
 msgstr "Minde_n felhasználó jogosultságainak megjelenítése"
 
-#: ../tools/polkit-gnome-authorization.c:2397
+#: ../tools/polkit-gnome-authorization.c:2426
 msgid "Select an action"
 msgstr "Válasszon műveletet"
+
