@@ -1,30 +1,91 @@
+# translation of policykit-gnome.HEAD.po to
 # Greek translation for policykit-gnome
 # Copyright (c) 2008 Rosetta Contributors and Canonical Ltd 2008
 # This file is distributed under the same license as the policykit-gnome package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
 #
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2008.
+# Jennie Petoumenou <epetoumenou@gmail.com>, 2008.
 msgid ""
 msgstr ""
-"Project-Id-Version: policykit-gnome\n"
+"Project-Id-Version: policykit-gnome.HEAD\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-04-04 10:14+0100\n"
-"PO-Revision-Date: 2008-04-03 15:42+0000\n"
-"Last-Translator: Γιάννης Κατσαμπίρης <giannis1_86@hotmail.com>\n"
-"Language-Team: Greek <el@li.org>\n"
+"POT-Creation-Date: 2009-01-02 21:15+0000\n"
+"PO-Revision-Date: 2008-12-28 15:18+0200\n"
+"Last-Translator: Jennie Petoumenou <epetoumenou@gmail.com>\n"
+"Language-Team: Greek <team@gnome.gr>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Launchpad-Export-Date: 2008-04-04 07:12+0000\n"
-"X-Generator: Launchpad (build Unknown)\n"
+"X-Generator: Lokalize 0.2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2439
+#: ../tools/polkit-gnome-authorization.c:2452
 msgid "Authorizations"
 msgstr "Εξουσιοδοτήσεις"
 
 #: ../data/polkit-gnome-authorization.desktop.in.h:2
 msgid "Configure authorizations"
 msgstr "Ρύθμιση εξουσιοδοτήσεων"
+
+#: ../data/polkit-gnome.schemas.in.h:1
+msgid ""
+"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
+"checked by default; this list is maintained by the authentication dialog "
+"code itself. For example, if a user unchecks the \"retain authorization\" "
+"check box for an action and successfully obtains an authorization for the "
+"action, the action will be added to this list."
+msgstr ""
+"Λίστα ενεργειών για τις οποίες το κουτί \"διατήρηση εξουσιοδότησης\" δεν "
+"είναι προεπιλεγμένο. Η λίστα ανανεώνεται αυτόματα από τον κώδικα του "
+"διαλόγου πιστοποίησης. Για παράδειγμα, αν ο χρήστης απεπιλέξει το κουτί "
+"\"διατήρηση εξουσιοδότησης\" για μία ενέργεια και μετά αποκτήσει πιστοποίηση "
+"για την ενέργεια αυτή, η ενέργεια θα προστεθεί στη λίστα."
+
+#: ../data/polkit-gnome.schemas.in.h:2
+msgid ""
+"A list of actions where the \"retain authorization\" checkbox isn't checked "
+"by default"
+msgstr ""
+"Λίστα ενεργειών για τις οποίες το κουτί \"διατήρηση εξουσιοδότησης\" δεν "
+"είναι προεπιλεγμένο"
+
+#: ../data/polkit-gnome.schemas.in.h:3
+msgid ""
+"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
+"keyboard, so that you will not be able to type in other programs while the "
+"dialog is active. Use this if your window manager does not focus the "
+"authentication dialog automatically, and you want to avoid accidentally "
+"typing passwords in other programs."
+msgstr ""
+"Αν έχει οριστεί αληθές, ο διάλογος πιστοποίησης του PolicyKit-gnome θα "
+"κλειδώνει το πληκτρολόγιο, έτσι ώστε να μην μπορεί να χρησιμοποιηθεί από "
+"κανένα άλλο πρόγραμμα όσο θα είναι ενεργός ο διάλογος πιστοποίησης. "
+"Χρησιμοποιήστε αυτή την επιλογή αν ο διαχειριστής παραθύρων σας δεν εστιάζει "
+"αυτόματα στο διάλογο πιστοποίησης και φοβάστε μήπως πληκτρολογήσετε κατά "
+"λάθος συνθηματικά σε άλλα προγράμματα."
+
+#: ../data/polkit-gnome.schemas.in.h:4
+msgid ""
+"If set to true, then \"retain authorization\" check box (if present) is "
+"checked by default in the authentication dialog unless the action is "
+"mentioned in the \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\" key."
+msgstr ""
+"Αν έχει οριστεί αληθές, τότε το κουτί \"διατήρηση πιστοποίησης\" (αν "
+"υπάρχει) του διαλόγου πιστοποίησης είναι προεπιλεγμένο. Εξαιρούνται οι "
+"ενέργειες που αναφέρονται στο \"/desktop/gnome/policykit/"
+"auth_dialog_retain_authorization_blacklist\"."
+
+#: ../data/polkit-gnome.schemas.in.h:5
+msgid "Whether the authentication dialog should grab the keyboard"
+msgstr ""
+"Αν ο διάλογος πιστοποίησης θα πρέπει να κλειδώνει το πληκτρολόγιο για "
+"αποκλειστική του χρήση"
+
+#: ../data/polkit-gnome.schemas.in.h:6
+msgid "Whether the retain authorization check box is checked by default"
+msgstr "Αν είναι προεπιλεγμένο το κουτί διατήρησης της πιστοποίησης"
 
 #: ../examples/polkit-gnome-example.c:137
 msgid "Copyright © 2007 David Zeuthen"
@@ -37,7 +98,7 @@ msgstr "Ιστοσελίδα του PolicyKit-gnome"
 #: ../examples/polkit-gnome-example.c:140
 #: ../examples/polkit-gnome-example.c:446
 msgid "PolicyKit-gnome demo"
-msgstr ""
+msgstr "Επίδειξη του PolicyKit-gnome"
 
 #: ../examples/polkit-gnome-example.c:141
 msgid "PolicyKit for the GNOME desktop"
@@ -83,20 +144,24 @@ msgid ""
 "Making the helper <b>Frobnicate</b> requires the user to authenticate. The "
 "authorization is kept for the life time of the process"
 msgstr ""
+"Το <b>Frobnicate</b> απαιτεί πιστοποίηση του χρήστη. Η εξουσιοδότηση "
+"διατηρείται καθ' όλη τη διάρκεια της διεργασίας"
 
 #: ../examples/polkit-gnome-example.c:252
 msgid "Frobnicate!"
-msgstr ""
+msgstr "Frobnicate!"
 
 #: ../examples/polkit-gnome-example.c:267
 msgid ""
 "Making the helper <b>Jump</b> requires the user to authenticate. This is a "
 "one-shot authorization."
 msgstr ""
+"Το <b> Άλμα</b> απαιτεί πιστοποίηση του χρήστη. Η εξουσιοδότηση είναι μιας "
+"χρήσης."
 
 #: ../examples/polkit-gnome-example.c:275
 msgid "Jump!"
-msgstr ""
+msgstr "Άλμα!"
 
 #: ../examples/polkit-gnome-example.c:290
 msgid ""
@@ -104,45 +169,46 @@ msgid ""
 "authenticate. This instance overrides the defaults set in "
 "polkit_gnome_action_new()."
 msgstr ""
+"Το <b>Tweak</b> απαιτεί πιστοποίηση διαχειριστή συστήματος. Παρακάμπτει τις "
+"προεπιλεγμένες ρυθμίσεις του polkit_gnome_action_new()."
 
 #: ../examples/polkit-gnome-example.c:299
 #: ../examples/polkit-gnome-example.c:320
 msgid "Tweak!"
-msgstr ""
+msgstr "Tweak!"
 
 #: ../examples/polkit-gnome-example.c:306
-#: ../examples/polkit-gnome-example.policy.in.h:17
+#: ../examples/org.gnome.policykit.examples.policy.in.h:17
 msgid "Tweak"
-msgstr ""
+msgstr "Tweak"
 
 #: ../examples/polkit-gnome-example.c:307
 msgid "Tweak (long)"
-msgstr ""
+msgstr "Tweak (long)"
 
 #: ../examples/polkit-gnome-example.c:308
 msgid "If your admin wasn't annoying, you could do this"
-msgstr ""
-"Εάν ο διαχειριστής δεν ήταν ενοχλητικός, θα μπορούσατε να το κάνετε αυτό"
+msgstr "Αν είχατε λιγότερο ενοχλητικό διαχειριστή, θα μπορούσατε να το κάνετε"
 
 #: ../examples/polkit-gnome-example.c:313
 msgid "Tweak..."
-msgstr ""
+msgstr "Tweak..."
 
 #: ../examples/polkit-gnome-example.c:314
 msgid "Tweak... (long)"
-msgstr ""
+msgstr "Tweak... (long)"
 
 #: ../examples/polkit-gnome-example.c:315
 msgid "Only card carrying tweakers can do this!"
-msgstr ""
+msgstr "Μόνο όσοι tweakers έχουν κάρτα μπορούν να το κάνουν αυτό!"
 
 #: ../examples/polkit-gnome-example.c:321
 msgid "Tweak! (long)"
-msgstr ""
+msgstr "Tweak! (long)"
 
 #: ../examples/polkit-gnome-example.c:322
 msgid "Go ahead, tweak tweak tweak!"
-msgstr ""
+msgstr "Εμπρός! Tweak tweak tweak!"
 
 #: ../examples/polkit-gnome-example.c:339
 msgid ""
@@ -150,10 +216,12 @@ msgid ""
 "authenticate. Once authenticated, this privilege can be retained "
 "indefinitely."
 msgstr ""
+"Το <b>Twiddle</b> απαιτεί πιστοποίηση διαχειριστή συστήματος. Μετά την "
+"πιστοποίηση, τα σχετικά προνόμια διατηρούνται επ' αόριστον."
 
 #: ../examples/polkit-gnome-example.c:348
 msgid "Twiddle!"
-msgstr ""
+msgstr "Twiddle!"
 
 #: ../examples/polkit-gnome-example.c:363
 msgid ""
@@ -161,10 +229,13 @@ msgid ""
 "authenticated, this privilege can be retained for the remainder of the "
 "desktop session."
 msgstr ""
+"Η <b>Μπουνιά</b> απαιτεί πιστοποίηση του χρήστη. Μετά την πιστοποίηση, τα "
+"σχετικά προνόμια διατηρούνται μέχρι το τέλος της συνεδρίας της επιφάνειας "
+"εργασίας."
 
 #: ../examples/polkit-gnome-example.c:372
 msgid "Punch!"
-msgstr ""
+msgstr "Μπουνιά!"
 
 #: ../examples/polkit-gnome-example.c:387
 msgid ""
@@ -174,119 +245,146 @@ msgid ""
 "exactlywhen the authorization is held. Toggling the button means obtaining "
 "resp. revoking the authorization in question."
 msgstr ""
+"Η <b> Εναλλαγή</b> δείχνει πώς μπορεί να χρησιμοποιηθεί το  PolicyKit για να "
+"κατευθύνει τη λειτουργία ενός GtkToggleButton. Προσφέρει έναν εύκολο τρόπο "
+"για να ζητείται από τους χρήστες να αποσύρουν την εξουσιοδότηση όταν δεν τη "
+"χρειάζονται πλέον. Π.χ. το κουμπί \"πατιέται\" ακριβώς τη στιγμή που δίνεται "
+"η εξουσιοδότηση. Η εναλλαγή του κουμπιού σημαίνει ότι αναλαμβάνεται η ευθύνη "
+"για την απόσυρση της εξουσιοδότησης."
 
 #: ../examples/polkit-gnome-example.c:401
 msgid "Click to make changes..."
-msgstr ""
+msgstr "Πιέστε για να κάνετε αλλαγές..."
 
 #: ../examples/polkit-gnome-example.c:402
 msgid "Click to prevent changes"
-msgstr "Κάντε κλικ για να εμποδίσετε τις αλλαγές"
+msgstr "Πιέστε για να εμποδίσετε τις αλλαγές"
 
 #: ../examples/polkit-gnome-example.c:422
 msgid ""
 "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
 "update in real-time.</i>."
 msgstr ""
+"<i>Συμβουλή: Δοκιμάστε να επεξεργαστείτε το /etc/PolicyKit/Policy.conf και "
+"θα δείτε τα γραφικά συστατικά του διαμεσολαβητή να ανανεώνονται σε "
+"πραγματικό χρόνο.</i>"
 
-#: ../examples/polkit-gnome-example.policy.in.h:1
+#: ../examples/org.gnome.policykit.examples.policy.in.h:1
 msgid "Frobnicate"
-msgstr ""
+msgstr "Frobnicate"
 
-#: ../examples/polkit-gnome-example.policy.in.h:2
+#: ../examples/org.gnome.policykit.examples.policy.in.h:2
 msgid "Jump"
-msgstr ""
+msgstr "Άλμα"
 
-#: ../examples/polkit-gnome-example.policy.in.h:3
+#: ../examples/org.gnome.policykit.examples.policy.in.h:3
 msgid "Kick bar"
-msgstr ""
+msgstr "Κλωτσιά στο bar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:4
+#: ../examples/org.gnome.policykit.examples.policy.in.h:4
 msgid "Kick baz"
-msgstr ""
+msgstr "Κλωτσιά στο baz"
 
-#: ../examples/polkit-gnome-example.policy.in.h:5
+#: ../examples/org.gnome.policykit.examples.policy.in.h:5
 msgid "Kick foo"
-msgstr ""
+msgstr "Κλωτσιά στο foo"
 
-#: ../examples/polkit-gnome-example.policy.in.h:6
+#: ../examples/org.gnome.policykit.examples.policy.in.h:6
 msgid "Punch"
-msgstr ""
+msgstr "Μπουνιά"
 
-#: ../examples/polkit-gnome-example.policy.in.h:7
+#: ../examples/org.gnome.policykit.examples.policy.in.h:7
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Frobnicating"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να κάνει Frobnicate"
 
-#: ../examples/polkit-gnome-example.policy.in.h:8
+#: ../examples/org.gnome.policykit.examples.policy.in.h:8
 msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να κάνει Άλμα"
 
-#: ../examples/polkit-gnome-example.policy.in.h:9
+#: ../examples/org.gnome.policykit.examples.policy.in.h:9
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking bar"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να ρίξει Κλωτσιά στο bar"
 
-#: ../examples/polkit-gnome-example.policy.in.h:10
+#: ../examples/org.gnome.policykit.examples.policy.in.h:10
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking baz"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να ρίξει Κλωτσιά στο baz"
 
-#: ../examples/polkit-gnome-example.policy.in.h:11
+#: ../examples/org.gnome.policykit.examples.policy.in.h:11
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Kicking foo"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να ρίξει Κλωτσιά στο foo"
 
-#: ../examples/polkit-gnome-example.policy.in.h:12
+#: ../examples/org.gnome.policykit.examples.policy.in.h:12
 msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να ρίξει Μπουνιά"
 
-#: ../examples/polkit-gnome-example.policy.in.h:13
+#: ../examples/org.gnome.policykit.examples.policy.in.h:13
 msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να κάνει Εναλλαγή"
 
-#: ../examples/polkit-gnome-example.policy.in.h:14
+#: ../examples/org.gnome.policykit.examples.policy.in.h:14
 msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να κάνει Tweak"
 
-#: ../examples/polkit-gnome-example.policy.in.h:15
+#: ../examples/org.gnome.policykit.examples.policy.in.h:15
 msgid ""
 "System policy prevents the PolicyKit-gnome example helper from Twiddling"
 msgstr ""
+"Η πολιτική του συστήματος εμποδίζει το παράδειγμα βοηθού του PolicyKit-gnome "
+"να κάνει Twiddle"
 
-#: ../examples/polkit-gnome-example.policy.in.h:16
+#: ../examples/org.gnome.policykit.examples.policy.in.h:16
 msgid "Toggle"
 msgstr "Εναλλαγή"
 
-#: ../examples/polkit-gnome-example.policy.in.h:18
+#: ../examples/org.gnome.policykit.examples.policy.in.h:18
 msgid "Twiddle"
-msgstr ""
+msgstr "Twiddle"
 
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:400
 #: ../polkit-gnome/polkit-gnome-toggle-action.c:401
 msgid "Authenticating..."
-msgstr ""
+msgstr "Πιστοποίηση..."
 
 #: ../src/main.c:139
 msgid "Don't exit after 30 seconds of inactivity"
-msgstr ""
+msgstr "Να μη γίνει έξοδος μετά από 30 δευτερόλεπτα αδράνειας"
 
-#: ../src/main.c:148
+#: ../src/main.c:154
 msgid "PolicyKit GNOME session daemon"
-msgstr ""
+msgstr "Δαίμονας συνεδρίας του PolicyKit GNOME"
 
-#: ../src/main.c:174
+#: ../src/main.c:180
 #, c-format
 msgid "Starting PolicyKit GNOME session daemon version %s"
-msgstr ""
+msgstr "Εκκίνηση του δαίμονα συνεδρίας του PolicyKit GNOME, έκδοση %s"
 
 #: ../src/polkit-gnome-auth-dialog.c:190
-#: ../tools/polkit-gnome-authorization.c:649
+#: ../tools/polkit-gnome-authorization.c:653
 msgid "Select user..."
-msgstr "Επιλέξτε χρήστη"
+msgstr "Επιλογή χρήστη..."
 
 #: ../src/polkit-gnome-auth-dialog.c:211
-#: ../tools/polkit-gnome-authorization.c:665
+#: ../tools/polkit-gnome-authorization.c:672
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
@@ -297,112 +395,110 @@ msgstr "Απο_μνημόνευση της εξουσιοδότησης για �
 
 #: ../src/polkit-gnome-auth-dialog.c:298
 msgid "_Remember authorization"
-msgstr "Απο_μνημόνευση εξουσιοδότησης"
+msgstr "Απ_ομνημόνευση εξουσιοδότησης"
 
 #: ../src/polkit-gnome-auth-dialog.c:313
-#, fuzzy
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
-"Μια εφαρμογή προσπαθεί να εκτελέσει μια ενέργεια η οποία απαιτεί προνόμια. "
-"Για να εκτελεστεί η ενέργεια πρέπει να πιστοποιήσετε παρακάτω ότι είστε ένας "
-"από τους χρήστες του συστήματος."
+"Μια εφαρμογή προσπαθεί να εκτελέσει ενέργεια που απαιτεί προνόμια. "
+"Απαιτείται πιστοποίηση ενός από τους παρακάτω χρήστες για την εκτέλεση της "
+"ενέργειας."
 
 #: ../src/polkit-gnome-auth-dialog.c:320
-#, fuzzy
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
 msgstr ""
-"Μια εφαρμογή προσπαθεί να εκτελέσει μια ενέργεια η οποία απαιτεί προνόμια. "
-"Για να εκτελεστεί η ενέργεια πρέπει να πιστοποιήσετε ότι είστε ο υπερχρήστης "
-"του συστήματος."
+"Μια εφαρμογή προσπαθεί να εκτελέσει ενέργεια που απαιτεί προνόμια. "
+"Απαιτείται πιστοποίηση υπερχρήστη για την εκτέλεση της ενέργειας."
 
 #: ../src/polkit-gnome-auth-dialog.c:324
-#, fuzzy
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
 msgstr ""
-"Μια εφαρμογή προσπαθεί να εκτελέσει μια ενέργεια η οποία απαιτεί προνόμια. "
+"Μια εφαρμογή προσπαθεί να εκτελέσει ενέργεια που απαιτεί προνόμια. "
 "Απαιτείται πιστοποίηση για την εκτέλεση της ενέργειας."
 
-#: ../src/polkit-gnome-auth-dialog.c:348
+#: ../src/polkit-gnome-auth-dialog.c:405
 #, c-format
 msgid "Click to edit %s"
 msgstr "Κάντε κλικ για να επεξεργαστείτε το %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:371
-#: ../tools/polkit-gnome-authorization.c:1391
+#: ../src/polkit-gnome-auth-dialog.c:430
+#: ../tools/polkit-gnome-authorization.c:1400
 #, c-format
 msgid "Click to open %s"
 msgstr "Κάντε κλικ για να ανοίξετε το %s"
 
-#: ../src/polkit-gnome-auth-dialog.c:600
-#, fuzzy
+#: ../src/polkit-gnome-auth-dialog.c:667
 msgid "_Authenticate"
 msgstr "_Πιστοποίηση"
 
-#: ../src/polkit-gnome-auth-dialog.c:659 ../src/polkit-gnome-manager.c:680
-#: ../src/polkit-gnome-manager.c:729
+#: ../src/polkit-gnome-auth-dialog.c:726 ../src/polkit-gnome-manager.c:686
+#: ../src/polkit-gnome-manager.c:735
 msgid "_Password:"
-msgstr "_Κωδικός:"
+msgstr "_Συνθηματικό:"
 
-#: ../src/polkit-gnome-auth-dialog.c:681
+#: ../src/polkit-gnome-auth-dialog.c:748
 msgid "For this _session only"
 msgstr "Μόνο για αυτήν τη _συνεδρία"
 
-#: ../src/polkit-gnome-auth-dialog.c:689
+#: ../src/polkit-gnome-auth-dialog.c:756
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Λεπτομέρειες</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:710
+#: ../src/polkit-gnome-auth-dialog.c:777
 msgid "<small><b>Application:</b></small>"
 msgstr "<small><b>Εφαρμογή:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:714
+#: ../src/polkit-gnome-auth-dialog.c:781
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Ενέργεια:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:719
+#: ../src/polkit-gnome-auth-dialog.c:786
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Διανομέας:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:848
+#: ../src/polkit-gnome-auth-dialog.c:915
 msgid "Authenticate"
 msgstr "Πιστοποίηση"
 
-#: ../src/polkit-gnome-manager.c:724
+#: ../src/polkit-gnome-manager.c:367
+msgid "(unknown"
+msgstr "(άγνωστο)"
+
+#: ../src/polkit-gnome-manager.c:730
 #, c-format
 msgid "_Password for %s:"
-msgstr "_Κωδικός για το %s:"
+msgstr "_Συνθηματικό %s:"
 
-#: ../src/polkit-gnome-manager.c:726
+#: ../src/polkit-gnome-manager.c:732
 msgid "_Password for root:"
-msgstr "_Κωδικός για υπερχρήστη:"
-
-#: ../src/polkit-gnome-manager.c:734
-#, c-format
-msgid "_Password or swipe finger for %s:"
-msgstr ""
-
-#: ../src/polkit-gnome-manager.c:737
-msgid "_Password or swipe finger for root:"
-msgstr ""
+msgstr "_Συνθηματικό root:"
 
 #: ../src/polkit-gnome-manager.c:740
+#, c-format
+msgid "_Password or swipe finger for %s:"
+msgstr "_Συνθηματικό ή δακτυλικό αποτύπωμα %s:"
+
+#: ../src/polkit-gnome-manager.c:743
+msgid "_Password or swipe finger for root:"
+msgstr "_Συνθηματικό ή δακτυλικό αποτύπωμα root:"
+
+#: ../src/polkit-gnome-manager.c:746
 msgid "_Password or swipe finger:"
-msgstr ""
+msgstr "_Συνθηματικό ή δακτυλικό αποτύπωμα:"
 
 #: ../tools/polkit-gnome-authorization.c:117
 msgid "No"
 msgstr "Όχι"
 
 #: ../tools/polkit-gnome-authorization.c:119
-#, fuzzy
 msgid "Admin Authentication (one shot)"
-msgstr "Πιστοποίηση διαχειριστή (μια φορά)"
+msgstr "Πιστοποίηση διαχειριστή (μιας χρήσης)"
 
 #: ../tools/polkit-gnome-authorization.c:120
 msgid "Admin Authentication"
@@ -410,16 +506,15 @@ msgstr "Πιστοποίηση διαχειριστή"
 
 #: ../tools/polkit-gnome-authorization.c:121
 msgid "Admin Authentication (keep session)"
-msgstr "Πιστοποίηση διαχειριστή (διατήρηση συνεδρίας)"
+msgstr "Πιστοποίηση διαχειριστή (για τη συνεδρία)"
 
 #: ../tools/polkit-gnome-authorization.c:122
 msgid "Admin Authentication (keep indefinitely)"
-msgstr "Πιστοποίηση διαχειριστή (οριστική διατήρηση)"
+msgstr "Πιστοποίηση διαχειριστή (επ' αόριστον)"
 
 #: ../tools/polkit-gnome-authorization.c:124
-#, fuzzy
 msgid "Authentication (one shot)"
-msgstr "Πιστοποίηση (μια φορά)"
+msgstr "Πιστοποίηση (μιας χρήσης)"
 
 #: ../tools/polkit-gnome-authorization.c:125
 msgid "Authentication"
@@ -427,12 +522,11 @@ msgstr "Πιστοποίηση"
 
 #: ../tools/polkit-gnome-authorization.c:126
 msgid "Authentication (keep session)"
-msgstr "Πιστοποίηση (διατήρηση συνεδρίας)"
+msgstr "Πιστοποίηση (για τη συνεδρία)"
 
 #: ../tools/polkit-gnome-authorization.c:127
-#, fuzzy
 msgid "Authentication (keep indefinitely)"
-msgstr "Πιστοποίηση (οριστική διατήρηση)"
+msgstr "Πιστοποίηση (επ' αόριστον)"
 
 #: ../tools/polkit-gnome-authorization.c:129
 msgid "Yes"
@@ -444,27 +538,25 @@ msgstr ", "
 
 #: ../tools/polkit-gnome-authorization.c:276
 msgid "Must be on console"
-msgstr "Πρέπει να βρίσκεται σε κονσόλα"
+msgstr "Να βρίσκεται σε κονσόλα"
 
 #: ../tools/polkit-gnome-authorization.c:279
-#, fuzzy
 msgid "Must be in active session"
-msgstr "Πρέπει να βρίσκεται στην ενεργή συνεδρία"
+msgstr "Να βρίσκεται σε ενεργή συνεδρία"
 
 #: ../tools/polkit-gnome-authorization.c:282
-#, fuzzy, c-format
+#, c-format
 msgid "Must be program %s"
-msgstr "Πρέπει να βρίσκεται σε κονσόλα"
+msgstr "Να είναι το πρόγραμμα %s"
 
 #: ../tools/polkit-gnome-authorization.c:286
 #, c-format
 msgid "Must be SELinux Context %s"
-msgstr ""
+msgstr "Να βρίσκεται σε περιβάλλον SELinux %s"
 
 #: ../tools/polkit-gnome-authorization.c:344
-#, fuzzy
 msgid "A moment ago"
-msgstr "Μια στιγμή πριν"
+msgstr "Μόλις τώρα"
 
 #: ../tools/polkit-gnome-authorization.c:348
 msgid "1 minute ago"
@@ -493,278 +585,280 @@ msgstr "1 ημέρα πριν"
 msgid "%d days ago"
 msgstr "%d ημέρες πριν"
 
-#: ../tools/polkit-gnome-authorization.c:379
+#: ../tools/polkit-gnome-authorization.c:383
 #, c-format
 msgid "Auth as %s (uid %d)"
-msgstr ""
+msgstr "Πιστοποίηση ως %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:381
+#: ../tools/polkit-gnome-authorization.c:385
 #, c-format
 msgid "Auth as uid %d"
-msgstr ""
+msgstr "Πιστοποίηση ως uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:387
+#: ../tools/polkit-gnome-authorization.c:391
 #, c-format
 msgid "Blocked by %s (uid %d)"
-msgstr ""
+msgstr "Φραγή από %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:389
+#: ../tools/polkit-gnome-authorization.c:393
 #, c-format
 msgid "Blocked by uid %d"
-msgstr ""
+msgstr "Φραγή από uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:392
+#: ../tools/polkit-gnome-authorization.c:396
 #, c-format
 msgid "Granted by %s (uid %d)"
-msgstr ""
+msgstr "Χορήγηση από %s (uid %d)"
 
-#: ../tools/polkit-gnome-authorization.c:394
+#: ../tools/polkit-gnome-authorization.c:398
 #, c-format
 msgid "Granted by uid %d"
-msgstr ""
+msgstr "Χορήγηση από uid %d"
 
-#: ../tools/polkit-gnome-authorization.c:409
+#: ../tools/polkit-gnome-authorization.c:413
 #, c-format
 msgid "Single shot pid %d (%s)"
-msgstr ""
+msgstr "pid μιας χρήσης %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:415
+#: ../tools/polkit-gnome-authorization.c:419
 #, c-format
 msgid "pid %d (%s)"
-msgstr ""
+msgstr "pid %d (%s)"
 
-#: ../tools/polkit-gnome-authorization.c:418
+#: ../tools/polkit-gnome-authorization.c:422
 msgid "This session"
-msgstr "Σε αυτήν τη συνεδρία"
+msgstr "Για αυτήν τη συνεδρία"
 
-#: ../tools/polkit-gnome-authorization.c:421
+#: ../tools/polkit-gnome-authorization.c:425
 msgid "Always"
 msgstr "Πάντα"
 
-#: ../tools/polkit-gnome-authorization.c:431
+#: ../tools/polkit-gnome-authorization.c:435
 msgid "None"
-msgstr "Κανένα"
+msgstr "Ποτέ"
 
-#: ../tools/polkit-gnome-authorization.c:827
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Negative Authorization"
-msgstr ""
+msgstr "Χορήγηση αρνητικής εξουσιοδότησης"
 
-#: ../tools/polkit-gnome-authorization.c:827
+#: ../tools/polkit-gnome-authorization.c:836
 msgid "Grant Authorization"
 msgstr "Χορήγηση εξουσιοδότησης"
 
-#: ../tools/polkit-gnome-authorization.c:850
+#: ../tools/polkit-gnome-authorization.c:859
 #, c-format
 msgid ""
 "<b><big>Granting a negative authorization for the <i>%s</i> action requires "
 "more information</big></b>"
 msgstr ""
-"<b><big>Η χορήγηση αρνητικής εξουσιοδότησης για την ενέργεια <i>%s</i> "
-"απαιτεί περισσότερες πληροφορίες</big></b>"
+"<b><big>Η χορήγηση αρνητικής εξουσιοδότησης στην ενέργεια <i>%s</i> απαιτεί "
+"περισσότερες πληροφορίες</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:851
+#: ../tools/polkit-gnome-authorization.c:860
 #, c-format
 msgid ""
 "<b><big>Granting an authorization for the <i>%s</i> action requires more "
 "information</big></b>"
 msgstr ""
-"<b><big>Η χορήγηση εξουσιοδότησης για την ενέργεια <i>%s</i> απαιτεί "
+"<b><big>Η χορήγηση εξουσιοδότησης στην ενέργεια <i>%s</i> απαιτεί "
 "περισσότερες πληροφορίες</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:862
-#, fuzzy
+#: ../tools/polkit-gnome-authorization.c:871
 msgid ""
 "Select the user to block for the action and, optionally, any constraints on "
 "the negative authorization that you are about to grant."
 msgstr ""
-"Επιλέξτε το χρήστη για τον οποίο επιθυμείτε να γίνει η φραγή για την "
-"ενέργεια και, προαιρετικά, οποιουσδήποτε περιορισμούς κατά την αρνητική "
-"εξουσιοδότηση που πρόκειται να χορηγήσετε."
+"Επιλέξτε το χρήστη για τον οποίο επιθυμείτε να ισχύει φραγή για αυτήν την "
+"ενέργεια και, προαιρετικά, περιορισμούς για την αρνητική εξουσιοδότηση που "
+"πρόκειται να χορηγήσετε."
 
-#: ../tools/polkit-gnome-authorization.c:864
+#: ../tools/polkit-gnome-authorization.c:873
 msgid ""
 "Select the beneficiary and, optionally, how to constrain the authorization "
 "that you are about to grant."
 msgstr ""
+"Επιλέξτε τον δικαιούχο και, προαιρετικά, περιορισμούς για την εξουσιοδότηση "
+"που πρόκειται να χορηγήσετε."
 
-#: ../tools/polkit-gnome-authorization.c:875
+#: ../tools/polkit-gnome-authorization.c:884
 msgid "<b>Beneficiary</b>"
-msgstr ""
+msgstr "<b>Δικαιούχος</b>"
 
-#: ../tools/polkit-gnome-authorization.c:887
+#: ../tools/polkit-gnome-authorization.c:896
 msgid "Select the user that will receive the negative authorization."
-msgstr "Επιλέξτε το χρήστη που θα παραλάβει την αρνητική εξουσιοδότηση."
-
-#: ../tools/polkit-gnome-authorization.c:889
-msgid "Select the user that will receive the authorization."
-msgstr "Επιλέξτε το χρήστη που θα παραλάβει την εξουσιοδότηση."
+msgstr "Επιλέξτε το χρήστη για τον οποίο θα ισχύει η αρνητική εξουσιοδότηση."
 
 #: ../tools/polkit-gnome-authorization.c:898
-msgid "_Show system users"
-msgstr "_Εμφάνιση των χρηστών του συστήματος"
+msgid "Select the user that will receive the authorization."
+msgstr "Επιλέξτε το χρήστη για τον οποίο θα ισχύει η εξουσιοδότηση."
 
-#: ../tools/polkit-gnome-authorization.c:913
+#: ../tools/polkit-gnome-authorization.c:907
+msgid "_Show system users"
+msgstr "Ε_μφάνιση χρηστών συστήματος"
+
+#: ../tools/polkit-gnome-authorization.c:922
 msgid "<b>Constraints</b>"
 msgstr "<b>Περιορισμοί</b>"
 
-#: ../tools/polkit-gnome-authorization.c:924
+#: ../tools/polkit-gnome-authorization.c:933
 msgid ""
 "Constraints limits the authorization such that it only applies under certain "
 "circumstances."
 msgstr ""
+"Οι περιορισμοί σημαίνουν ότι η εξουσιοδότηση θα ισχύει μόνο υπό ορισμένες "
+"συνθήκες."
 
-#: ../tools/polkit-gnome-authorization.c:930
+#: ../tools/polkit-gnome-authorization.c:939
 msgid "_None"
-msgstr "_Κανένα"
+msgstr "_Καθόλου"
 
-#: ../tools/polkit-gnome-authorization.c:932
+#: ../tools/polkit-gnome-authorization.c:941
 msgid "Must be _in active session"
-msgstr "Πρέπει να βρίσκεται _σε ενεργή συνεδρία"
+msgstr "Να βρίσκεται σε _ενεργή συνεδρία"
 
-#: ../tools/polkit-gnome-authorization.c:934
+#: ../tools/polkit-gnome-authorization.c:943
 msgid "Must be on _local console"
-msgstr "Πρέπει να βρίσκεται σε _τοπική κονσόλα"
+msgstr "Να βρίσκεται σε _τοπική κονσόλα"
 
-#: ../tools/polkit-gnome-authorization.c:936
-#, fuzzy
+#: ../tools/polkit-gnome-authorization.c:945
 msgid "Must be in _active session on local console"
-msgstr "Πρέπει να βρίσκεται σε _ενεργή συνεδρία και στην τοπική κονσόλα"
+msgstr "Να βρίσκεται _σε ενεργή συνεδρία και σε τοπική κονσόλα"
 
-#: ../tools/polkit-gnome-authorization.c:957
-#: ../tools/polkit-gnome-authorization.c:2133
+#: ../tools/polkit-gnome-authorization.c:966
+#: ../tools/polkit-gnome-authorization.c:2142
 msgid "_Block..."
 msgstr "_Φραγή..."
 
-#: ../tools/polkit-gnome-authorization.c:961
-#: ../tools/polkit-gnome-authorization.c:2126
+#: ../tools/polkit-gnome-authorization.c:970
+#: ../tools/polkit-gnome-authorization.c:2135
 msgid "_Grant..."
 msgstr "_Χορήγηση..."
 
-#: ../tools/polkit-gnome-authorization.c:1155
+#: ../tools/polkit-gnome-authorization.c:1164
 msgid "Edit Implicit Authorizations"
-msgstr "Επεξεργασία αυτονόητων εξουσιοδοτήσεων"
+msgstr "Επεξεργασία σιωπηρών εξουσιοδοτήσεων"
 
-#: ../tools/polkit-gnome-authorization.c:1176
+#: ../tools/polkit-gnome-authorization.c:1185
 msgid "<b><big>Choose new implicit authorizations</big></b>"
-msgstr "b><big>Επιλέξτε καινούριες αυτονόητες εξουσιοδοτήσεις</big></b>"
+msgstr "<b><big>Επιλέξτε καινούριες σιωπηρές εξουσιοδοτήσεις</big></b>"
 
-#: ../tools/polkit-gnome-authorization.c:1190
+#: ../tools/polkit-gnome-authorization.c:1199
 #, c-format
 msgid ""
 "Implicit authorizations are authorizations that are granted automatically to "
 "users under certain circumstances. Choose what is required for the action <i>"
 "%s</i>."
 msgstr ""
+"Οι σιωπηρές εξουσιοδοτήσεις είναι εξουσιοδοτήσεις που δίνονται αυτόματα "
+"στους χρήστες υπό ορισμένες συνθήκες. Επιλέξτε τις προϋποθέσεις για την "
+"ενέργεια <i>%s</i>."
 
-#: ../tools/polkit-gnome-authorization.c:1215
-#: ../tools/polkit-gnome-authorization.c:1974
+#: ../tools/polkit-gnome-authorization.c:1224
+#: ../tools/polkit-gnome-authorization.c:1983
 msgid "<i>Anyone:</i>"
-msgstr ""
+msgstr "<i>Οποιοσδήποτε</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1222
-#: ../tools/polkit-gnome-authorization.c:1978
+#: ../tools/polkit-gnome-authorization.c:1231
+#: ../tools/polkit-gnome-authorization.c:1987
 msgid "<i>Console:</i>"
 msgstr "<i>Κονσόλα:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1229
-#: ../tools/polkit-gnome-authorization.c:1982
+#: ../tools/polkit-gnome-authorization.c:1238
+#: ../tools/polkit-gnome-authorization.c:1991
 msgid "<i>Active Console:</i>"
 msgstr "<i>Ενεργή κονσόλα:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1258
+#: ../tools/polkit-gnome-authorization.c:1267
 msgid "_Modify..."
 msgstr "_Τροποποίηση..."
 
-#: ../tools/polkit-gnome-authorization.c:1890
+#: ../tools/polkit-gnome-authorization.c:1899
 msgid "<b>Action</b>"
 msgstr "<b>Ενέργεια</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1905
+#: ../tools/polkit-gnome-authorization.c:1914
 msgid "<i>Identifier:</i>"
 msgstr "<i>Αναγνωριστικό:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1915
+#: ../tools/polkit-gnome-authorization.c:1924
 msgid "<i>Description:</i>"
 msgstr "<i>Περιγραφή:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1925
+#: ../tools/polkit-gnome-authorization.c:1934
 msgid "<i>Vendor:</i>"
 msgstr "<i>Διανομέας:</i>"
 
-#: ../tools/polkit-gnome-authorization.c:1951
+#: ../tools/polkit-gnome-authorization.c:1960
 msgid "<b>Implicit Authorizations</b>"
-msgstr "<b>Αυτονόητες εξουσιοδοτήσεις</b>"
+msgstr "<b>Σιωπηρές εξουσιοδοτήσεις</b>"
 
-#: ../tools/polkit-gnome-authorization.c:1959
-#, fuzzy
+#: ../tools/polkit-gnome-authorization.c:1968
 msgid ""
 "Implicit authorizations are authorizations automatically given to users "
 "based on certain criteria such as if they are on the local console."
 msgstr ""
-"Οι αυτονόητες εξουσιοδοτήσεις είναι εξουσιοδοτήσεις που δίνονται αυτόματα σε "
-"χρήστες που πληρούν συγκεκριμένα κριτήρια όπως εάν αυτοί είναι σε τοπική "
-"κονσόλα."
+"Οι σιωπηρές εξουσιοδοτήσεις είναι εξουσιοδοτήσεις που δίνονται αυτόματα σε "
+"χρήστες που πληρούν συγκεκριμένα κριτήρια, π.χ. βρίσκονται σε τοπική κονσόλα."
 
-#: ../tools/polkit-gnome-authorization.c:2002
+#: ../tools/polkit-gnome-authorization.c:2011
 msgid "_Edit..."
-msgstr "_Επεξεργασία…"
+msgstr "Ε_πεξεργασία…"
 
-#: ../tools/polkit-gnome-authorization.c:2009
+#: ../tools/polkit-gnome-authorization.c:2018
 msgid "Revert To _Defaults..."
-msgstr "Επαναφορά στις __προεπιλογές..."
+msgstr "Επ_αναφορά προεπιλογών..."
 
-#: ../tools/polkit-gnome-authorization.c:2032
+#: ../tools/polkit-gnome-authorization.c:2041
 msgid "<b>Explicit Authorizations</b>"
 msgstr "<b>Ρητές εξουσιοδοτήσεις</b>"
 
-#: ../tools/polkit-gnome-authorization.c:2043
-#, fuzzy
+#: ../tools/polkit-gnome-authorization.c:2052
 msgid ""
 "This list displays authorizations that are either obtained through "
 "authentication or specifically given to the entity in question. Blocked "
 "authorizations are marked with a STOP sign."
 msgstr ""
-"Η λίστα αυτή εμφανίζει εξουσιοδοτήσεις οι οποίες είτε λήφθηκαν μέσω "
-"πιστοποίησης είτε δόθηκαν ειδικά στο εν λόγω πρόσωπο. Οι φραγμένες "
-"εξουσιοδοτήσεις σημειώνονται με το σύμβολο STOP."
+"Η λίστα αυτή εμφανίζει εξουσιοδοτήσεις οι οποίες είτε ελήφθησαν μέσω "
+"πιστοποίησης είτε χορηγήθηκαν συγκεκριμένα  στον εν λόγω χρήστη/ομάδα. Οι "
+"φραγμένες εξουσιοδοτήσεις σημειώνονται με το σύμβολο STOP."
 
-#: ../tools/polkit-gnome-authorization.c:2073
+#: ../tools/polkit-gnome-authorization.c:2082
 msgid "Entity"
-msgstr "Οντότητα"
+msgstr "Όνομα"
 
-#: ../tools/polkit-gnome-authorization.c:2081
+#: ../tools/polkit-gnome-authorization.c:2090
 msgid "Scope"
-msgstr ""
+msgstr "Εμβέλεια"
 
-#: ../tools/polkit-gnome-authorization.c:2089
+#: ../tools/polkit-gnome-authorization.c:2098
 msgid "Obtained"
-msgstr "Έχει ληφθεί"
+msgstr "Χρόνος λήψης"
 
-#: ../tools/polkit-gnome-authorization.c:2097
+#: ../tools/polkit-gnome-authorization.c:2106
 msgid "How"
-msgstr "Πως"
+msgstr "Τρόπος λήψης"
 
-#: ../tools/polkit-gnome-authorization.c:2105
+#: ../tools/polkit-gnome-authorization.c:2114
 msgid "Constraints"
-msgstr ""
+msgstr "Περιορισμοί"
 
-#: ../tools/polkit-gnome-authorization.c:2147
-#: ../tools/polkit-gnome-authorization.c:2161
+#: ../tools/polkit-gnome-authorization.c:2156
+#: ../tools/polkit-gnome-authorization.c:2170
 msgid "_Revoke"
 msgstr "Α_νάκληση"
 
-#: ../tools/polkit-gnome-authorization.c:2154
+#: ../tools/polkit-gnome-authorization.c:2163
 msgid "_Revoke..."
 msgstr "Α_νάκληση..."
 
-#: ../tools/polkit-gnome-authorization.c:2174
+#: ../tools/polkit-gnome-authorization.c:2183
 msgid "_Show authorizations from all users..."
-msgstr "_Εμφανιση πιστοποιήσεων από όλους τους χρήστες..."
+msgstr "_Εμφανιση πιστοποιήσεων για όλους τους χρήστες..."
 
-#: ../tools/polkit-gnome-authorization.c:2175
+#: ../tools/polkit-gnome-authorization.c:2184
 msgid "_Show authorizations from all users"
-msgstr "_Εμφανιση πιστοποιήσεων από όλους τους χρήστες"
+msgstr "_Εμφανιση πιστοποιήσεων για όλους τους χρήστες"
 
-#: ../tools/polkit-gnome-authorization.c:2413
+#: ../tools/polkit-gnome-authorization.c:2426
 msgid "Select an action"
-msgstr "Επιλέξτε μία ενέργεια"
+msgstr "Επιλέξτε ενέργεια"
