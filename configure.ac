@@ -1,4 +1,4 @@
-AC_INIT([PolicyKit-gnome],[0.9.2],[mailto:david@fubar.dk],[PolicyKit-gnome])
+AC_INIT([PolicyKit-gnome],[0.90],[http://lists.freedesktop.org/mailman/listinfo/polkit-devel],[PolicyKit-gnome])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
@@ -124,9 +124,9 @@ GTK_DOC_CHECK([1.3])
 
 GTK_REQUIRED=2.13.6
 GCONF_REQUIRED=2.8
-DBUS_GLIB_REQUIRED=0.71
-POLKIT_DBUS_REQUIRED=0.9
-POLKIT_GRANT_REQUIRED=0.9
+EGGDBUS_REQUIRED=0.2
+POLKIT_AGENT_REQUIRED=0.90
+POLKIT_GOBJECT_REQUIRED=0.90
 
 PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
@@ -136,17 +136,17 @@ PKG_CHECK_MODULES(GCONF, gconf-2.0 >= $GCONF_REQUIRED)
 AC_SUBST(GCONF_CFLAGS)
 AC_SUBST(GCONF_LIBS)
 
-PKG_CHECK_MODULES(DBUS_GLIB, dbus-glib-1 >= $DBUS_GLIB_REQUIRED)
-AC_SUBST(DBUS_GLIB_CFLAGS)
-AC_SUBST(DBUS_GLIB_LIBS)
+PKG_CHECK_MODULES(EGGDBUS, eggdbus-1 >= $EGGDBUS_REQUIRED)
+AC_SUBST(EGGDBUS_CFLAGS)
+AC_SUBST(EGGDBUS_LIBS)
 
-PKG_CHECK_MODULES(POLKIT_DBUS, polkit-dbus >= $POLKIT_DBUS_REQUIRED)
-AC_SUBST(POLKIT_DBUS_CFLAGS)
-AC_SUBST(POLKIT_DBUS_LIBS)
+PKG_CHECK_MODULES(POLKIT_AGENT, polkit-agent-1 >= $POLKIT_AGENT_REQUIRED)
+AC_SUBST(POLKIT_AGENT_CFLAGS)
+AC_SUBST(POLKIT_AGENT_LIBS)
 
-PKG_CHECK_MODULES(POLKIT_GRANT, polkit-grant >= $POLKIT_GRANT_REQUIRED)
-AC_SUBST(POLKIT_GRANT_CFLAGS)
-AC_SUBST(POLKIT_GRANT_LIBS)
+PKG_CHECK_MODULES(POLKIT_GOBJECT, polkit-gobject-1 >= $POLKIT_GOBJECT_REQUIRED)
+AC_SUBST(POLKIT_GOBJECT_CFLAGS)
+AC_SUBST(POLKIT_GOBJECT_LIBS)
 
 AC_ARG_ENABLE([examples],
               AC_HELP_STRING([--enable-examples], [Build the example programs]),,
@@ -154,13 +154,13 @@ AC_ARG_ENABLE([examples],
 
 AM_CONDITIONAL(BUILD_EXAMPLES, test "x$enable_examples" = "xyes")
 
-if test "x$enable_examples" = "xyes"; then
-    AC_CHECK_PROG([POLKIT_POLICY_FILE_VALIDATE],
-                  [polkit-policy-file-validate], [polkit-policy-file-validate])
-    if test -z "$POLKIT_POLICY_FILE_VALIDATE"; then
-        AC_MSG_ERROR([polkit-policy-file-validate not found])
-    fi
-fi
+#if test "x$enable_examples" = "xyes"; then
+#    AC_CHECK_PROG([POLKIT_POLICY_FILE_VALIDATE],
+#                  [polkit-policy-file-validate], [polkit-policy-file-validate])
+#    if test -z "$POLKIT_POLICY_FILE_VALIDATE"; then
+#        AC_MSG_ERROR([polkit-policy-file-validate not found])
+#    fi
+#fi
 
 dnl ==============================================
 dnl Special GConf section 

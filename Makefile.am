@@ -1,11 +1,15 @@
-SUBDIRS = data src polkit-gnome tools
+#SUBDIRS = data src polkit-gnome tools
 
-if BUILD_EXAMPLES
-SUBDIRS += examples
-endif
+SUBDIRS = src
+
+#if BUILD_EXAMPLES
+#SUBDIRS += examples
+#endif
 
 # Need to build docs after examples because the docs include generated files
-SUBDIRS += doc po
+#SUBDIRS += doc po
+
+SUBDIRS += po
 
 # Creating ChangeLog from git log (taken from cairo/Makefile.am):
 ChangeLog: $(srcdir)/ChangeLog

@@ -36,8 +36,6 @@
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
 
 #include "sexy-url-label.h"
 #include "polkit-gnome-auth-dialog.h"
@@ -616,6 +614,7 @@ vendor_url_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
 static void
 action_id_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
 {
+#if 0
         GError *error;
         DBusGConnection *bus;
         DBusGProxy *manager_proxy;
@@ -653,6 +652,7 @@ action_id_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
 	}
 out:
 	;
+#endif
 }
 
 static void
