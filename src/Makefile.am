@@ -1,13 +1,21 @@
 
-libexec_PROGRAMS = polkit-gnome-manager
+FULL_LIBEXECDIR=$(libexecdir)
 
-polkit_gnome_manager_SOURCES = 						\
+polkit-gnome-authentication-agent-1.desktop : polkit-gnome-authentication-agent-1.desktop.in
+	cat polkit-gnome-authentication-agent-1.desktop.in | sed 's,@FULL_LIBEXECDIR@,$(FULL_LIBEXECDIR),' > $@
+
+desktopdir = $(datadir)/gnome/autostart
+desktop_DATA = polkit-gnome-authentication-agent-1.desktop
+
+libexec_PROGRAMS = polkit-gnome-authentication-agent-1
+
+polkit_gnome_authentication_agent_1_SOURCES = 				\
 	polkit-gnome-auth-dialog.h	polkit-gnome-auth-dialog.c	\
 	sexy-url-label.h 		sexy-url-label.c		\
 	main.c								\
 	$(BUILT_SOURCES)
 
-polkit_gnome_manager_CPPFLAGS = 			\
+polkit_gnome_authentication_agent_1_CPPFLAGS = 		\
 	-I$(top_srcdir)					\
 	-DG_LOG_DOMAIN=\"PolicyKitGnome\"		\
 	-DDATADIR=\""$(pkgdatadir)"\"			\
@@ -15,7 +23,7 @@ polkit_gnome_manager_CPPFLAGS = 			\
 	$(DISABLE_DEPRECATED)				\
 	$(AM_CPPFLAGS)
 
-polkit_gnome_manager_CFLAGS = 				\
+polkit_gnome_authentication_agent_1_CFLAGS = 		\
 	$(GTK_CFLAGS)					\
 	$(GCONF_CFLAGS)					\
 	$(EGGDBUS_CFLAGS)				\
@@ -24,10 +32,10 @@ polkit_gnome_manager_CFLAGS = 				\
 	$(WARN_CFLAGS)					\
 	$(AM_CFLAGS)
 
-polkit_gnome_manager_LDFLAGS = 				\
+polkit_gnome_authentication_agent_1_LDFLAGS = 		\
 	$(AM_LDFLAGS)
 
-polkit_gnome_manager_LDADD = 				\
+polkit_gnome_authentication_agent_1_LDADD = 		\
 	$(GTK_LIBS)					\
 	$(GCONF_LIBS)					\
 	$(EGGDBUS_LIBS)					\
@@ -35,9 +43,7 @@ polkit_gnome_manager_LDADD = 				\
 	$(POLKIT_GOBJECT_LIBS)				\
 	$(INTLLIBS)
 
-CLEANFILES = $(BUILT_SOURCES)
-
-EXTRA_DIST = polkit-gnome-manager.xml
+EXTRA_DIST = polkit-gnome-authentication-agent-1.desktop.in
 
 clean-local :
-	rm -f *~
+	rm -f *~ polkit-gnome-authentication-agent-1.desktop

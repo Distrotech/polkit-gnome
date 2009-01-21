@@ -1,4 +1,4 @@
-AC_INIT([PolicyKit-gnome],[0.90],[http://lists.freedesktop.org/mailman/listinfo/polkit-devel],[PolicyKit-gnome])
+AC_INIT([polkit-gnome],[0.90],[http://lists.freedesktop.org/mailman/listinfo/polkit-devel],[polkit-gnome])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
@@ -180,7 +180,7 @@ AM_GCONF_SOURCE_2
 
 IT_PROG_INTLTOOL([0.35.0])
 
-GETTEXT_PACKAGE=PolicyKit-gnome
+GETTEXT_PACKAGE=polkit-gnome-1
 AC_SUBST([GETTEXT_PACKAGE])
 AM_GLIB_GNU_GETTEXT
 AC_DEFINE_UNQUOTED([GETTEXT_PACKAGE],["$GETTEXT_PACKAGE"],[gettext domain])
@@ -193,23 +193,24 @@ AC_SUBST([AM_CFLAGS])
 AC_SUBST([AM_CXXFLAGS])
 AC_SUBST([AM_LDFLAGS])
 
+#data/Makefile
+#data/polkit-gnome.pc
+#examples/Makefile
+#polkit-gnome/Makefile
+#tools/Makefile
+#doc/Makefile
+#doc/version.xml
+
 AC_CONFIG_FILES([
 Makefile
-data/Makefile
-data/polkit-gnome.pc
-examples/Makefile
-polkit-gnome/Makefile
 src/Makefile
-tools/Makefile
-doc/Makefile
-doc/version.xml
 po/Makefile.in
 ])
 
 AC_OUTPUT
 
 echo "
-                  PolicyKit-gnome $VERSION
+                  polkit-gnome $VERSION
                 =======================
 
         prefix:                     ${prefix}
