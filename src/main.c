@@ -454,7 +454,6 @@ int
 main (int argc, char **argv)
 {
   GMainLoop *loop;
-  GError *error;
   int ret;
 
   g_type_init ();
@@ -474,17 +473,9 @@ main (int argc, char **argv)
 
   authority = polkit_authority_get ();
 
-  error = NULL;
   agent = polkit_agent_authentication_agent_new (begin_authentication_func,
                                                  cancel_authentication_func,
-                                                 NULL,
-                                                 &error);
-  if (agent == NULL)
-    {
-      g_warning ("Error registering authentication agent: %s", error->message);
-      g_error_free (error);
-      goto out;
-    }
+                                                 NULL);
 
   loop = g_main_loop_new (NULL, FALSE);
 
@@ -492,7 +483,6 @@ main (int argc, char **argv)
 
   ret = 0;
 
- out:
   if (agent != NULL)
     g_object_unref (agent);
 
