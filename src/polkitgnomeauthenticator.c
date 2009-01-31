@@ -237,7 +237,7 @@ session_request (PolkitAgentSession *session,
 
   password = NULL;
 
-  g_debug ("in conversation_pam_prompt, request='%s', echo_on=%d", request, echo_on);
+  //g_debug ("in conversation_pam_prompt, request='%s', echo_on=%d", request, echo_on);
 
   /* Fix up, and localize, password prompt if it's password auth */
   if (g_ascii_strncasecmp (request, "password:", 9) == 0)
@@ -299,7 +299,7 @@ session_show_error (PolkitAgentSession *session,
                     const gchar        *msg,
                     gpointer            user_data)
 {
-  g_debug ("error_msg='%s'", msg);
+  g_warning ("TODO: should display error_msg='%s'", msg);
 }
 
 static void
@@ -307,7 +307,7 @@ session_show_info (PolkitAgentSession *session,
                    const gchar        *msg,
                    gpointer            user_data)
 {
-  g_debug ("text_info='%s'", msg);
+  g_warning ("TODO: should display text_info='%s'", msg);
 }
 
 
@@ -320,7 +320,7 @@ session_completed (PolkitAgentSession *session,
 
   authenticator->gained_authorization = gained_authorization;
 
-  g_debug ("in conversation_done gained=%d", gained_authorization);
+  //g_debug ("in conversation_done gained=%d", gained_authorization);
 
   g_main_loop_quit (authenticator->loop);
 }
@@ -336,7 +336,7 @@ do_initiate (gpointer user_data)
   if (!polkit_gnome_authentication_dialog_run_until_user_is_selected (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog)))
     {
       /* user cancelled the dialog */
-      g_debug ("User cancelled before selecting a user");
+      //g_debug ("User cancelled before selecting a user");
       authenticator->was_cancelled = TRUE;
       goto out;
     }
@@ -350,7 +350,7 @@ do_initiate (gpointer user_data)
   g_free (authenticator->selected_user);
   authenticator->selected_user = polkit_gnome_authentication_dialog_get_selected_user (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog));
 
-  g_debug ("Authenticating user %s", authenticator->selected_user);
+  //g_debug ("Authenticating user %s", authenticator->selected_user);
   identity = polkit_unix_user_new_for_name (authenticator->selected_user, NULL);
 
   authenticator->session = polkit_agent_session_new (identity, authenticator->cookie);
@@ -386,14 +386,14 @@ do_initiate (gpointer user_data)
 
   g_main_loop_run (authenticator->loop);
 
-  g_debug ("gained_authorization=%d was_cancelled=%d new_user_selected=%d.",
-           authenticator->gained_authorization,
-           authenticator->was_cancelled,
-           authenticator->new_user_selected);
+  //g_debug ("gained_authorization=%d was_cancelled=%d new_user_selected=%d.",
+  //         authenticator->gained_authorization,
+  //         authenticator->was_cancelled,
+  //         authenticator->new_user_selected);
 
   if (authenticator->new_user_selected)
     {
-      g_debug ("New user selected");
+      //g_debug ("New user selected");
       authenticator->new_user_selected = FALSE;
       g_object_unref (authenticator->session);
       authenticator->session = NULL;
