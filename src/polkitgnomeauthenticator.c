@@ -279,22 +279,6 @@ out:
 }
 
 static void
-session_request_echo_off (PolkitAgentSession *session,
-                          const gchar        *request,
-                          gpointer            user_data)
-{
-  session_request (session, request, FALSE, user_data);
-}
-
-static void
-session_request_echo_on (PolkitAgentSession *session,
-                         const gchar        *request,
-                         gpointer            user_data)
-{
-  session_request (session, request, TRUE, user_data);
-}
-
-static void
 session_show_error (PolkitAgentSession *session,
                     const gchar        *msg,
                     gpointer            user_data)
@@ -358,13 +342,8 @@ do_initiate (gpointer user_data)
   g_object_unref (identity);
 
   g_signal_connect (authenticator->session,
-                    "request-echo-on",
-                    G_CALLBACK (session_request_echo_on),
-                    authenticator);
-
-  g_signal_connect (authenticator->session,
-                    "request-echo-off",
-                    G_CALLBACK (session_request_echo_off),
+                    "request",
+                    G_CALLBACK (session_request),
                     authenticator);
 
   g_signal_connect (authenticator->session,
