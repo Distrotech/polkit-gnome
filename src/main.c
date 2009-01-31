@@ -36,6 +36,7 @@ main (int argc, char **argv)
   gint ret;
   GMainLoop *loop;
   PolkitAgentListener *listener;
+  GError *error;
 
   g_type_init ();
   gtk_init (&argc, &argv);
@@ -48,18 +49,28 @@ main (int argc, char **argv)
 
   ret = 1;
 
+  loop = g_main_loop_new (NULL, FALSE);
+
   listener = polkit_gnome_listener_new ();
 
-  polkit_agent_export_listener (listener, NULL, "/org/gnome/PolicyKit1/AuthenticationAgent");
-
-  loop = g_main_loop_new (NULL, FALSE);
+  error = NULL;
+  if (!polkit_agent_register_listener (listener,
+                                       NULL,
+                                       "/org/gnome/PolicyKit1/AuthenticationAgent",
+                                       &error))
+    {
+      g_printerr ("Cannot register authentication agent: %s\n", error->message);
+      g_error_free (error);
+      goto out;
+    }
 
   g_main_loop_run (loop);
 
+  ret = 0;
+
+ out:
   g_object_unref (listener);
   g_main_loop_unref (loop);
-
-  ret = 0;
 
   return ret;
 }
