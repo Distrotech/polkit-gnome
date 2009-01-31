@@ -9,15 +9,17 @@ desktop_DATA = polkit-gnome-authentication-agent-1.desktop
 
 libexec_PROGRAMS = polkit-gnome-authentication-agent-1
 
-polkit_gnome_authentication_agent_1_SOURCES = 				\
-	polkit-gnome-auth-dialog.h	polkit-gnome-auth-dialog.c	\
-	sexy-url-label.h 		sexy-url-label.c		\
-	main.c								\
+polkit_gnome_authentication_agent_1_SOURCES = 						\
+	polkitgnomelistener.h			polkitgnomelistener.c			\
+	polkitgnomeauthenticator.h		polkitgnomeauthenticator.c		\
+	polkitgnomeauthenticationdialog.h	polkitgnomeauthenticationdialog.c	\
+	sexy-url-label.h 			sexy-url-label.c			\
+	main.c										\
 	$(BUILT_SOURCES)
 
 polkit_gnome_authentication_agent_1_CPPFLAGS = 		\
 	-I$(top_srcdir)					\
-	-DG_LOG_DOMAIN=\"PolicyKitGnome\"		\
+	-DG_LOG_DOMAIN=\"polkit-gnome-1\"		\
 	-DDATADIR=\""$(pkgdatadir)"\"			\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
 	$(DISABLE_DEPRECATED)				\
