@@ -149,7 +149,6 @@ get_desc_for_action (PolkitAuthority *authority,
 
   action_descs = polkit_authority_enumerate_actions_sync (authority,
                                                           NULL,
-                                                          NULL,
                                                           NULL);
   for (l = action_descs; l != NULL; l = l->next)
     {

@@ -22,6 +22,7 @@ polkit_gnome_authentication_agent_1_CPPFLAGS = 		\
 	-DG_LOG_DOMAIN=\"polkit-gnome-1\"		\
 	-DDATADIR=\""$(pkgdatadir)"\"			\
 	-DGNOMELOCALEDIR=\""$(datadir)/locale"\"	\
+	-DPOLKIT_AGENT_I_KNOW_API_IS_SUBJECT_TO_CHANGE	\
 	$(DISABLE_DEPRECATED)				\
 	$(AM_CPPFLAGS)
 
