@@ -1,0 +1,9 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=PolicyKit Authentication Agent
+Comment=PolicyKit Authentication Agent
+Exec=@FULL_LIBEXECDIR@/polkit-gnome-authentication-agent-1
+Terminal=false
+Type=Application
+Categories=
+OnlyShowIn=GNOME;
