@@ -42,6 +42,9 @@ struct _PolkitGnomeListenerClass
 
 static void polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *listener,
                                                            const gchar          *action_id,
+                                                           const gchar          *message,
+                                                           const gchar          *icon_name,
+                                                           GHashTable           *details,
                                                            const gchar          *cookie,
                                                            GList                *identities,
                                                            GCancellable         *cancellable,
@@ -155,6 +158,9 @@ cancelled_cb (GCancellable *cancellable,
 static void
 polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *agent_listener,
                                                const gchar          *action_id,
+                                               const gchar          *message,
+                                               const gchar          *icon_name,
+                                               GHashTable           *details,
                                                const gchar          *cookie,
                                                GList                *identities,
                                                GCancellable         *cancellable,
@@ -181,6 +187,9 @@ polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *agent_liste
     }
 
   listener->the_authenticator = polkit_gnome_authenticator_new (action_id,
+                                                                message,
+                                                                icon_name,
+                                                                details,
                                                                 cookie,
                                                                 identities);
   if (listener->the_authenticator == NULL)

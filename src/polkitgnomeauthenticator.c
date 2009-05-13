@@ -39,11 +39,13 @@ struct _PolkitGnomeAuthenticator
 
   PolkitAuthority *authority;
   gchar *action_id;
+  gchar *message;
+  gchar *icon_name;
+  GHashTable *details;
   gchar *cookie;
   GList *identities;
 
   PolkitActionDescription *action_desc;
-  gchar *icon_name;
   gchar **users;
 
   gboolean gained_authorization;
@@ -87,13 +89,15 @@ polkit_gnome_authenticator_finalize (GObject *object)
   if (authenticator->authority != NULL)
     g_object_unref (authenticator->authority);
   g_free (authenticator->action_id);
+  g_free (authenticator->message);
+  g_free (authenticator->icon_name);
+  g_hash_table_unref (authenticator->details);
   g_free (authenticator->cookie);
   g_list_foreach (authenticator->identities, (GFunc) g_object_unref, NULL);
   g_list_free (authenticator->identities);
 
   if (authenticator->action_desc != NULL)
     g_object_unref (authenticator->action_desc);
-  g_free (authenticator->icon_name);
   g_strfreev (authenticator->users);
 
   g_free (authenticator->selected_user);
@@ -170,12 +174,14 @@ get_desc_for_action (PolkitAuthority *authority,
 }
 
 PolkitGnomeAuthenticator *
-polkit_gnome_authenticator_new (const gchar *action_id,
-                                const gchar *cookie,
-                                GList       *identities)
+polkit_gnome_authenticator_new (const gchar  *action_id,
+                                const gchar  *message,
+                                const gchar  *icon_name,
+                                GHashTable   *details,
+                                const gchar  *cookie,
+                                GList        *identities)
 {
   PolkitGnomeAuthenticator *authenticator;
-  GIcon *icon;
   GList *l;
   guint n;
 
@@ -183,6 +189,9 @@ polkit_gnome_authenticator_new (const gchar *action_id,
 
   authenticator->authority = polkit_authority_get ();
   authenticator->action_id = g_strdup (action_id);
+  authenticator->message = g_strdup (message);
+  authenticator->icon_name = g_strdup (icon_name);
+  authenticator->details = g_hash_table_ref (details);
   authenticator->cookie = g_strdup (cookie);
   authenticator->identities = g_list_copy (identities);
   g_list_foreach (authenticator->identities, (GFunc) g_object_ref, NULL);
@@ -191,10 +200,6 @@ polkit_gnome_authenticator_new (const gchar *action_id,
                                                     authenticator->action_id);
   if (authenticator->action_desc == NULL)
     goto error;
-
-  icon = polkit_action_description_get_icon (authenticator->action_desc);
-  if (icon != NULL)
-    authenticator->icon_name = g_icon_to_string (icon);
 
   authenticator->users = g_new0 (gchar *, g_list_length (authenticator->identities) + 1);
   for (l = authenticator->identities, n = 0; l != NULL; l = l->next, n++)
@@ -209,12 +214,12 @@ polkit_gnome_authenticator_new (const gchar *action_id,
     }
 
   authenticator->dialog = polkit_gnome_authentication_dialog_new
-                            ("/todo/path/to/program/requesting/auth",
-                             authenticator->action_id,
+                            (authenticator->action_id,
                              polkit_action_description_get_vendor_name (authenticator->action_desc),
                              polkit_action_description_get_vendor_url (authenticator->action_desc),
                              authenticator->icon_name,
-                             polkit_action_description_get_message (authenticator->action_desc),
+                             authenticator->message,
+                             authenticator->details,
                              authenticator->users);
 
   return authenticator;
