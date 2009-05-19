@@ -23,6 +23,7 @@
 #define __POLKIT_GNOME_AUTHENTICATION_DIALOG_H
 
 #include <gtk/gtk.h>
+#include <polkit/polkit.h>
 
 G_BEGIN_DECLS
 
@@ -48,13 +49,13 @@ struct _PolkitGnomeAuthenticationDialogClass
 };
 
 GType      polkit_gnome_authentication_dialog_get_type                      (void);
-GtkWidget *polkit_gnome_authentication_dialog_new                           (const gchar *action_id,
-                                                                             const gchar *vendor,
-                                                                             const gchar *vendor_url,
-                                                                             const gchar *icon_name,
-                                                                             const gchar *message_markup,
-                                                                             GHashTable  *details,
-                                                                             gchar      **users);
+GtkWidget *polkit_gnome_authentication_dialog_new                           (const gchar    *action_id,
+                                                                             const gchar    *vendor,
+                                                                             const gchar    *vendor_url,
+                                                                             const gchar    *icon_name,
+                                                                             const gchar    *message_markup,
+                                                                             PolkitDetails  *details,
+                                                                             gchar         **users);
 gchar     *polkit_gnome_authentication_dialog_get_selected_user             (PolkitGnomeAuthenticationDialog *dialog);
 gboolean   polkit_gnome_authentication_dialog_run_until_user_is_selected    (PolkitGnomeAuthenticationDialog *dialog);
 gchar     *polkit_gnome_authentication_dialog_run_until_response_for_prompt (PolkitGnomeAuthenticationDialog *dialog,

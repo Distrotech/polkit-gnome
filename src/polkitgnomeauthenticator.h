@@ -37,12 +37,12 @@ typedef struct _PolkitGnomeAuthenticator PolkitGnomeAuthenticator;
 typedef struct _PolkitGnomeAuthenticatorClass PolkitGnomeAuthenticatorClass;
 
 GType                      polkit_gnome_authenticator_get_type   (void) G_GNUC_CONST;
-PolkitGnomeAuthenticator  *polkit_gnome_authenticator_new        (const gchar  *action_id,
-                                                                  const gchar  *message,
-                                                                  const gchar  *icon_name,
-                                                                  GHashTable   *details,
-                                                                  const gchar  *cookie,
-                                                                  GList        *identities);
+PolkitGnomeAuthenticator  *polkit_gnome_authenticator_new        (const gchar              *action_id,
+                                                                  const gchar              *message,
+                                                                  const gchar              *icon_name,
+                                                                  PolkitDetails            *details,
+                                                                  const gchar              *cookie,
+                                                                  GList                    *identities);
 void                       polkit_gnome_authenticator_initiate   (PolkitGnomeAuthenticator *authenticator);
 void                       polkit_gnome_authenticator_cancel     (PolkitGnomeAuthenticator *authenticator);
 const gchar               *polkit_gnome_authenticator_get_cookie (PolkitGnomeAuthenticator *authenticator);

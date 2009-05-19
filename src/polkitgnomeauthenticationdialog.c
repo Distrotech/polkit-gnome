@@ -56,7 +56,7 @@ struct _PolkitGnomeAuthenticationDialogPrivate
   gchar *vendor;
   gchar *vendor_url;
   gchar *icon_name;
-  GHashTable *details;
+  PolkitDetails *details;
 
   gchar **users;
   gchar *selected_user;
@@ -327,7 +327,7 @@ polkit_gnome_authentication_dialog_set_property (GObject      *object,
   switch (prop_id)
     {
     case PROP_DETAILS:
-      dialog->priv->details = g_value_dup_boxed (value);
+      dialog->priv->details = g_value_dup_object (value);
       break;
 
     case PROP_ACTION_ID:
@@ -479,7 +479,8 @@ polkit_gnome_authentication_dialog_finalize (GObject *object)
   g_free (dialog->priv->vendor);
   g_free (dialog->priv->vendor_url);
   g_free (dialog->priv->icon_name);
-  g_hash_table_unref (dialog->priv->details);
+  if (dialog->priv->details != NULL)
+    g_object_unref (dialog->priv->details);
 
   g_strfreev (dialog->priv->users);
   g_free (dialog->priv->selected_user);
@@ -506,7 +507,6 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   GtkWidget *image;
   gboolean have_user_combobox;
   gchar *s;
-  GList *keys, *l;
   guint rows;
 
   dialog = POLKIT_GNOME_AUTHENTICATION_DIALOG (object);
@@ -626,27 +626,34 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   gtk_table_set_row_spacings (GTK_TABLE (table), 6);
   gtk_container_add (GTK_CONTAINER (table_alignment), table);
 
+  /* TODO: sort keys? */
   rows = 0;
-  keys = g_hash_table_get_keys (dialog->priv->details);
-  keys = g_list_sort (keys, (GCompareFunc) g_strcmp0);
-  for (l = keys; l != NULL; l = l->next)
+  if (dialog->priv->details != NULL)
     {
-      const gchar *key = l->data;
-      const gchar *value;
+      guint n;
+      gchar **keys;
 
-      value = g_hash_table_lookup (dialog->priv->details, key);
+      keys = polkit_details_get_keys (dialog->priv->details);
+      for (n = 0; keys[n] != NULL; n++)
+        {
+          const gchar *key = keys[n];
+          const gchar *value;
 
-      label = gtk_label_new (NULL);
-      s = g_strdup_printf ("<small>%s</small>", value);
-      gtk_label_set_markup (GTK_LABEL (label), s);
-      g_free (s);
-      gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
-      s = g_strdup_printf ("<small><b>%s:</b></small>", key);
-      add_row (table, rows++, s, label);
-      g_free (s);
+          value = polkit_details_lookup (dialog->priv->details, key);
+
+          label = gtk_label_new (NULL);
+          s = g_strdup_printf ("<small>%s</small>", value);
+          gtk_label_set_markup (GTK_LABEL (label), s);
+          g_free (s);
+          gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
+          s = g_strdup_printf ("<small><b>%s:</b></small>", key);
+          add_row (table, rows, s, label);
+          g_free (s);
+
+          rows++;
+        }
+      g_strfreev (keys);
     }
-  g_list_free (keys);
-
 
   /* --- */
 
@@ -707,15 +714,15 @@ polkit_gnome_authentication_dialog_class_init (PolkitGnomeAuthenticationDialogCl
 
   g_object_class_install_property (gobject_class,
                                    PROP_DETAILS,
-                                   g_param_spec_boxed ("details",
-                                                       NULL,
-                                                       NULL,
-                                                       G_TYPE_HASH_TABLE,
-                                                       G_PARAM_READWRITE |
-                                                       G_PARAM_CONSTRUCT_ONLY |
-                                                       G_PARAM_STATIC_NAME |
-                                                       G_PARAM_STATIC_NICK |
-                                                       G_PARAM_STATIC_BLURB));
+                                   g_param_spec_object ("details",
+                                                        NULL,
+                                                        NULL,
+                                                        POLKIT_TYPE_DETAILS,
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT_ONLY |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
 
   g_object_class_install_property (gobject_class,
                                    PROP_ACTION_ID,
@@ -810,13 +817,13 @@ polkit_gnome_authentication_dialog_class_init (PolkitGnomeAuthenticationDialogCl
  * Returns: A new password dialog.
  **/
 GtkWidget *
-polkit_gnome_authentication_dialog_new (const gchar *action_id,
-                                        const gchar *vendor,
-                                        const gchar *vendor_url,
-                                        const gchar *icon_name,
-                                        const gchar *message_markup,
-                                        GHashTable  *details,
-                                        gchar      **users)
+polkit_gnome_authentication_dialog_new (const gchar    *action_id,
+                                        const gchar    *vendor,
+                                        const gchar    *vendor_url,
+                                        const gchar    *icon_name,
+                                        const gchar    *message_markup,
+                                        PolkitDetails  *details,
+                                        gchar         **users)
 {
   PolkitGnomeAuthenticationDialog *dialog;
   GtkWindow *window;

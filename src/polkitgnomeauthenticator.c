@@ -41,7 +41,7 @@ struct _PolkitGnomeAuthenticator
   gchar *action_id;
   gchar *message;
   gchar *icon_name;
-  GHashTable *details;
+  PolkitDetails *details;
   gchar *cookie;
   GList *identities;
 
@@ -91,7 +91,8 @@ polkit_gnome_authenticator_finalize (GObject *object)
   g_free (authenticator->action_id);
   g_free (authenticator->message);
   g_free (authenticator->icon_name);
-  g_hash_table_unref (authenticator->details);
+  if (authenticator->details != NULL)
+    g_object_unref (authenticator->details);
   g_free (authenticator->cookie);
   g_list_foreach (authenticator->identities, (GFunc) g_object_unref, NULL);
   g_list_free (authenticator->identities);
@@ -174,12 +175,12 @@ get_desc_for_action (PolkitAuthority *authority,
 }
 
 PolkitGnomeAuthenticator *
-polkit_gnome_authenticator_new (const gchar  *action_id,
-                                const gchar  *message,
-                                const gchar  *icon_name,
-                                GHashTable   *details,
-                                const gchar  *cookie,
-                                GList        *identities)
+polkit_gnome_authenticator_new (const gchar     *action_id,
+                                const gchar     *message,
+                                const gchar     *icon_name,
+                                PolkitDetails   *details,
+                                const gchar     *cookie,
+                                GList           *identities)
 {
   PolkitGnomeAuthenticator *authenticator;
   GList *l;
@@ -191,7 +192,8 @@ polkit_gnome_authenticator_new (const gchar  *action_id,
   authenticator->action_id = g_strdup (action_id);
   authenticator->message = g_strdup (message);
   authenticator->icon_name = g_strdup (icon_name);
-  authenticator->details = g_hash_table_ref (details);
+  if (details != NULL)
+    authenticator->details = g_object_ref (details);
   authenticator->cookie = g_strdup (cookie);
   authenticator->identities = g_list_copy (identities);
   g_list_foreach (authenticator->identities, (GFunc) g_object_ref, NULL);
