@@ -50,6 +50,8 @@ struct _PolkitGnomeAuthenticationDialogPrivate
   GtkWidget *password_entry;
   GtkWidget *auth_button;
   GtkWidget *cancel_button;
+  GtkWidget *info_label;
+  GtkWidget *table_alignment;
 
   gchar *message;
   gchar *action_id;
@@ -189,8 +191,8 @@ create_user_combobox (PolkitGnomeAuthenticationDialog *dialog)
         {
           gchar *path;
           path = g_strdup_printf ("%s/.face", passwd->pw_dir);
-          /* TODO: we probably shouldn't hard-code the size to 24x24*/
-          pixbuf = gdk_pixbuf_new_from_file_at_scale (path, 24, 24, TRUE, NULL);
+          /* TODO: we probably shouldn't hard-code the size to 16x16 */
+          pixbuf = gdk_pixbuf_new_from_file_at_scale (path, 16, 16, TRUE, NULL);
           g_free (path);
         }
 
@@ -261,7 +263,7 @@ get_image (PolkitGnomeAuthenticationDialog *dialog)
   copy_pixbuf = NULL;
   vendor_pixbuf = NULL;
 
-  if (dialog->priv->icon_name == NULL)
+  if (dialog->priv->icon_name == NULL || strlen (dialog->priv->icon_name) == 0)
     {
       image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_AUTHENTICATION, GTK_ICON_SIZE_DIALOG);
       goto out;
@@ -274,7 +276,7 @@ get_image (PolkitGnomeAuthenticationDialog *dialog)
                                             NULL);
   if (vendor_pixbuf == NULL)
     {
-      g_warning ("No icon for themed icon with name %s", dialog->priv->icon_name);
+      g_warning ("No icon for themed icon with name '%s'", dialog->priv->icon_name);
       image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_AUTHENTICATION, GTK_ICON_SIZE_DIALOG);
       goto out;
     }
@@ -595,7 +597,7 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
     }
 
   /* password entry */
-  vbox = gtk_vbox_new (FALSE, 6);
+  vbox = gtk_vbox_new (FALSE, 0);
   gtk_box_pack_start (GTK_BOX (main_vbox), vbox, FALSE, FALSE, 0);
 
   table_alignment = gtk_alignment_new (0.0, 0.0, 1.0, 1.0);
@@ -612,6 +614,18 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
                             G_CALLBACK (gtk_window_activate_default),
                             dialog);
 
+  dialog->priv->table_alignment = table_alignment;
+  /* initially never show the password entry stuff; we'll toggle it on/off so it's
+   * only shown when prompting for a password */
+  gtk_widget_set_no_show_all (dialog->priv->table_alignment, TRUE);
+
+  /* A label for showing PAM_TEXT_INFO and PAM_TEXT_ERROR messages */
+  label = gtk_label_new (NULL);
+  gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
+  gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
+  dialog->priv->info_label = label;
+
+  /* Details */
   details_expander = gtk_expander_new_with_mnemonic (_("<small><b>_Details</b></small>"));
   gtk_expander_set_use_markup (GTK_EXPANDER (details_expander), TRUE);
   gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), details_expander, FALSE, FALSE, 0);
@@ -697,6 +711,8 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   else
     {
     }
+
+  gtk_widget_realize (GTK_WIDGET (dialog));
 
 }
 
@@ -916,7 +932,6 @@ polkit_gnome_authentication_dialog_run_until_user_is_selected (PolkitGnomeAuthen
 
   dialog->priv->is_running = TRUE;
 
-  gtk_widget_show_all (GTK_WIDGET (dialog));
   response = gtk_dialog_run (GTK_DIALOG (dialog));
 
   dialog->priv->is_running = FALSE;
@@ -966,8 +981,13 @@ polkit_gnome_authentication_dialog_run_until_response_for_prompt (PolkitGnomeAut
 
   dialog->priv->is_running = TRUE;
 
-  gtk_widget_show_all (GTK_WIDGET (dialog));
+  gtk_widget_set_no_show_all (dialog->priv->table_alignment, FALSE);
+  gtk_widget_show_all (dialog->priv->table_alignment);
+
   response = gtk_dialog_run (GTK_DIALOG (dialog));
+
+  gtk_widget_hide_all (dialog->priv->table_alignment);
+  gtk_widget_set_no_show_all (dialog->priv->table_alignment, TRUE);
 
   dialog->priv->is_running = FALSE;
 
@@ -1002,6 +1022,14 @@ polkit_gnome_authentication_dialog_get_selected_user (PolkitGnomeAuthenticationD
 {
   return g_strdup (dialog->priv->selected_user);
 }
+
+void
+polkit_gnome_authentication_dialog_set_info_message (PolkitGnomeAuthenticationDialog *dialog,
+                                                     const gchar                     *info_markup)
+{
+  gtk_label_set_markup (GTK_LABEL (dialog->priv->info_label), info_markup);
+}
+
 
 /**
  * polkit_gnome_authentication_dialog_cancel:

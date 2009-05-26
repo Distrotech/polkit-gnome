@@ -174,6 +174,30 @@ get_desc_for_action (PolkitAuthority *authority,
   return result;
 }
 
+static void
+on_dialog_deleted (GtkWidget *widget,
+                   GdkEvent  *event,
+                   gpointer   user_data)
+{
+  PolkitGnomeAuthenticator *authenticator = POLKIT_GNOME_AUTHENTICATOR (user_data);
+
+  polkit_gnome_authenticator_cancel (authenticator);
+}
+
+static void
+on_user_selected (GObject    *object,
+                  GParamSpec *pspec,
+                  gpointer    user_data)
+{
+  PolkitGnomeAuthenticator *authenticator = POLKIT_GNOME_AUTHENTICATOR (user_data);
+
+  /* clear any previous messages */
+  polkit_gnome_authentication_dialog_set_info_message (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog), "");
+
+  polkit_gnome_authenticator_cancel (authenticator);
+  authenticator->new_user_selected = TRUE;
+}
+
 PolkitGnomeAuthenticator *
 polkit_gnome_authenticator_new (const gchar     *action_id,
                                 const gchar     *message,
@@ -223,6 +247,14 @@ polkit_gnome_authenticator_new (const gchar     *action_id,
                              authenticator->message,
                              authenticator->details,
                              authenticator->users);
+  g_signal_connect (authenticator->dialog,
+                    "delete-event",
+                    G_CALLBACK (on_dialog_deleted),
+                    authenticator);
+  g_signal_connect (authenticator->dialog,
+                    "notify::selected-user",
+                    G_CALLBACK (on_user_selected),
+                    authenticator);
 
   return authenticator;
 
@@ -262,6 +294,8 @@ session_request (PolkitAgentSession *session,
       modified_request = g_strdup (request);
     }
 
+  gtk_widget_show_all (GTK_WIDGET (authenticator->dialog));
+  gtk_window_present (GTK_WINDOW (authenticator->dialog));
   password = polkit_gnome_authentication_dialog_run_until_response_for_prompt (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog),
                                                                                modified_request,
                                                                                echo_on,
@@ -289,7 +323,12 @@ session_show_error (PolkitAgentSession *session,
                     const gchar        *msg,
                     gpointer            user_data)
 {
-  g_warning ("TODO: should display error_msg='%s'", msg);
+  PolkitGnomeAuthenticator *authenticator = POLKIT_GNOME_AUTHENTICATOR (user_data);
+  gchar *s;
+
+  s = g_strconcat ("<b>", msg, "</b>", NULL);
+  polkit_gnome_authentication_dialog_set_info_message (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog), s);
+  g_free (s);
 }
 
 static void
@@ -297,7 +336,15 @@ session_show_info (PolkitAgentSession *session,
                    const gchar        *msg,
                    gpointer            user_data)
 {
-  g_warning ("TODO: should display text_info='%s'", msg);
+  PolkitGnomeAuthenticator *authenticator = POLKIT_GNOME_AUTHENTICATOR (user_data);
+  gchar *s;
+
+  s = g_strconcat ("<b>", msg, "</b>", NULL);
+  polkit_gnome_authentication_dialog_set_info_message (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog), s);
+  g_free (s);
+
+  gtk_widget_show_all (GTK_WIDGET (authenticator->dialog));
+  gtk_window_present (GTK_WINDOW (authenticator->dialog));
 }
 
 
@@ -323,6 +370,8 @@ do_initiate (gpointer user_data)
   PolkitIdentity *identity;
   gint num_tries;
 
+  gtk_widget_show_all (GTK_WIDGET (authenticator->dialog));
+  gtk_window_present (GTK_WINDOW (authenticator->dialog));
   if (!polkit_gnome_authentication_dialog_run_until_user_is_selected (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog)))
     {
       /* user cancelled the dialog */
@@ -391,6 +440,15 @@ do_initiate (gpointer user_data)
     {
       if (authenticator->dialog != NULL)
         {
+          gchar *s;
+
+          s = g_strconcat ("<b>", _("Authentication Failure"), "</b>", NULL);
+          polkit_gnome_authentication_dialog_set_info_message (
+                                  POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog),
+                                  s);
+          g_free (s);
+          gtk_widget_queue_draw (authenticator->dialog);
+
           /* shake the dialog to indicate error */
           polkit_gnome_authentication_dialog_indicate_error (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog));
 

@@ -65,6 +65,8 @@ gchar     *polkit_gnome_authentication_dialog_run_until_response_for_prompt (Pol
                                                                              gboolean                        *new_user_selected);
 gboolean   polkit_gnome_authentication_dialog_cancel                        (PolkitGnomeAuthenticationDialog *dialog);
 void       polkit_gnome_authentication_dialog_indicate_error                (PolkitGnomeAuthenticationDialog *dialog);
+void       polkit_gnome_authentication_dialog_set_info_message              (PolkitGnomeAuthenticationDialog *dialog,
+                                                                             const gchar                     *info_markup);
 
 G_END_DECLS
 
