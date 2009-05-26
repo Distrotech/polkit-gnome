@@ -166,6 +166,7 @@ create_user_combobox (PolkitGnomeAuthenticationDialog *dialog)
   /* For each user */
   for (n = 0; dialog->priv->users[n] != NULL; n++)
     {
+      gchar *gecos;
       gchar *real_name;
       GdkPixbuf *pixbuf;
       struct passwd *passwd;
@@ -179,11 +180,23 @@ create_user_combobox (PolkitGnomeAuthenticationDialog *dialog)
           continue;
         }
 
-      /* Real name */
-      if (passwd->pw_gecos != NULL && strlen (passwd->pw_gecos) > 0)
-        real_name = g_strdup_printf (_("%s (%s)"), passwd->pw_gecos, dialog->priv->users[n]);
+      if (passwd->pw_gecos != NULL)
+        gecos = g_locale_to_utf8 (passwd->pw_gecos, -1, NULL, NULL, NULL);
       else
-        real_name = g_strdup (dialog->priv->users[n]);
+        gecos = NULL;
+
+      if (gecos != NULL && strlen (gecos) > 0)
+        {
+          gchar *first_comma;
+          first_comma = strchr (gecos, ',');
+          if (first_comma != NULL)
+            *first_comma = '\0';
+        }
+      if (gecos != NULL && strlen (gecos) > 0 && strcmp (gecos, dialog->priv->users[n]) != 0)
+        real_name = g_strdup_printf (_("%s (%s)"), gecos, dialog->priv->users[n]);
+       else
+         real_name = g_strdup (dialog->priv->users[n]);
+      g_free (gecos);
 
       /* Load users face */
       pixbuf = NULL;
