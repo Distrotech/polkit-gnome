@@ -1,4 +1,31 @@
 ==========
+polkit-gnome 0.92
+==========
+
+This is PolicyKit-gnome version 0.92.
+
+Build requirements
+
+ PolicyKit >= 0.92
+ gtk+-2.0  >= 2.14
+
+Changes since 0.91:
+
+ David Zeuthen (9):
+      post release version bump to 0.92
+      Update for changes in PolicyKit API
+      Catch up with latest polkit API changes
+      Handle non-standard PAM stacks like fprintd
+      Bug 541945 – Parse gecos field (i.e. don't show username commas)
+      Change license to LGPLv2
+      Do not depend on EggDBus
+      Rip out stuff no longer needed for PolicyKit 1.0
+      Update NEWS
+
+David Zeuthen,
+June 8, 2009
+
+==========
 PolicyKit-gnome 0.9.2
 ==========
 
