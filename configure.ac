@@ -108,32 +108,21 @@ fi
 # *****
 
 GNOME_COMMON_INIT
-GNOME_DOC_INIT
 GNOME_DEBUG_CHECK
 GNOME_COMPILE_WARNINGS([maximum])
 GNOME_MAINTAINER_MODE_DEFINES
-
-AC_ARG_ENABLE(gtk-doc, AC_HELP_STRING([--enable-gtk-doc],
-  [use gtk-doc to build documentation [default=yes]]),,
-  enable_gtk_doc=yes)
-GTK_DOC_CHECK([1.3])
 
 # ***************************
 # Check for required packages
 # ***************************
 
 GTK_REQUIRED=2.13.6
-GCONF_REQUIRED=2.8
 POLKIT_AGENT_REQUIRED=0.90
 POLKIT_GOBJECT_REQUIRED=0.90
 
 PKG_CHECK_MODULES(GTK, gtk+-2.0 >= $GTK_REQUIRED)
 AC_SUBST(GTK_CFLAGS)
 AC_SUBST(GTK_LIBS)
-
-PKG_CHECK_MODULES(GCONF, gconf-2.0 >= $GCONF_REQUIRED)
-AC_SUBST(GCONF_CFLAGS)
-AC_SUBST(GCONF_LIBS)
 
 PKG_CHECK_MODULES(POLKIT_AGENT, polkit-agent-1 >= $POLKIT_AGENT_REQUIRED)
 AC_SUBST(POLKIT_AGENT_CFLAGS)
@@ -148,26 +137,6 @@ AC_ARG_ENABLE([examples],
               [enable_examples=yes])
 
 AM_CONDITIONAL(BUILD_EXAMPLES, test "x$enable_examples" = "xyes")
-
-#if test "x$enable_examples" = "xyes"; then
-#    AC_CHECK_PROG([POLKIT_POLICY_FILE_VALIDATE],
-#                  [polkit-policy-file-validate], [polkit-policy-file-validate])
-#    if test -z "$POLKIT_POLICY_FILE_VALIDATE"; then
-#        AC_MSG_ERROR([polkit-policy-file-validate not found])
-#    fi
-#fi
-
-dnl ==============================================
-dnl Special GConf section 
-dnl ==============================================
-
-AC_PATH_PROG(GCONFTOOL, gconftool-2, no)
-
-if test x"$GCONFTOOL" = xno; then
-  AC_MSG_ERROR([gconftool-2 executable not found in your path - should be installed with GConf])
-fi
-
-AM_GCONF_SOURCE_2
 
 # ********************
 # Internationalisation
@@ -187,14 +156,6 @@ AC_SUBST([AM_CPPFLAGS])
 AC_SUBST([AM_CFLAGS])
 AC_SUBST([AM_CXXFLAGS])
 AC_SUBST([AM_LDFLAGS])
-
-#data/Makefile
-#data/polkit-gnome.pc
-#examples/Makefile
-#polkit-gnome/Makefile
-#tools/Makefile
-#doc/Makefile
-#doc/version.xml
 
 AC_CONFIG_FILES([
 Makefile
@@ -222,5 +183,4 @@ echo "
         cppflags:                   ${CPPFLAGS}
 
         Maintainer mode:            ${USE_MAINTAINER_MODE}
-        Building api docs:          ${enable_gtk_doc}
 "

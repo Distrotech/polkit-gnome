@@ -33,7 +33,6 @@
 #include <stdlib.h>
 #include <pwd.h>
 #include <errno.h>
-#include <gconf/gconf-client.h>
 
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
