@@ -1,0 +1,98 @@
+# Punjabi translation of policykit-gnome.
+# Copyright (C) 2009 policykit-gnome's COPYRIGHT HOLDER
+# This file is distributed under the same license as the policykit-gnome package.
+#
+# A S Alam <aalam@users.sf.net>, 2009.
+msgid ""
+msgstr ""
+"Project-Id-Version: policykit-gnome master\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
+"cgi?product=policykit-gnome&component=general\n"
+"POT-Creation-Date: 2009-06-08 21:19+0000\n"
+"PO-Revision-Date: 2009-06-12 06:24+0530\n"
+"Last-Translator: A S Alam <aalam@users.sf.net>\n"
+"Language-Team: Punjabi/Panjabi <punjabi-users@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 0.3\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:160
+msgid "Select user..."
+msgstr "ਯੂਜ਼ਰ ਚੁਣੋ..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:195
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "ਪਰਮਾਣਕਿਤਾ(_A)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:574
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਕਾਰਵਾਈ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੀ ਹੈ, ਜਿਸ ਲਈ ਅਧਿਕਾਰਾਂ ਦੀ ਲੋੜ "
+"ਹੈ। ਕਾਰਵਾਈ ਕਰਨ ਲਈ ਹੇਠ ਦਿੱਤੇ ਯੂਜ਼ਰਾਂ ਵਿੱਚੋਂ ਇੱਕ ਵਾਂਗ ਪਰਮਾਣਿਤ ਹੋਵੋ।"
+
+#: ../src/polkitgnomeauthenticationdialog.c:582
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਕਾਰਵਾਈ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੀ ਹੈ, ਜਿਸ ਲਈ ਅਧਿਕਾਰਾਂ ਦੀ ਲੋੜ "
+"ਹੈ। ਕਾਰਵਾਈ ਕਰਨ ਲਈ ਪਰਮਾਣਿਤ ਹੋਣ ਦੀ ਲੋੜ ਹੈ।"
+
+#: ../src/polkitgnomeauthenticationdialog.c:588
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"ਐਪਲੀਕੇਸ਼ਨ ਇੱਕ ਕਾਰਵਾਈ ਕਰਨ ਦੀ ਕੋਸ਼ਿਸ਼ ਕਰ ਰਹੀ ਹੈ, ਜਿਸ ਲਈ ਅਧਿਕਾਰਾਂ ਦੀ ਲੋੜ "
+"ਹੈ। ਕਾਰਵਾਈ ਕਰਨ ਲਈ ਸੁਪਰ ਯੂਜ਼ਰਾਂ ਵਾਂਗ ਪਰਮਾਣਿਤ ਹੋਵੋ।"
+
+#: ../src/polkitgnomeauthenticationdialog.c:623
+#: ../src/polkitgnomeauthenticator.c:289
+msgid "_Password:"
+msgstr "ਪਾਸਵਰਡ(_P):"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:641
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>ਵੇਰਵਾ(_D)</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:693
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>ਐਕਸ਼ਨ:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:696
+#, c-format
+msgid "Click to edit %s"
+msgstr "%s ਸੋਧਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#: ../src/polkitgnomeauthenticationdialog.c:709
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>ਵੇਂਡਰ:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:712
+#, c-format
+msgid "Click to open %s"
+msgstr "%s ਖੋਲ੍ਹਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
+
+#: ../src/polkitgnomeauthenticationdialog.c:875
+msgid "Authenticate"
+msgstr "ਪਰਮਾਣਿਤ"
+
+#: ../src/polkitgnomeauthenticator.c:285
+#, c-format
+msgid "_Password for %s:"
+msgstr "%s ਲਈ ਪਾਸਵਰਡ(_P):"
+
+#: ../src/polkitgnomeauthenticator.c:445
+msgid "Authentication Failure"
+msgstr "ਪਰਮਾਣਕਿਤਾ ਫੇਲ੍ਹ ਹੋਈ"
+
