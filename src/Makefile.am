@@ -13,7 +13,6 @@ polkit_gnome_authentication_agent_1_SOURCES = 						\
 	polkitgnomelistener.h			polkitgnomelistener.c			\
 	polkitgnomeauthenticator.h		polkitgnomeauthenticator.c		\
 	polkitgnomeauthenticationdialog.h	polkitgnomeauthenticationdialog.c	\
-	sexy-url-label.h 			sexy-url-label.c			\
 	main.c										\
 	$(BUILT_SOURCES)
 

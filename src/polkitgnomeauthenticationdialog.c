@@ -37,7 +37,6 @@
 #include <glib/gi18n-lib.h>
 #include <gtk/gtk.h>
 
-#include "sexy-url-label.h"
 #include "polkitgnomeauthenticationdialog.h"
 
 #define RESPONSE_USER_SELECTED 1001
@@ -416,14 +415,7 @@ add_row (GtkWidget *table, int row, const char *label_text, GtkWidget *entry)
 }
 
 static void
-vendor_url_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
-{
-  if (url != NULL)
-    gtk_show_uri (NULL, url, GDK_CURRENT_TIME, NULL);
-}
-
-static void
-action_id_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
+action_id_activated (GtkLabel *url_label, gpointer user_data)
 {
 #if 0
   GError *error;
@@ -452,7 +444,7 @@ action_id_activated (SexyUrlLabel *url_label, char *url, gpointer user_data)
   if (!dbus_g_proxy_call (manager_proxy,
                           "ShowAction",
                           &error,
-                          G_TYPE_STRING, url,
+                          G_TYPE_STRING, gtk_label_get_current_uri (GTK_LABEL (url_label)),
                           G_TYPE_INVALID,
                           G_TYPE_INVALID))
     {
@@ -683,15 +675,16 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
 
   /* --- */
 
-  label = sexy_url_label_new ();
+  label = gtk_label_new (NULL);
+  gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
   s = g_strdup_printf ("<small><a href=\"%s\">%s</a></small>",
                        dialog->priv->action_id,
                        dialog->priv->action_id);
-  sexy_url_label_set_markup (SEXY_URL_LABEL (label), s);
+  gtk_label_set_markup (GTK_LABEL (label), s);
   g_free (s);
   gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
   add_row (table, rows++, _("<small><b>Action:</b></small>"), label);
-  g_signal_connect (label, "url-activated", G_CALLBACK (action_id_activated), NULL);
+  g_signal_connect (label, "activate-link", G_CALLBACK (action_id_activated), NULL);
 
   s = g_strdup_printf (_("Click to edit %s"), dialog->priv->action_id);
   gtk_widget_set_tooltip_markup (label, s);
@@ -699,15 +692,15 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
 
   /* --- */
 
-  label = sexy_url_label_new ();
+  label = gtk_label_new (NULL);
+  gtk_label_set_use_markup (GTK_LABEL (label), TRUE);
   s = g_strdup_printf ("<small><a href=\"%s\">%s</a></small>",
                        dialog->priv->vendor_url,
                        dialog->priv->vendor);
-  sexy_url_label_set_markup (SEXY_URL_LABEL (label), s);
+  gtk_label_set_markup (GTK_LABEL (label), s);
   g_free (s);
   gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
   add_row (table, rows++, _("<small><b>Vendor:</b></small>"), label);
-  g_signal_connect (label, "url-activated", G_CALLBACK (vendor_url_activated), NULL);
 
   s = g_strdup_printf (_("Click to open %s"), dialog->priv->vendor_url);
   gtk_widget_set_tooltip_markup (label, s);
