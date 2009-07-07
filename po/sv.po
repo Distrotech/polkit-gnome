@@ -7,68 +7,68 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-13 10:31+0200\n"
-"PO-Revision-Date: 2009-06-13 10:31+0100\n"
+"POT-Creation-Date: 2009-07-07 12:53+0200\n"
+"PO-Revision-Date: 2009-07-07 22:23+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/polkitgnomeauthenticationdialog.c:160
+#: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
 msgstr "Välj användare..."
 
-#: ../src/polkitgnomeauthenticationdialog.c:195
+#: ../src/polkitgnomeauthenticationdialog.c:194
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:537
+#: ../src/polkitgnomeauthenticationdialog.c:529
 msgid "_Authenticate"
 msgstr "_Autentisera"
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:566
 msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
 msgstr "Ett program försöker genomföra en åtgärd som kräver privilegier. Autentisering som en av användarna nedan krävs för att genomföra denna åtgärd."
 
-#: ../src/polkitgnomeauthenticationdialog.c:582
+#: ../src/polkitgnomeauthenticationdialog.c:574
 msgid "An application is attempting to perform an action that requires privileges. Authentication is required to perform this action."
 msgstr "Ett program försöker genomföra en åtgärd som kräver privilegier. Autentisering krävs för att genomföra denna åtgärd."
 
-#: ../src/polkitgnomeauthenticationdialog.c:588
+#: ../src/polkitgnomeauthenticationdialog.c:580
 msgid "An application is attempting to perform an action that requires privileges. Authentication as the super user is required to perform this action."
 msgstr "Ett program försöker genomföra en åtgärd som kräver privilegier. Autentisering som superanvändaren krävs för att genomföra denna åtgärd."
 
-#: ../src/polkitgnomeauthenticationdialog.c:623
+#: ../src/polkitgnomeauthenticationdialog.c:615
 #: ../src/polkitgnomeauthenticator.c:289
 msgid "_Password:"
 msgstr "_Lösenord:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:641
+#: ../src/polkitgnomeauthenticationdialog.c:633
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Detaljer</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:693
+#: ../src/polkitgnomeauthenticationdialog.c:686
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Åtgärd:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:696
+#: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
 msgid "Click to edit %s"
 msgstr "Klicka för att redigera %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:709
+#: ../src/polkitgnomeauthenticationdialog.c:703
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Leverantör:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:712
+#: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format
 msgid "Click to open %s"
 msgstr "Klicka för att öppna %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:875
+#: ../src/polkitgnomeauthenticationdialog.c:868
 msgid "Authenticate"
 msgstr "Autentisera"
 
@@ -80,6 +80,10 @@ msgstr "_Lösenord för %s:"
 #: ../src/polkitgnomeauthenticator.c:445
 msgid "Authentication Failure"
 msgstr "Autentiseringsfel"
+
+#: ../src/polkit-gnome-authentication-agent-1.desktop.in.h:1
+msgid "PolicyKit Authentication Agent"
+msgstr "Autentiseringsagent för PolicyKit"
 
 #~ msgid "Authorizations"
 #~ msgstr "Behörigheter"
@@ -149,8 +153,6 @@ msgstr "Autentiseringsfel"
 #~ msgstr "Nej"
 #~ msgid "Admin Authentication (one shot)"
 #~ msgstr "Administrativ autentisering (en gång)"
-#~ msgid "Admin Authentication"
-#~ msgstr "Administrativ autentisering"
 #~ msgid "Admin Authentication (keep session)"
 #~ msgstr "Administrativ autentisering (behåll session)"
 #~ msgid "Admin Authentication (keep indefinitely)"
