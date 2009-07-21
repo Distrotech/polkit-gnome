@@ -1,4 +1,30 @@
 ==========
+polkit-gnome 0.93
+==========
+
+This is polkit-gnome version 0.93.
+
+Build requirements
+
+ polkit    >= 0.93
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.92:
+
+David Zeuthen (8):
+      Post-release version bump to 0.93
+      Fix desktop file
+      Nuke unused stuff
+      Bug 584847 – Get rid of libsexy, use new GtkLabel link support
+      Display a status icon if we have temporary authorizations
+      Bug 589150 – Install autostart desktop files in /etc/xdg/autostart
+      Require polkit version 0.93 since the API changed slightly
+      Update NEWS for release
+
+David Zeuthen,
+July 20th, 2009
+
+==========
 polkit-gnome 0.92
 ==========
 
