@@ -23,6 +23,8 @@ AC_ISC_POSIX
 AC_HEADER_STDC
 AC_PROG_LIBTOOL
 
+GTK_DOC_CHECK([1.3])
+
 #### gcc warning flags
 
 if test "x$GCC" = "xyes"; then
@@ -159,8 +161,12 @@ AC_SUBST([AM_LDFLAGS])
 
 AC_CONFIG_FILES([
 Makefile
-src/Makefile
 po/Makefile.in
+polkitgtk/Makefile
+polkitgtk/polkit-gtk-1.pc
+src/Makefile
+docs/version.xml
+docs/Makefile
 ])
 
 AC_OUTPUT
@@ -183,4 +189,5 @@ echo "
         cppflags:                   ${CPPFLAGS}
 
         Maintainer mode:            ${USE_MAINTAINER_MODE}
+        Building api docs:          ${enable_gtk_doc}
 "

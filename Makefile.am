@@ -1,4 +1,4 @@
-SUBDIRS = src po
+SUBDIRS = polkitgtk src po docs
 
 EXTRA_DIST = \
 	autogen.sh		\
