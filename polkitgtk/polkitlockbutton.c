@@ -70,25 +70,41 @@
  * means that any attempt to use the Mechanism that requires authorization
  * for the specified action will always prompt for authentication. This
  * condition happens exactly when
- * (polkit_lock_button_get_can_obtain() && !polkit_lock_button_get_is_visible())
+ * (!polkit_lock_button_get_is_authorized() && polkit_lock_button_get_can_obtain() && !polkit_lock_button_get_is_visible())
  * is %TRUE.
  *
  * Typically #PolkitLockButton is only useful for actions where authorization
- * is retained.
+ * is retained (cf. the defaults specified in the <literal>.policy</literal>
+ * file for the action) but note that this behavior can be overridden by the
+ * Authority implementation.
  *
  * The typical usage of this widget is like this:
  * <programlisting>
  * static void
  * update_sensitivity_according_to_lock_button (FooBar *bar)
  * {
+ *   gboolean make_sensitive;
+ *
+ *   make_sensitive = FALSE;
  *   if (polkit_lock_button_get_is_authorized (POLKIT_LOCK_BUTTON (bar->priv->lock_button)))
  *     {
- *       /<!-- -->* Make all widgets relying on authorization sensitive *<!-- -->/
+ *       make_sensitive = TRUE;
  *     }
  *   else
  *     {
- *       /<!-- -->* Make all widgets relying on authorization insensitive *<!-- -->/
+ *       /<!-- -->* Catch the case where authorization is one-shot - this means
+ *        * an authentication dialog will be shown every time a widget the user
+ *        * manipulates calls into the Mechanism.
+ *        *<!-- -->/
+ *       if (polkit_lock_button_get_can_obtain (POLKIT_LOCK_BUTTON (bar->priv->lock_button)) &&
+ *           !polkit_lock_button_get_is_visible (POLKIT_LOCK_BUTTON (bar->priv->lock_button)))
+ *         make_sensitive = TRUE;
  *     }
+ *
+ *
+ *   /<!-- -->* Make all widgets relying on authorization sensitive according to
+ *    * the value of make_sensitive.
+ *    *<!-- -->/
  * }
  *
  * static void
