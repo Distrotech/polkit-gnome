@@ -63,6 +63,58 @@
  * If the user is authorized (either implicitly via the .policy file
  * defaults or through e.g. Local Authority configuration) and no
  * authentication is necessary, the widget will be hidden.
+ *
+ * Finally, if the user is not authorized but authorization can be
+ * obtained and the obtained authorization will be a one-shot
+ * authorization, the widget will be hidden as well. This
+ * means that any attempt to use the Mechanism that requires authorization
+ * for the specified action will always prompt for authentication. This
+ * condition happens exactly when
+ * (polkit_lock_button_get_can_obtain() && !polkit_lock_button_get_is_visible())
+ * is %TRUE.
+ *
+ * Typically #PolkitLockButton is only useful for actions where authorization
+ * is retained.
+ *
+ * The typical usage of this widget is like this:
+ * <programlisting>
+ * static void
+ * update_sensitivity_according_to_lock_button (FooBar *bar)
+ * {
+ *   if (polkit_lock_button_get_is_authorized (POLKIT_LOCK_BUTTON (bar->priv->lock_button)))
+ *     {
+ *       /<!-- -->* Make all widgets relying on authorization sensitive *<!-- -->/
+ *     }
+ *   else
+ *     {
+ *       /<!-- -->* Make all widgets relying on authorization insensitive *<!-- -->/
+ *     }
+ * }
+ *
+ * static void
+ * on_lock_button_changed (PolkitLockButton *button,
+ *                         gpointer          user_data)
+ * {
+ *   FooBar *bar = FOO_BAR (user_data);
+ *
+ *   update_sensitivity_according_to_lock_button (bar);
+ * }
+ *
+ * static void
+ * foo_bar_init (FooBar *bar)
+ * {
+ *   /<!-- -->* Construct other widgets *<!-- -->/
+ *
+ *   bar->priv->lock_button = polkit_lock_button_new ("org.project.mechanism.action-name");
+ *   g_signal_connect (bar->priv->lock_button,
+ *                     "changed",
+ *                     G_CALLBACK (on_lock_button_changed),
+ *                     bar);
+ *   update_sensitity_according_to_lock_button (bar);
+ *
+ *   /<!-- -->* Pack bar->priv->lock_button into widget hierarchy *<!-- -->/
+ * }
+ * </programlisting>
  */
 
 struct _PolkitLockButtonPrivate
@@ -80,6 +132,7 @@ struct _PolkitLockButtonPrivate
   gboolean ignore_toggled_signal;
 
   gboolean can_obtain;
+  gboolean retains_after_challenge;
   gboolean authorized;
   gboolean hidden;
 
@@ -478,15 +531,16 @@ update_state (PolkitLockButton *button)
       text = button->priv->text_lock;
       active = TRUE;
       sensitive = TRUE;
-      /* if the authorization isn't temporary, then hide all the controls */
+      /* if the authorization isn't temporary => hidden */
       if (button->priv->tmp_authz_id == NULL)
         button->priv->hidden = TRUE;
     }
   else
     {
       active = FALSE;
-      if (button->priv->can_obtain)
+      if (button->priv->can_obtain && button->priv->retains_after_challenge)
         {
+          /* can retain and obtain authorization => show the unlock button */
           text = button->priv->text_unlock;
           g_free (button->priv->tmp_authz_id);
           button->priv->tmp_authz_id = NULL;
@@ -494,10 +548,19 @@ update_state (PolkitLockButton *button)
         }
       else
         {
-          text = button->priv->text_not_authorized;
-          g_free (button->priv->tmp_authz_id);
-          button->priv->tmp_authz_id = NULL;
-          sensitive = FALSE;
+          if (button->priv->can_obtain)
+            {
+              /* we can obtain authorization, we just can't retain it => hidden */
+              button->priv->hidden = TRUE;
+            }
+          else
+            {
+              /* cannot even obtain authorization => tell user he can't have a pony */
+              text = button->priv->text_not_authorized;
+              g_free (button->priv->tmp_authz_id);
+              button->priv->tmp_authz_id = NULL;
+              sensitive = FALSE;
+            }
         }
     }
 
@@ -536,7 +599,6 @@ process_result (PolkitLockButton          *button,
 {
   gboolean old_can_obtain;
   gboolean old_authorized;
-  PolkitDetails *details;
 
   old_can_obtain = button->priv->can_obtain;
   old_authorized = button->priv->authorized;
@@ -544,13 +606,9 @@ process_result (PolkitLockButton          *button,
   button->priv->authorized = polkit_authorization_result_get_is_authorized (result);
 
   /* save the temporary authorization id */
-  details = polkit_authorization_result_get_details (result);
-  if (details != NULL)
-    {
-      g_free (button->priv->tmp_authz_id);
-      button->priv->tmp_authz_id = g_strdup (polkit_details_lookup (details,
-                                                                    "polkit.temporary_authorization_id"));
-    }
+  g_free (button->priv->tmp_authz_id);
+  button->priv->tmp_authz_id = g_strdup (polkit_authorization_result_get_temporary_authorization_id (result));
+  button->priv->retains_after_challenge = polkit_authorization_result_get_retains_authorization (result);
 
   update_state (button);
 
