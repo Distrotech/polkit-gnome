@@ -1,0 +1,170 @@
+# Lithuanian translation for PolicyKit-gnome package.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Žygimantas Beručka <zygis@gnome.org>, 2009.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-07-29 12:23+0300\n"
+"PO-Revision-Date: 2009-07-29 15:01+0300\n"
+"Last-Translator: Žygimantas Beručka <zygis@gnome.org>\n"
+"Language-Team: Lithuanian <gnome-lt@lists.gnome.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../polkitgtk/polkitlockbutton.c:390
+msgid "Action Identifier"
+msgstr "Veiksmo identifikatorius"
+
+#: ../polkitgtk/polkitlockbutton.c:391
+msgid "The action identifier to use for the button"
+msgstr "Veiksmo identifikatorius, naudotinas mygtukui"
+
+#: ../polkitgtk/polkitlockbutton.c:407
+msgid "Is Authorized"
+msgstr "Autorizuotas"
+
+#: ../polkitgtk/polkitlockbutton.c:408
+msgid "Whether the process is authorized"
+msgstr "Ar procesas yra autorizuotas"
+
+#: ../polkitgtk/polkitlockbutton.c:423
+msgid "Is Visible"
+msgstr "Matomas"
+
+#: ../polkitgtk/polkitlockbutton.c:424
+msgid "Whether the widget is visible"
+msgstr "Ar valdymo elementas yra matomas"
+
+#: ../polkitgtk/polkitlockbutton.c:439
+msgid "Can Obtain"
+msgstr "Gali gauti"
+
+#: ../polkitgtk/polkitlockbutton.c:440
+msgid "Whether authorization can be obtained"
+msgstr "Ar galima gauti autorizaciją"
+
+#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+msgid "Unlock Text"
+msgstr "Atrakinti tekstą"
+
+#: ../polkitgtk/polkitlockbutton.c:456
+msgid "The text to display when prompting the user to unlock."
+msgstr "Tekstas, rodytinas prašant naudotojo atrakinti."
+
+#: ../polkitgtk/polkitlockbutton.c:457
+msgid "Click to make changes"
+msgstr "Spustelėję galite atlikti pakeitimus"
+
+#: ../polkitgtk/polkitlockbutton.c:472
+msgid "Lock Text"
+msgstr "Užrakinti tekstą"
+
+#: ../polkitgtk/polkitlockbutton.c:473
+msgid "The text to display when prompting the user to lock."
+msgstr "Tekstas, rodytinas prašant naudotojo užrakinti."
+
+#: ../polkitgtk/polkitlockbutton.c:474
+msgid "Click to prevent changes"
+msgstr "Spustelėkite, norėdami neleisti pakeitimų"
+
+#: ../polkitgtk/polkitlockbutton.c:490
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Tekstas, rodytinas, kai naudotojas negali gauti privilegijų patvirtindamas"
+"savo tapatybę."
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Not authorized to make changes"
+msgstr "Neturi teisių, reikiamų pakeitimų atlikimui"
+
+#: ../src/main.c:128
+msgid "Click the icon to drop all elevated privileges"
+msgstr "Spustelėję piktogramą atsisakysite visų gautų privilegijų"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Pasirinkite naudotoją..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:529
+msgid "_Authenticate"
+msgstr "_Patvirtinti tapatybę"
+
+#: ../src/polkitgnomeauthenticationdialog.c:566
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Programa siekia atlikti veiksmą, kuriam reikia privilegijų. Norint atlikti "
+"šį veiksmą reikia patvirtinti vieno iš žemiau pateiktų naudotojų tapatybę."
+
+#: ../src/polkitgnomeauthenticationdialog.c:574
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Programa siekia atlikti veiksmą, kuriam reikia privilegijų. Norint atlikti "
+"šį veiksmą reikia patvirtinti tapatybę."
+
+#: ../src/polkitgnomeauthenticationdialog.c:580
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Programa siekia atlikti veiksmą, kuriam reikia privilegijų. Norint atlikti "
+"šį veiksmą reikia patvirtinti administratoriaus tapatybę."
+
+#: ../src/polkitgnomeauthenticationdialog.c:615
+#: ../src/polkitgnomeauthenticator.c:289
+msgid "_Password:"
+msgstr "_Slaptažodis:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:633
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Išsamiau</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:686
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Veiksmas:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:689
+#, c-format
+msgid "Click to edit %s"
+msgstr "Spustelėkite norėdami taisyti %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:703
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Pardavėjas:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:705
+#, c-format
+msgid "Click to open %s"
+msgstr "Spustelėkite norėdami atverti %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:868
+msgid "Authenticate"
+msgstr "Nustatyti tapatybę"
+
+#: ../src/polkitgnomeauthenticator.c:285
+#, c-format
+msgid "_Password for %s:"
+msgstr "Naudotojo %s _slaptažodis:"
+
+#: ../src/polkitgnomeauthenticator.c:445
+msgid "Authentication Failure"
+msgstr "Nepavyko nustatyti tapatybės"
+
+#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
+msgid "PolicyKit Authentication Agent"
+msgstr "PolicyKit tapatybės nustatymo agentas"
