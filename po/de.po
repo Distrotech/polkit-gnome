@@ -1,44 +1,122 @@
 # German translation of PolicyKit-gnome.
 # Copyright (C) 2008
 # This file is distributed under the same license as the PolicyKit-gnome package.
+# #
+# # authorize - 
+# # authenticate -
+# #
 # Denis Washington <denisw@svn.gnome.org>, 2008.
 # Mario Blättermann <mariobl@gnome.org>, 2009.
+# Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-15 12:01+0200\n"
-"PO-Revision-Date: 2009-06-15 12:02+0100\n"
-"Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
-"Language-Team: de <gnome-de@gnome.org>\n"
+"POT-Creation-Date: 2009-08-08 00:59+0200\n"
+"PO-Revision-Date: 2009-07-31 21:10+0200\n"
+"Last-Translator: Christian Kirbach <Christian.Kirbach@googlemail.com>\n"
+"Language-Team: German <gnome-de@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../src/polkitgnomeauthenticationdialog.c:160
+#: ../polkitgtk/polkitlockbutton.c:390
+msgid "Action Identifier"
+msgstr "Wirkungsbeschreibung"
+
+#: ../polkitgtk/polkitlockbutton.c:391
+msgid "The action identifier to use for the button"
+msgstr "Die Wirkungsbeschreibung für den Knopf"
+
+#: ../polkitgtk/polkitlockbutton.c:407
+msgid "Is Authorized"
+msgstr "Ist berechtigt"
+
+#: ../polkitgtk/polkitlockbutton.c:408
+msgid "Whether the process is authorized"
+msgstr "Ob der Prozess berechtigt ist"
+
+#: ../polkitgtk/polkitlockbutton.c:423
+msgid "Is Visible"
+msgstr "Ist sichtbar"
+
+#: ../polkitgtk/polkitlockbutton.c:424
+msgid "Whether the widget is visible"
+msgstr "Ob das Widget sichtbar ist"
+
+# »Darf erlangen« klingt irgendwie unvollständig.
+#: ../polkitgtk/polkitlockbutton.c:439
+msgid "Can Obtain"
+msgstr "Darf Legitimation erlangen"
+
+#: ../polkitgtk/polkitlockbutton.c:440
+msgid "Whether authorization can be obtained"
+msgstr "Ob die Legitimation erlangt werden darf"
+
+#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+msgid "Unlock Text"
+msgstr "Entsperrungsanfrage"
+
+#: ../polkitgtk/polkitlockbutton.c:456
+msgid "The text to display when prompting the user to unlock."
+msgstr "Der Text, mit dem der Benutzer beim Entsperren gefragt wird."
+
+#: ../polkitgtk/polkitlockbutton.c:457
+msgid "Click to make changes"
+msgstr "Zum Bearbeiten anklicken"
+
+#: ../polkitgtk/polkitlockbutton.c:472
+msgid "Lock Text"
+msgstr "Sperranfrage"
+
+#: ../polkitgtk/polkitlockbutton.c:473
+msgid "The text to display when prompting the user to lock."
+msgstr "Der Text, mit dem der Benutzer beim Sperren gefragt wird."
+
+#: ../polkitgtk/polkitlockbutton.c:474
+msgid "Click to prevent changes"
+msgstr "Zum Verhindern von Änderungen anklicken"
+
+#: ../polkitgtk/polkitlockbutton.c:490
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Der Anzeigetext, wenn ein Benutzer keine Legitimation durch "
+"Authentifizierung erlangen kann."
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Not authorized to make changes"
+msgstr "Nicht zu Änderungen berechtigt."
+
+#: ../src/main.c:128
+msgid "Click the icon to drop all elevated privileges"
+msgstr "Zum Verwerfen aller Berechtigungen das Symbol anklicken"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
 msgstr "Benutzer wählen …"
 
-#: ../src/polkitgnomeauthenticationdialog.c:195
+#: ../src/polkitgnomeauthenticationdialog.c:194
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:537
+#: ../src/polkitgnomeauthenticationdialog.c:529
 msgid "_Authenticate"
 msgstr "_Legitimieren"
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:566
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
 "Eine Anwendung versucht eine Aktion auszuführen, die Privilegien erfordert. "
 "Eine Legitimation als einer der unten aufgelisteten Benutzer ist "
-"erforderlich, um diese Aktion auszuführen"
+"erforderlich, um diese Aktion auszuführen."
 
-#: ../src/polkitgnomeauthenticationdialog.c:582
+#: ../src/polkitgnomeauthenticationdialog.c:574
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -46,7 +124,7 @@ msgstr ""
 "Eine Anwendung versucht eine Aktion auszuführen, die Privilegien erfordert. "
 "Eine Legitimation ist erforderlich, um diese Aktion auszuführen."
 
-#: ../src/polkitgnomeauthenticationdialog.c:588
+#: ../src/polkitgnomeauthenticationdialog.c:580
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -55,35 +133,35 @@ msgstr ""
 "Eine Legitimation als Administrator ist erforderlich, um diese Aktion "
 "auszuführen."
 
-#: ../src/polkitgnomeauthenticationdialog.c:623
+#: ../src/polkitgnomeauthenticationdialog.c:615
 #: ../src/polkitgnomeauthenticator.c:289
 msgid "_Password:"
 msgstr "_Passwort:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:641
+#: ../src/polkitgnomeauthenticationdialog.c:633
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Details</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:693
+#: ../src/polkitgnomeauthenticationdialog.c:686
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Aktion:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:696
+#: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
 msgid "Click to edit %s"
 msgstr "Klicken, um %s zu bearbeiten"
 
-#: ../src/polkitgnomeauthenticationdialog.c:709
+#: ../src/polkitgnomeauthenticationdialog.c:703
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Anbieter:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:712
+#: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format
 msgid "Click to open %s"
 msgstr "Klicken, um %s zu öffnen"
 
-#: ../src/polkitgnomeauthenticationdialog.c:875
+#: ../src/polkitgnomeauthenticationdialog.c:868
 msgid "Authenticate"
 msgstr "Legitimieren"
 
@@ -96,6 +174,10 @@ msgstr "_Passwort für %s:"
 msgid "Authentication Failure"
 msgstr "Legitimation gescheitert"
 
+#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
+msgid "PolicyKit Authentication Agent"
+msgstr "Legitimationsdienst von PolicyKit"
+
 #~ msgid "Authorizations"
 #~ msgstr "Zugriffsberechtigungen"
 
@@ -104,15 +186,15 @@ msgstr "Legitimation gescheitert"
 
 #~ msgid ""
 #~ "If set to true, the authentication dialog from PolicyKit-gnome will grab "
-#~ "the keyboard, so that you will not be able to type in other programs while "
-#~ "the dialog is active. Use this if your window manager does not focus the "
-#~ "authentication dialog automatically, and you want to avoid accidentally "
-#~ "typing passwords in other programs."
+#~ "the keyboard, so that you will not be able to type in other programs "
+#~ "while the dialog is active. Use this if your window manager does not "
+#~ "focus the authentication dialog automatically, and you want to avoid "
+#~ "accidentally typing passwords in other programs."
 #~ msgstr ""
 #~ "Ist dies auf wahr gesetzt, zieht der Legitimationsdialog Tastatureingaben "
 #~ "auf sich, sodass es nicht möglich ist, in anderen Programmen zu tippen, "
 #~ "solange der Dialog aktiv ist. Benutzen Sie dies, wenn ihr Fenstermanager "
-#~ "den Legitimationsdialog nicht automatisch fokussiert und sie vermeiden "
+#~ "den Legitimationsdialog nicht automatisch fokussiert und Sie vermeiden "
 #~ "wollen, versehentlich Passwörter in andere Programme zu schreiben."
 
 #~ msgid "Whether the authentication dialog should grab the keyboard"
@@ -200,9 +282,6 @@ msgstr "Legitimation gescheitert"
 
 #~ msgid "Admin Authentication (one shot)"
 #~ msgstr "Legitimation als Administrator (gezielt)"
-
-#~ msgid "Admin Authentication"
-#~ msgstr "Legitimation als Administrator"
 
 #~ msgid "Admin Authentication (keep session)"
 #~ msgstr "Legitimation als Administrator (für Sitzung beibehalten)"
@@ -301,8 +380,8 @@ msgstr "Legitimation gescheitert"
 #~ "<b><big>Granting a negative authorization for the <i>%s</i> action "
 #~ "requires more information</big></b>"
 #~ msgstr ""
-#~ "<b><big>Das Verweigern des Zugriffs auf die Aktion <i>%s</i> efordert mehr "
-#~ "Informationen</big></b>"
+#~ "<b><big>Das Verweigern des Zugriffs auf die Aktion <i>%s</i> efordert "
+#~ "mehr Informationen</big></b>"
 
 #~ msgid ""
 #~ "<b><big>Granting an authorization for the <i>%s</i> action requires more "
@@ -320,11 +399,11 @@ msgstr "Legitimation gescheitert"
 #~ "gelten sollen."
 
 #~ msgid ""
-#~ "Select the beneficiary and, optionally, how to constrain the authorization "
-#~ "that you are about to grant."
+#~ "Select the beneficiary and, optionally, how to constrain the "
+#~ "authorization that you are about to grant."
 #~ msgstr ""
-#~ "Wählen Sie den durch die Zugriffsgewährung Begünstigten und, optional, wie "
-#~ "die Gewährung eingeschränkt werden soll."
+#~ "Wählen Sie den durch die Zugriffsgewährung Begünstigten und, optional, "
+#~ "wie die Gewährung eingeschränkt werden soll."
 
 #~ msgid "<b>Beneficiary</b>"
 #~ msgstr "<b>Begünstigter:</b>"
@@ -379,7 +458,7 @@ msgstr "Legitimation gescheitert"
 #~ "action <i>%s</i>."
 #~ msgstr ""
 #~ "Implizite Berechtigungen sind Berechtigungen, die unter bestimmten "
-#~ "Umständen an alle Benutzer vergeben werden. Wählen Sie, was dafür für die "
+#~ "Umständen an alle Benutzer vergeben werden. Wählen Sie, was für die "
 #~ "Aktion <i>%s</i> nötig ist."
 
 #~ msgid "<i>Anyone:</i>"
@@ -397,9 +476,6 @@ msgstr "Legitimation gescheitert"
 #~ msgid "<b>Action</b>"
 #~ msgstr "<b>Aktion</b>"
 
-#~ msgid "<i>Identifier:</i>"
-#~ msgstr "<i>Kennung:</i>"
-
 #~ msgid "<i>Description:</i>"
 #~ msgstr "<i>Beschreibung</i>"
 
@@ -413,9 +489,9 @@ msgstr "Legitimation gescheitert"
 #~ "Implicit authorizations are authorizations automatically given to users "
 #~ "based on certain criteria such as if they are on the local console."
 #~ msgstr ""
-#~ "Implizite Berechtigungen sind Berechtigungen, die basierend auf bestimmten "
-#~ "Kriterien automatisch an Benutzer vergeben werden, beispielsweise ob sie "
-#~ "an der lokalen Konsole sind."
+#~ "Implizite Berechtigungen sind Berechtigungen, die basierend auf "
+#~ "bestimmten Kriterien automatisch an Benutzer vergeben werden, "
+#~ "beispielsweise ob sie an der lokalen Konsole sind."
 
 #~ msgid "_Edit..."
 #~ msgstr "_Bearbeiten …"
@@ -441,9 +517,6 @@ msgstr "Legitimation gescheitert"
 #~ msgid "Scope"
 #~ msgstr "Geltungsbereich"
 
-#~ msgid "Obtained"
-#~ msgstr "Erworben"
-
 #~ msgid "How"
 #~ msgstr "Wie"
 
@@ -457,10 +530,10 @@ msgstr "Legitimation gescheitert"
 #~ msgstr "_Aufheben …"
 
 #~ msgid "_Show authorizations from all users..."
-#~ msgstr "_Berechtigungen von allen Benutzern anzeigen …"
+#~ msgstr "_Berechtigungen aller Benutzern anzeigen …"
 
 #~ msgid "_Show authorizations from all users"
-#~ msgstr "Berechtigungen von allen Benutzern anzeigen"
+#~ msgstr "_Berechtigungen aller Benutzern anzeigen"
 
 #~ msgid "Select an action"
 #~ msgstr "Wählen Sie eine Aktion aus"
