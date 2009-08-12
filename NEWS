@@ -1,4 +1,27 @@
 ==========
+polkit-gnome 0.94
+==========
+
+This is polkit-gnome version 0.94.
+
+Build requirements
+
+ polkit    >= 0.94
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.93:
+
+David Zeuthen (5):
+      Post-release version bump to 0.94
+      Add libpolkit-gtk-1 with a PolkitLockButton widget
+      Make use of new API to better cope with one-shot authorizations
+      Clarify docs for PolkitLockButton
+      Update NEWS for release
+
+David Zeuthen,
+August 12, 2009
+
+==========
 polkit-gnome 0.93
 ==========
 
