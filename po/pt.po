@@ -6,10 +6,9 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2009-07-20 23:31+0000\n"
-"PO-Revision-Date: 2009-07-21 23:35+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-09-06 16:50+0100\n"
+"PO-Revision-Date: 2009-08-31 00:05+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
 "Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -17,6 +16,74 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: PORTUGAL\n"
+
+#: ../polkitgtk/polkitlockbutton.c:390
+msgid "Action Identifier"
+msgstr "Identificador de Acção"
+
+#: ../polkitgtk/polkitlockbutton.c:391
+msgid "The action identifier to use for the button"
+msgstr "O identificador de acção a utilizar para o botão"
+
+#: ../polkitgtk/polkitlockbutton.c:407
+msgid "Is Authorized"
+msgstr "É autorizado"
+
+#: ../polkitgtk/polkitlockbutton.c:408
+msgid "Whether the process is authorized"
+msgstr "Se o processo é autorizado"
+
+#: ../polkitgtk/polkitlockbutton.c:423
+msgid "Is Visible"
+msgstr "É visível"
+
+#: ../polkitgtk/polkitlockbutton.c:424
+msgid "Whether the widget is visible"
+msgstr "Se a widget é visível"
+
+#: ../polkitgtk/polkitlockbutton.c:439
+msgid "Can Obtain"
+msgstr "Pode obter"
+
+#: ../polkitgtk/polkitlockbutton.c:440
+msgid "Whether authorization can be obtained"
+msgstr "Se a autorização pode ser obtida"
+
+#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+msgid "Unlock Text"
+msgstr "Destrancar texto"
+
+#: ../polkitgtk/polkitlockbutton.c:456
+msgid "The text to display when prompting the user to unlock."
+msgstr "O texto a apresentar ao pedir ao utilizador para destrancar."
+
+#: ../polkitgtk/polkitlockbutton.c:457
+msgid "Click to make changes"
+msgstr "Clicar para realizar alterações"
+
+#: ../polkitgtk/polkitlockbutton.c:472
+msgid "Lock Text"
+msgstr "Trancar texto"
+
+#: ../polkitgtk/polkitlockbutton.c:473
+msgid "The text to display when prompting the user to lock."
+msgstr "Texto a apresentar ao pedir ao utilizador para trancar."
+
+#: ../polkitgtk/polkitlockbutton.c:474
+msgid "Click to prevent changes"
+msgstr "Clicar para prevenir alterações"
+
+#: ../polkitgtk/polkitlockbutton.c:490
+msgid ""
+"The text to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Texto a apresentar quando o utilizador não consegue obter autorização "
+"através de autenticação."
+
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Not authorized to make changes"
+msgstr "Não autorizado para realizar alterações"
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
@@ -98,12 +165,10 @@ msgid "_Password for %s:"
 msgstr "_Senha para %s:"
 
 #: ../src/polkitgnomeauthenticator.c:445
-#| msgid "Authentication"
 msgid "Authentication Failure"
 msgstr "Falha de Autenticação"
 
 #: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-#| msgid "Admin Authentication"
 msgid "PolicyKit Authentication Agent"
 msgstr "Agente de Autenticação PolicyKit"
 
@@ -292,12 +357,6 @@ msgstr "Agente de Autenticação PolicyKit"
 #~ "para dispensarem as autorizações quando terminarem a sua utilização. Por "
 #~ "ex. o botão encontra-se 'pressionado' exactamente quando a autorização é "
 #~ "detida. Alternar o botão significa revogar a autorização em questão."
-
-#~ msgid "Click to make changes..."
-#~ msgstr "Clicar para efectuar alterações..."
-
-#~ msgid "Click to prevent changes"
-#~ msgstr "Clicar para prevenir alterações"
 
 #~ msgid ""
 #~ "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
@@ -542,9 +601,6 @@ msgstr "Agente de Autenticação PolicyKit"
 #~ msgid "<b>Action</b>"
 #~ msgstr "<b>Acção</b>"
 
-#~ msgid "<i>Identifier:</i>"
-#~ msgstr "<i>identificador:</i>"
-
 #~ msgid "<i>Description:</i>"
 #~ msgstr "<i>Descrição:</i>"
 
@@ -585,9 +641,6 @@ msgstr "Agente de Autenticação PolicyKit"
 
 #~ msgid "Scope"
 #~ msgstr "Âmbito"
-
-#~ msgid "Obtained"
-#~ msgstr "Adquirida"
 
 #~ msgid "How"
 #~ msgstr "Como"
