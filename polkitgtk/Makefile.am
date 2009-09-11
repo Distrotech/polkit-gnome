@@ -56,6 +56,7 @@ example_CFLAGS = 					\
 	-I$(top_srcdir)					\
 	-I$(top_builddir)				\
 	$(POLKIT_GOBJECT_CFLAGS)			\
+	$(DBUS_GLIB_CFLAGS)				\
 	$(GTK_CFLAGS)					\
 	$(WARN_CFLAGS)					\
 	$(AM_CFLAGS)					\
@@ -63,6 +64,7 @@ example_CFLAGS = 					\
 
 example_LDADD = 					\
 	$(POLKIT_GOBJECT_LIBS)				\
+	$(DBUS_GLIB_LIBS)				\
 	$(GTK_LIBS)					\
 	$(INTLLIBS)					\
 	libpolkit-gtk-1.la				\

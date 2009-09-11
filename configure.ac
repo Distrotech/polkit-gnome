@@ -134,6 +134,10 @@ PKG_CHECK_MODULES(POLKIT_GOBJECT, polkit-gobject-1 >= $POLKIT_GOBJECT_REQUIRED)
 AC_SUBST(POLKIT_GOBJECT_CFLAGS)
 AC_SUBST(POLKIT_GOBJECT_LIBS)
 
+PKG_CHECK_MODULES(DBUS_GLIB, dbus-glib-1)
+AC_SUBST(DBUS_GLIB_CFLAGS)
+AC_SUBST(DBUS_GLIB_LIBS)
+
 AC_ARG_ENABLE([examples],
               AC_HELP_STRING([--enable-examples], [Build the example programs]),,
               [enable_examples=yes])

@@ -27,6 +27,7 @@
 #define __POLKIT_GTK_TYPES_H
 
 #include <gtk/gtk.h>
+#include <polkit/polkit.h>
 
 struct _PolkitLockButton;
 typedef struct _PolkitLockButton PolkitLockButton;

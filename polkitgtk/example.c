@@ -19,7 +19,72 @@
  * Author: David Zeuthen <davidz@redhat.com>
  */
 
+#include <dbus/dbus-glib.h>
+#include <dbus/dbus-glib-lowlevel.h>
 #include <polkitgtk/polkitgtk.h>
+
+static PolkitAuthority *authority = NULL;
+const gchar *action_id = NULL;
+static PolkitSubject *system_bus_name_subject = NULL;
+static PolkitSubject *unix_process_subject = NULL;
+static GtkWidget *system_bus_name_authorized_label = NULL;
+static GtkWidget *unix_process_authorized_label = NULL;
+
+static void
+update_one (PolkitSubject *subject,
+            GtkWidget     *label)
+{
+  PolkitAuthorizationResult *result;
+  GError *error;
+  GString *s;
+  gchar *subject_str;
+
+  s = g_string_new (NULL);
+  subject_str = polkit_subject_to_string (subject);
+  g_string_append_printf (s, "Result for subject `%s': ", subject_str);
+  g_free (subject_str);
+
+  error = NULL;
+  result = polkit_authority_check_authorization_sync (authority,
+                                                      subject,
+                                                      action_id,
+                                                      NULL,
+                                                      POLKIT_CHECK_AUTHORIZATION_FLAGS_NONE,
+                                                      NULL,
+                                                      &error);
+  if (result == NULL)
+    {
+      g_string_append_printf (s,
+                              "failed: %s", error->message);
+      g_error_free (error);
+    }
+  else
+    {
+      g_string_append_printf (s,
+                              "authorized=%d challenge=%d retains=%d",
+                              polkit_authorization_result_get_is_authorized (result),
+                              polkit_authorization_result_get_is_challenge (result),
+                              polkit_authorization_result_get_retains_authorization (result));
+      g_object_unref (result);
+    }
+
+  gtk_label_set_text (GTK_LABEL (label), s->str);
+  g_string_free (s, TRUE);
+}
+
+static void
+update_labels (void)
+{
+  update_one (system_bus_name_subject, system_bus_name_authorized_label);
+  update_one (unix_process_subject, unix_process_authorized_label);
+}
+
+static void
+on_authority_changed (PolkitAuthority *authority,
+                      gpointer         user_data)
+{
+  update_labels ();
+}
 
 static void
 on_button_changed (PolkitLockButton *button,
@@ -34,11 +99,13 @@ on_button_changed (PolkitLockButton *button,
 int
 main (int argc, char *argv[])
 {
+  DBusGConnection *bus;
   GtkWidget *window;
   GtkWidget *label;
   GtkWidget *button;
   GtkWidget *entry;
   GtkWidget *vbox;
+  GError *error;
   gchar *s;
 
   gtk_init (&argc, &argv);
@@ -46,6 +113,17 @@ main (int argc, char *argv[])
   if (argc != 2)
     {
       g_printerr ("usage: %s <action_id>\n", argv[0]);
+      goto out;
+    }
+  action_id = argv[1];
+
+  error = NULL;
+  bus = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+  if (bus == NULL)
+    {
+      g_printerr ("Failed connecting to system bus: %s\n",
+                  error->message);
+      g_error_free (error);
       goto out;
     }
 
@@ -56,21 +134,46 @@ main (int argc, char *argv[])
   gtk_container_set_border_width (GTK_CONTAINER (window), 12);
   gtk_container_add (GTK_CONTAINER (window), vbox);
 
-  s = g_strdup_printf ("Showing PolkitLockButton for action id: %s", argv[1]);
+  s = g_strdup_printf ("Showing PolkitLockButton for action id: %s", action_id);
   label = gtk_label_new (s);
-  gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
   gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
   g_free (s);
+
+  label = gtk_label_new (NULL);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
+  gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
+  system_bus_name_authorized_label = label;
+
+  label = gtk_label_new (NULL);
+  gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
+  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
+  gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
+  unix_process_authorized_label = label;
 
   entry = gtk_entry_new ();
   gtk_box_pack_start (GTK_BOX (vbox), entry, FALSE, FALSE, 0);
 
-  button = polkit_lock_button_new (argv[1]);
+  button = polkit_lock_button_new (action_id);
   g_signal_connect (button,
                     "changed",
                     G_CALLBACK (on_button_changed),
                     entry);
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
+
+
+  system_bus_name_subject = polkit_system_bus_name_new (dbus_bus_get_unique_name (dbus_g_connection_get_connection (bus)));
+  unix_process_subject = polkit_unix_process_new (getpid ());
+
+  authority = polkit_authority_get ();
+  g_signal_connect (authority,
+                    "changed",
+                    G_CALLBACK (on_authority_changed),
+                    NULL);
+
+  update_labels ();
 
   gtk_widget_set_sensitive (entry,
                             polkit_lock_button_get_is_authorized (POLKIT_LOCK_BUTTON (button)));
