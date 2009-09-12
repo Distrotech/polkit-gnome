@@ -30,7 +30,7 @@
 /**
  * SECTION:polkitlockbutton
  * @title: PolkitLockButton
- * @short_description: Toggle button for obtaining/revoking authorizations
+ * @short_description: Widget for obtaining/revoking authorizations
  * @stability: Stable
  *
  * #PolkitLockButton is a widget that can be used in control panels to
@@ -62,21 +62,33 @@
  * </mediaobject>
  * If the user is authorized (either implicitly via the .policy file
  * defaults or through e.g. Local Authority configuration) and no
- * authentication is necessary, the widget will be hidden.
+ * authentication is necessary and the Authority Implementation
+ * supports lock-down, the widget looks like this
+ * <mediaobject id="lock-button-unlocked-lock-down">
+ *  <imageobject>
+ *    <imagedata fileref="polkit-lock-button-lock-down.png" format="PNG"/>
+ *  </imageobject>
+ * </mediaobject>
+ * allowing the user to lock down the action. The lockdown can be
+ * removed by right clicking the button - the user can discover this
+ * through the tooltip. If the Authority implementation does not
+ * support lockdown, the widget will be hidden.
  *
  * Finally, if the user is not authorized but authorization can be
  * obtained and the obtained authorization will be a one-shot
- * authorization, the widget will be hidden as well. This
- * means that any attempt to use the Mechanism that requires authorization
- * for the specified action will always prompt for authentication. This
+ * authorization, the widget will be hidden. This means that any
+ * attempt to use the Mechanism that requires authorization for the
+ * specified action will always prompt for authentication. This
  * condition happens exactly when
- * (!polkit_lock_button_get_is_authorized() && polkit_lock_button_get_can_obtain() && !polkit_lock_button_get_is_visible())
- * is %TRUE.
+ * (!polkit_lock_button_get_is_authorized() &&
+ * polkit_lock_button_get_can_obtain() &&
+ * !polkit_lock_button_get_is_visible()) is %TRUE.
  *
- * Typically #PolkitLockButton is only useful for actions where authorization
- * is retained (cf. the defaults specified in the <literal>.policy</literal>
- * file for the action) but note that this behavior can be overridden by the
- * Authority implementation.
+ * Typically #PolkitLockButton is only useful for actions where
+ * authorization is obtained through authentication (and retained) or
+ * where users are implictly authorized (cf. the defaults specified in
+ * the <literal>.policy</literal> file for the action) but note that
+ * this behavior can be overridden by the Authority implementation.
  *
  * The typical usage of this widget is like this:
  * <programlisting>
@@ -141,16 +153,23 @@ struct _PolkitLockButtonPrivate
 
   gchar *text_unlock;
   gchar *text_lock;
+  gchar *text_lock_down;
   gchar *text_not_authorized;
 
-  GtkWidget *toggle_button;
+  gchar *tooltip_unlock;
+  gchar *tooltip_lock;
+  gchar *tooltip_lock_down;
+  gchar *tooltip_not_authorized;
+
+  GtkWidget *button;
   GtkWidget *label;
-  gboolean ignore_toggled_signal;
 
   gboolean can_obtain;
   gboolean retains_after_challenge;
   gboolean authorized;
   gboolean hidden;
+  gboolean locked_down;
+  gboolean can_lock_down;
 
   /* is non-NULL exactly when we are authorized and have a temporary authorization */
   gchar *tmp_authz_id;
@@ -172,7 +191,12 @@ enum
   PROP_CAN_OBTAIN,
   PROP_TEXT_UNLOCK,
   PROP_TEXT_LOCK,
+  PROP_TEXT_LOCK_DOWN,
   PROP_TEXT_NOT_AUTHORIZED,
+  PROP_TOOLTIP_UNLOCK,
+  PROP_TOOLTIP_LOCK,
+  PROP_TOOLTIP_LOCK_DOWN,
+  PROP_TOOLTIP_NOT_AUTHORIZED,
 };
 
 enum
@@ -190,8 +214,12 @@ static void update_state (PolkitLockButton *button);
 static void on_authority_changed (PolkitAuthority *authority,
                                   gpointer         user_data);
 
-static void on_toggled (GtkToggleButton *toggle_button,
-                        gpointer         user_data);
+static void on_clicked (GtkButton *button,
+                        gpointer   user_data);
+
+static gboolean on_button_press_event (GtkWidget      *widget,
+                                       GdkEventButton *event,
+                                       gpointer        user_data);
 
 G_DEFINE_TYPE (PolkitLockButton, polkit_lock_button, GTK_TYPE_HBOX);
 
@@ -259,8 +287,28 @@ polkit_lock_button_get_property (GObject    *object,
       g_value_set_string (value, button->priv->text_lock);
       break;
 
+    case PROP_TEXT_LOCK_DOWN:
+      g_value_set_string (value, button->priv->text_lock_down);
+      break;
+
     case PROP_TEXT_NOT_AUTHORIZED:
       g_value_set_string (value, button->priv->text_not_authorized);
+      break;
+
+    case PROP_TOOLTIP_UNLOCK:
+      g_value_set_string (value, button->priv->tooltip_unlock);
+      break;
+
+    case PROP_TOOLTIP_LOCK:
+      g_value_set_string (value, button->priv->tooltip_lock);
+      break;
+
+    case PROP_TOOLTIP_LOCK_DOWN:
+      g_value_set_string (value, button->priv->tooltip_lock_down);
+      break;
+
+    case PROP_TOOLTIP_NOT_AUTHORIZED:
+      g_value_set_string (value, button->priv->tooltip_not_authorized);
       break;
 
     default:
@@ -291,8 +339,28 @@ polkit_lock_button_set_property (GObject      *object,
       polkit_lock_button_set_lock_text (button, g_value_get_string (value));
       break;
 
+    case PROP_TEXT_LOCK_DOWN:
+      polkit_lock_button_set_lock_down_text (button, g_value_get_string (value));
+      break;
+
     case PROP_TEXT_NOT_AUTHORIZED:
       polkit_lock_button_set_not_authorized_text (button, g_value_get_string (value));
+      break;
+
+    case PROP_TOOLTIP_UNLOCK:
+      polkit_lock_button_set_unlock_tooltip (button, g_value_get_string (value));
+      break;
+
+    case PROP_TOOLTIP_LOCK:
+      polkit_lock_button_set_lock_tooltip (button, g_value_get_string (value));
+      break;
+
+    case PROP_TOOLTIP_LOCK_DOWN:
+      polkit_lock_button_set_lock_down_tooltip (button, g_value_get_string (value));
+      break;
+
+    case PROP_TOOLTIP_NOT_AUTHORIZED:
+      polkit_lock_button_set_not_authorized_tooltip (button, g_value_get_string (value));
       break;
 
     default:
@@ -315,9 +383,8 @@ static void
 polkit_lock_button_constructed (GObject *object)
 {
   PolkitLockButton *button = POLKIT_LOCK_BUTTON (object);
-  GtkWidget *image;
 
-  gtk_box_set_spacing (GTK_BOX (button), 6);
+  gtk_box_set_spacing (GTK_BOX (button), 2);
 
   button->priv->authority = polkit_authority_get ();
   g_signal_connect (button->priv->authority,
@@ -325,17 +392,20 @@ polkit_lock_button_constructed (GObject *object)
                     G_CALLBACK (on_authority_changed),
                     button);
 
-  button->priv->toggle_button = gtk_toggle_button_new ();
-  image = gtk_image_new_from_stock (GTK_STOCK_DIALOG_AUTHENTICATION,
-                                    GTK_ICON_SIZE_BUTTON);
-  gtk_button_set_image (GTK_BUTTON (button->priv->toggle_button), image);
-  g_signal_connect (button->priv->toggle_button,
-                    "toggled",
-                    G_CALLBACK (on_toggled),
+  button->priv->button = gtk_button_new ();
+  gtk_button_set_relief (GTK_BUTTON (button->priv->button), GTK_RELIEF_NONE);
+  /* image is set in update_state() */
+  g_signal_connect (button->priv->button,
+                    "clicked",
+                    G_CALLBACK (on_clicked),
+                    button);
+  g_signal_connect (button->priv->button,
+                    "button-press-event",
+                    G_CALLBACK (on_button_press_event),
                     button);
 
   gtk_box_pack_start (GTK_BOX (button),
-                      button->priv->toggle_button,
+                      button->priv->button,
                       FALSE,
                       FALSE,
                       0);
@@ -348,7 +418,7 @@ polkit_lock_button_constructed (GObject *object)
                       0);
 
   /* take control of visibility of child widgets */
-  gtk_widget_set_no_show_all (button->priv->toggle_button, TRUE);
+  gtk_widget_set_no_show_all (button->priv->button, TRUE);
   gtk_widget_set_no_show_all (button->priv->label, TRUE);
 
   if (button->priv->subject == NULL)
@@ -462,6 +532,23 @@ polkit_lock_button_class_init (PolkitLockButtonClass *klass)
                                                         G_PARAM_STATIC_BLURB));
 
   /**
+   * PolkitLockButton:tooltip-unlock:
+   *
+   * The tooltip to display when prompting the user to unlock.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_TOOLTIP_UNLOCK,
+                                   g_param_spec_string ("tooltip-unlock",
+                                                        _("Unlock Tooltip"),
+                                                        _("The tooltip to display when prompting the user to unlock."),
+                                                        _("Authentication is needed to make changes."),
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
+
+  /**
    * PolkitLockButton:text-lock:
    *
    * The text to display when prompting the user to lock.
@@ -479,6 +566,57 @@ polkit_lock_button_class_init (PolkitLockButtonClass *klass)
                                                         G_PARAM_STATIC_BLURB));
 
   /**
+   * PolkitLockButton:tooltip-lock:
+   *
+   * The tooltip to display when prompting the user to lock.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_TOOLTIP_LOCK,
+                                   g_param_spec_string ("tooltip-lock",
+                                                        _("Lock Tooltip"),
+                                                        _("The tooltip to display when prompting the user to lock."),
+                                                        _("To prevent further changes, click the lock."),
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
+
+  /**
+   * PolkitLockButton:text-lock-down:
+   *
+   * The text to display when prompting the user to lock down the action for all users.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_TEXT_LOCK_DOWN,
+                                   g_param_spec_string ("text-lock-down",
+                                                        _("Lock Down Text"),
+                                                        _("The text to display when prompting the user to lock down the action for all users."),
+                                                        _("Click to lock down"),
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
+
+  /**
+   * PolkitLockButton:tooltip-lock-down:
+   *
+   * The tooltip to display when prompting the user to lock down the action for all users.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_TOOLTIP_LOCK_DOWN,
+                                   g_param_spec_string ("tooltip-lock-down",
+                                                        _("Lock Down Tooltip"),
+                                                        _("The tooltip to display when prompting the user to lock down the action for all users."),
+                                                        _("To prevent users without administrative privileges from making changes, click the lock."),
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
+
+  /**
    * PolkitLockButton:text-not-authorized:
    *
    * The text to display when the user cannot obtain authorization through authentication.
@@ -489,6 +627,23 @@ polkit_lock_button_class_init (PolkitLockButtonClass *klass)
                                                         _("Unlock Text"),
                                                         _("The text to display when the user cannot obtain authorization through authentication."),
                                                         _("Not authorized to make changes"),
+                                                        G_PARAM_READWRITE |
+                                                        G_PARAM_CONSTRUCT |
+                                                        G_PARAM_STATIC_NAME |
+                                                        G_PARAM_STATIC_NICK |
+                                                        G_PARAM_STATIC_BLURB));
+
+  /**
+   * PolkitLockButton:tooltip-not-authorized:
+   *
+   * The tooltip to display when the user cannot obtain authorization through authentication.
+   */
+  g_object_class_install_property (gobject_class,
+                                   PROP_TOOLTIP_NOT_AUTHORIZED,
+                                   g_param_spec_string ("tooltip-not-authorized",
+                                                        _("Unlock Tooltip"),
+                                                        _("The tooltip to display when the user cannot obtain authorization through authentication."),
+                                                        _("System policy prevents changes. Contact your system administator."),
                                                         G_PARAM_READWRITE |
                                                         G_PARAM_CONSTRUCT |
                                                         G_PARAM_STATIC_NAME |
@@ -535,9 +690,10 @@ static void
 update_state (PolkitLockButton *button)
 {
   const gchar *text;
-  gboolean active;
+  const gchar *tooltip;
   gboolean sensitive;
   gboolean old_hidden;
+  GtkWidget *image;
 
   old_hidden = button->priv->hidden;
   button->priv->hidden = FALSE;
@@ -545,19 +701,31 @@ update_state (PolkitLockButton *button)
   if (button->priv->authorized)
     {
       text = button->priv->text_lock;
-      active = TRUE;
+      tooltip = button->priv->tooltip_lock;
       sensitive = TRUE;
-      /* if the authorization isn't temporary => hidden */
+      /* if the authorization isn't temporary => ask if user wants to lock the authorization down the
+       * authority we're using has that capability
+       */
       if (button->priv->tmp_authz_id == NULL)
-        button->priv->hidden = TRUE;
+        {
+          if (button->priv->can_lock_down && !button->priv->locked_down)
+            {
+              text = button->priv->text_lock_down;
+              tooltip = button->priv->tooltip_lock_down;
+            }
+          else
+            {
+              button->priv->hidden = TRUE;
+            }
+        }
     }
   else
     {
-      active = FALSE;
       if (button->priv->can_obtain && button->priv->retains_after_challenge)
         {
           /* can retain and obtain authorization => show the unlock button */
           text = button->priv->text_unlock;
+          tooltip = button->priv->tooltip_unlock;
           g_free (button->priv->tmp_authz_id);
           button->priv->tmp_authz_id = NULL;
           sensitive = TRUE;
@@ -573,6 +741,7 @@ update_state (PolkitLockButton *button)
             {
               /* cannot even obtain authorization => tell user he can't have a pony */
               text = button->priv->text_not_authorized;
+              tooltip = button->priv->tooltip_not_authorized;
               g_free (button->priv->tmp_authz_id);
               button->priv->tmp_authz_id = NULL;
               sensitive = FALSE;
@@ -580,20 +749,40 @@ update_state (PolkitLockButton *button)
         }
     }
 
+  image = gtk_image_new_from_icon_name (button->priv->authorized ? "stock_lock-open" : "stock_lock",
+                                        GTK_ICON_SIZE_SMALL_TOOLBAR);
+  gtk_button_set_image (GTK_BUTTON (button->priv->button), image);
   gtk_label_set_text (GTK_LABEL (button->priv->label), text);
-  button->priv->ignore_toggled_signal = TRUE;
-  gtk_toggle_button_set_active (GTK_TOGGLE_BUTTON (button->priv->toggle_button), active);
-  button->priv->ignore_toggled_signal = FALSE;
-  gtk_widget_set_sensitive (button->priv->toggle_button, sensitive);
+  gtk_widget_set_sensitive (button->priv->button, sensitive);
+
+  if (button->priv->locked_down)
+    {
+      gchar *s;
+      s = g_strdup_printf ("%s\n"
+                           "\n"
+                           "%s",
+                           tooltip,
+                           /* Translators: this string is appended to the tooltip if the action is
+                            * currently locked down */
+                           _("This button is locked down so only users with administrative privileges can unlock it. Right-click the button to remove the lock down."));
+      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->label), s);
+      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->button), s);
+      g_free (s);
+    }
+  else
+    {
+      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->label), tooltip);
+      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->button), tooltip);
+    }
 
   if (button->priv->hidden)
     {
-      gtk_widget_hide (button->priv->toggle_button);
+      gtk_widget_hide (button->priv->button);
       gtk_widget_hide (button->priv->label);
     }
   else
     {
-      gtk_widget_show (button->priv->toggle_button);
+      gtk_widget_show (button->priv->button);
       gtk_widget_show (button->priv->label);
     }
 
@@ -620,6 +809,8 @@ process_result (PolkitLockButton          *button,
   old_authorized = button->priv->authorized;
   button->priv->can_obtain = polkit_authorization_result_get_is_challenge (result);
   button->priv->authorized = polkit_authorization_result_get_is_authorized (result);
+  button->priv->can_lock_down = TRUE; /* TODO: check if we're using the Local Authority */
+  button->priv->locked_down = polkit_authorization_result_get_local_authority_lock_down (result);
 
   /* save the temporary authorization id */
   g_free (button->priv->tmp_authz_id);
@@ -777,14 +968,36 @@ interactive_check_cb (GObject       *source_object,
     }
 }
 
-static void
-on_toggled (GtkToggleButton *toggle_button,
-            gpointer         user_data)
+static gboolean
+on_button_press_event (GtkWidget      *widget,
+                       GdkEventButton *event,
+                       gpointer        user_data)
 {
   PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
+  gboolean ret;
 
-  if (button->priv->ignore_toggled_signal)
-    goto out;
+  ret = FALSE;
+
+  if (event->button == 3 && button->priv->locked_down)
+    {
+      gchar *command_line;
+
+      command_line = g_strdup_printf ("pklalockdown --remove-lockdown %s", button->priv->action_id);
+      g_spawn_command_line_async (command_line, NULL);
+      g_free (command_line);
+
+      /* eat this event */
+      ret = TRUE;
+    }
+
+  return ret;
+}
+
+static void
+on_clicked (GtkButton *_button,
+            gpointer   user_data)
+{
+  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
 
   if (!button->priv->authorized && button->priv->can_obtain)
     {
@@ -810,6 +1023,14 @@ on_toggled (GtkToggleButton *toggle_button,
                                                              NULL,  /* cancellable */
                                                              NULL,  /* callback */
                                                              NULL); /* user_data */
+    }
+  else if (button->priv->authorized && button->priv->tmp_authz_id == NULL &&
+           button->priv->can_lock_down && !button->priv->locked_down)
+    {
+      gchar *command_line;
+      command_line = g_strdup_printf ("pklalockdown --lockdown %s", button->priv->action_id);
+      g_spawn_command_line_async (command_line, NULL);
+      g_free (command_line);
     }
 
  out:
@@ -854,7 +1075,7 @@ polkit_lock_button_get_can_obtain (PolkitLockButton *button)
  *
  * Gets whether @button is currently being shown.
  *
- * Returns: %TRUE if @button has visible UI elements.
+ * Returns: %TRUE if @button has any visible UI elements.
  */
 gboolean
 polkit_lock_button_get_is_visible (PolkitLockButton *button)
@@ -868,7 +1089,7 @@ polkit_lock_button_get_is_visible (PolkitLockButton *button)
  * @button: A #PolkitLockButton.
  * @text: The text to set.
  *
- * Makes @button display @text when the prompting the user to unlock.
+ * Makes @button display @text when not authorized and clicking the button will obtain the authorization.
  */
 void
 polkit_lock_button_set_unlock_text (PolkitLockButton *button,
@@ -893,7 +1114,7 @@ polkit_lock_button_set_unlock_text (PolkitLockButton *button,
  * @button: A #PolkitLockButton.
  * @text: The text to set.
  *
- * Makes @button display @text when the prompting the user to unlock.
+ * Makes @button display @text when authorized and clicking the button will revoke the authorization.
  */
 void
 polkit_lock_button_set_lock_text (PolkitLockButton *button,
@@ -914,11 +1135,36 @@ polkit_lock_button_set_lock_text (PolkitLockButton *button,
 }
 
 /**
+ * polkit_lock_button_set_lock_down_text:
+ * @button: A #PolkitLockButton.
+ * @text: The text to set.
+ *
+ * Makes @button display @text when authorized and it is possible to lock down the action.
+ */
+void
+polkit_lock_button_set_lock_down_text (PolkitLockButton *button,
+                                       const gchar      *text)
+{
+  g_return_if_fail (POLKIT_IS_LOCK_BUTTON (button));
+  g_return_if_fail (text != NULL);
+
+  if (button->priv->text_lock_down != NULL)
+    {
+      button->priv->text_lock_down = g_strdup (text);
+      update_state (button);
+    }
+  else
+    {
+      button->priv->text_lock_down = g_strdup (text);
+    }
+}
+
+/**
  * polkit_lock_button_set_not_authorized_text:
  * @button: A #PolkitLockButton.
  * @text: The text to set.
  *
- * Makes @button display @text when the prompting the user to unlock.
+ * Makes @button display @text when an authorization cannot be obtained.
  */
 void
 polkit_lock_button_set_not_authorized_text (PolkitLockButton *button,
@@ -935,5 +1181,106 @@ polkit_lock_button_set_not_authorized_text (PolkitLockButton *button,
   else
     {
       button->priv->text_not_authorized = g_strdup (text);
+    }
+}
+
+
+/**
+ * polkit_lock_button_set_unlock_tooltip:
+ * @button: A #PolkitLockButton.
+ * @tooltip: The text of the tooltip.
+ *
+ * Makes @button display @tooltip when not authorized and clicking the button will obtain the authorization.
+ */
+void
+polkit_lock_button_set_unlock_tooltip (PolkitLockButton *button,
+                                       const gchar      *tooltip)
+{
+  g_return_if_fail (POLKIT_IS_LOCK_BUTTON (button));
+  g_return_if_fail (tooltip != NULL);
+
+  if (button->priv->tooltip_unlock != NULL)
+    {
+      button->priv->tooltip_unlock = g_strdup (tooltip);
+      update_state (button);
+    }
+  else
+    {
+      button->priv->tooltip_unlock = g_strdup (tooltip);
+    }
+}
+
+/**
+ * polkit_lock_button_set_lock_tooltip:
+ * @button: A #PolkitLockButton.
+ * @tooltip: The text of the tooltip.
+ *
+ * Makes @button display @tooltip when authorized and clicking the button will revoke the authorization.
+ */
+void
+polkit_lock_button_set_lock_tooltip (PolkitLockButton *button,
+                                     const gchar      *tooltip)
+{
+  g_return_if_fail (POLKIT_IS_LOCK_BUTTON (button));
+  g_return_if_fail (tooltip != NULL);
+
+  if (button->priv->tooltip_lock != NULL)
+    {
+      button->priv->tooltip_lock = g_strdup (tooltip);
+      update_state (button);
+    }
+  else
+    {
+      button->priv->tooltip_lock = g_strdup (tooltip);
+    }
+}
+
+/**
+ * polkit_lock_button_set_lock_down_tooltip:
+ * @button: A #PolkitLockButton.
+ * @tooltip: The text of the tooltip.
+ *
+ * Makes @button display @tooltip when authorized and it is possible to lock down the action.
+ */
+void
+polkit_lock_button_set_lock_down_tooltip (PolkitLockButton *button,
+                                          const gchar      *tooltip)
+{
+  g_return_if_fail (POLKIT_IS_LOCK_BUTTON (button));
+  g_return_if_fail (tooltip != NULL);
+
+  if (button->priv->tooltip_lock_down != NULL)
+    {
+      button->priv->tooltip_lock_down = g_strdup (tooltip);
+      update_state (button);
+    }
+  else
+    {
+      button->priv->tooltip_lock_down = g_strdup (tooltip);
+    }
+}
+
+/**
+ * polkit_lock_button_set_not_authorized_tooltip:
+ * @button: A #PolkitLockButton.
+ * @tooltip: The text of the tooltip.
+ *
+ * Makes @button display @tooltip when an authorization cannot be obtained.
+ */
+void
+polkit_lock_button_set_not_authorized_tooltip (PolkitLockButton *button,
+                                               const gchar      *tooltip)
+{
+  g_return_if_fail (POLKIT_IS_LOCK_BUTTON (button));
+  g_return_if_fail (tooltip != NULL);
+
+  if (button->priv->tooltip_not_authorized != NULL)
+    {
+      button->priv->tooltip_not_authorized = g_strdup (tooltip);
+      update_state (button);
+    }
+  else
+    {
+      button->priv->tooltip_not_authorized = g_strdup (tooltip);
     }
 }

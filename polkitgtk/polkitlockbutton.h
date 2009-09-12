@@ -88,16 +88,30 @@ struct _PolkitLockButtonClass
 };
 
 
-GType        polkit_lock_button_get_type              (  void) G_GNUC_CONST;
-GtkWidget   *polkit_lock_button_new                     (const gchar      *action_id);
-gboolean     polkit_lock_button_get_is_authorized       (PolkitLockButton *button);
-gboolean     polkit_lock_button_get_is_visible          (PolkitLockButton *button);
-gboolean     polkit_lock_button_get_can_obtain          (PolkitLockButton *button);
-void         polkit_lock_button_set_unlock_text         (PolkitLockButton *button,
-                                                         const gchar      *text);
-void         polkit_lock_button_set_lock_text           (PolkitLockButton *button,
-                                                         const gchar      *text);
-void         polkit_lock_button_set_not_authorized_text (PolkitLockButton *button,
-                                                         const gchar      *text);
+GType        polkit_lock_button_get_type                   (void) G_GNUC_CONST;
+GtkWidget   *polkit_lock_button_new                        (const gchar      *action_id);
+gboolean     polkit_lock_button_get_is_authorized          (PolkitLockButton *button);
+gboolean     polkit_lock_button_get_is_visible             (PolkitLockButton *button);
+gboolean     polkit_lock_button_get_can_obtain             (PolkitLockButton *button);
+
+void         polkit_lock_button_set_unlock_text            (PolkitLockButton *button,
+                                                            const gchar      *text);
+void         polkit_lock_button_set_unlock_tooltip         (PolkitLockButton *button,
+                                                            const gchar      *tooltip);
+
+void         polkit_lock_button_set_lock_text              (PolkitLockButton *button,
+                                                            const gchar      *text);
+void         polkit_lock_button_set_lock_tooltip           (PolkitLockButton *button,
+                                                            const gchar      *tooltip);
+
+void         polkit_lock_button_set_lock_down_text         (PolkitLockButton *button,
+                                                            const gchar      *text);
+void         polkit_lock_button_set_lock_down_tooltip      (PolkitLockButton *button,
+                                                            const gchar      *tooltip);
+
+void         polkit_lock_button_set_not_authorized_text    (PolkitLockButton *button,
+                                                            const gchar      *text);
+void         polkit_lock_button_set_not_authorized_tooltip (PolkitLockButton *button,
+                                                            const gchar      *tooltip);
 
 #endif /* POLKIT_LOCK_BUTTON_H */

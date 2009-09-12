@@ -53,6 +53,7 @@ HTML_IMAGES = 							\
 	polkit-lock-button-locked.png				\
 	polkit-lock-button-not-authorized.png			\
 	polkit-lock-button-unlocked.png				\
+	polkit-lock-button-lock-down.png			\
 	$(NULL)
 
 # Extra options to supply to gtkdoc-fixref

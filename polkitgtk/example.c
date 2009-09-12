@@ -61,10 +61,12 @@ update_one (PolkitSubject *subject,
   else
     {
       g_string_append_printf (s,
-                              "authorized=%d challenge=%d retains=%d",
+                              "authorized=%d challenge=%d retains=%d temporary=%d lockdown=%d",
                               polkit_authorization_result_get_is_authorized (result),
                               polkit_authorization_result_get_is_challenge (result),
-                              polkit_authorization_result_get_retains_authorization (result));
+                              polkit_authorization_result_get_retains_authorization (result),
+                              polkit_authorization_result_get_temporary_authorization_id (result) != NULL,
+                              polkit_authorization_result_get_local_authority_lock_down (result));
       g_object_unref (result);
     }
 
@@ -128,7 +130,7 @@ main (int argc, char *argv[])
     }
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-  gtk_window_set_resizable (GTK_WINDOW (window), FALSE);
+  gtk_window_set_resizable (GTK_WINDOW (window), TRUE);
 
   vbox = gtk_vbox_new (FALSE, 12);
   gtk_container_set_border_width (GTK_CONTAINER (window), 12);
@@ -137,19 +139,19 @@ main (int argc, char *argv[])
   s = g_strdup_printf ("Showing PolkitLockButton for action id: %s", action_id);
   label = gtk_label_new (s);
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
+  gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
   g_free (s);
 
   label = gtk_label_new (NULL);
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
+  gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
   system_bus_name_authorized_label = label;
 
   label = gtk_label_new (NULL);
   gtk_misc_set_alignment (GTK_MISC (label), 0.0, 0.5);
-  gtk_label_set_line_wrap (GTK_LABEL (label), FALSE);
+  gtk_label_set_line_wrap (GTK_LABEL (label), TRUE);
   gtk_box_pack_start (GTK_BOX (vbox), label, FALSE, FALSE, 0);
   unix_process_authorized_label = label;
 
