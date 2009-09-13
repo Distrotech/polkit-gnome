@@ -72,6 +72,37 @@ example_LDADD = 					\
 
 CLEANFILES = $(BUILT_SOURCES) $(pkgconfig_DATA)
 
+if ENABLE_INTROSPECTION
+girdir = $(GIRDIR)
+gir_DATA = PolkitGtk-1.0.gir
+
+typelibsdir = $(GIRTYPELIBDIR)
+typelibs_DATA = PolkitGtk-1.0.typelib
+
+PolkitGtk-1.0.gir: libpolkit-gtk-1.la $(G_IR_SCANNER) Makefile.am
+	$(G_IR_SCANNER) -v 					\
+		--namespace PolkitGtk 				\
+		--strip-prefix=polkit				\
+		--nsversion=1.0 				\
+		--include=Gtk-2.0 				\
+		--include=Polkit-1.0 				\
+		--library=polkit-gtk-1 				\
+		--output $@ 					\
+		--pkg=polkit-gobject-1				\
+		--pkg=gtk+-2.0 					\
+		--libtool=$(top_builddir)/libtool		\
+                -I$(top_srcdir)		 			\
+	        -DPOLKIT_GTK_COMPILATION                   	\
+		$(srcdir)/polkitgtk.h 				\
+		$(srcdir)/polkitgtktypes.h 			\
+		$(srcdir)/polkitlockbutton.h 			\
+		$(NULL)
+
+PolkitGtk-1.0.typelib: PolkitGtk-1.0.gir $(G_IR_COMPILER)
+	$(G_IR_COMPILER) $< -o $@
+
+endif # ENABLE_INTROSPECTION
+
 clean-local :
 	rm -f *~ $(BUILT_SOURCES)
 
