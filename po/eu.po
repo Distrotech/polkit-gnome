@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: eu\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-08-28 17:09+0200\n"
-"PO-Revision-Date: 2009-08-28 17:20+0200\n"
+"POT-Creation-Date: 2009-09-14 10:20+0200\n"
+"PO-Revision-Date: 2009-09-14 10:33+0200\n"
 "Last-Translator: Iñaki Larrañaga Murgoitio <dooteo@euskalgnu.org>\n"
 "Language-Team: Basque <itzulpena@euskalgnu.org>\n"
 "MIME-Version: 1.0\n"
@@ -17,73 +17,152 @@ msgstr ""
 "X-Generator: KBabel 1.11.4\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../polkitgtk/polkitlockbutton.c:390
+#: ../polkitgtk/polkitlockbutton.c:460
 msgid "Action Identifier"
 msgstr "Ekintzaren identifikatzailea"
 
-#: ../polkitgtk/polkitlockbutton.c:391
+#: ../polkitgtk/polkitlockbutton.c:461
 msgid "The action identifier to use for the button"
 msgstr "Ekintzaren identifikatzailea botoian erabiltzeko"
 
-#: ../polkitgtk/polkitlockbutton.c:407
+#: ../polkitgtk/polkitlockbutton.c:477
 msgid "Is Authorized"
 msgstr "Baimenduta dago"
 
-#: ../polkitgtk/polkitlockbutton.c:408
+#: ../polkitgtk/polkitlockbutton.c:478
 msgid "Whether the process is authorized"
 msgstr "Prozesua baimenduta dagoen edo ez"
 
-#: ../polkitgtk/polkitlockbutton.c:423
+#: ../polkitgtk/polkitlockbutton.c:493
 msgid "Is Visible"
 msgstr "Ikusgai dago"
 
-#: ../polkitgtk/polkitlockbutton.c:424
+#: ../polkitgtk/polkitlockbutton.c:494
 msgid "Whether the widget is visible"
 msgstr "Trepeta ikusgai dagoen edo ez"
 
-#: ../polkitgtk/polkitlockbutton.c:439
+#: ../polkitgtk/polkitlockbutton.c:509
 msgid "Can Obtain"
 msgstr "Lor daiteke"
 
-#: ../polkitgtk/polkitlockbutton.c:440
+#: ../polkitgtk/polkitlockbutton.c:510
 msgid "Whether authorization can be obtained"
 msgstr "Baimena lor daitekeen edo ez"
 
-#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
 msgid "Unlock Text"
 msgstr "Desblokeatze-testua"
 
-#: ../polkitgtk/polkitlockbutton.c:456
+#: ../polkitgtk/polkitlockbutton.c:526
 msgid "The text to display when prompting the user to unlock."
 msgstr "Bistaratuko den testua erabitzaileari desblokeatzeko galdetzean."
 
-#: ../polkitgtk/polkitlockbutton.c:457
+#: ../polkitgtk/polkitlockbutton.c:527
 msgid "Click to make changes"
 msgstr "Egin klik aldaketak burutzeko"
 
-#: ../polkitgtk/polkitlockbutton.c:472
+#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
+msgid "Unlock Tooltip"
+msgstr "Desblokeatze-argibidea"
+
+#: ../polkitgtk/polkitlockbutton.c:543
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "Bistaratuko den argibidea erabitzaileari desblokeatzeko galdetzean."
+
+#: ../polkitgtk/polkitlockbutton.c:544
+msgid "Authentication is needed to make changes."
+msgstr "Autentifitzea behar da aldaketak egiteko."
+
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Lock Text"
 msgstr "Blokeatze-testua"
 
-#: ../polkitgtk/polkitlockbutton.c:473
+#: ../polkitgtk/polkitlockbutton.c:560
 msgid "The text to display when prompting the user to lock."
 msgstr "Bistaratuko den testua erabitzaileari blokeatzeko galdetzean."
 
-#: ../polkitgtk/polkitlockbutton.c:474
+#: ../polkitgtk/polkitlockbutton.c:561
 msgid "Click to prevent changes"
 msgstr "Egin klik aldaketak galarazteko"
 
-#: ../polkitgtk/polkitlockbutton.c:490
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "Lock Tooltip"
+msgstr "Blokeatze-argibidea"
+
+#: ../polkitgtk/polkitlockbutton.c:577
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "Bistaratuko den argibidea erabitzaileari blokeatzeko galdetzean."
+
+#: ../polkitgtk/polkitlockbutton.c:578
+msgid "To prevent further changes, click the lock."
+msgstr "Aldaketa gehiago saihesteko, egin klik blokeoan."
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Lock Down Text"
+msgstr "Blokeatze-testua"
+
+#: ../polkitgtk/polkitlockbutton.c:594
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr "Bistaratuko den testua erabiltzaile guztientzako ekintza blokeatzeko galdetzean erabitzaileari."
+
+#: ../polkitgtk/polkitlockbutton.c:595
+msgid "Click to lock down"
+msgstr "Egin klik blokeatzeko"
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid "Lock Down Tooltip"
+msgstr "Blokeatze-argibidea"
+
+#: ../polkitgtk/polkitlockbutton.c:611
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr "Bistaratuko den testua erabiltzaile guztientzako ekintza blokeatzeko galdetzean erabitzaileari."
+
+#: ../polkitgtk/polkitlockbutton.c:612
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+"Egin klik blokeoan administratzailearen pribilegiorik ez dituzten erabiltzaileek aldaketak "
+"egitea saihesteko."
+
+#: ../polkitgtk/polkitlockbutton.c:628
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
 msgstr ""
-"Bistaratuko den testua erabiltzaileak ezin duenean baimenik "
-"lortu autentifikazioaren bidez."
+"Bistaratuko den testua erabiltzaileak ezin duenean baimenik lortu "
+"autentifikazioaren bidez."
 
-#: ../polkitgtk/polkitlockbutton.c:491
+#: ../polkitgtk/polkitlockbutton.c:629
 msgid "Not authorized to make changes"
 msgstr "Baimenik ez aldaketak egiteko"
+
+#: ../polkitgtk/polkitlockbutton.c:645
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr ""
+"Bistaratuko den argibidea erabiltzaileak ezin duenean baimenik lortu "
+"autentifikazioaren bidez."
+
+#: ../polkitgtk/polkitlockbutton.c:646
+msgid "System policy prevents changes. Contact your system administator."
+msgstr "Sistemako arauek aldaketa saihesten dituzte. Jar zaitez administratzailearekin harremanetan."
+
+#. Translators: this string is appended to the tooltip if the action is
+#. * currently locked down
+#: ../polkitgtk/polkitlockbutton.c:767
+msgid ""
+"This button is locked down so only users with administrative privileges can "
+"unlock it. Right-click the button to remove the lock down."
+msgstr ""
+"Botoi hau blokeatuta dago, eta administratzailearen pribilegioak dituzten "
+"erabiltzaileek soilik desblokea dezakete. Egin klik saguaren eskuineko botoiarekin "
+"blokeoa kentzeko."
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
@@ -108,7 +187,8 @@ msgid ""
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
 "Aplikazio bat baimena behar duen ekintza bat lantzen saiatzen ari da. "
-"Ekintza hau lantzeko, azpiko erabiltzaileetako bat bezala autentifikatu behar da."
+"Ekintza hau lantzeko, azpiko erabiltzaileetako bat bezala autentifikatu "
+"behar da."
 
 #: ../src/polkitgnomeauthenticationdialog.c:574
 msgid ""
