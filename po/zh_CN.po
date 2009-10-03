@@ -1,91 +1,174 @@
-# Simplified Chinese translation of PolicyKit-gnome.
-# Copyright (C) 2008, 2009 Free Software Foundation, Inc.
+# Simplified Chinese translation.
+# Copyright (C) 2008 THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the policykit-gnome package.
 #
-# 甘露(Lu Gan) <ganlu@svn.gnome.org>, 2008.
-# Aron Xu <happyaron.xu@gmail.com>, 2009.
+# 甘露(Lu Gan) <ganlu@svn.gnome.org>
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: policykit-gnome master\n"
+"Project-Id-Version: policykit-gnome VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-08 23:36+0800\n"
-"PO-Revision-Date: 2009-09-08 23:40+0800\n"
-"Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2009-10-03 21:55+0800\n"
+"PO-Revision-Date: 2009-10-03 13:26+0000\n"
+"Last-Translator: Tao Wei <weitao1979@gmail.com>\n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-10-03 13:44+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
 
-#: ../polkitgtk/polkitlockbutton.c:390
+#: ../polkitgtk/polkitlockbutton.c:460
 msgid "Action Identifier"
-msgstr "操作标识符"
+msgstr "动作识别"
 
-#: ../polkitgtk/polkitlockbutton.c:391
+#: ../polkitgtk/polkitlockbutton.c:461
 msgid "The action identifier to use for the button"
-msgstr ""
+msgstr "用在按钮上的动作识别"
 
-#: ../polkitgtk/polkitlockbutton.c:407
+#: ../polkitgtk/polkitlockbutton.c:477
 msgid "Is Authorized"
-msgstr "已认证"
+msgstr "是被授权"
 
-#: ../polkitgtk/polkitlockbutton.c:408
+#: ../polkitgtk/polkitlockbutton.c:478
 msgid "Whether the process is authorized"
-msgstr "过程是否已认证"
+msgstr "操作是否被授权"
 
-#: ../polkitgtk/polkitlockbutton.c:423
+#: ../polkitgtk/polkitlockbutton.c:493
 msgid "Is Visible"
-msgstr "可见"
+msgstr "是可见"
 
-#: ../polkitgtk/polkitlockbutton.c:424
+#: ../polkitgtk/polkitlockbutton.c:494
 msgid "Whether the widget is visible"
-msgstr ""
+msgstr "部件是否可见"
 
-#: ../polkitgtk/polkitlockbutton.c:439
+#: ../polkitgtk/polkitlockbutton.c:509
 msgid "Can Obtain"
-msgstr "可以获得"
+msgstr "可以获取"
 
-#: ../polkitgtk/polkitlockbutton.c:440
+#: ../polkitgtk/polkitlockbutton.c:510
 msgid "Whether authorization can be obtained"
-msgstr ""
+msgstr "授权是否可以被获取"
 
-#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
 msgid "Unlock Text"
-msgstr "解锁"
+msgstr "不锁定文字"
 
-#: ../polkitgtk/polkitlockbutton.c:456
+#: ../polkitgtk/polkitlockbutton.c:526
 msgid "The text to display when prompting the user to unlock."
-msgstr "当请求用户解锁时显示的文本。"
+msgstr "当提示用户解锁时显示的文字。"
 
-#: ../polkitgtk/polkitlockbutton.c:457
+#: ../polkitgtk/polkitlockbutton.c:527
 msgid "Click to make changes"
-msgstr "单击以更改..."
+msgstr "点击来进行改变"
 
-#: ../polkitgtk/polkitlockbutton.c:472
+#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
+#, fuzzy
+msgid "Unlock Tooltip"
+msgstr "不锁定文字"
+
+#: ../polkitgtk/polkitlockbutton.c:543
+#, fuzzy
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "当提示用户解锁时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:544
+#, fuzzy
+msgid "Authentication is needed to make changes."
+msgstr "没有被认证来做出改变"
+
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Lock Text"
-msgstr ""
+msgstr "锁定文字"
 
-#: ../polkitgtk/polkitlockbutton.c:473
+#: ../polkitgtk/polkitlockbutton.c:560
 msgid "The text to display when prompting the user to lock."
-msgstr ""
+msgstr "当提示用户锁定时显示的文字。"
 
-#: ../polkitgtk/polkitlockbutton.c:474
+#: ../polkitgtk/polkitlockbutton.c:561
 msgid "Click to prevent changes"
 msgstr "单击以防止更改"
 
-#: ../polkitgtk/polkitlockbutton.c:490
+#: ../polkitgtk/polkitlockbutton.c:576
+#, fuzzy
+msgid "Lock Tooltip"
+msgstr "锁定文字"
+
+#: ../polkitgtk/polkitlockbutton.c:577
+#, fuzzy
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "当提示用户锁定时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:578
+msgid "To prevent further changes, click the lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:593
+#, fuzzy
+msgid "Lock Down Text"
+msgstr "锁定文字"
+
+#: ../polkitgtk/polkitlockbutton.c:594
+#, fuzzy
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr "当提示用户锁定时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:595
+#, fuzzy
+msgid "Click to lock down"
+msgstr "单击以打开 %s"
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid "Lock Down Tooltip"
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:611
+#, fuzzy
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr "当提示用户锁定时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:612
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr ""
+
+#: ../polkitgtk/polkitlockbutton.c:628
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
+msgstr "当用户不能通过认证来获得认证时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:629
+msgid "Not authorized to make changes"
+msgstr "没有被认证来做出改变"
+
+#: ../polkitgtk/polkitlockbutton.c:645
+#, fuzzy
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr "当用户不能通过认证来获得认证时显示的文字。"
+
+#: ../polkitgtk/polkitlockbutton.c:646
+msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
 
-#: ../polkitgtk/polkitlockbutton.c:491
-msgid "Not authorized to make changes"
+#. Translators: this string is appended to the tooltip if the action is
+#. * currently locked down
+#: ../polkitgtk/polkitlockbutton.c:767
+msgid ""
+"This button is locked down so only users with administrative privileges can "
+"unlock it. Right-click the button to remove the lock down."
 msgstr ""
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
-msgstr "点击图标以放弃已认证特权"
+msgstr "点击图标来放下所有提升的权限"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -127,7 +210,7 @@ msgstr "密码(_P)："
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
 msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_详细</b></small>"
+msgstr "<small><b>详情(_D)</b></small>"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
 msgid "<small><b>Action:</b></small>"
@@ -162,7 +245,7 @@ msgstr "认证失败"
 
 #: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
 msgid "PolicyKit Authentication Agent"
-msgstr "PolicyKit 认证助手"
+msgstr "PolicyKit 认证代理"
 
 #~ msgid "Authorizations"
 #~ msgstr "授权"
@@ -289,6 +372,9 @@ msgstr "PolicyKit 认证助手"
 #~ "觉的方法当用户已经用授权完成任务时放弃授权。比如，一个按钮在“的的确确授权"
 #~ "授予的时间”被“按下”，开关按钮意味着反映或者撤回正在考虑的授权"
 
+#~ msgid "Click to make changes..."
+#~ msgstr "单击使更改..."
+
 #~ msgid ""
 #~ "<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
 #~ "update in real-time.</i>."
@@ -399,6 +485,9 @@ msgstr "PolicyKit 认证助手"
 #~ msgid "Admin Authentication (one shot)"
 #~ msgstr "管理员证明（仅一次有效）"
 
+#~ msgid "Admin Authentication"
+#~ msgstr "管理员证明"
+
 #~ msgid "Admin Authentication (keep session)"
 #~ msgstr "管理员证明（会话期间有效）"
 
@@ -407,6 +496,9 @@ msgstr "PolicyKit 认证助手"
 
 #~ msgid "Authentication (one shot)"
 #~ msgstr "证明（仅一次有效）"
+
+#~ msgid "Authentication"
+#~ msgstr "证明"
 
 #~ msgid "Authentication (keep session)"
 #~ msgstr "证明（会话期间有效）"
@@ -578,6 +670,9 @@ msgstr "PolicyKit 认证助手"
 #~ msgid "<b>Action</b>"
 #~ msgstr "<b>动作</b>"
 
+#~ msgid "<i>Identifier:</i>"
+#~ msgstr "<i>标识符：</i>"
+
 #~ msgid "<i>Description:</i>"
 #~ msgstr "<i>描述：</i>"
 
@@ -615,6 +710,9 @@ msgstr "PolicyKit 认证助手"
 
 #~ msgid "Scope"
 #~ msgstr "范围"
+
+#~ msgid "Obtained"
+#~ msgstr "获得"
 
 #~ msgid "How"
 #~ msgstr "如何"
