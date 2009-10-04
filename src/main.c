@@ -141,6 +141,7 @@ update_temporary_authorization_icon_real (void)
       /* hide icon */
       if (status_icon != NULL)
         {
+          gtk_status_icon_set_visible (status_icon, FALSE);
           g_object_unref (status_icon);
           status_icon = NULL;
         }
