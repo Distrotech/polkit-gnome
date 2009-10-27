@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-21 00:34+0200\n"
-"PO-Revision-Date: 2009-09-21 00:38+0100\n"
+"POT-Creation-Date: 2009-10-27 22:09+0100\n"
+"PO-Revision-Date: 2009-10-27 22:09+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "MIME-Version: 1.0\n"
@@ -158,7 +158,7 @@ msgstr "%s (%s)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:529
 msgid "_Authenticate"
-msgstr "_Autentisera"
+msgstr "A_utentisera"
 
 #: ../src/polkitgnomeauthenticationdialog.c:566
 msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
