@@ -170,6 +170,10 @@ main (int argc, char *argv[])
   unix_process_subject = polkit_unix_process_new (getpid ());
 
   authority = polkit_authority_get ();
+  g_debug ("backend: name=`%s' version=`%s' features=%d",
+           polkit_authority_get_backend_name (authority),
+           polkit_authority_get_backend_version (authority),
+           polkit_authority_get_backend_features (authority));
   g_signal_connect (authority,
                     "changed",
                     G_CALLBACK (on_authority_changed),
