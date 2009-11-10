@@ -485,7 +485,13 @@ polkit_gnome_authenticator_cancel (PolkitGnomeAuthenticator *authenticator)
   authenticator->was_cancelled = TRUE;
 
   if (authenticator->session != NULL)
-    polkit_agent_session_cancel (authenticator->session);
+    {
+      polkit_agent_session_cancel (authenticator->session);
+    }
+  else
+    {
+      g_signal_emit_by_name (authenticator, "completed", FALSE);
+    }
 }
 
 const gchar *

@@ -31,8 +31,10 @@ struct _PolkitGnomeListener
 {
   PolkitAgentListener parent_instance;
 
-  /* we only support a single active authenticator right now */
-  PolkitGnomeAuthenticator *the_authenticator;
+  /* we support multiple authenticators - they are simply queued up */
+  GList *authenticators;
+
+  PolkitGnomeAuthenticator *active_authenticator;
 };
 
 struct _PolkitGnomeListenerClass
@@ -97,6 +99,8 @@ polkit_gnome_listener_new (void)
 typedef struct
 {
   PolkitGnomeListener *listener;
+  PolkitGnomeAuthenticator *authenticator;
+
   GSimpleAsyncResult *simple;
   GCancellable *cancellable;
 
@@ -105,6 +109,7 @@ typedef struct
 
 static AuthData *
 auth_data_new (PolkitGnomeListener *listener,
+               PolkitGnomeAuthenticator *authenticator,
                GSimpleAsyncResult *simple,
                GCancellable *cancellable)
 {
@@ -112,6 +117,7 @@ auth_data_new (PolkitGnomeListener *listener,
 
   data = g_new0 (AuthData, 1);
   data->listener = g_object_ref (listener);
+  data->authenticator = g_object_ref (authenticator);
   data->simple = g_object_ref (simple);
   data->cancellable = g_object_ref (cancellable);
   return data;
@@ -121,11 +127,22 @@ static void
 auth_data_free (AuthData *data)
 {
   g_object_unref (data->listener);
+  g_object_unref (data->authenticator);
   g_object_unref (data->simple);
   if (data->cancellable != NULL && data->cancel_id > 0)
     g_signal_handler_disconnect (data->cancellable, data->cancel_id);
   g_object_unref (data->cancellable);
   g_free (data);
+}
+
+static void
+maybe_initiate_next_authenticator (PolkitGnomeListener *listener)
+{
+  if (listener->active_authenticator == NULL && listener->authenticators != NULL)
+    {
+      polkit_gnome_authenticator_initiate (POLKIT_GNOME_AUTHENTICATOR (listener->authenticators->data));
+      listener->active_authenticator = listener->authenticators->data;
+    }
 }
 
 static void
@@ -135,13 +152,16 @@ authenticator_completed (PolkitGnomeAuthenticator *authenticator,
 {
   AuthData *data = user_data;
 
-  g_warn_if_fail (authenticator == data->listener->the_authenticator);
+  data->listener->authenticators = g_list_remove (data->listener->authenticators, authenticator);
+  if (authenticator == data->listener->active_authenticator)
+    data->listener->active_authenticator = NULL;
 
-  g_object_unref (data->listener->the_authenticator);
-  data->listener->the_authenticator = NULL;
+  g_object_unref (authenticator);
 
   g_simple_async_result_complete (data->simple);
   g_object_unref (data->simple);
+
+  maybe_initiate_next_authenticator (data->listener);
 
   auth_data_free (data);
 }
@@ -152,7 +172,7 @@ cancelled_cb (GCancellable *cancellable,
 {
   AuthData *data = user_data;
 
-  polkit_gnome_authenticator_cancel (data->listener->the_authenticator);
+  polkit_gnome_authenticator_cancel (data->authenticator);
 }
 
 static void
@@ -169,6 +189,7 @@ polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *agent_liste
 {
   PolkitGnomeListener *listener = POLKIT_GNOME_LISTENER (agent_listener);
   GSimpleAsyncResult *simple;
+  PolkitGnomeAuthenticator *authenticator;
   AuthData *data;
 
   simple = g_simple_async_result_new (G_OBJECT (listener),
@@ -176,35 +197,25 @@ polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *agent_liste
                                       user_data,
                                       polkit_gnome_listener_initiate_authentication);
 
-  if (listener->the_authenticator != NULL)
+  authenticator = polkit_gnome_authenticator_new (action_id,
+                                                  message,
+                                                  icon_name,
+                                                  details,
+                                                  cookie,
+                                                  identities);
+  if (authenticator == NULL)
     {
       g_simple_async_result_set_error (simple,
                                        POLKIT_ERROR,
                                        POLKIT_ERROR_FAILED,
-                                       "Authentication is already in progress for another action");
+                                       "Error creating authentication object");
       g_simple_async_result_complete (simple);
       goto out;
     }
 
-  listener->the_authenticator = polkit_gnome_authenticator_new (action_id,
-                                                                message,
-                                                                icon_name,
-                                                                details,
-                                                                cookie,
-                                                                identities);
-  if (listener->the_authenticator == NULL)
-    {
-      g_simple_async_result_set_error (simple,
-                                       POLKIT_ERROR,
-                                       POLKIT_ERROR_FAILED,
-                                       "Authentication is already in progress for another action");
-      g_simple_async_result_complete (simple);
-      goto out;
-    }
+  data = auth_data_new (listener, authenticator, simple, cancellable);
 
-  data = auth_data_new (listener, simple, cancellable);
-
-  g_signal_connect (listener->the_authenticator,
+  g_signal_connect (authenticator,
                     "completed",
                     G_CALLBACK (authenticator_completed),
                     data);
@@ -217,7 +228,9 @@ polkit_gnome_listener_initiate_authentication (PolkitAgentListener  *agent_liste
                                           data);
     }
 
-  polkit_gnome_authenticator_initiate (listener->the_authenticator);
+  listener->authenticators = g_list_append (listener->authenticators, authenticator);
+
+  maybe_initiate_next_authenticator (listener);
 
  out:
   ;
