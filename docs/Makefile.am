@@ -63,6 +63,7 @@ if ENABLE_GTK_DOC
 include $(top_srcdir)/gtk-doc.make
 else
 CLEANFILES =
+EXTRA_DIST = $(HTML_IMAGES)
 endif
 
 CLEANFILES +=   *~				\

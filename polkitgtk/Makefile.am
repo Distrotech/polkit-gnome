@@ -70,8 +70,6 @@ example_LDADD = 					\
 	libpolkit-gtk-1.la				\
 	$(NULL)
 
-CLEANFILES = $(BUILT_SOURCES) $(pkgconfig_DATA)
-
 if ENABLE_INTROSPECTION
 girdir = $(GIRDIR)
 gir_DATA = PolkitGtk-1.0.gir
@@ -102,6 +100,8 @@ PolkitGtk-1.0.typelib: PolkitGtk-1.0.gir $(G_IR_COMPILER)
 	$(G_IR_COMPILER) $< -o $@
 
 endif # ENABLE_INTROSPECTION
+
+CLEANFILES = $(BUILT_SOURCES) $(pkgconfig_DATA) $(gir_DATA) $(typelibs_DATA)
 
 clean-local :
 	rm -f *~ $(BUILT_SOURCES)
