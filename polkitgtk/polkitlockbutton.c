@@ -809,8 +809,8 @@ process_result (PolkitLockButton          *button,
   old_authorized = button->priv->authorized;
   button->priv->can_obtain = polkit_authorization_result_get_is_challenge (result);
   button->priv->authorized = polkit_authorization_result_get_is_authorized (result);
-  button->priv->can_lock_down = TRUE; /* TODO: check if we're using the Local Authority */
-  button->priv->locked_down = polkit_authorization_result_get_local_authority_lock_down (result);
+  button->priv->can_lock_down = polkit_authority_get_backend_features (button->priv->authority) & POLKIT_AUTHORITY_FEATURES_LOCKDOWN;
+  button->priv->locked_down = polkit_authorization_result_get_locked_down (result);
 
   /* save the temporary authorization id */
   g_free (button->priv->tmp_authz_id);
@@ -968,6 +968,28 @@ interactive_check_cb (GObject       *source_object,
     }
 }
 
+static void
+remove_lockdown_cb (PolkitAuthority *authority,
+                    GAsyncResult    *res,
+                    gpointer         user_data)
+{
+  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
+  GError *error;
+
+  error = NULL;
+  if (!polkit_authority_remove_lockdown_for_action_finish (button->priv->authority,
+                                                           res,
+                                                           &error))
+    {
+      g_warning ("Error removing lockdown for action %s: %s",
+                 button->priv->action_id,
+                 error->message);
+      g_error_free (error);
+    }
+
+  g_object_unref (button);
+}
+
 static gboolean
 on_button_press_event (GtkWidget      *widget,
                        GdkEventButton *event,
@@ -980,17 +1002,38 @@ on_button_press_event (GtkWidget      *widget,
 
   if (event->button == 3 && button->priv->locked_down)
     {
-      gchar *command_line;
-
-      command_line = g_strdup_printf ("pklalockdown --remove-lockdown %s", button->priv->action_id);
-      g_spawn_command_line_async (command_line, NULL);
-      g_free (command_line);
-
+      polkit_authority_remove_lockdown_for_action (button->priv->authority,
+                                                   button->priv->action_id,
+                                                   NULL, /* cancellable */
+                                                   (GAsyncReadyCallback) remove_lockdown_cb,
+                                                   g_object_ref (button));
       /* eat this event */
       ret = TRUE;
     }
 
   return ret;
+}
+
+static void
+add_lockdown_cb (PolkitAuthority *authority,
+                 GAsyncResult    *res,
+                 gpointer         user_data)
+{
+  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
+  GError *error;
+
+  error = NULL;
+  if (!polkit_authority_add_lockdown_for_action_finish (button->priv->authority,
+                                                        res,
+                                                        &error))
+    {
+      g_warning ("Error adding lockdown for action %s: %s",
+                 button->priv->action_id,
+                 error->message);
+      g_error_free (error);
+    }
+
+  g_object_unref (button);
 }
 
 static void
@@ -1027,10 +1070,11 @@ on_clicked (GtkButton *_button,
   else if (button->priv->authorized && button->priv->tmp_authz_id == NULL &&
            button->priv->can_lock_down && !button->priv->locked_down)
     {
-      gchar *command_line;
-      command_line = g_strdup_printf ("pklalockdown --lockdown %s", button->priv->action_id);
-      g_spawn_command_line_async (command_line, NULL);
-      g_free (command_line);
+      polkit_authority_add_lockdown_for_action (button->priv->authority,
+                                                button->priv->action_id,
+                                                NULL, /* cancellable */
+                                                (GAsyncReadyCallback) add_lockdown_cb,
+                                                g_object_ref (button));
     }
 
  out:
