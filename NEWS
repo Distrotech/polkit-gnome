@@ -1,4 +1,44 @@
 ==========
+polkit-gnome 0.95
+==========
+
+This is polkit-gnome version 0.95.
+
+Build requirements
+
+ polkit    >= 0.95
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.94:
+
+Chris Coulson (1):
+      Set status icon invisible before unref'ing it
+
+David Zeuthen (9):
+      Post-release version bump to 0.95
+      Add test-case for fd.o bug 23867
+      Add support for locking down actions
+      Add GObject Introspection for libpolkit-gtk-1
+      In the example, print backend details on stdout
+      Fix distcheck
+      Support multiple outstanding authentication requests
+      Use new API in polkit 0.95 for lock down
+      Update NEWS for release
+
+Translations:
+
+  AntÃ³nio Lima, Aron Xu, Christian Kirbach, Claude Paroz, Daniel
+  Nylander, Fran Dieguez, Gabor Kelemen, Gianvito Cavasoli, Inaki
+  Larranaga, Inaki Larranaga Murgoitio, Jorge GonzÃ¡lez, Khaled Hosny,
+  Leonardo Ferreira Fontenelle, Mads Lundby, Pavlos Tournaris, Petr
+  Kovar, Philip Withnall, Sweta Kothari, Takayuki KUSANO, Tao Wei,
+  Tomasz Dominikowski, Ville-Pekka Vainio
+
+
+David Zeuthen,
+August 12, 2009
+
+==========
 polkit-gnome 0.94
 ==========
 
