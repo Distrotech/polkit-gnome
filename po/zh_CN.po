@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: policykit-gnome VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-03 21:55+0800\n"
-"PO-Revision-Date: 2009-10-03 13:26+0000\n"
+"PO-Revision-Date: 2009-12-02 17:49+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -124,7 +124,7 @@ msgstr "当提示用户锁定时显示的文字。"
 msgid ""
 "To prevent users without administrative privileges from making changes, "
 "click the lock."
-msgstr ""
+msgstr "为了防止用户没有管理员权限来做更改，点击这个锁。"
 
 #: ../polkitgtk/polkitlockbutton.c:628
 msgid ""
@@ -153,6 +153,7 @@ msgid ""
 "This button is locked down so only users with administrative privileges can "
 "unlock it. Right-click the button to remove the lock down."
 msgstr ""
+"这个按钮是被锁定的，只有有管理权限的用户才能解锁。右键单击该按钮来移除锁定。"
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
@@ -220,7 +221,7 @@ msgstr "单击以打开 %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:868
 msgid "Authenticate"
-msgstr "鉴定为真"
+msgstr "授权"
 
 #: ../src/polkitgnomeauthenticator.c:285
 #, c-format
