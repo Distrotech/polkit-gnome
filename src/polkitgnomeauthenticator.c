@@ -375,7 +375,7 @@ do_initiate (gpointer user_data)
   if (!polkit_gnome_authentication_dialog_run_until_user_is_selected (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog)))
     {
       /* user cancelled the dialog */
-      //g_debug ("User cancelled before selecting a user");
+      /*g_debug ("User cancelled before selecting a user");*/
       authenticator->was_cancelled = TRUE;
       goto out;
     }
@@ -389,7 +389,7 @@ do_initiate (gpointer user_data)
   g_free (authenticator->selected_user);
   authenticator->selected_user = polkit_gnome_authentication_dialog_get_selected_user (POLKIT_GNOME_AUTHENTICATION_DIALOG (authenticator->dialog));
 
-  //g_debug ("Authenticating user %s", authenticator->selected_user);
+  /*g_debug ("Authenticating user %s", authenticator->selected_user);*/
   identity = polkit_unix_user_new_for_name (authenticator->selected_user, NULL);
 
   authenticator->session = polkit_agent_session_new (identity, authenticator->cookie);
@@ -420,14 +420,14 @@ do_initiate (gpointer user_data)
 
   g_main_loop_run (authenticator->loop);
 
-  //g_debug ("gained_authorization=%d was_cancelled=%d new_user_selected=%d.",
-  //         authenticator->gained_authorization,
-  //         authenticator->was_cancelled,
-  //         authenticator->new_user_selected);
+  /*g_debug ("gained_authorization=%d was_cancelled=%d new_user_selected=%d.",
+           authenticator->gained_authorization,
+           authenticator->was_cancelled,
+           authenticator->new_user_selected);*/
 
   if (authenticator->new_user_selected)
     {
-      //g_debug ("New user selected");
+      /*g_debug ("New user selected");*/
       authenticator->new_user_selected = FALSE;
       g_object_unref (authenticator->session);
       authenticator->session = NULL;
@@ -487,10 +487,6 @@ polkit_gnome_authenticator_cancel (PolkitGnomeAuthenticator *authenticator)
   if (authenticator->session != NULL)
     {
       polkit_agent_session_cancel (authenticator->session);
-    }
-  else
-    {
-      g_signal_emit_by_name (authenticator, "completed", FALSE);
     }
 }
 
