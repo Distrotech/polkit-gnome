@@ -11,7 +11,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=policykit-gnome&component=general\n"
 "POT-Creation-Date: 2009-09-29 12:28+0000\n"
-"PO-Revision-Date: 2009-11-08 13:37+0100\n"
+"PO-Revision-Date: 2009-12-22 08:45+0100\n"
 "Last-Translator: Jorge González <jorgegonz@svn.gnome.org>\n"
 "Language-Team: Español <gnome-es-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -227,7 +227,7 @@ msgstr ""
 #: ../src/polkitgnomeauthenticationdialog.c:615
 #: ../src/polkitgnomeauthenticator.c:289
 msgid "_Password:"
-msgstr "_Contraseña:"
+msgstr "Contrase_ña:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
@@ -259,7 +259,7 @@ msgstr "Autenticar"
 #: ../src/polkitgnomeauthenticator.c:285
 #, c-format
 msgid "_Password for %s:"
-msgstr "_Contraseña para %s:"
+msgstr "Contrase_ña para %s:"
 
 #: ../src/polkitgnomeauthenticator.c:445
 msgid "Authentication Failure"
