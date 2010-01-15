@@ -1,4 +1,4 @@
-AC_INIT([polkit-gnome],[0.95],[http://lists.freedesktop.org/mailman/listinfo/polkit-devel],[polkit-gnome])
+AC_INIT([polkit-gnome],[0.96],[http://lists.freedesktop.org/mailman/listinfo/polkit-devel],[polkit-gnome])
 
 AM_INIT_AUTOMAKE([1.9 foreign dist-bzip2 no-dist-gzip])
 
