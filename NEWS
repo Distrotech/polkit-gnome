@@ -1,4 +1,29 @@
 ==========
+polkit-gnome 0.96
+==========
+
+This is polkit-gnome version 0.96.
+
+Build requirements
+
+ polkit    >= 0.95
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.95:
+
+David Zeuthen (3):
+      Fix bug with authenticating multiple possible users
+      Post-release version bump to 0.96
+      Update NEWS for release
+
+Translations:
+
+ Aron Xu, Gianvito Cavasoli, Gil Forcada, Jorge González, Matej Urbančič
+
+David Zeuthen,
+January 15, 2010
+
+==========
 polkit-gnome 0.95
 ==========
 
@@ -36,7 +61,7 @@ Translations:
 
 
 David Zeuthen,
-August 12, 2009
+November 13, 2009
 
 ==========
 polkit-gnome 0.94
