@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome.master.gu\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2009-09-17 09:20+0000\n"
-"PO-Revision-Date: 2010-02-05 12:58+0530\n"
+"POT-Creation-Date: 2010-02-05 07:30+0000\n"
+"PO-Revision-Date: 2010-03-24 15:09+0530\n"
 "Last-Translator: Sweta Kothari <swkothar@redhat.com>\n"
 "Language-Team: Gujarati\n"
 "MIME-Version: 1.0\n"
@@ -68,7 +68,7 @@ msgstr "Tooltip નું તાળુ ખોલો"
 
 #: ../polkitgtk/polkitlockbutton.c:543
 msgid "The tooltip to display when prompting the user to unlock."
-msgstr "દર્શાવવા માટે ટુલટીપ જ્યારે તાળુ ખોલવા માટે વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે."
+msgstr "જ્યારે તાળુ ખોલવા માટે વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે ત્યારે દર્શાવવા માટે ટુલટીપ."
 
 #: ../polkitgtk/polkitlockbutton.c:544
 msgid "Authentication is needed to make changes."
@@ -80,7 +80,7 @@ msgstr "લખાણને તાળુ મારો"
 
 #: ../polkitgtk/polkitlockbutton.c:560
 msgid "The text to display when prompting the user to lock."
-msgstr "દર્શાવવા માટે લખાણ જ્યારે તાળુ મારવા માટે પ્રોમ્પ્ટ કરી રહ્યા છે."
+msgstr "જ્યારે તાળુ મારવા માટે પ્રોમ્પ્ટ કરી રહ્યા છે ત્યારે દર્શાવવા માટે લખાણ."
 
 #: ../polkitgtk/polkitlockbutton.c:561
 msgid "Click to prevent changes"
@@ -92,7 +92,7 @@ msgstr "ટુલટીપ ને તાળુ મારો"
 
 #: ../polkitgtk/polkitlockbutton.c:577
 msgid "The tooltip to display when prompting the user to lock."
-msgstr "દર્શાવવા માટે ટુલટીપ જ્યારે તાળુ મારવા માટે વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે."
+msgstr "જ્યારે તાળુ મારવા માટે વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે ત્યારે દર્શાવવા માટે ટુલટીપ."
 
 #: ../polkitgtk/polkitlockbutton.c:578
 msgid "To prevent further changes, click the lock."
@@ -106,7 +106,7 @@ msgstr "લખાણ નીચે તાળુ મારો"
 msgid ""
 "The text to display when prompting the user to lock down the action for all "
 "users."
-msgstr "દર્શાવવા માટે લખાણ જ્યારે બધા વપરાશકર્તાઓ માટે ક્રિયાને તાળુ મારવા માટે વપરાશકર્તાને તાળુ મારી રહ્યા છે."
+msgstr "જ્યારે બધા વપરાશકર્તાઓ માટે ક્રિયાને તાળુ મારવા વપરાશકર્તાને તાળુ મારી રહ્યા છે ત્યારે દર્શાવવા માટે લખાણ."
 
 #: ../polkitgtk/polkitlockbutton.c:595
 msgid "Click to lock down"
@@ -120,19 +120,21 @@ msgstr "ટુલટીપ નીચે તાળુ મારો"
 msgid ""
 "The tooltip to display when prompting the user to lock down the action for "
 "all users."
-msgstr "દર્શાવવા માટે ટુલટીપ જ્યારે બધા વપરાશકર્તાઓ માટે ક્રિયાને તાળુ મારવા માટે વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે."
+msgstr "જ્યારે બધા વપરાશકર્તાઓ માટે ક્રિયાને તાળુ મારવા વપરાશકર્તાને પ્રોમ્પ્ટ કરી રહ્યા છે ત્યારે દર્શાવવા માટે ટુલટીપ."
 
 #: ../polkitgtk/polkitlockbutton.c:612
 msgid ""
 "To prevent users without administrative privileges from making changes, "
 "click the lock."
-msgstr "બદલાવોને બનાવવાથી વહીવટકર્તાઓનાં અધિકારો વગર વપરાશકર્તાઓને અટકાવવા માટે, તાળા પર ક્લિક કરો."
+msgstr ""
+"બદલાવોને કરવાથી વહીવટકર્તાઓનાં અધિકારો વગર વપરાશકર્તાઓને અટકાવવા માટે, તાળા પર "
+"ક્લિક કરો."
 
 #: ../polkitgtk/polkitlockbutton.c:628
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
-msgstr "દર્શાવવા માટે લખાણ જ્યારે વપરાશકર્તાને સત્તાધિકરણ મારફતે સત્તાને મેળવી સકાતી નથી."
+msgstr "જ્યારે વપરાશકર્તાન એ સત્તાધિકરણ મારફતે સત્તાને મેળવી શકતા નથી ત્યારે દર્શાવવા માટે લખાણ."
 
 #: ../polkitgtk/polkitlockbutton.c:629
 msgid "Not authorized to make changes"
@@ -142,7 +144,7 @@ msgstr "બદલાવો કરવા માટે સત્તાધિકર
 msgid ""
 "The tooltip to display when the user cannot obtain authorization through "
 "authentication."
-msgstr "દર્શાવવા માટે ટુલટીપ જ્યારે વપરાશકર્તાને સત્તાધિકરણ મારફતે સત્તા મેળવી શકાતી નથી."
+msgstr "જ્યારે વપરાશકર્તા એ સત્તાધિકરણ મારફતે સત્તા મેળવી શકતા નથી ત્યારે દર્શાવવા માટે ટુલટીપ."
 
 #: ../polkitgtk/polkitlockbutton.c:646
 msgid "System policy prevents changes. Contact your system administator."
@@ -154,7 +156,9 @@ msgstr "સિસ્ટમ પોલિસી બદલાવોને અટક
 msgid ""
 "This button is locked down so only users with administrative privileges can "
 "unlock it. Right-click the button to remove the lock down."
-msgstr "આ બટનનું તાળુ મારેલ છે તેથી વહાવટકર્તા અધિકારો સાથે ફક્ત વપરાશકર્તાઓ જ તેનું તાળુ ખોલી શકે છે. તાળુને દૂર કરવા માટે બટન પર જમણી ક્લિક કરો."
+msgstr ""
+"આ બટનનું તાળુ મારેલ છે તેથી વહીવટકર્તા અધિકારો સાથે ફક્ત વપરાશકર્તાઓ જ તેનું તાળુ ખોલી શકે "
+"છે. તાળુ મારવાનુંે દૂર કરવા માટે બટન પર જમણી ક્લિક કરો."
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
@@ -177,19 +181,25 @@ msgstr "પ્રસ્થાપિત કરો (_A)"
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
-msgstr "કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. નીચેનાં વપરાશકર્તાઓમાંથી એક તરીકે સત્તાધિકરણ ને આ ક્રિયાને ચલાવવા માટે જરૂર છે."
+msgstr ""
+"કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. નીચેનાં "
+"વપરાશકર્તાઓ નાં એકને આ ક્રિયાને ચલાવવા માટે સત્તાધિકરણની જરૂર છે."
 
 #: ../src/polkitgnomeauthenticationdialog.c:574
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
-msgstr "કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. સત્તાધિકરણને આ ક્રિયાને ચલાવવા માટે જરૂર છે."
+msgstr ""
+"કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. "
+"સત્તાધિકરણની આ ક્રિયાને ચલાવવા માટે જરૂર છે."
 
 #: ../src/polkitgnomeauthenticationdialog.c:580
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
-msgstr "કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. મુખ્ય વપરાશકર્તા તરીકે સત્તાધિકરણ ને આ ક્રિયાને ચલાવવા માટે જરૂર છે."
+msgstr ""
+"કાર્યક્રમ એ ક્રિયાને ચલાવવા માટે પ્રયત્ન કરી રહ્યુ છે કે જેને અધિકારોની જરૂરિયાત છે. મુખ્ય "
+"વપરાશકર્તા તરીકે સત્તાધિકરણની આ ક્રિયાને ચલાવવા માટે જરૂર છે."
 
 #: ../src/polkitgnomeauthenticationdialog.c:615
 #: ../src/polkitgnomeauthenticator.c:289
