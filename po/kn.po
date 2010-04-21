@@ -6,9 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2010-02-08 11:29+0000\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-04-21 12:19+0530\n"
 "PO-Revision-Date: 2010-02-10 14:05+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: kn-IN <>\n"
@@ -107,8 +106,8 @@ msgid ""
 "The text to display when prompting the user to lock down the action for all "
 "users."
 msgstr ""
-"ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ "
-"ತೋರಿಸಬೇಕಿರುವ ಪಠ್ಯ."
+"ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ "
+"ಪಠ್ಯ."
 
 #: ../polkitgtk/polkitlockbutton.c:595
 msgid "Click to lock down"
@@ -123,24 +122,23 @@ msgid ""
 "The tooltip to display when prompting the user to lock down the action for "
 "all users."
 msgstr ""
-"ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ "
-"ತೋರಿಸಬೇಕಿರುವ ಉಪಕರಣಸಲಹೆ."
+"ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ "
+"ಉಪಕರಣಸಲಹೆ."
 
 #: ../polkitgtk/polkitlockbutton.c:612
 msgid ""
 "To prevent users without administrative privileges from making changes, "
 "click the lock."
 msgstr ""
-"ನಿರ್ವಹಣಾ ಅಧಿಕಾರಗಳನ್ನು ಹೊಂದಿರದ ಬಳಕೆದಾರರು ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡುವುದನ್ನು ತಡೆಯಲು, "
-"ಲಾಕ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
+"ನಿರ್ವಹಣಾ ಅಧಿಕಾರಗಳನ್ನು ಹೊಂದಿರದ ಬಳಕೆದಾರರು ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡುವುದನ್ನು ತಡೆಯಲು, ಲಾಕ್ "
+"ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
 
 #: ../polkitgtk/polkitlockbutton.c:628
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
 msgstr ""
-"ದೃಢೀಕರಣದ ಮೂಲಕ ಬಳಕೆದಾರರು ಅಧಿಕಾರವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗದೆ ಇದ್ದಾಗ ತೋರಿಸಬೇಕಿರುವ "
-"ಪಠ್ಯ."
+"ದೃಢೀಕರಣದ ಮೂಲಕ ಬಳಕೆದಾರರು ಅಧಿಕಾರವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗದೆ ಇದ್ದಾಗ ತೋರಿಸಬೇಕಿರುವ ಪಠ್ಯ."
 
 #: ../polkitgtk/polkitlockbutton.c:629
 msgid "Not authorized to make changes"
@@ -157,8 +155,7 @@ msgstr ""
 #: ../polkitgtk/polkitlockbutton.c:646
 msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
-"ವ್ಯವಸ್ಥೆಯ ನಿಯಮಗಳು ಬದಲಾವಣೆಯನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತವೆ. ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯ "
-"ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."
+"ವ್ಯವಸ್ಥೆಯ ನಿಯಮಗಳು ಬದಲಾವಣೆಯನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತವೆ. ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯ ನಿರ್ವಾಹಕರನ್ನು ಸಂಪರ್ಕಿಸಿ."
 
 #. Translators: this string is appended to the tooltip if the action is
 #. * currently locked down
@@ -168,8 +165,7 @@ msgid ""
 "unlock it. Right-click the button to remove the lock down."
 msgstr ""
 "ಕೇವಲ ನಿರ್ವಾಹಕ ಅಧಿಕಾರಗಳನ್ನು ಹೊಂದಿರುವ ಬಳಕೆದಾರರು ಮಾತ್ರ ಅನ್‌ಲಾಕ್ ಮಾಡಲಾಗುವಂತೆ ಈ "
-"ಗುಂಡಿಯನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿರುತ್ತದೆ. ಲಾಕ್ ಅನ್ನು ತೆಗೆದು ಹಾಕಲು ಮೌಸ್‌ನ ಬಲಗುಂಡಿಯನ್ನು "
-"ಕ್ಲಿಕ್‌ ಮಾಡಿ."
+"ಗುಂಡಿಯನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿರುತ್ತದೆ. ಲಾಕ್ ಅನ್ನು ತೆಗೆದು ಹಾಕಲು ಮೌಸ್‌ನ ಬಲಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್‌ ಮಾಡಿ."
 
 #: ../src/main.c:128
 msgid "Click the icon to drop all elevated privileges"
@@ -193,25 +189,24 @@ msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
-"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ."
-" ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಈ ಕೆಳಗಿನ ಬಳಕೆದಾರರಲ್ಲಿ ಒಬ್ಬರಾಗಿ ದೃಢೀಕರಿಸುವ "
-"ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. ಈ "
+"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಈ ಕೆಳಗಿನ ಬಳಕೆದಾರರಲ್ಲಿ ಒಬ್ಬರಾಗಿ ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:574
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
 msgstr ""
-"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ."
-" ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. ಈ "
+"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:580
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
 msgstr ""
-"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ."
-" ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಸೂಪರ್ ಯೂಸರ್ ಆಗಿ ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. ಈ "
+"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಸೂಪರ್ ಯೂಸರ್ ಆಗಿ ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:615
 #: ../src/polkitgnomeauthenticator.c:289
@@ -257,4 +252,3 @@ msgstr "ಧೃಡೀಕರಣ ವಿಫಲ"
 #: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
 msgid "PolicyKit Authentication Agent"
 msgstr "PolicyKit ದೃಢೀಕರಣ ಮಧ್ಯವರ್ತಿ"
-
