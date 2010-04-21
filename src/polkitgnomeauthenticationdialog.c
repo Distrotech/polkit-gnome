@@ -530,17 +530,20 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
                                                           GTK_RESPONSE_OK);
   gtk_dialog_set_default_response (GTK_DIALOG (dialog), GTK_RESPONSE_OK);
 
+  content_area = gtk_dialog_get_content_area (GTK_DIALOG (dialog));
+  action_area = gtk_dialog_get_action_area (GTK_DIALOG (dialog));
+
   gtk_dialog_set_has_separator (GTK_DIALOG (dialog), FALSE);
   gtk_container_set_border_width (GTK_CONTAINER (dialog), 5);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (dialog)->vbox), 2); /* 2 * 5 + 2 = 12 */
-  gtk_container_set_border_width (GTK_CONTAINER (GTK_DIALOG (dialog)->action_area), 5);
-  gtk_box_set_spacing (GTK_BOX (GTK_DIALOG (dialog)->action_area), 6);
+  gtk_box_set_spacing (GTK_BOX (content_area), 2); /* 2 * 5 + 2 = 12 */
+  gtk_container_set_border_width (GTK_CONTAINER (action_area), 5);
+  gtk_box_set_spacing (GTK_BOX (action_area), 6);
   gtk_window_set_resizable (GTK_WINDOW (dialog), FALSE);
   gtk_window_set_icon_name (GTK_WINDOW (dialog), GTK_STOCK_DIALOG_AUTHENTICATION);
 
   hbox = gtk_hbox_new (FALSE, 12);
   gtk_container_set_border_width (GTK_CONTAINER (hbox), 5);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), hbox, TRUE, TRUE, 0);
+  gtk_box_pack_start (GTK_BOX (content_area), hbox, TRUE, TRUE, 0);
 
   image = get_image (dialog);
   gtk_misc_set_alignment (GTK_MISC (image), 0.5, 0.0);
@@ -632,7 +635,7 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   /* Details */
   details_expander = gtk_expander_new_with_mnemonic (_("<small><b>_Details</b></small>"));
   gtk_expander_set_use_markup (GTK_EXPANDER (details_expander), TRUE);
-  gtk_box_pack_start (GTK_BOX (GTK_DIALOG (dialog)->vbox), details_expander, FALSE, FALSE, 0);
+  gtk_box_pack_start (GTK_BOX (content_area), details_expander, FALSE, FALSE, 0);
 
   details_vbox = gtk_vbox_new (FALSE, 10);
   gtk_container_add (GTK_CONTAINER (details_expander), details_vbox);
