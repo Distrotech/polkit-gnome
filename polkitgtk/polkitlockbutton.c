@@ -749,7 +749,7 @@ update_state (PolkitLockButton *button)
         }
     }
 
-  image = gtk_image_new_from_icon_name (button->priv->authorized ? "stock_lock-open" : "stock_lock",
+  image = gtk_image_new_from_icon_name (button->priv->authorized ? "changes-allow" : "changes-prevent",
                                         GTK_ICON_SIZE_SMALL_TOOLBAR);
   gtk_button_set_image (GTK_BUTTON (button->priv->button), image);
   gtk_label_set_text (GTK_LABEL (button->priv->label), text);
