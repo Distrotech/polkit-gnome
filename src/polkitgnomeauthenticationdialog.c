@@ -511,6 +511,8 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   GtkWidget *details_vbox;
   GtkWidget *label;
   GtkWidget *image;
+  GtkWidget *content_area;
+  GtkWidget *action_area;
   gboolean have_user_combobox;
   gchar *s;
   guint rows;
