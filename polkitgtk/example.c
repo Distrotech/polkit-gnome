@@ -61,12 +61,11 @@ update_one (PolkitSubject *subject,
   else
     {
       g_string_append_printf (s,
-                              "authorized=%d challenge=%d retains=%d temporary=%d locked_down=%d",
+                              "authorized=%d challenge=%d retains=%d temporary=%d",
                               polkit_authorization_result_get_is_authorized (result),
                               polkit_authorization_result_get_is_challenge (result),
                               polkit_authorization_result_get_retains_authorization (result),
-                              polkit_authorization_result_get_temporary_authorization_id (result) != NULL,
-                              polkit_authorization_result_get_locked_down (result));
+                              polkit_authorization_result_get_temporary_authorization_id (result) != NULL);
       g_object_unref (result);
     }
 

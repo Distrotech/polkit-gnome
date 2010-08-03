@@ -168,8 +168,6 @@ struct _PolkitLockButtonPrivate
   gboolean retains_after_challenge;
   gboolean authorized;
   gboolean hidden;
-  gboolean locked_down;
-  gboolean can_lock_down;
 
   /* is non-NULL exactly when we are authorized and have a temporary authorization */
   gchar *tmp_authz_id;
@@ -216,10 +214,6 @@ static void on_authority_changed (PolkitAuthority *authority,
 
 static void on_clicked (GtkButton *button,
                         gpointer   user_data);
-
-static gboolean on_button_press_event (GtkWidget      *widget,
-                                       GdkEventButton *event,
-                                       gpointer        user_data);
 
 G_DEFINE_TYPE (PolkitLockButton, polkit_lock_button, GTK_TYPE_HBOX);
 
@@ -398,10 +392,6 @@ polkit_lock_button_constructed (GObject *object)
   g_signal_connect (button->priv->button,
                     "clicked",
                     G_CALLBACK (on_clicked),
-                    button);
-  g_signal_connect (button->priv->button,
-                    "button-press-event",
-                    G_CALLBACK (on_button_press_event),
                     button);
 
   gtk_box_pack_start (GTK_BOX (button),
@@ -708,15 +698,7 @@ update_state (PolkitLockButton *button)
        */
       if (button->priv->tmp_authz_id == NULL)
         {
-          if (button->priv->can_lock_down && !button->priv->locked_down)
-            {
-              text = button->priv->text_lock_down;
-              tooltip = button->priv->tooltip_lock_down;
-            }
-          else
-            {
-              button->priv->hidden = TRUE;
-            }
+          //button->priv->hidden = TRUE;
         }
     }
   else
@@ -755,25 +737,8 @@ update_state (PolkitLockButton *button)
   gtk_label_set_text (GTK_LABEL (button->priv->label), text);
   gtk_widget_set_sensitive (button->priv->button, sensitive);
 
-  if (button->priv->locked_down)
-    {
-      gchar *s;
-      s = g_strdup_printf ("%s\n"
-                           "\n"
-                           "%s",
-                           tooltip,
-                           /* Translators: this string is appended to the tooltip if the action is
-                            * currently locked down */
-                           _("This button is locked down so only users with administrative privileges can unlock it. Right-click the button to remove the lock down."));
-      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->label), s);
-      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->button), s);
-      g_free (s);
-    }
-  else
-    {
-      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->label), tooltip);
-      gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->button), tooltip);
-    }
+  gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->label), tooltip);
+  gtk_widget_set_tooltip_markup (GTK_WIDGET (button->priv->button), tooltip);
 
   if (button->priv->hidden)
     {
@@ -809,8 +774,6 @@ process_result (PolkitLockButton          *button,
   old_authorized = button->priv->authorized;
   button->priv->can_obtain = polkit_authorization_result_get_is_challenge (result);
   button->priv->authorized = polkit_authorization_result_get_is_authorized (result);
-  button->priv->can_lock_down = polkit_authority_get_backend_features (button->priv->authority) & POLKIT_AUTHORITY_FEATURES_LOCKDOWN;
-  button->priv->locked_down = polkit_authorization_result_get_locked_down (result);
 
   /* save the temporary authorization id */
   g_free (button->priv->tmp_authz_id);
@@ -969,74 +932,6 @@ interactive_check_cb (GObject       *source_object,
 }
 
 static void
-remove_lockdown_cb (PolkitAuthority *authority,
-                    GAsyncResult    *res,
-                    gpointer         user_data)
-{
-  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
-  GError *error;
-
-  error = NULL;
-  if (!polkit_authority_remove_lockdown_for_action_finish (button->priv->authority,
-                                                           res,
-                                                           &error))
-    {
-      g_warning ("Error removing lockdown for action %s: %s",
-                 button->priv->action_id,
-                 error->message);
-      g_error_free (error);
-    }
-
-  g_object_unref (button);
-}
-
-static gboolean
-on_button_press_event (GtkWidget      *widget,
-                       GdkEventButton *event,
-                       gpointer        user_data)
-{
-  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
-  gboolean ret;
-
-  ret = FALSE;
-
-  if (event->button == 3 && button->priv->locked_down)
-    {
-      polkit_authority_remove_lockdown_for_action (button->priv->authority,
-                                                   button->priv->action_id,
-                                                   NULL, /* cancellable */
-                                                   (GAsyncReadyCallback) remove_lockdown_cb,
-                                                   g_object_ref (button));
-      /* eat this event */
-      ret = TRUE;
-    }
-
-  return ret;
-}
-
-static void
-add_lockdown_cb (PolkitAuthority *authority,
-                 GAsyncResult    *res,
-                 gpointer         user_data)
-{
-  PolkitLockButton *button = POLKIT_LOCK_BUTTON (user_data);
-  GError *error;
-
-  error = NULL;
-  if (!polkit_authority_add_lockdown_for_action_finish (button->priv->authority,
-                                                        res,
-                                                        &error))
-    {
-      g_warning ("Error adding lockdown for action %s: %s",
-                 button->priv->action_id,
-                 error->message);
-      g_error_free (error);
-    }
-
-  g_object_unref (button);
-}
-
-static void
 on_clicked (GtkButton *_button,
             gpointer   user_data)
 {
@@ -1066,15 +961,6 @@ on_clicked (GtkButton *_button,
                                                              NULL,  /* cancellable */
                                                              NULL,  /* callback */
                                                              NULL); /* user_data */
-    }
-  else if (button->priv->authorized && button->priv->tmp_authz_id == NULL &&
-           button->priv->can_lock_down && !button->priv->locked_down)
-    {
-      polkit_authority_add_lockdown_for_action (button->priv->authority,
-                                                button->priv->action_id,
-                                                NULL, /* cancellable */
-                                                (GAsyncReadyCallback) add_lockdown_cb,
-                                                g_object_ref (button));
     }
 
  out:
