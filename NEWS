@@ -1,4 +1,19 @@
 ==========
+polkit-gnome 0.98 (not released)
+==========
+
+This is polkit-gnome version 0.98.
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.97:
+
+ TODO
+
+==========
 polkit-gnome 0.97
 ==========
 
