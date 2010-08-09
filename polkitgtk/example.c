@@ -19,8 +19,6 @@
  * Author: David Zeuthen <davidz@redhat.com>
  */
 
-#include <dbus/dbus-glib.h>
-#include <dbus/dbus-glib-lowlevel.h>
 #include <polkitgtk/polkitgtk.h>
 
 static PolkitAuthority *authority = NULL;
@@ -100,7 +98,7 @@ on_button_changed (PolkitLockButton *button,
 int
 main (int argc, char *argv[])
 {
-  DBusGConnection *bus;
+  GDBusConnection *bus;
   GtkWidget *window;
   GtkWidget *label;
   GtkWidget *button;
@@ -119,11 +117,10 @@ main (int argc, char *argv[])
   action_id = argv[1];
 
   error = NULL;
-  bus = dbus_g_bus_get (DBUS_BUS_SYSTEM, &error);
+  bus = g_bus_get_sync (G_BUS_TYPE_SYSTEM, NULL /* GCancellable* */, &error);
   if (bus == NULL)
     {
-      g_printerr ("Failed connecting to system bus: %s\n",
-                  error->message);
+      g_printerr ("Failed connecting to system bus: %s\n", error->message);
       g_error_free (error);
       goto out;
     }
@@ -165,10 +162,18 @@ main (int argc, char *argv[])
   gtk_box_pack_start (GTK_BOX (vbox), button, FALSE, FALSE, 0);
 
 
-  system_bus_name_subject = polkit_system_bus_name_new (dbus_bus_get_unique_name (dbus_g_connection_get_connection (bus)));
+  system_bus_name_subject = polkit_system_bus_name_new (g_dbus_connection_get_unique_name (bus));
   unix_process_subject = polkit_unix_process_new (getpid ());
 
-  authority = polkit_authority_get ();
+  error = NULL;
+  authority = polkit_authority_get_sync (NULL /* GCancellable* */, &error);
+  if (authority == NULL)
+    {
+      g_printerr ("Failed getting the authority: %s\n", error->message);
+      g_error_free (error);
+      goto out;
+    }
+
   g_debug ("backend: name=`%s' version=`%s' features=%d",
            polkit_authority_get_backend_name (authority),
            polkit_authority_get_backend_version (authority),
