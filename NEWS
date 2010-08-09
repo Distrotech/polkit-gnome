@@ -1,4 +1,35 @@
 ==========
+polkit-gnome 0.97
+==========
+
+This is polkit-gnome version 0.97
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1
+
+Changes since 0.96:
+
+Andre Klapper (1):
+      Compile with -DGSEAL_ENABLE. Fixes bug 616386.
+
+David Zeuthen (4):
+      Fix build
+      Remove lock down functionality
+      Require polkit 0.97
+      Update NEWS for release
+
+Martin Pitt (1):
+      Hide the agent autostart desktop file
+
+Matthias Clasen (1):
+      Use standard icon names
+
+David Zeuthen,
+January 15, 2010
+
+==========
 polkit-gnome 0.96
 ==========
 
