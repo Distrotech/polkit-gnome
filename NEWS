@@ -14,7 +14,7 @@ Changes since 0.96:
 Andre Klapper (1):
       Compile with -DGSEAL_ENABLE. Fixes bug 616386.
 
-David Zeuthen (7):
+David Zeuthen (8):
       Fix build
       Remove lock down functionality
       Require polkit 0.97
@@ -22,6 +22,7 @@ David Zeuthen (7):
       Post-release version bump to 0.97
       Port from dbus-glib to gdbus
       Silence the build
+      Avoid deprecated polkit_authority_get() function
 
 Martin Pitt (1):
       Hide the agent autostart desktop file

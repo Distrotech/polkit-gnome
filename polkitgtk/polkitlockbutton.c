@@ -377,10 +377,18 @@ static void
 polkit_lock_button_constructed (GObject *object)
 {
   PolkitLockButton *button = POLKIT_LOCK_BUTTON (object);
+  GError *error;
 
   gtk_box_set_spacing (GTK_BOX (button), 2);
 
-  button->priv->authority = polkit_authority_get ();
+  /* TODO: should be async+failable (e.g. GAsyncInitable) instead of this */
+  error = NULL;
+  button->priv->authority = polkit_authority_get_sync (NULL /* GCancellable* */, &error);
+  if (button->priv->authority == NULL)
+    {
+      g_critical ("Error getting authority: %s", error->message);
+      g_error_free (error);
+    }
   g_signal_connect (button->priv->authority,
                     "changed",
                     G_CALLBACK (on_authority_changed),

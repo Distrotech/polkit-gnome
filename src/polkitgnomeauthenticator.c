@@ -209,10 +209,19 @@ polkit_gnome_authenticator_new (const gchar     *action_id,
   PolkitGnomeAuthenticator *authenticator;
   GList *l;
   guint n;
+  GError *error;
 
   authenticator = POLKIT_GNOME_AUTHENTICATOR (g_object_new (POLKIT_GNOME_TYPE_AUTHENTICATOR, NULL));
 
-  authenticator->authority = polkit_authority_get ();
+  error = NULL;
+  authenticator->authority = polkit_authority_get_sync (NULL /* GCancellable* */, &error);
+  if (authenticator->authority == NULL)
+    {
+      g_critical ("Error getting authority: %s", error->message);
+      g_error_free (error);
+      goto error;
+    }
+
   authenticator->action_id = g_strdup (action_id);
   authenticator->message = g_strdup (message);
   authenticator->icon_name = g_strdup (icon_name);

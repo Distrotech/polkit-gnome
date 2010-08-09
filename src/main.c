@@ -223,7 +223,14 @@ main (int argc, char **argv)
 
   loop = g_main_loop_new (NULL, FALSE);
 
-  authority = polkit_authority_get ();
+  error = NULL;
+  authority = polkit_authority_get_sync (NULL /* GCancellable* */, &error);
+  if (authority == NULL)
+    {
+      g_warning ("Error getting authority: %s", error->message);
+      g_error_free (error);
+      goto out;
+    }
   g_signal_connect (authority,
                     "changed",
                     G_CALLBACK (on_authority_changed),
