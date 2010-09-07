@@ -1,849 +1,255 @@
-# Slovak translation for policykit-gnome
-# Copyright (c) 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the policykit-gnome package.
-# Pavol Šimo <palo.simo@gmail.com>, 2008.
+# Slovak translation for PolicyKit-gnome.
+# Copyright (C) 2008, 2009, 2010 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Pavol Šimo <palo.simo@gmail.com>, 2008, 2009, 2010.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: policykit-gnome\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-09-18 16:21+0200\n"
-"PO-Revision-Date: 2008-09-18 14:19+0200\n"
+"Project-Id-Version: PolicyKit-gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&component=general\n"
+"POT-Creation-Date: 2010-08-09 21:55+0000\n"
+"PO-Revision-Date: 2010-02-22 15:20+0100\n"
 "Last-Translator: Pavol Šimo <palo.simo@gmail.com>\n"
-"Language-Team: Slovak <sk-i18n@lists.linux.sk>\n"
+"Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../data/polkit-gnome-authorization.desktop.in.h:1
-#: ../tools/polkit-gnome-authorization.c:2452
-msgid "Authorizations"
-msgstr "Oprávnenia"
+#: ../polkitgtk/polkitlockbutton.c:458
+msgid "Action Identifier"
+msgstr "Identifikátor akcie"
 
-#: ../data/polkit-gnome-authorization.desktop.in.h:2
-msgid "Configure authorizations"
-msgstr "Nastaviť oprávnenia"
+#: ../polkitgtk/polkitlockbutton.c:459
+msgid "The action identifier to use for the button"
+msgstr "Identifikátor akcie, ktorý sa použije pre tlačidlo"
 
-#: ../data/polkit-gnome.schemas.in.h:1
-msgid ""
-"A list of PolicyKit action where the \"retain authorization\" checkbox isn't "
-"checked by default; this list is maintained by the authentication dialog "
-"code itself. For example, if a user unchecks the \"retain authorization\" "
-"check box for an action and successfully obtains an authorization for the "
-"action, the action will be added to this list."
-msgstr ""
-"Zoznam akcií pre PolicyKit, kde voľba \"ponechať oprávnenie\" nie je "
-"predvolene označená; tento zoznam je spravovaný kódom samotného overovacieho "
-"dialógového okna. Napríklad ak používateľ odznačí voľbu \"ponechať oprávnenie"
-"\" pre nejakú akciu a následne sa úspešne overí, táto akcia bude pridaná do "
-"tohto zoznamu."
+#: ../polkitgtk/polkitlockbutton.c:475
+msgid "Is Authorized"
+msgstr "Je oprávnený"
 
-#: ../data/polkit-gnome.schemas.in.h:2
-msgid ""
-"A list of actions where the \"retain authorization\" checkbox isn't checked "
-"by default"
-msgstr ""
-"Zoznam akcií, v ktorých voľba \"ponechať oprávnenie\" nie je predvolene "
-"označená"
+#: ../polkitgtk/polkitlockbutton.c:476
+msgid "Whether the process is authorized"
+msgstr "Či je proces oprávnený"
 
-#: ../data/polkit-gnome.schemas.in.h:3
-msgid ""
-"If set to true, the authentication dialog from PolicyKit-gnome will grab the "
-"keyboard, so that you will not be able to type in other programs while the "
-"dialog is active. Use this if your window manager does not focus the "
-"authentication dialog automatically, and you want to avoid accidentally "
-"typing passwords in other programs."
-msgstr ""
-"Ak má hodnotu true, dialógové okno overenia z PolicyKit-gnome odchytí vstup "
-"z klávesnice, takže pokiaľ bude toto dialógové okno aktívne, nebudete môcť "
-"písať do iných aplikácií. Použite to, ak váš správca okien toto dialógové "
-"okno nepresunie automaticky do popredia a chcete zabrániť náhodnému vpísaniu "
-"hesiel do iných programov."
+#: ../polkitgtk/polkitlockbutton.c:491
+msgid "Is Visible"
+msgstr "Je viditeľný"
 
-#: ../data/polkit-gnome.schemas.in.h:4
-msgid ""
-"If set to true, then \"retain authorization\" check box (if present) is "
-"checked by default in the authentication dialog unless the action is "
-"mentioned in the \"/desktop/gnome/policykit/"
-"auth_dialog_retain_authorization_blacklist\" key."
-msgstr ""
-"Ak má hodnotu true, voľba \"ponechať oprávnenie\" (ak sa zobrazuje) v "
-"dialógovom okne overovania bude predvolene označená v tom prípade, ak nebude "
-"akcia uvedená v kľúči \"/desktop/gnome/policykit/"
-"auth_dialog_retain_authorization_blacklist\"."
+#: ../polkitgtk/polkitlockbutton.c:492
+msgid "Whether the widget is visible"
+msgstr "Či je ovládací prvok viditeľný"
 
-#: ../data/polkit-gnome.schemas.in.h:5
-msgid "Whether the authentication dialog should grab the keyboard"
-msgstr "Či má overovacie dialógové okno odchytiť vstup z klávesnice"
+#: ../polkitgtk/polkitlockbutton.c:507
+msgid "Can Obtain"
+msgstr "Môže získať"
 
-#: ../data/polkit-gnome.schemas.in.h:6
-msgid "Whether the retain authorization check box is checked by default"
-msgstr "Či je voľba \"ponechať autorizáciu\" predvolene označená"
+#: ../polkitgtk/polkitlockbutton.c:508
+msgid "Whether authorization can be obtained"
+msgstr "Či môže byť oprávnenie získané"
 
-#: ../examples/polkit-gnome-example.c:137
-msgid "Copyright © 2007 David Zeuthen"
-msgstr "Autorské práva © 2007 David Zeuthen"
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
+msgid "Unlock Text"
+msgstr "Text odomknutia"
 
-#: ../examples/polkit-gnome-example.c:138
-msgid "PolicyKit-gnome Website"
-msgstr "WWW stránka PolicyKit-gnome"
+#: ../polkitgtk/polkitlockbutton.c:524
+msgid "The text to display when prompting the user to unlock."
+msgstr "Text, ktorý sa zobrazí pri výzve používateľa na odomknutie."
 
-#: ../examples/polkit-gnome-example.c:140
-#: ../examples/polkit-gnome-example.c:446
-msgid "PolicyKit-gnome demo"
-msgstr "PolicyKit-gnome demo"
+#: ../polkitgtk/polkitlockbutton.c:525
+msgid "Click to make changes"
+msgstr "Kliknite, aby sa zmeny vykonali"
 
-#: ../examples/polkit-gnome-example.c:141
-msgid "PolicyKit for the GNOME desktop"
-msgstr "PolicyKit pre prostredie GNOME"
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "Bublinový popis odomknutia"
 
-#: ../examples/polkit-gnome-example.c:151
-msgid "_File"
-msgstr "_Súbor"
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "Bublinový popis, ktorý sa zobrazí pri výzve používateľa na odomknutie."
 
-#. name, stock id, label
-#: ../examples/polkit-gnome-example.c:152
-msgid "_Actions"
-msgstr "_Akcie"
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "Na vykonanie zmien je potrebné overenie totožnosti."
 
-#. name, stock id, label
-#: ../examples/polkit-gnome-example.c:153
-msgid "_Help"
-msgstr "_Pomocník"
+#: ../polkitgtk/polkitlockbutton.c:557
+msgid "Lock Text"
+msgstr "Text uzamknutia"
 
-#. name, stock id, label
-#. name, stock id
-#: ../examples/polkit-gnome-example.c:156
-msgid "_Quit"
-msgstr "_Koniec"
+#: ../polkitgtk/polkitlockbutton.c:558
+msgid "The text to display when prompting the user to lock."
+msgstr "Text, ktorý sa zobrazí pri výzve používateľa na uzamknutie."
 
-#. label, accelerator
-#: ../examples/polkit-gnome-example.c:157
-msgid "Quit"
-msgstr "Koniec"
-
-#. name, stock id
-#: ../examples/polkit-gnome-example.c:161
-msgid "_About"
-msgstr "_O programe"
-
-#. label, accelerator
-#: ../examples/polkit-gnome-example.c:162
-msgid "About"
-msgstr "O programe"
-
-# http://speechcode.com/jargon/jargon.info.Frobnicate.html
-#: ../examples/polkit-gnome-example.c:243
-msgid ""
-"Making the helper <b>Frobnicate</b> requires the user to authenticate. The "
-"authorization is kept for the life time of the process"
-msgstr ""
-"Vykonanie akcie <b>Frobnicate</b> vyžaduje overenie používateľa. Oprávnenie "
-"bude uchované počas behu procesu."
-
-#: ../examples/polkit-gnome-example.c:252
-msgid "Frobnicate!"
-msgstr "Frobnicate!"
-
-#: ../examples/polkit-gnome-example.c:267
-msgid ""
-"Making the helper <b>Jump</b> requires the user to authenticate. This is a "
-"one-shot authorization."
-msgstr ""
-"Vykonanie akcie <b>Jump</b> vyžaduje overenie používateľa. Toto je "
-"jednorazové oprávnenie."
-
-#: ../examples/polkit-gnome-example.c:275
-msgid "Jump!"
-msgstr "Jump!"
-
-#: ../examples/polkit-gnome-example.c:290
-msgid ""
-"Making the helper <b>Tweak</b> requires a system administrator to "
-"authenticate. This instance overrides the defaults set in "
-"polkit_gnome_action_new()."
-msgstr ""
-"Vykonanie akcie <b>Tweak</b> vyžaduje overenie systémováho administrátora. "
-"Táto inštancia prekrýva predvolené nastavenia z polkit_gnome_action_new()."
-
-#: ../examples/polkit-gnome-example.c:299
-#: ../examples/polkit-gnome-example.c:320
-msgid "Tweak!"
-msgstr "Tweak!"
-
-#: ../examples/polkit-gnome-example.c:306
-#: ../examples/org.gnome.policykit.examples.policy.in.h:17
-msgid "Tweak"
-msgstr "Tweak"
-
-#: ../examples/polkit-gnome-example.c:307
-msgid "Tweak (long)"
-msgstr "Tweak (long)"
-
-#: ../examples/polkit-gnome-example.c:308
-msgid "If your admin wasn't annoying, you could do this"
-msgstr "Keby váš správca nebol protivný, dovolil by vám to."
-
-#: ../examples/polkit-gnome-example.c:313
-msgid "Tweak..."
-msgstr "Tweak..."
-
-#: ../examples/polkit-gnome-example.c:314
-msgid "Tweak... (long)"
-msgstr "Tweak... (long)"
-
-#: ../examples/polkit-gnome-example.c:315
-msgid "Only card carrying tweakers can do this!"
-msgstr "Len vlastníci identifikačnej karty môžu toto!"
-
-#: ../examples/polkit-gnome-example.c:321
-msgid "Tweak! (long)"
-msgstr "Tweak! (long)"
-
-#: ../examples/polkit-gnome-example.c:322
-msgid "Go ahead, tweak tweak tweak!"
-msgstr "Do toho, tweak tweak tweak!"
-
-#: ../examples/polkit-gnome-example.c:339
-msgid ""
-"Making the helper <b>Twiddle</b> requires a system administrator to "
-"authenticate. Once authenticated, this privilege can be retained "
-"indefinitely."
-msgstr ""
-"Vykonanie akcie <b>Twiddle</b> vyžaduje overenie systémového administrátora. "
-"Oprávnenie bude ponechané už navždy."
-
-#: ../examples/polkit-gnome-example.c:348
-msgid "Twiddle!"
-msgstr "Twiddle!"
-
-#: ../examples/polkit-gnome-example.c:363
-msgid ""
-"Making the helper <b>Punch</b> requires the user to authenticate. Once "
-"authenticated, this privilege can be retained for the remainder of the "
-"desktop session."
-msgstr ""
-"Vykonanie akcie <b>Punch</b> vyžaduje overenie používateľa. Oprávnenie bude "
-"uchované počas trvania relácie."
-
-#: ../examples/polkit-gnome-example.c:372
-msgid "Punch!"
-msgstr "Punch!"
-
-#: ../examples/polkit-gnome-example.c:387
-msgid ""
-"The <b>Toggle</b> action demonstrates the use of PolicyKit to drive a "
-"GtkToggleButton; it's an intuitive way to ask users to give up "
-"authorizations when they are done with them. E.g. the button is 'pressed in' "
-"exactlywhen the authorization is held. Toggling the button means obtaining "
-"resp. revoking the authorization in question."
-msgstr ""
-"Akcia <b>Toggle</b> demonštruje použitie PolicyKit na obsluhu prvku "
-"GtkToggleButton; je to intuitívny spôsob požiadania používateľa o zrieknutie "
-"sa autorizácií, keď ich už nepotrebujú. Napríklad tlačidlo je 'zatlačené' "
-"práve vtedy, keď sú oprávnenia vlastnené. Prepnutie tlačidla znamená "
-"získanie resp. odvolanie danej autorizácie."
-
-#: ../examples/polkit-gnome-example.c:401
-msgid "Click to make changes..."
-msgstr "Kliknite pre vykonanie zmien..."
-
-#: ../examples/polkit-gnome-example.c:402
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Click to prevent changes"
-msgstr "Kliknite pre zabránenie zmenám"
+msgstr "Kliknite, aby sa zamedzilo zmenám"
 
-#: ../examples/polkit-gnome-example.c:422
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "Bublinový popis uzamknutia"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "Bublinový popis, ktorý sa zobrazí pri výzve používateľa na uzamknutie."
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "Na zamedzenie ďalších zmien kliknite na zámok."
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "Text zamedzenia"
+
+#: ../polkitgtk/polkitlockbutton.c:592
 msgid ""
-"<i>Tip: try editing /etc/PolicyKit/Policy.conf and see the proxy widgets "
-"update in real-time.</i>."
+"The text to display when prompting the user to lock down the action for all "
+"users."
 msgstr ""
-"<i>Tip: vyskúšajte zmeniť /etc/PolicyKit/Policy.conf a uvidíte, ako sa "
-"zástupné ovládacie prvky ihneď aktualizujú.</i>"
+"Text, ktorý sa zobrazí pri výzve používateľa na zamedzenie akcie pre "
+"všetkých používateľov."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:1
-msgid "Frobnicate"
-msgstr "Frobnicate"
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr "Kliknite, aby sa vykonalo zamedzenie"
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:2
-msgid "Jump"
-msgstr "Jump"
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "Bublinový popis zamedzenia"
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:3
-msgid "Kick bar"
-msgstr "Kick bar"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:4
-msgid "Kick baz"
-msgstr "Kick baz"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:5
-msgid "Kick foo"
-msgstr "Kick foo"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:6
-msgid "Punch"
-msgstr "Punch"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:7
+#: ../polkitgtk/polkitlockbutton.c:609
 msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Frobnicating"
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
 msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Frobnicate."
+"Bublinový popis, ktorý sa zobrazí pri výzve používateľa na zamedzenie akcie "
+"pre všetkých používateľov."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:8
-msgid "System policy prevents the PolicyKit-gnome example helper from Jumping"
-msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Jump"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:9
+#: ../polkitgtk/polkitlockbutton.c:610
 msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking bar"
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
 msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Kick bar"
+"Na zabránenie vykonania zmien používateľmi bez správcovských práv kliknite "
+"na zámok."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:10
+#: ../polkitgtk/polkitlockbutton.c:626
 msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking baz"
+"The text to display when the user cannot obtain authorization through "
+"authentication."
 msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Kick baz"
+"Text, ktorý sa zobrazí, keď používateľ nemôže získať oprávnenie pomocou "
+"overenia totožnosti."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:11
+#: ../polkitgtk/polkitlockbutton.c:627
+msgid "Not authorized to make changes"
+msgstr "Na vykonanie zmien nemáte oprávnenie"
+
+#: ../polkitgtk/polkitlockbutton.c:643
 msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Kicking foo"
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
 msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Kick foo"
+"Bublinový popis, ktorý sa zobrazí, keď používateľ nemôže získať oprávnenie "
+"pomocou overenia totožnosti."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:12
-msgid "System policy prevents the PolicyKit-gnome example helper from Punching"
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Punch"
+"Systémová politika nepovoľuje zmeny. Kontaktujte správcu vášho systému."
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:13
-msgid "System policy prevents the PolicyKit-gnome example helper from Toggling"
-msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Toggle"
+#: ../src/main.c:128
+msgid "Click the icon to drop all elevated privileges"
+msgstr "Kliknite na ikonu, aby sa zahodili zvýšené práva"
 
-#: ../examples/org.gnome.policykit.examples.policy.in.h:14
-msgid "System policy prevents the PolicyKit-gnome example helper from Tweaking"
-msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Tweak"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:15
-msgid ""
-"System policy prevents the PolicyKit-gnome example helper from Twiddling"
-msgstr ""
-"Systémová politika zabraňuje ukážkovému príkladu PolicyKit-gnome vo vykonaní "
-"akcie Twiddle"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:16
-msgid "Toggle"
-msgstr "Toggle"
-
-#: ../examples/org.gnome.policykit.examples.policy.in.h:18
-msgid "Twiddle"
-msgstr "Twiddle"
-
-#: ../polkit-gnome/polkit-gnome-toggle-action.c:400
-#: ../polkit-gnome/polkit-gnome-toggle-action.c:401
-msgid "Authenticating..."
-msgstr "Overuje sa..."
-
-#: ../src/main.c:139
-msgid "Don't exit after 30 seconds of inactivity"
-msgstr "Neukončiť po 30-tich sekundách nečinnosti"
-
-#: ../src/main.c:154
-msgid "PolicyKit GNOME session daemon"
-msgstr "Démon PolicyKit pre reláciu GNOME"
-
-#: ../src/main.c:180
-#, c-format
-msgid "Starting PolicyKit GNOME session daemon version %s"
-msgstr "Spúšťa sa démon PolicyKit pre reláciu GNOME verzie %s"
-
-#: ../src/polkit-gnome-auth-dialog.c:190
-#: ../tools/polkit-gnome-authorization.c:653
+#: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
-msgstr "Zvoliť používateľa..."
+msgstr "Vybrať používateľa..."
 
-#: ../src/polkit-gnome-auth-dialog.c:211
-#: ../tools/polkit-gnome-authorization.c:672
+#: ../src/polkitgnomeauthenticationdialog.c:194
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkit-gnome-auth-dialog.c:292
-msgid "_Remember authorization for this session"
-msgstr "Za_pamätať autorizáciu pre túto reláciu"
+#: ../src/polkitgnomeauthenticationdialog.c:531
+msgid "_Authenticate"
+msgstr "_Overiť totožnosť"
 
-#: ../src/polkit-gnome-auth-dialog.c:298
-msgid "_Remember authorization"
-msgstr "Za_pamätať autorizáciu"
-
-#: ../src/polkit-gnome-auth-dialog.c:313
+#: ../src/polkitgnomeauthenticationdialog.c:571
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
-"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje privilégiá. Na vykonanie "
-"tejto akcie je vyžadované overenie niektorého z uvedených používateľov."
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti niektorého z uvedených používateľov."
 
-#: ../src/polkit-gnome-auth-dialog.c:320
-msgid ""
-"An application is attempting to perform an action that requires privileges. "
-"Authentication as the super user is required to perform this action."
-msgstr ""
-"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje privilégiá. Na vykonanie "
-"tejto akcie je vyžadované overenie superpoužívateľa."
-
-#: ../src/polkit-gnome-auth-dialog.c:324
+#: ../src/polkitgnomeauthenticationdialog.c:579
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
 msgstr ""
-"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje privilégiá. Na vykonanie "
-"tejto akcie je vyžadované overenie."
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti."
 
-#: ../src/polkit-gnome-auth-dialog.c:405
-#, c-format
-msgid "Click to edit %s"
-msgstr "Kliknúť pre úpravu %s"
+#: ../src/polkitgnomeauthenticationdialog.c:585
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
+"akcie je vyžadované overenie totožnosti superpoužívateľa."
 
-#: ../src/polkit-gnome-auth-dialog.c:430
-#: ../tools/polkit-gnome-authorization.c:1400
-#, c-format
-msgid "Click to open %s"
-msgstr "Kliknúť pre otvorenie %s"
-
-#: ../src/polkit-gnome-auth-dialog.c:667
-msgid "_Authenticate"
-msgstr "_Overiť"
-
-#: ../src/polkit-gnome-auth-dialog.c:726 ../src/polkit-gnome-manager.c:686
-#: ../src/polkit-gnome-manager.c:735
+#: ../src/polkitgnomeauthenticationdialog.c:620
+#: ../src/polkitgnomeauthenticator.c:298
 msgid "_Password:"
 msgstr "_Heslo:"
 
-#: ../src/polkit-gnome-auth-dialog.c:748
-msgid "For this _session only"
-msgstr "Len pre túto _reláciu"
-
-#: ../src/polkit-gnome-auth-dialog.c:756
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:638
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>Po_drobnosti</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:777
-msgid "<small><b>Application:</b></small>"
-msgstr "<small><b>Aplikácia:</b></small>"
-
-#: ../src/polkit-gnome-auth-dialog.c:781
+#: ../src/polkitgnomeauthenticationdialog.c:691
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Akcia:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:786
+#: ../src/polkitgnomeauthenticationdialog.c:694
+#, c-format
+msgid "Click to edit %s"
+msgstr "Kliknutím upravíte %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:708
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Dodávateľ:</b></small>"
 
-#: ../src/polkit-gnome-auth-dialog.c:915
+#: ../src/polkitgnomeauthenticationdialog.c:710
+#, c-format
+msgid "Click to open %s"
+msgstr "Kliknutím otvoríte %s"
+
+# toto je titulok okna, tam nedávame neurčitok
+#: ../src/polkitgnomeauthenticationdialog.c:873
 msgid "Authenticate"
-msgstr "Overenie"
+msgstr "Overenie totožnosti"
 
-#: ../src/polkit-gnome-manager.c:367
-msgid "(unknown"
-msgstr "(neznámy"
-
-#: ../src/polkit-gnome-manager.c:730
+#: ../src/polkitgnomeauthenticator.c:294
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Heslo používateľa %s:"
 
-#: ../src/polkit-gnome-manager.c:732
-msgid "_Password for root:"
-msgstr "_Heslo používateľa root:"
-
-#: ../src/polkit-gnome-manager.c:740
-#, c-format
-msgid "_Password or swipe finger for %s:"
-msgstr "_Heslo alebo odtlačok používateľa %s:"
-
-#: ../src/polkit-gnome-manager.c:743
-msgid "_Password or swipe finger for root:"
-msgstr "_Heslo alebo odtlačok používateľa root:"
-
-#: ../src/polkit-gnome-manager.c:746
-msgid "_Password or swipe finger:"
-msgstr "_Heslo alebo odtlačok:"
-
-#: ../tools/polkit-gnome-authorization.c:117
-msgid "No"
-msgstr "Nie"
-
-#: ../tools/polkit-gnome-authorization.c:119
-msgid "Admin Authentication (one shot)"
-msgstr "Správcovské overenie (jednorazové)"
-
-#: ../tools/polkit-gnome-authorization.c:120
-msgid "Admin Authentication"
-msgstr "Správcovské overenie"
-
-#: ../tools/polkit-gnome-authorization.c:121
-msgid "Admin Authentication (keep session)"
-msgstr "Správcovské overenie (do konca relácie)"
-
-#: ../tools/polkit-gnome-authorization.c:122
-msgid "Admin Authentication (keep indefinitely)"
-msgstr "Správcovské overenie (trvalé)"
-
-#: ../tools/polkit-gnome-authorization.c:124
-msgid "Authentication (one shot)"
-msgstr "Overenie (jednorazové)"
-
-#: ../tools/polkit-gnome-authorization.c:125
-msgid "Authentication"
-msgstr "Overenie"
-
-#: ../tools/polkit-gnome-authorization.c:126
-msgid "Authentication (keep session)"
-msgstr "Overenie (do konca relácie)"
-
-#: ../tools/polkit-gnome-authorization.c:127
-msgid "Authentication (keep indefinitely)"
-msgstr "Overenie (trvalé)"
-
-#: ../tools/polkit-gnome-authorization.c:129
-msgid "Yes"
-msgstr "Áno"
-
-#: ../tools/polkit-gnome-authorization.c:272
-msgid ", "
-msgstr ", "
-
-#: ../tools/polkit-gnome-authorization.c:276
-msgid "Must be on console"
-msgstr "Len ak je na konzole"
-
-#: ../tools/polkit-gnome-authorization.c:279
-msgid "Must be in active session"
-msgstr "Len ak je v aktívnej relácií"
-
-#: ../tools/polkit-gnome-authorization.c:282
-#, c-format
-msgid "Must be program %s"
-msgstr "Len ak je to program %s"
-
-#: ../tools/polkit-gnome-authorization.c:286
-#, c-format
-msgid "Must be SELinux Context %s"
-msgstr "Len ak je to SELinux kontext %s"
-
-#: ../tools/polkit-gnome-authorization.c:344
-msgid "A moment ago"
-msgstr "Pred chvíľou"
-
-#: ../tools/polkit-gnome-authorization.c:348
-msgid "1 minute ago"
-msgstr "Pred 1 minútou"
-
-#: ../tools/polkit-gnome-authorization.c:350
-#, c-format
-msgid "%d minutes ago"
-msgstr "Pred %d minútami"
-
-#: ../tools/polkit-gnome-authorization.c:354
-msgid "1 hour ago"
-msgstr "Pred hodinou"
-
-#: ../tools/polkit-gnome-authorization.c:356
-#, c-format
-msgid "%d hours ago"
-msgstr "Pred %d hodinami"
-
-#: ../tools/polkit-gnome-authorization.c:360
-msgid "1 day ago"
-msgstr "Včera"
-
-#: ../tools/polkit-gnome-authorization.c:362
-#, c-format
-msgid "%d days ago"
-msgstr "Pred %d dňami"
-
-#: ../tools/polkit-gnome-authorization.c:383
-#, c-format
-msgid "Auth as %s (uid %d)"
-msgstr "Oprávnenie pre %s (uid %d)"
-
-#: ../tools/polkit-gnome-authorization.c:385
-#, c-format
-msgid "Auth as uid %d"
-msgstr "Oprávnenie pre uid %d"
-
-#: ../tools/polkit-gnome-authorization.c:391
-#, c-format
-msgid "Blocked by %s (uid %d)"
-msgstr "Blokuje ho %s (uid %d)"
-
-#: ../tools/polkit-gnome-authorization.c:393
-#, c-format
-msgid "Blocked by uid %d"
-msgstr "Blokuje ho uid %d"
-
-#: ../tools/polkit-gnome-authorization.c:396
-#, c-format
-msgid "Granted by %s (uid %d)"
-msgstr "Povoľuje ho %s (uid %d)"
-
-#: ../tools/polkit-gnome-authorization.c:398
-#, c-format
-msgid "Granted by uid %d"
-msgstr "Povoľuje ho uid %d"
-
-#: ../tools/polkit-gnome-authorization.c:413
-#, c-format
-msgid "Single shot pid %d (%s)"
-msgstr "Jednorazovo pid %d (%s)"
-
-#: ../tools/polkit-gnome-authorization.c:419
-#, c-format
-msgid "pid %d (%s)"
-msgstr "Pre pid %d (%s)"
-
-#: ../tools/polkit-gnome-authorization.c:422
-msgid "This session"
-msgstr "Pre túto reláciu"
-
-#: ../tools/polkit-gnome-authorization.c:425
-msgid "Always"
-msgstr "Navždy"
-
-#: ../tools/polkit-gnome-authorization.c:435
-msgid "None"
-msgstr "Žiadne"
-
-#: ../tools/polkit-gnome-authorization.c:836
-msgid "Grant Negative Authorization"
-msgstr "Poskytnutie negatívneho oprávnenia"
-
-#: ../tools/polkit-gnome-authorization.c:836
-msgid "Grant Authorization"
-msgstr "Poskytnutie oprávnenia"
-
-#: ../tools/polkit-gnome-authorization.c:859
-#, c-format
-msgid ""
-"<b><big>Granting a negative authorization for the <i>%s</i> action requires "
-"more information</big></b>"
-msgstr ""
-"<b><big>Udelenie negatívneho oprávnenia pre akciu <i>%s</i> vyžaduje viac "
-"informácií</big></b>"
-
-#: ../tools/polkit-gnome-authorization.c:860
-#, c-format
-msgid ""
-"<b><big>Granting an authorization for the <i>%s</i> action requires more "
-"information</big></b>"
-msgstr ""
-"<b><big>Udelenie oprávnenia pre akciu <i>%s</i> vyžaduje viac informácií</"
-"big></b>"
-
-#: ../tools/polkit-gnome-authorization.c:871
-msgid ""
-"Select the user to block for the action and, optionally, any constraints on "
-"the negative authorization that you are about to grant."
-msgstr ""
-"Zvoľte používateľa, ktorému chcete blokovať akciu a voliteľne aj obmedzenia "
-"negatívneho oprávnenia, ktoré idete udeliť."
-
-#: ../tools/polkit-gnome-authorization.c:873
-msgid ""
-"Select the beneficiary and, optionally, how to constrain the authorization "
-"that you are about to grant."
-msgstr ""
-"Zvoľte príjemcu a voliteľne aj obmedzenia oprávnenia, ktoré idete udeliť."
-
-#: ../tools/polkit-gnome-authorization.c:884
-msgid "<b>Beneficiary</b>"
-msgstr "<b>Príjemca</b>"
-
-#: ../tools/polkit-gnome-authorization.c:896
-msgid "Select the user that will receive the negative authorization."
-msgstr "Zvoľte používateľa, ktorý získa negatívne oprávnenie."
-
-#: ../tools/polkit-gnome-authorization.c:898
-msgid "Select the user that will receive the authorization."
-msgstr "Zvoľte používateľa, ktorý získa oprávnenie."
-
-#: ../tools/polkit-gnome-authorization.c:907
-msgid "_Show system users"
-msgstr "_Zobraziť používateľov systému"
-
-#: ../tools/polkit-gnome-authorization.c:922
-msgid "<b>Constraints</b>"
-msgstr "<b>Obmedzenia</b>"
-
-#: ../tools/polkit-gnome-authorization.c:933
-msgid ""
-"Constraints limits the authorization such that it only applies under certain "
-"circumstances."
-msgstr "Obmedzenia limitujú oprávnenie, takže platí len za určitých podmienok."
-
-#: ../tools/polkit-gnome-authorization.c:939
-msgid "_None"
-msgstr "Žia_dne"
-
-#: ../tools/polkit-gnome-authorization.c:941
-msgid "Must be _in active session"
-msgstr "Len ak je v aktívnej _relácií"
-
-#: ../tools/polkit-gnome-authorization.c:943
-msgid "Must be on _local console"
-msgstr "Len ak je na _lokálnej konzole"
-
-#: ../tools/polkit-gnome-authorization.c:945
-msgid "Must be in _active session on local console"
-msgstr "Len ak je v _aktívnej relácií na lokálnej konzole"
-
-#: ../tools/polkit-gnome-authorization.c:966
-#: ../tools/polkit-gnome-authorization.c:2142
-msgid "_Block..."
-msgstr "_Blokovať..."
-
-#: ../tools/polkit-gnome-authorization.c:970
-#: ../tools/polkit-gnome-authorization.c:2135
-msgid "_Grant..."
-msgstr "_Udeliť..."
-
-#: ../tools/polkit-gnome-authorization.c:1164
-msgid "Edit Implicit Authorizations"
-msgstr "Úprava nepriamych oprávnení"
-
-#: ../tools/polkit-gnome-authorization.c:1185
-msgid "<b><big>Choose new implicit authorizations</big></b>"
-msgstr "<b><big>Zvoľte nové nepriame oprávnenia</big></b>"
-
-#: ../tools/polkit-gnome-authorization.c:1199
-#, c-format
-msgid ""
-"Implicit authorizations are authorizations that are granted automatically to "
-"users under certain circumstances. Choose what is required for the action <i>"
-"%s</i>."
-msgstr ""
-"Nepriame oprávnenia sú také, ktoré sú používateľom udelené za istých "
-"podmienok automaticky. Zvoľte, čo bude pre akciu <i>%s</i> vyžadované."
-
-#: ../tools/polkit-gnome-authorization.c:1224
-#: ../tools/polkit-gnome-authorization.c:1983
-msgid "<i>Anyone:</i>"
-msgstr "<i>Ktokoľvek:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1231
-#: ../tools/polkit-gnome-authorization.c:1987
-msgid "<i>Console:</i>"
-msgstr "<i>Na konzole:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1238
-#: ../tools/polkit-gnome-authorization.c:1991
-msgid "<i>Active Console:</i>"
-msgstr "<i>Na aktívnej konzole:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1267
-msgid "_Modify..."
-msgstr "_Upraviť..."
-
-#: ../tools/polkit-gnome-authorization.c:1899
-msgid "<b>Action</b>"
-msgstr "<b>Akcia</b>"
-
-#: ../tools/polkit-gnome-authorization.c:1914
-msgid "<i>Identifier:</i>"
-msgstr "<i>Identifikátor:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1924
-msgid "<i>Description:</i>"
-msgstr "<i>Popis:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1934
-msgid "<i>Vendor:</i>"
-msgstr "<i>Dodávateľ:</i>"
-
-#: ../tools/polkit-gnome-authorization.c:1960
-msgid "<b>Implicit Authorizations</b>"
-msgstr "<b>Nepriame overenia</b>"
-
-#: ../tools/polkit-gnome-authorization.c:1968
-msgid ""
-"Implicit authorizations are authorizations automatically given to users "
-"based on certain criteria such as if they are on the local console."
-msgstr ""
-"Nepriame oprávnenia sú také, ktoré sú používateľom udelené za istých "
-"podmienok automaticky, napríklad ak sú na lokálnej konzole."
-
-#: ../tools/polkit-gnome-authorization.c:2011
-msgid "_Edit..."
-msgstr "_Upraviť..."
-
-#: ../tools/polkit-gnome-authorization.c:2018
-msgid "Revert To _Defaults..."
-msgstr "Obnoviť pre_dvolené..."
-
-#: ../tools/polkit-gnome-authorization.c:2041
-msgid "<b>Explicit Authorizations</b>"
-msgstr "<b>Priame oprávnenia</b>"
-
-#: ../tools/polkit-gnome-authorization.c:2052
-msgid ""
-"This list displays authorizations that are either obtained through "
-"authentication or specifically given to the entity in question. Blocked "
-"authorizations are marked with a STOP sign."
-msgstr ""
-"Tento zoznam obsahuje oprávnenia, ktoré sú buď získané pomocou overenia, "
-"alebo špecificky udelené danému objektu. Blokované oprávnenia sú označené "
-"symbolom STOP."
-
-#: ../tools/polkit-gnome-authorization.c:2082
-msgid "Entity"
-msgstr "Objekt"
-
-#: ../tools/polkit-gnome-authorization.c:2090
-msgid "Scope"
-msgstr "Platnosť"
-
-#: ../tools/polkit-gnome-authorization.c:2098
-msgid "Obtained"
-msgstr "Získané"
-
-#: ../tools/polkit-gnome-authorization.c:2106
-msgid "How"
-msgstr "Spôsob"
-
-#: ../tools/polkit-gnome-authorization.c:2114
-msgid "Constraints"
-msgstr "Obmedzenia"
-
-#: ../tools/polkit-gnome-authorization.c:2156
-#: ../tools/polkit-gnome-authorization.c:2170
-msgid "_Revoke"
-msgstr "_Odvolať"
-
-#: ../tools/polkit-gnome-authorization.c:2163
-msgid "_Revoke..."
-msgstr "_Odvolať..."
-
-#: ../tools/polkit-gnome-authorization.c:2183
-msgid "_Show authorizations from all users..."
-msgstr "_Zobraziť oprávnenia všetkých používateľov..."
-
-#: ../tools/polkit-gnome-authorization.c:2184
-msgid "_Show authorizations from all users"
-msgstr "_Zobraziť oprávnenia všetkých používateľov"
-
-#: ../tools/polkit-gnome-authorization.c:2426
-msgid "Select an action"
-msgstr "Zvoľte akciu"
+# toto je status overenia - tento slovosled tam pasuje viac
+#: ../src/polkitgnomeauthenticator.c:454
+msgid "Authentication Failure"
+msgstr "Overenie totožnosti zlyhalo"
+
+#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
+msgid "PolicyKit Authentication Agent"
+msgstr "Agent PolicyKit na overovanie totožnosti"
+
+# Veď to, že "right-click" neobsahuje v sebe "button"... Skúsim to takto
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "Toto tlačidlo je obmedzené tak, že len používatelia so správcovskými "
+#~ "právami ho môžu odomknúť. Na odstránenie obmedzenia tlačidla naň kliknite "
+#~ "pravým tlačidlom myši."
