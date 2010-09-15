@@ -1,8 +1,8 @@
 ==========
-polkit-gnome 0.98 (not released)
+polkit-gnome 0.99
 ==========
 
-This is polkit-gnome version 0.98.
+This is polkit-gnome version 0.99.
 
 Build requirements
 
@@ -11,7 +11,15 @@ Build requirements
 
 Changes since 0.97:
 
- TODO
+ David Zeuthen (5):
+       Post-release version bump to 0.98
+       Fix wrong date in NEWS file
+       Fix up --string-prefix usage to work with latest gobject-introspection
+       Bump version to 0.99
+       Update NEWS for release
+
+David Zeuthen,
+September 15, 2010
 
 ==========
 polkit-gnome 0.97
