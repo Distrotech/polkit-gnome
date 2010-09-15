@@ -78,7 +78,7 @@ typelibs_DATA = PolkitGtk-1.0.typelib
 PolkitGtk-1.0.gir: libpolkit-gtk-1.la $(G_IR_SCANNER) Makefile.am
 	$(G_IR_SCANNER) -v 					\
 		--namespace PolkitGtk 				\
-		--strip-prefix=polkit				\
+		--strip-prefix=Polkit				\
 		--nsversion=1.0 				\
 		--include=Gtk-2.0 				\
 		--include=Polkit-1.0 				\
