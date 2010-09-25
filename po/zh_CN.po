@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: policykit-gnome VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2009-10-03 21:55+0800\n"
-"PO-Revision-Date: 2009-12-02 17:49+0800\n"
+"PO-Revision-Date: 2010-09-26 00:26+0800\n"
 "Last-Translator: Aron Xu <happyaron.xu@gmail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -212,7 +212,7 @@ msgstr "单击以编辑 %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
 msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>厂商：</b></small>"
+msgstr "<small><b>提供者：</b></small>"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format
