@@ -1,5 +1,7 @@
+# Slovenian translations for PoliciKit-gnome
 # Copyright (C) 2009 PolicyKit-gnome's COPYRIGHT HOLDER
 # This file is distributed under the same license as the PolicyKit-gnome package.
+#
 # Matej Urbančič <mateju@svn.gnome.org>, 2010.
 #
 msgid ""
@@ -7,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PolicyKit-gnome master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&component=general\n"
 "POT-Creation-Date: 2009-10-17 22:11+0000\n"
-"PO-Revision-Date: 2010-01-04 07:48+0100\n"
+"PO-Revision-Date: 2010-05-30 11:09+0100\n"
 "Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
@@ -32,7 +34,7 @@ msgstr "Je pooblaščeno"
 
 #: ../polkitgtk/polkitlockbutton.c:478
 msgid "Whether the process is authorized"
-msgstr "Ali je postopek overjen"
+msgstr "Ali je postopek pooblaščen"
 
 #: ../polkitgtk/polkitlockbutton.c:493
 msgid "Is Visible"
