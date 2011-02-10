@@ -207,11 +207,11 @@ create_user_combobox (PolkitGnomeAuthenticationDialog *dialog)
           g_free (path);
         }
 
-      /* fall back to stock_person icon */
+      /* fall back to avatar-default icon */
       if (pixbuf == NULL)
         {
           pixbuf = gtk_icon_theme_load_icon (gtk_icon_theme_get_default (),
-                                             "stock_person",
+                                             "avatar-default",
                                              GTK_ICON_SIZE_MENU,
                                              0,
                                              NULL);
