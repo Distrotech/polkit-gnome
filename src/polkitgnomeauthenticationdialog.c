@@ -995,7 +995,7 @@ polkit_gnome_authentication_dialog_run_until_response_for_prompt (PolkitGnomeAut
 
   response = gtk_dialog_run (GTK_DIALOG (dialog));
 
-  gtk_widget_hide_all (dialog->priv->table_alignment);
+  gtk_widget_hide (dialog->priv->table_alignment);
   gtk_widget_set_no_show_all (dialog->priv->table_alignment, TRUE);
 
   dialog->priv->is_running = FALSE;
