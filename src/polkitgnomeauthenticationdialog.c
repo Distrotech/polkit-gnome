@@ -661,6 +661,9 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
           const gchar *key = keys[n];
           const gchar *value;
 
+          if (g_str_has_prefix (key, "polkit."))
+            continue;
+
           value = polkit_details_lookup (dialog->priv->details, key);
 
           label = gtk_label_new (NULL);
