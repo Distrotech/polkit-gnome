@@ -5,4 +5,3 @@ polkitgtk/polkitlockbutton.c
 src/main.c
 src/polkitgnomeauthenticationdialog.c
 src/polkitgnomeauthenticator.c
-src/polkit-gnome-authentication-agent-1.desktop.in.in

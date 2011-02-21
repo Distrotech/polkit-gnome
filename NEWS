@@ -11,12 +11,13 @@ Build requirements
 
 Changes since 0.99:
 
-David Zeuthen (5):
+David Zeuthen (6):
       Post-release version bump to 0.100
       Make --with-gtk work with introspection
       Nuke desktop file for autostart
       Do not show internal polkit.* detail key/value pairs
       Update NEWS for release
+      Fix 'make distcheck'
 
 Matthias Clasen (6):
       Add gnome-authentication-agent-1.desktop.in to POTFILES.skip
