@@ -1,14 +1,6 @@
 
 FULL_LIBEXECDIR=$(libexecdir)
 
-desktopdir = $(sysconfdir)/xdg/autostart
-desktop_DATA = polkit-gnome-authentication-agent-1.desktop
-
-@INTLTOOL_DESKTOP_RULE@
-
-polkit-gnome-authentication-agent-1.desktop.in : polkit-gnome-authentication-agent-1.desktop.in.in
-	cat polkit-gnome-authentication-agent-1.desktop.in.in | sed 's,@FULL_LIBEXECDIR@,$(FULL_LIBEXECDIR),' > $@
-
 libexec_PROGRAMS = polkit-gnome-authentication-agent-1
 
 polkit_gnome_authentication_agent_1_SOURCES = 						\
@@ -45,7 +37,7 @@ polkit_gnome_authentication_agent_1_LDADD = 		\
 	$(POLKIT_GOBJECT_LIBS)				\
 	$(INTLLIBS)
 
-EXTRA_DIST = polkit-gnome-authentication-agent-1.desktop.in.in
+EXTRA_DIST =
 
 clean-local :
-	rm -f *~ polkit-gnome-authentication-agent-1.desktop polkit-gnome-authentication-agent-1.desktop.in
+	rm -f *~
