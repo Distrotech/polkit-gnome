@@ -1,4 +1,37 @@
 ==========
+polkit-gnome 0.100
+==========
+
+This is polkit-gnome version 0.100.
+
+Build requirements
+
+ polkit    >= 0.97
+ gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+
+Changes since 0.99:
+
+David Zeuthen (5):
+      Post-release version bump to 0.100
+      Make --with-gtk work with introspection
+      Nuke desktop file for autostart
+      Do not show internal polkit.* detail key/value pairs
+      Update NEWS for release
+
+Matthias Clasen (6):
+      Add gnome-authentication-agent-1.desktop.in to POTFILES.skip
+      Don't use a status icon for temporary authorizations
+      Use avatar-default instead of stock_person
+      Don't use gtk_dialog_set_has_separator
+      Don't use gtk_widget_hide_all
+      Add a --with-gtk configure option
+
+Thanks to our contributors.
+
+David Zeuthen,
+February 21, 2011
+
+==========
 polkit-gnome 0.99
 ==========
 
@@ -9,7 +42,7 @@ Build requirements
  polkit    >= 0.97
  gtk+-2.0  >= 2.17.1
 
-Changes since 0.97:
+Changes since 0.98:
 
  David Zeuthen (5):
        Post-release version bump to 0.98
