@@ -32,6 +32,7 @@
 
 #include "polkitgnomeauthenticator.h"
 #include "polkitgnomeauthenticationdialog.h"
+#include "polkitgnomemarshal.h"
 
 struct _PolkitGnomeAuthenticator
 {
@@ -126,6 +127,7 @@ polkit_gnome_authenticator_class_init (PolkitGnomeAuthenticatorClass *klass)
    * PolkitGnomeAuthenticator::completed:
    * @authenticator: A #PolkitGnomeAuthenticator.
    * @gained_authorization: Whether the authorization was gained.
+   * @dismissed: Whether the dialog was dismissed.
    *
    * Emitted when the authentication is completed. The user is supposed to dispose of @authenticator
    * upon receiving this signal.
@@ -136,9 +138,10 @@ polkit_gnome_authenticator_class_init (PolkitGnomeAuthenticatorClass *klass)
                                             0,                      /* class offset     */
                                             NULL,                   /* accumulator      */
                                             NULL,                   /* accumulator data */
-                                            g_cclosure_marshal_VOID__BOOLEAN,
+                                            _polkit_gnome_marshal_VOID__BOOLEAN_BOOLEAN,
                                             G_TYPE_NONE,
-                                            1,
+                                            2,
+                                            G_TYPE_BOOLEAN,
                                             G_TYPE_BOOLEAN);
 }
 
@@ -471,7 +474,10 @@ do_initiate (gpointer user_data)
     }
 
  out:
-  g_signal_emit_by_name (authenticator, "completed", authenticator->gained_authorization);
+  g_signal_emit_by_name (authenticator,
+                         "completed",
+                         authenticator->gained_authorization,
+                         authenticator->was_cancelled);
 
   g_object_unref (authenticator);
 
