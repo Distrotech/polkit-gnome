@@ -43,6 +43,7 @@ main (int argc, char **argv)
   GMainLoop *loop;
   PolkitAgentListener *listener;
   GError *error;
+  GDBusConnection *session_bus_connection;
 
   g_type_init ();
   gtk_init (&argc, &argv);
@@ -91,6 +92,11 @@ main (int argc, char **argv)
       g_error_free (error);
       goto out;
     }
+
+  /* Poor mans session management - connect to the session bus
+   * so we get killed when it goes away
+   */
+  session_bus_connection = g_bus_get_sync (G_BUS_TYPE_SESSION, NULL, NULL);
 
   g_main_loop_run (loop);
 
