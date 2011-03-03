@@ -36,6 +36,8 @@ static PolkitAuthority *authority = NULL;
 /* the session we are servicing */
 static PolkitSubject *session = NULL;
 
+static GDBusConnection *session_bus_connection = NULL;
+
 int
 main (int argc, char **argv)
 {
@@ -43,7 +45,6 @@ main (int argc, char **argv)
   GMainLoop *loop;
   PolkitAgentListener *listener;
   GError *error;
-  GDBusConnection *session_bus_connection;
 
   g_type_init ();
   gtk_init (&argc, &argv);

@@ -68,10 +68,6 @@ polkit_gnome_listener_init (PolkitGnomeListener *listener)
 static void
 polkit_gnome_listener_finalize (GObject *object)
 {
-  PolkitGnomeListener *listener;
-
-  listener = POLKIT_GNOME_LISTENER (object);
-
   if (G_OBJECT_CLASS (polkit_gnome_listener_parent_class)->finalize != NULL)
     G_OBJECT_CLASS (polkit_gnome_listener_parent_class)->finalize (object);
 }
