@@ -83,9 +83,11 @@ main (int argc, char **argv)
     }
 
   error = NULL;
-  if (!polkit_agent_register_listener (listener,
+  if (!polkit_agent_listener_register (listener,
+                                       POLKIT_AGENT_REGISTER_FLAGS_NONE,
                                        session,
                                        "/org/gnome/PolicyKit1/AuthenticationAgent",
+                                       NULL, /* GCancellable */
                                        &error))
     {
       g_printerr ("Cannot register authentication agent: %s\n", error->message);
