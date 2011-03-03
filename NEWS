@@ -1,4 +1,33 @@
 ==========
+polkit-gnome 0.101
+==========
+
+This is polkit-gnome version 0.101.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+
+Changes since 0.100:
+
+ David Zeuthen (6):
+       Post-release version bump to 0.101
+       Return error when authentication dialog is dismissed
+       Fix crashers if icons cannot be loaded
+       Don't use deprecated polkit API
+       Fix warnings with gcc 4.6
+       Update NEWS for release
+
+ Matthias Clasen (1):
+       Connect to the session bus
+
+Thanks to our contributors.
+
+David Zeuthen,
+March 3, 2011
+
+==========
 polkit-gnome 0.100
 ==========
 
