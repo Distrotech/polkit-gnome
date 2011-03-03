@@ -270,6 +270,7 @@ get_image (PolkitGnomeAuthenticationDialog *dialog)
   GdkPixbuf *vendor_pixbuf;
   GtkWidget *image;
 
+  image = NULL;
   pixbuf = NULL;
   copy_pixbuf = NULL;
   vendor_pixbuf = NULL;
@@ -299,7 +300,12 @@ get_image (PolkitGnomeAuthenticationDialog *dialog)
                                      0,
                                      NULL);
   if (pixbuf == NULL)
-    goto out;
+    {
+      g_warning ("Unable to get a pixbuf for GTK_STOCK_DIALOG_AUTHENTICATION (%s) at size 48",
+                 GTK_STOCK_DIALOG_AUTHENTICATION);
+      image = gtk_image_new_from_pixbuf (vendor_pixbuf);
+      goto out;
+    }
 
   /* need to copy the pixbuf since we're modifying it */
   copy_pixbuf = gdk_pixbuf_copy (pixbuf);
