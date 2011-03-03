@@ -11,13 +11,14 @@ Build requirements
 
 Changes since 0.100:
 
- David Zeuthen (6):
+ David Zeuthen (7):
        Post-release version bump to 0.101
        Return error when authentication dialog is dismissed
        Fix crashers if icons cannot be loaded
        Don't use deprecated polkit API
        Fix warnings with gcc 4.6
        Update NEWS for release
+       Update POTFILES.in
 
  Matthias Clasen (1):
        Connect to the session bus
