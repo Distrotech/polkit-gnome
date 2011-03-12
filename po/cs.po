@@ -1,113 +1,118 @@
 # Czech translation of PolicyKit-gnome.
 # Copyright (C) 2008 the author(s) of PolicyKit-gnome.
 # This file is distributed under the same license as the policykit-gnome package.
+#
 # Adrian Guniš <andygun@seznam.cz>, 2008.
 # Petr Kovar <pknbe@volny.cz>, 2008, 2009.
+# Marek Černocký <marek@manet.cz>, 2011.
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-21 05:53+0200\n"
-"PO-Revision-Date: 2009-09-20 20:45+0200\n"
-"Last-Translator: Petr Kovar <pknbe@volny.cz>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&component=general\n"
+"POT-Creation-Date: 2011-03-03 18:50+0000\n"
+"PO-Revision-Date: 2011-03-12 13:15+0100\n"
+"Last-Translator: Marek Černocký <marek@manet.cz>\n"
 "Language-Team: Czech <gnome-cs-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
+"Language: cs\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
 "X-Generator: Lokalize 1.0\n"
 
-#: ../polkitgtk/polkitlockbutton.c:460
+#: ../polkitgtk/polkitlockbutton.c:458
 msgid "Action Identifier"
 msgstr "Identifikátor akce"
 
-#: ../polkitgtk/polkitlockbutton.c:461
+#: ../polkitgtk/polkitlockbutton.c:459
 msgid "The action identifier to use for the button"
 msgstr "Identifikátor akce, který má být použit u tlačítka"
 
-#: ../polkitgtk/polkitlockbutton.c:477
+#: ../polkitgtk/polkitlockbutton.c:475
 msgid "Is Authorized"
 msgstr "Je oprávněn"
 
-#: ../polkitgtk/polkitlockbutton.c:478
+#: ../polkitgtk/polkitlockbutton.c:476
 msgid "Whether the process is authorized"
 msgstr "Zda je proces oprávněn"
 
-#: ../polkitgtk/polkitlockbutton.c:493
+#: ../polkitgtk/polkitlockbutton.c:491
 msgid "Is Visible"
 msgstr "Je viditelný"
 
-#: ../polkitgtk/polkitlockbutton.c:494
+#: ../polkitgtk/polkitlockbutton.c:492
 msgid "Whether the widget is visible"
 msgstr "Zda je widget viditelný"
 
-#: ../polkitgtk/polkitlockbutton.c:509
+#: ../polkitgtk/polkitlockbutton.c:507
 msgid "Can Obtain"
 msgstr "Je získatelné"
 
-#: ../polkitgtk/polkitlockbutton.c:510
+#: ../polkitgtk/polkitlockbutton.c:508
 msgid "Whether authorization can be obtained"
-msgstr "Zda je oprávnění získatelné"
+msgstr "Zda lze oprávnění získat"
 
-#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
 msgid "Unlock Text"
-msgstr "Odemknout text"
+msgstr "Text odemčení"
 
-#: ../polkitgtk/polkitlockbutton.c:526
+#: ../polkitgtk/polkitlockbutton.c:524
 msgid "The text to display when prompting the user to unlock."
 msgstr ""
 "Text určený k zobrazení při dotazování se uživatele za účelem odemčení."
 
-#: ../polkitgtk/polkitlockbutton.c:527
+#: ../polkitgtk/polkitlockbutton.c:525
 msgid "Click to make changes"
 msgstr "Kliknutím provedete změny"
 
-#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
 msgid "Unlock Tooltip"
-msgstr "Odemknout místní nápovědu"
+msgstr "Místní nápověda odemčení"
 
-#: ../polkitgtk/polkitlockbutton.c:543
+#: ../polkitgtk/polkitlockbutton.c:541
 msgid "The tooltip to display when prompting the user to unlock."
 msgstr ""
 "Místní nápověda určená k zobrazení při dotazování se uživatele za účelem "
 "odemčení."
 
-#: ../polkitgtk/polkitlockbutton.c:544
+#: ../polkitgtk/polkitlockbutton.c:542
 msgid "Authentication is needed to make changes."
 msgstr "K provedení změn je vyžadováno ověření."
 
-#: ../polkitgtk/polkitlockbutton.c:559
+#: ../polkitgtk/polkitlockbutton.c:557
 msgid "Lock Text"
-msgstr "Uzamknout text"
+msgstr "Text uzamčení"
 
-#: ../polkitgtk/polkitlockbutton.c:560
+#: ../polkitgtk/polkitlockbutton.c:558
 msgid "The text to display when prompting the user to lock."
 msgstr ""
 "Text určený k zobrazení při dotazování se uživatele za účelem uzamčení."
 
-#: ../polkitgtk/polkitlockbutton.c:561
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Click to prevent changes"
 msgstr "Kliknutím se zamezí změnám"
 
-#: ../polkitgtk/polkitlockbutton.c:576
+#: ../polkitgtk/polkitlockbutton.c:574
 msgid "Lock Tooltip"
-msgstr "Uzamknout místní nápovědu"
+msgstr "Místní nápověda uzamčení"
 
-#: ../polkitgtk/polkitlockbutton.c:577
+#: ../polkitgtk/polkitlockbutton.c:575
 msgid "The tooltip to display when prompting the user to lock."
 msgstr ""
 "Místní nápověda určená k zobrazení při dotazování se uživatele za účelem "
 "uzamčení."
 
-#: ../polkitgtk/polkitlockbutton.c:578
+#: ../polkitgtk/polkitlockbutton.c:576
 msgid "To prevent further changes, click the lock."
 msgstr "Klikněte na zámek, chcete-li zabránit dalším změnám."
 
-#: ../polkitgtk/polkitlockbutton.c:593
+#: ../polkitgtk/polkitlockbutton.c:591
 msgid "Lock Down Text"
-msgstr "Text uzamčení"
+msgstr "Text úplného uzamčení"
 
-#: ../polkitgtk/polkitlockbutton.c:594
+#: ../polkitgtk/polkitlockbutton.c:592
 msgid ""
 "The text to display when prompting the user to lock down the action for all "
 "users."
@@ -115,15 +120,15 @@ msgstr ""
 "Text určený k zobrazení při dotazování se uživatele za účelem uzamčení akce "
 "pro všechny uživatele."
 
-#: ../polkitgtk/polkitlockbutton.c:595
+#: ../polkitgtk/polkitlockbutton.c:593
 msgid "Click to lock down"
-msgstr "Uzamkněte kliknutím"
+msgstr "Úplně uzamkněte kliknutím"
 
-#: ../polkitgtk/polkitlockbutton.c:610
+#: ../polkitgtk/polkitlockbutton.c:608
 msgid "Lock Down Tooltip"
-msgstr "Místní nápověda uzamknutí"
+msgstr "Místní nápověda úplného uzamčení"
 
-#: ../polkitgtk/polkitlockbutton.c:611
+#: ../polkitgtk/polkitlockbutton.c:609
 msgid ""
 "The tooltip to display when prompting the user to lock down the action for "
 "all users."
@@ -131,7 +136,7 @@ msgstr ""
 "Místní nápověda určená k zobrazení při dotazování se uživatele za účelem "
 "uzamčení akce pro všechny uživatele."
 
-#: ../polkitgtk/polkitlockbutton.c:612
+#: ../polkitgtk/polkitlockbutton.c:610
 msgid ""
 "To prevent users without administrative privileges from making changes, "
 "click the lock."
@@ -139,7 +144,7 @@ msgstr ""
 "Klikněte na zámek, chcete-li zabránit uživatelům bez oprávnění správce v "
 "provádění změn."
 
-#: ../polkitgtk/polkitlockbutton.c:628
+#: ../polkitgtk/polkitlockbutton.c:626
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
@@ -147,11 +152,11 @@ msgstr ""
 "Text určený k zobrazení, pokud je uživatel schopen získat oprávnění pomocí "
 "ověření."
 
-#: ../polkitgtk/polkitlockbutton.c:629
+#: ../polkitgtk/polkitlockbutton.c:627
 msgid "Not authorized to make changes"
 msgstr "Neoprávněn k provedení změn"
 
-#: ../polkitgtk/polkitlockbutton.c:645
+#: ../polkitgtk/polkitlockbutton.c:643
 msgid ""
 "The tooltip to display when the user cannot obtain authorization through "
 "authentication."
@@ -159,41 +164,26 @@ msgstr ""
 "Místní nápověda určená k zobrazení, pokud uživatel není schopen získat "
 "oprávnění pomocí ověření."
 
-#: ../polkitgtk/polkitlockbutton.c:646
+#: ../polkitgtk/polkitlockbutton.c:644
 msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
-"Systémová pravidla znemožňují provádění změn. Kontaktujte prosím správce "
+"Systémové zásady znemožňují provádění změn. Kontaktujte prosím správce "
 "systému."
-
-#. Translators: this string is appended to the tooltip if the action is
-#. * currently locked down
-#: ../polkitgtk/polkitlockbutton.c:767
-msgid ""
-"This button is locked down so only users with administrative privileges can "
-"unlock it. Right-click the button to remove the lock down."
-msgstr ""
-"Toto tlačítko je uzamknuto, takže jej mohou odemknout pouze uživatelé s "
-"oprávněním správce. Uzamknutí odstraníte kliknutím pravým tlačítkem myši na "
-"tlačítko."
-
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "Kliknutím na ikonu zrušíte zvýšená oprávnění"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
-msgstr "Vybrat uživatele..."
+msgstr "Vybrat uživatele…"
 
 #: ../src/polkitgnomeauthenticationdialog.c:194
 #, c-format
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:529
+#: ../src/polkitgnomeauthenticationdialog.c:537
 msgid "_Authenticate"
 msgstr "_Ověřit"
 
-#: ../src/polkitgnomeauthenticationdialog.c:566
+#: ../src/polkitgnomeauthenticationdialog.c:576
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -201,7 +191,7 @@ msgstr ""
 "Aplikace se pokouší provést akci, která vyžaduje oprávnění. K provedení této "
 "akce je vyžadováno ověření jednoho z níže uvedených uživatelů."
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:584
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -209,7 +199,7 @@ msgstr ""
 "Aplikace se pokouší provést akci, která vyžaduje oprávnění. K provedení této "
 "akce je vyžadováno ověření."
 
-#: ../src/polkitgnomeauthenticationdialog.c:580
+#: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -217,50 +207,64 @@ msgstr ""
 "Aplikace se pokouší provést akci, která vyžaduje oprávnění. K provedení této "
 "akce je vyžadováno ověření superuživatele."
 
-#: ../src/polkitgnomeauthenticationdialog.c:615
-#: ../src/polkitgnomeauthenticator.c:289
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
 msgid "_Password:"
 msgstr "_Heslo:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:633
+#: ../src/polkitgnomeauthenticationdialog.c:643
 msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Podrobnosti</b></small>"
+msgstr "<small><b>Po_drobnosti</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:686
+#: ../src/polkitgnomeauthenticationdialog.c:699
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Akce:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:689
+#: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
 msgid "Click to edit %s"
-msgstr "Kliknutím upravíte %s"
+msgstr "Kliknutím upravíte akci %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:703
+#: ../src/polkitgnomeauthenticationdialog.c:716
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Dodavatel:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:705
+#: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
 msgid "Click to open %s"
-msgstr "Kliknutím otevřete %s"
+msgstr "Kliknutím otevřete dodavatele %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:868
+#: ../src/polkitgnomeauthenticationdialog.c:881
 msgid "Authenticate"
-msgstr "Ověřit"
+msgstr "Ověření"
 
-#: ../src/polkitgnomeauthenticator.c:285
+#: ../src/polkitgnomeauthenticator.c:297
 #, c-format
 msgid "_Password for %s:"
-msgstr "_Heslo %s:"
+msgstr "_Heslo pro uživatele %s:"
 
-#: ../src/polkitgnomeauthenticator.c:445
+#: ../src/polkitgnomeauthenticator.c:457
 msgid "Authentication Failure"
 msgstr "Selhání ověření"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "Ověřovací agent PolicyKit"
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Dialogové okno ověření bylo uživatelem odmítnuto"
+
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "Toto tlačítko je uzamknuto, takže jej mohou odemknout pouze uživatelé s "
+#~ "oprávněním správce. Uzamknutí odstraníte kliknutím pravým tlačítkem myši "
+#~ "na tlačítko."
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Kliknutím na ikonu zrušíte zvýšená oprávnění"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "Ověřovací agent PolicyKit"
 
 #~ msgid "Authorizations"
 #~ msgstr "Oprávnění"
