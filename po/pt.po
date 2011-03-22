@@ -1,107 +1,110 @@
 # Portuguese translation of policykit-gnome.
-# Copyright © 2008 policykit-gnome.
+# Copyright © 2008, 2009, 2010, 2011 policykit-gnome.
 # This file is distributed under the same license as the policykit-gnome package.
+# António Lima <amrlima@gmail.com>, 2008, 2009, 2010, 2011.
 #
-# António Lima <amrlima@gmail.com>, 200, 2009.
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-09-15 00:41+0100\n"
-"PO-Revision-Date: 2009-09-14 22:52+0000\n"
+"POT-Creation-Date: 2011-03-22 00:14+0000\n"
+"PO-Revision-Date: 2011-03-20 21:30+0000\n"
 "Last-Translator: António Lima <amrlima@gmail.com>\n"
-"Language-Team: Portuguese <gnome_pt@yahoogroups.com>\n"
+"Language-Team: gnome_pt@yahoogroups.com\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Virtaal 0.6.1\n"
 "X-Poedit-Language: Portuguese\n"
 "X-Poedit-Country: PORTUGAL\n"
 
-#: ../polkitgtk/polkitlockbutton.c:460
+#: ../polkitgtk/polkitlockbutton.c:458
 msgid "Action Identifier"
 msgstr "Identificador de Acção"
 
-#: ../polkitgtk/polkitlockbutton.c:461
+#: ../polkitgtk/polkitlockbutton.c:459
 msgid "The action identifier to use for the button"
 msgstr "O identificador de acção a utilizar para o botão"
 
-#: ../polkitgtk/polkitlockbutton.c:477
+#: ../polkitgtk/polkitlockbutton.c:475
 msgid "Is Authorized"
 msgstr "É autorizado"
 
-#: ../polkitgtk/polkitlockbutton.c:478
+#: ../polkitgtk/polkitlockbutton.c:476
 msgid "Whether the process is authorized"
 msgstr "Se o processo é autorizado"
 
-#: ../polkitgtk/polkitlockbutton.c:493
+#: ../polkitgtk/polkitlockbutton.c:491
 msgid "Is Visible"
 msgstr "É visível"
 
-#: ../polkitgtk/polkitlockbutton.c:494
+#: ../polkitgtk/polkitlockbutton.c:492
 msgid "Whether the widget is visible"
 msgstr "Se a widget é visível"
 
-#: ../polkitgtk/polkitlockbutton.c:509
+#: ../polkitgtk/polkitlockbutton.c:507
 msgid "Can Obtain"
 msgstr "Pode obter"
 
-#: ../polkitgtk/polkitlockbutton.c:510
+#: ../polkitgtk/polkitlockbutton.c:508
 msgid "Whether authorization can be obtained"
 msgstr "Se a autorização pode ser obtida"
 
-#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
 msgid "Unlock Text"
 msgstr "Destrancar texto"
 
-#: ../polkitgtk/polkitlockbutton.c:526
+#: ../polkitgtk/polkitlockbutton.c:524
 msgid "The text to display when prompting the user to unlock."
 msgstr "O texto a apresentar ao pedir ao utilizador para destrancar."
 
-#: ../polkitgtk/polkitlockbutton.c:527
+#: ../polkitgtk/polkitlockbutton.c:525
 msgid "Click to make changes"
 msgstr "Clicar para realizar alterações"
 
-#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
 msgid "Unlock Tooltip"
 msgstr "Destrancar dica"
 
-#: ../polkitgtk/polkitlockbutton.c:543
+#: ../polkitgtk/polkitlockbutton.c:541
 msgid "The tooltip to display when prompting the user to unlock."
 msgstr "A dica a apresentar ao pedir ao utilizador para destrancar."
 
-#: ../polkitgtk/polkitlockbutton.c:544
+#: ../polkitgtk/polkitlockbutton.c:542
 msgid "Authentication is needed to make changes."
 msgstr "É necessária autenticação para realizar alterações."
 
-#: ../polkitgtk/polkitlockbutton.c:559
+#: ../polkitgtk/polkitlockbutton.c:557
 msgid "Lock Text"
 msgstr "Trancar texto"
 
-#: ../polkitgtk/polkitlockbutton.c:560
+#: ../polkitgtk/polkitlockbutton.c:558
 msgid "The text to display when prompting the user to lock."
 msgstr "Texto a apresentar ao pedir ao utilizador para trancar."
 
-#: ../polkitgtk/polkitlockbutton.c:561
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Click to prevent changes"
 msgstr "Clicar para prevenir alterações"
 
-#: ../polkitgtk/polkitlockbutton.c:576
+#: ../polkitgtk/polkitlockbutton.c:574
 msgid "Lock Tooltip"
 msgstr "Trancar dica"
 
-#: ../polkitgtk/polkitlockbutton.c:577
+#: ../polkitgtk/polkitlockbutton.c:575
 msgid "The tooltip to display when prompting the user to lock."
 msgstr "A dica a apresentar ao pedir ao utilizador para trancar."
 
-#: ../polkitgtk/polkitlockbutton.c:578
+#: ../polkitgtk/polkitlockbutton.c:576
 msgid "To prevent further changes, click the lock."
 msgstr "Para impedir mais alterações, clique no cadeado."
 
-#: ../polkitgtk/polkitlockbutton.c:593
+#: ../polkitgtk/polkitlockbutton.c:591
 msgid "Lock Down Text"
 msgstr "Trancar texto"
 
-#: ../polkitgtk/polkitlockbutton.c:594
+#: ../polkitgtk/polkitlockbutton.c:592
 msgid ""
 "The text to display when prompting the user to lock down the action for all "
 "users."
@@ -109,15 +112,15 @@ msgstr ""
 "Texto a apresentar ao pedir ao utilizador para trancar a acção para todos os "
 "utilizadores."
 
-#: ../polkitgtk/polkitlockbutton.c:595
+#: ../polkitgtk/polkitlockbutton.c:593
 msgid "Click to lock down"
 msgstr "Clique para trancar"
 
-#: ../polkitgtk/polkitlockbutton.c:610
+#: ../polkitgtk/polkitlockbutton.c:608
 msgid "Lock Down Tooltip"
 msgstr "Trancar dica"
 
-#: ../polkitgtk/polkitlockbutton.c:611
+#: ../polkitgtk/polkitlockbutton.c:609
 msgid ""
 "The tooltip to display when prompting the user to lock down the action for "
 "all users."
@@ -125,7 +128,7 @@ msgstr ""
 "A dica a apresentar ao pedir ao utilizador para trancar a acção para todos "
 "os utilizadores."
 
-#: ../polkitgtk/polkitlockbutton.c:612
+#: ../polkitgtk/polkitlockbutton.c:610
 msgid ""
 "To prevent users without administrative privileges from making changes, "
 "click the lock."
@@ -133,7 +136,7 @@ msgstr ""
 "Para impedir que os utilizadores sem privilégios administrativos façam "
 "alterações, clique no cadeado."
 
-#: ../polkitgtk/polkitlockbutton.c:628
+#: ../polkitgtk/polkitlockbutton.c:626
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
@@ -141,11 +144,11 @@ msgstr ""
 "Texto a apresentar quando o utilizador não consegue obter autorização "
 "através de autenticação."
 
-#: ../polkitgtk/polkitlockbutton.c:629
+#: ../polkitgtk/polkitlockbutton.c:627
 msgid "Not authorized to make changes"
 msgstr "Não autorizado para realizar alterações"
 
-#: ../polkitgtk/polkitlockbutton.c:645
+#: ../polkitgtk/polkitlockbutton.c:643
 msgid ""
 "The tooltip to display when the user cannot obtain authorization through "
 "authentication."
@@ -153,26 +156,11 @@ msgstr ""
 "A dica a apresentar quando o utilizador não consegue obter autorização "
 "através de autenticação."
 
-#: ../polkitgtk/polkitlockbutton.c:646
+#: ../polkitgtk/polkitlockbutton.c:644
 msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
 "Políticas do sistema impedem alterações. Contacte o seu administrador "
 "sistemas."
-
-#. Translators: this string is appended to the tooltip if the action is
-#. * currently locked down
-#: ../polkitgtk/polkitlockbutton.c:767
-msgid ""
-"This button is locked down so only users with administrative privileges can "
-"unlock it. Right-click the button to remove the lock down."
-msgstr ""
-"Este botão está trancado para que apenas utilizadores com privilégios "
-"administrativos podem destranca-lo. Clique com o botão direito no botão para "
-"remover o bloqueio."
-
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "Clique no ícone para retirar todos os privilégios concedidos"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -183,11 +171,11 @@ msgstr "Seleccionar utilizador..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:529
+#: ../src/polkitgnomeauthenticationdialog.c:537
 msgid "_Authenticate"
 msgstr "_Autenticar"
 
-#: ../src/polkitgnomeauthenticationdialog.c:566
+#: ../src/polkitgnomeauthenticationdialog.c:576
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -196,7 +184,7 @@ msgstr ""
 "necessária uma autenticação como um dos utilizadores para executar esta "
 "acção."
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:584
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -204,7 +192,7 @@ msgstr ""
 "Uma aplicação está a tentar executar uma acção que requer privilégios. É "
 "necessária autenticação para executar esta acção."
 
-#: ../src/polkitgnomeauthenticationdialog.c:580
+#: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -212,50 +200,64 @@ msgstr ""
 "Uma aplicação está a tentar executar uma acção que requer privilégios. É "
 "necessária autenticação como super utilizador para executar esta acção."
 
-#: ../src/polkitgnomeauthenticationdialog.c:615
-#: ../src/polkitgnomeauthenticator.c:289
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
 msgid "_Password:"
 msgstr "_Senha:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:633
+#: ../src/polkitgnomeauthenticationdialog.c:643
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>_Detalhes</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:686
+#: ../src/polkitgnomeauthenticationdialog.c:699
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Acção:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:689
+#: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
 msgid "Click to edit %s"
 msgstr "Clique para editar %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:703
+#: ../src/polkitgnomeauthenticationdialog.c:716
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Fornecedor:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:705
+#: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
 msgid "Click to open %s"
 msgstr "Clique para abrir %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:868
+#: ../src/polkitgnomeauthenticationdialog.c:881
 msgid "Authenticate"
 msgstr "Autenticar"
 
-#: ../src/polkitgnomeauthenticator.c:285
+#: ../src/polkitgnomeauthenticator.c:297
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Senha para %s:"
 
-#: ../src/polkitgnomeauthenticator.c:445
+#: ../src/polkitgnomeauthenticator.c:457
 msgid "Authentication Failure"
 msgstr "Falha de Autenticação"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "Agente de Autenticação PolicyKit"
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Diálogo de autenticação foi dispensado pelo utilizador"
+
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "Este botão está trancado para que apenas utilizadores com privilégios "
+#~ "administrativos podem destranca-lo. Clique com o botão direito no botão "
+#~ "para remover o bloqueio."
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Clique no ícone para retirar todos os privilégios concedidos"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "Agente de Autenticação PolicyKit"
 
 #~ msgid "Authorizations"
 #~ msgstr "Autorizações"
