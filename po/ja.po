@@ -1,90 +1,154 @@
 # policykit-gnome ja.po.
-# Copyright (C) 2008 Free Software Foundation, Inc.
+# Copyright (C) 2008,2009,2011 Free Software Foundation, Inc.
 # This file is distributed under the same license as the policykit-gnome package.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2008.
+# Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2009,2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome master\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2009-09-09 23:51+0900\n"
-"PO-Revision-Date: 2009-09-10 00:08+0900\n"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-03-22 00:16+0000\n"
+"PO-Revision-Date: 2011-03-30 00:31+0900\n"
 "Last-Translator: Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>\n"
 "Language-Team: Japanese <gnome-translation@gnome.gr.jp>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Language: ja\n"
 
-#: ../polkitgtk/polkitlockbutton.c:390
+#: ../polkitgtk/polkitlockbutton.c:458
 msgid "Action Identifier"
 msgstr "アクション識別子"
 
-#: ../polkitgtk/polkitlockbutton.c:391
+#: ../polkitgtk/polkitlockbutton.c:459
 msgid "The action identifier to use for the button"
 msgstr "このボタンのアクション識別子"
 
-#: ../polkitgtk/polkitlockbutton.c:407
+#: ../polkitgtk/polkitlockbutton.c:475
 msgid "Is Authorized"
 msgstr "承認済?"
 
-#: ../polkitgtk/polkitlockbutton.c:408
+#: ../polkitgtk/polkitlockbutton.c:476
 msgid "Whether the process is authorized"
 msgstr "プロセスが承認済かどうか"
 
-#: ../polkitgtk/polkitlockbutton.c:423
+#: ../polkitgtk/polkitlockbutton.c:491
 msgid "Is Visible"
 msgstr "可視?"
 
-#: ../polkitgtk/polkitlockbutton.c:424
+#: ../polkitgtk/polkitlockbutton.c:492
 msgid "Whether the widget is visible"
 msgstr "ウィジェットが可視かどうか"
 
-#: ../polkitgtk/polkitlockbutton.c:439
+#: ../polkitgtk/polkitlockbutton.c:507
 msgid "Can Obtain"
 msgstr "取得可?"
 
-#: ../polkitgtk/polkitlockbutton.c:440
+#: ../polkitgtk/polkitlockbutton.c:508
 msgid "Whether authorization can be obtained"
 msgstr "承認を得ることができるかどうか?"
 
-#: ../polkitgtk/polkitlockbutton.c:455 ../polkitgtk/polkitlockbutton.c:489
+#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
 msgid "Unlock Text"
 msgstr "ロック解除テキスト"
 
-#: ../polkitgtk/polkitlockbutton.c:456
+#: ../polkitgtk/polkitlockbutton.c:524
 msgid "The text to display when prompting the user to unlock."
-msgstr "ユーザにロック解除をうながす時に表示するテキスト"
+msgstr "ユーザにロック解除をうながす時に表示するテキスト。"
 
-#: ../polkitgtk/polkitlockbutton.c:457
+#: ../polkitgtk/polkitlockbutton.c:525
 msgid "Click to make changes"
 msgstr "クリックして変更する"
 
-#: ../polkitgtk/polkitlockbutton.c:472
+#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
+msgid "Unlock Tooltip"
+msgstr "ロック解除ツールチップ"
+
+#: ../polkitgtk/polkitlockbutton.c:541
+msgid "The tooltip to display when prompting the user to unlock."
+msgstr "ユーザにロック解除をうながす時に表示するツールチップ。"
+
+#: ../polkitgtk/polkitlockbutton.c:542
+msgid "Authentication is needed to make changes."
+msgstr "変更するには認証が必要です。"
+
+#: ../polkitgtk/polkitlockbutton.c:557
 msgid "Lock Text"
 msgstr "ロック・テキスト"
 
-#: ../polkitgtk/polkitlockbutton.c:473
+#: ../polkitgtk/polkitlockbutton.c:558
 msgid "The text to display when prompting the user to lock."
-msgstr "ユーザにロックをうながす時に表示するテキスト"
+msgstr "ユーザにロックをうながす時に表示するテキスト。"
 
-#: ../polkitgtk/polkitlockbutton.c:474
+#: ../polkitgtk/polkitlockbutton.c:559
 msgid "Click to prevent changes"
 msgstr "クリックして変更しない"
 
-#: ../polkitgtk/polkitlockbutton.c:490
+#: ../polkitgtk/polkitlockbutton.c:574
+msgid "Lock Tooltip"
+msgstr "ロック・ツールチップ"
+
+#: ../polkitgtk/polkitlockbutton.c:575
+msgid "The tooltip to display when prompting the user to lock."
+msgstr "ユーザにロックをうながす時に表示するツールチップ。"
+
+#: ../polkitgtk/polkitlockbutton.c:576
+msgid "To prevent further changes, click the lock."
+msgstr "変更を加えるには、ロックをクリック。"
+
+#: ../polkitgtk/polkitlockbutton.c:591
+msgid "Lock Down Text"
+msgstr "ロックダウン・テキスト"
+
+#: ../polkitgtk/polkitlockbutton.c:592
+msgid ""
+"The text to display when prompting the user to lock down the action for all "
+"users."
+msgstr "すべてのユーザをロックダウンする時にユーザに表示するテキスト。"
+
+#: ../polkitgtk/polkitlockbutton.c:593
+msgid "Click to lock down"
+msgstr "ロックダウンするにはクリック"
+
+#: ../polkitgtk/polkitlockbutton.c:608
+msgid "Lock Down Tooltip"
+msgstr "ロックダウン・ツールチップ"
+
+#: ../polkitgtk/polkitlockbutton.c:609
+msgid ""
+"The tooltip to display when prompting the user to lock down the action for "
+"all users."
+msgstr "すべてのユーザをロックダウンする時にユーザに表示するツールチップ。"
+
+#: ../polkitgtk/polkitlockbutton.c:610
+msgid ""
+"To prevent users without administrative privileges from making changes, "
+"click the lock."
+msgstr "管理権限無しでユーザが変更を加えるのを避けるには、ロックをクリック。"
+
+#: ../polkitgtk/polkitlockbutton.c:626
 msgid ""
 "The text to display when the user cannot obtain authorization through "
 "authentication."
-msgstr "ユーザが認証されても承認を得られない時に表示するテキスト"
+msgstr "ユーザが認証されても承認を得られない時に表示するテキスト。"
 
-#: ../polkitgtk/polkitlockbutton.c:491
+#: ../polkitgtk/polkitlockbutton.c:627
 msgid "Not authorized to make changes"
 msgstr "変更するよう承認されていません"
 
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "アイコンをクリックして与えられたすべての権限を破棄"
+#: ../polkitgtk/polkitlockbutton.c:643
+msgid ""
+"The tooltip to display when the user cannot obtain authorization through "
+"authentication."
+msgstr "ユーザが認証されても承認を得られない時に表示するツールチップ。"
+
+#: ../polkitgtk/polkitlockbutton.c:644
+msgid "System policy prevents changes. Contact your system administator."
+msgstr ""
+"システムのポリシーにより変更ができません。システムの管理者に連絡してくださ"
+"い。"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -95,11 +159,11 @@ msgstr "ユーザの選択..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:529
+#: ../src/polkitgnomeauthenticationdialog.c:537
 msgid "_Authenticate"
 msgstr "認証する(_A)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:566
+#: ../src/polkitgnomeauthenticationdialog.c:576
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -108,7 +172,7 @@ msgstr ""
 "クションを実行するには、次に示すいずれかのユーザとしての認証が必要になりま"
 "す。"
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:584
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -116,7 +180,7 @@ msgstr ""
 "あるアプリケーションが特権の必要なアクションを実行しようとしています。このア"
 "クションを実行するには認証が必要になります。"
 
-#: ../src/polkitgnomeauthenticationdialog.c:580
+#: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -124,50 +188,56 @@ msgstr ""
 "あるアプリケーションが特権の必要なアクションを実行しようとしています。このア"
 "クションを実行するには root 権限としての認証が必要になります。"
 
-#: ../src/polkitgnomeauthenticationdialog.c:615
-#: ../src/polkitgnomeauthenticator.c:289
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
 msgid "_Password:"
 msgstr "パスワード(_P):"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:633
+#: ../src/polkitgnomeauthenticationdialog.c:643
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>詳細(_D)</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:686
+#: ../src/polkitgnomeauthenticationdialog.c:699
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>アクション:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:689
+#: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
 msgid "Click to edit %s"
-msgstr "ここをクリックして %s を編集して下さい"
+msgstr "ここをクリックして %s を編集してください"
 
-#: ../src/polkitgnomeauthenticationdialog.c:703
+#: ../src/polkitgnomeauthenticationdialog.c:716
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>ベンダ:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:705
+#: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
 msgid "Click to open %s"
-msgstr "ここをクリックして %s を開いて下さい"
+msgstr "ここをクリックして %s を開いてください"
 
-#: ../src/polkitgnomeauthenticationdialog.c:868
+#: ../src/polkitgnomeauthenticationdialog.c:881
 msgid "Authenticate"
 msgstr "認証"
 
-#: ../src/polkitgnomeauthenticator.c:285
+#: ../src/polkitgnomeauthenticator.c:297
 #, c-format
 msgid "_Password for %s:"
 msgstr "%s のパスワード(_P):"
 
-#: ../src/polkitgnomeauthenticator.c:445
+#: ../src/polkitgnomeauthenticator.c:457
 msgid "Authentication Failure"
 msgstr "認証失敗"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "PolicyKit 認証エージェント"
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "認証ダイアログがユーザによって非表示にされました"
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "アイコンをクリックして与えられたすべての権限を破棄"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "PolicyKit 認証エージェント"
 
 #~ msgid "Authorizations"
 #~ msgstr "権限の管理"
