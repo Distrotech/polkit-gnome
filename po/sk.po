@@ -1,15 +1,15 @@
 # Slovak translation for PolicyKit-gnome.
 # Copyright (C) 2008, 2009, 2010 Free Software Foundation, Inc.
 # This file is distributed under the same license as the PolicyKit-gnome package.
-# Pavol Šimo <palo.simo@gmail.com>, 2008, 2009, 2010.
+# Pavol Šimo <palo.simo@gmail.com>, 2008, 2009, 2010, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2010-08-09 21:55+0000\n"
-"PO-Revision-Date: 2010-02-22 15:20+0100\n"
+"POT-Creation-Date: 2011-03-03 18:50+0000\n"
+"PO-Revision-Date: 2011-04-26 14:52+0200\n"
 "Last-Translator: Pavol Šimo <palo.simo@gmail.com>\n"
 "Language-Team: Slovak <gnome-sk-list@gnome.org>\n"
 "MIME-Version: 1.0\n"
@@ -56,9 +56,10 @@ msgstr "Text odomknutia"
 msgid "The text to display when prompting the user to unlock."
 msgstr "Text, ktorý sa zobrazí pri výzve používateľa na odomknutie."
 
+# text z gnome-control-center
 #: ../polkitgtk/polkitlockbutton.c:525
 msgid "Click to make changes"
-msgstr "Kliknite, aby sa zmeny vykonali"
+msgstr "Kliknutím povolíte zmeny"
 
 #: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
 msgid "Unlock Tooltip"
@@ -157,10 +158,6 @@ msgid "System policy prevents changes. Contact your system administator."
 msgstr ""
 "Systémová politika nepovoľuje zmeny. Kontaktujte správcu vášho systému."
 
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "Kliknite na ikonu, aby sa zahodili zvýšené práva"
-
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
 msgstr "Vybrať používateľa..."
@@ -170,11 +167,11 @@ msgstr "Vybrať používateľa..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:531
+#: ../src/polkitgnomeauthenticationdialog.c:537
 msgid "_Authenticate"
 msgstr "_Overiť totožnosť"
 
-#: ../src/polkitgnomeauthenticationdialog.c:571
+#: ../src/polkitgnomeauthenticationdialog.c:576
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -182,7 +179,7 @@ msgstr ""
 "Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
 "akcie je vyžadované overenie totožnosti niektorého z uvedených používateľov."
 
-#: ../src/polkitgnomeauthenticationdialog.c:579
+#: ../src/polkitgnomeauthenticationdialog.c:584
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -190,7 +187,7 @@ msgstr ""
 "Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
 "akcie je vyžadované overenie totožnosti."
 
-#: ../src/polkitgnomeauthenticationdialog.c:585
+#: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -198,52 +195,58 @@ msgstr ""
 "Aplikácia sa pokúša vykonať akciu, ktorá vyžaduje práva. Na vykonanie tejto "
 "akcie je vyžadované overenie totožnosti superpoužívateľa."
 
-#: ../src/polkitgnomeauthenticationdialog.c:620
-#: ../src/polkitgnomeauthenticator.c:298
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:301
 msgid "_Password:"
 msgstr "_Heslo:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:638
+#: ../src/polkitgnomeauthenticationdialog.c:643
 msgid "<small><b>_Details</b></small>"
 msgstr "<small><b>Po_drobnosti</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:691
+#: ../src/polkitgnomeauthenticationdialog.c:699
 msgid "<small><b>Action:</b></small>"
 msgstr "<small><b>Akcia:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:694
+#: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
 msgid "Click to edit %s"
 msgstr "Kliknutím upravíte %s"
 
-#: ../src/polkitgnomeauthenticationdialog.c:708
+#: ../src/polkitgnomeauthenticationdialog.c:716
 msgid "<small><b>Vendor:</b></small>"
 msgstr "<small><b>Dodávateľ:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:710
+#: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
 msgid "Click to open %s"
 msgstr "Kliknutím otvoríte %s"
 
 # toto je titulok okna, tam nedávame neurčitok
-#: ../src/polkitgnomeauthenticationdialog.c:873
+#: ../src/polkitgnomeauthenticationdialog.c:881
 msgid "Authenticate"
 msgstr "Overenie totožnosti"
 
-#: ../src/polkitgnomeauthenticator.c:294
+#: ../src/polkitgnomeauthenticator.c:297
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Heslo používateľa %s:"
 
 # toto je status overenia - tento slovosled tam pasuje viac
-#: ../src/polkitgnomeauthenticator.c:454
+#: ../src/polkitgnomeauthenticator.c:457
 msgid "Authentication Failure"
 msgstr "Overenie totožnosti zlyhalo"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "Agent PolicyKit na overovanie totožnosti"
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentation dialog was dismissed by the user"
+msgstr "Dialógové okno overenia totožnosti bolo zatvorené používateľom"
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Kliknite na ikonu, aby sa zahodili zvýšené práva"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "Agent PolicyKit na overovanie totožnosti"
 
 # Veď to, že "right-click" neobsahuje v sebe "button"... Skúsim to takto
 #~ msgid ""
