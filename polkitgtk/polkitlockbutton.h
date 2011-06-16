@@ -47,7 +47,7 @@ typedef struct _PolkitLockButtonPrivate     PolkitLockButtonPrivate;
  */
 struct _PolkitLockButton
 {
-  GtkHBox parent;
+  GtkBox parent;
 
   /*< private >*/
   PolkitLockButtonPrivate *priv;
@@ -62,7 +62,7 @@ struct _PolkitLockButton
  */
 struct _PolkitLockButtonClass
 {
-  GtkHBoxClass parent_class;
+  GtkBoxClass parent_class;
 
   /* Signals */
   void (*changed) (PolkitLockButton *button);

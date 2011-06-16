@@ -215,7 +215,7 @@ static void on_authority_changed (PolkitAuthority *authority,
 static void on_clicked (GtkButton *button,
                         gpointer   user_data);
 
-G_DEFINE_TYPE (PolkitLockButton, polkit_lock_button, GTK_TYPE_HBOX);
+G_DEFINE_TYPE (PolkitLockButton, polkit_lock_button, GTK_TYPE_BOX);
 
 static void
 polkit_lock_button_finalize (GObject *object)
