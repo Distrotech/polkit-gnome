@@ -17,9 +17,10 @@ Changes since 0.101:
  Matthias Clasen (1):
        Use GtkBox instead of GtkHBox
 
- David Zeuthen (1):
+ David Zeuthen (3):
        Post-release version bump to 0.102
        Update NEWS for release
+       Don't default to maintainer-mode when building from tarballs
 
 Updated translations.
 
