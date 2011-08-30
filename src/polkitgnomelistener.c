@@ -161,7 +161,7 @@ authenticator_completed (PolkitGnomeAuthenticator *authenticator,
       g_simple_async_result_set_error (data->simple,
                                        POLKIT_ERROR,
                                        POLKIT_ERROR_CANCELLED,
-                                       _("Authentation dialog was dismissed by the user"));
+                                       _("Authentication dialog was dismissed by the user"));
     }
   g_simple_async_result_complete (data->simple);
   g_object_unref (data->simple);
