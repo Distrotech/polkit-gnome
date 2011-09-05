@@ -117,15 +117,6 @@ else
   fi
 fi
 
-# *****
-# GNOME
-# *****
-
-GNOME_COMMON_INIT
-GNOME_DEBUG_CHECK
-GNOME_COMPILE_WARNINGS([maximum])
-GNOME_MAINTAINER_MODE_DEFINES
-
 # ***************************
 # Check for required packages
 # ***************************
