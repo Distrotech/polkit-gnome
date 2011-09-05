@@ -32,7 +32,6 @@
 
 #include "polkitgnomeauthenticator.h"
 #include "polkitgnomeauthenticationdialog.h"
-#include "polkitgnomemarshal.h"
 
 struct _PolkitGnomeAuthenticator
 {
@@ -138,7 +137,7 @@ polkit_gnome_authenticator_class_init (PolkitGnomeAuthenticatorClass *klass)
                                             0,                      /* class offset     */
                                             NULL,                   /* accumulator      */
                                             NULL,                   /* accumulator data */
-                                            _polkit_gnome_marshal_VOID__BOOLEAN_BOOLEAN,
+                                            NULL, /* use generic marshaller */
                                             G_TYPE_NONE,
                                             2,
                                             G_TYPE_BOOLEAN,

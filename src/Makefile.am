@@ -5,13 +5,6 @@ FULL_LIBEXECDIR=$(libexecdir)
 
 libexec_PROGRAMS = polkit-gnome-authentication-agent-1
 
-polkitgnomemarshal.h polkitgnomemarshal.c : Makefile.am $(srcdir)/polkitgnomemarshal.list
-	glib-genmarshal --prefix=_polkit_gnome_marshal $(srcdir)/polkitgnomemarshal.list --header > polkitgnomemarshal.h.tmp && mv polkitgnomemarshal.h.tmp polkitgnomemarshal.h
-	(echo "#include \"polkitgnomemarshal.h\""; glib-genmarshal --prefix=_polkit_gnome_marshal $(srcdir)/polkitgnomemarshal.list --body) > polkitgnomemarshal.c.tmp && mv polkitgnomemarshal.c.tmp polkitgnomemarshal.c
-	touch polkitgnomemarshal.stamp
-
-BUILT_SOURCES = polkitgnomemarshal.h polkitgnomemarshal.c
-
 polkit_gnome_authentication_agent_1_SOURCES = 						\
 	polkitgnomelistener.h			polkitgnomelistener.c			\
 	polkitgnomeauthenticator.h		polkitgnomeauthenticator.c		\
@@ -46,8 +39,6 @@ polkit_gnome_authentication_agent_1_LDADD = 		\
 	$(POLKIT_AGENT_LIBS)				\
 	$(POLKIT_GOBJECT_LIBS)				\
 	$(INTLLIBS)
-
-EXTRA_DIST = polkitgnomemarshal.list
 
 clean-local :
 	rm -f *~
