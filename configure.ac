@@ -213,11 +213,7 @@ AC_SUBST([AM_LDFLAGS])
 AC_CONFIG_FILES([
 Makefile
 po/Makefile.in
-polkitgtk/Makefile
-polkitgtk/polkit-gtk-1.pc
 src/Makefile
-docs/version.xml
-docs/Makefile
 ])
 
 AC_OUTPUT
