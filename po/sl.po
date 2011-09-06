@@ -3,14 +3,15 @@
 # This file is distributed under the same license as the PolicyKit-gnome package.
 #
 # Matej Urbančič <mateju@svn.gnome.org>, 2010 - 2011.
+# Martin Srebotnjak  <miles@filmsi.net>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2011-03-05 10:04+0000\n"
-"PO-Revision-Date: 2011-03-09 13:08+0100\n"
-"Last-Translator: Matej Urbančič <mateju@svn.gnome.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2011-08-30 15:24+0000\n"
+"PO-Revision-Date: 2011-09-04 15:23+0100\n"
+"Last-Translator: Martin Srebotnjak  <miles@filmsi.net>\n"
 "Language-Team: Slovenian GNOME Translation Team <gnome-si@googlegroups.com>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -209,7 +210,8 @@ msgid "Authentication Failure"
 msgstr "Napaka overitve"
 
 #: ../src/polkitgnomelistener.c:164
-msgid "Authentation dialog was dismissed by the user"
+#| msgid "Authentation dialog was dismissed by the user"
+msgid "Authentication dialog was dismissed by the user"
 msgstr "Pogovorno okno overitve je zaprl uporabnik"
 
 #~ msgid ""
