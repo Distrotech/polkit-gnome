@@ -7,16 +7,29 @@ This is polkit-gnome version 0.103.
 Build requirements
 
  polkit    >= 0.96
- gtk+-2.0  >= 2.17.1 OR gtk+-3.0
+ gtk+-3.0  >= 3.0
 
 Changes since 0.102:
 
- TODO
+Alexandre Franke (2):
+      Fix typo
+      Add DOAP and drop MAINTAINERS file
+
+David Zeuthen (3):
+      Post-release version bump to 0.103
+      Fix make distcheck
+      Update NEWS for release
+
+Matthias Clasen (4):
+      Drop polkit-gtk
+      configure.ac: Drop a duplicated section
+      Drop --with-gtk=2.0|3.0
+      Drop marshaller complications
 
 Thanks to our contributors.
 
-YOUR NAME,
-DATE
+David Zeuthen,
+Sep 19, 2011
 
 ==========
 polkit-gnome 0.102
