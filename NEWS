@@ -1,4 +1,24 @@
 ==========
+polkit-gnome 0.104
+==========
+
+This is polkit-gnome version 0.104.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-3.0  >= 3.0
+
+Changes since 0.103:
+
+ TODO: git shortlog 0.103...
+
+Thanks to our contributors.
+
+YOUR NAME,
+DATE
+
+==========
 polkit-gnome 0.103
 ==========
 
