@@ -5,7 +5,7 @@ EXTRA_DIST = \
 	TODO			\
 	HACKING
 
-DISTCHECK_CONFIGURE_FLAGS="--disable-introspection --disable-maintainer-mode"
+DISTCHECK_CONFIGURE_FLAGS="--disable-maintainer-mode"
 
 clean-local :
 	rm -f *~ po/*~
