@@ -2,161 +2,21 @@
 # Copyright (C) 2007 David Zeuthen
 # This file is distributed under the same license as the PolicyKit-gnome package.
 # David Planella Molas <david.planella@gmail.com>, 2008, 2009.
+# Gil Forcada <gilforcada@guifi.net>, 2011.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: PolicyKit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-02 13:19+0200\n"
-"PO-Revision-Date: 2011-04-02 13:20+0200\n"
-"Last-Translator: David Planella <david.planella@gmail.com>\n"
-"Language-Team: Catalan <tradgnome@softcatala.net>\n"
+"POT-Creation-Date: 2011-10-01 16:06+0200\n"
+"PO-Revision-Date: 2011-10-01 16:07+0200\n"
+"Last-Translator: Gil Forcada <gilforcada@guifi.net>\n"
+"Language-Team: català; valencià <tradgnome@softcatala.org>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-
-#: ../polkitgtk/polkitlockbutton.c:458
-msgid "Action Identifier"
-msgstr "Identificador de l'acció"
-
-#: ../polkitgtk/polkitlockbutton.c:459
-msgid "The action identifier to use for the button"
-msgstr "L'identificador de l'acció a utilitzar pel botó"
-
-#: ../polkitgtk/polkitlockbutton.c:475
-msgid "Is Authorized"
-msgstr "És autoritzat"
-
-#: ../polkitgtk/polkitlockbutton.c:476
-msgid "Whether the process is authorized"
-msgstr "Si el procés és autoritzat"
-
-#: ../polkitgtk/polkitlockbutton.c:491
-msgid "Is Visible"
-msgstr "És visible"
-
-#: ../polkitgtk/polkitlockbutton.c:492
-msgid "Whether the widget is visible"
-msgstr "Si el giny és visible"
-
-#: ../polkitgtk/polkitlockbutton.c:507
-msgid "Can Obtain"
-msgstr "Pot obtenir"
-
-#: ../polkitgtk/polkitlockbutton.c:508
-msgid "Whether authorization can be obtained"
-msgstr "Si es pot obtenir l'autorització"
-
-#: ../polkitgtk/polkitlockbutton.c:523 ../polkitgtk/polkitlockbutton.c:625
-msgid "Unlock Text"
-msgstr "Text de desbloqueig"
-
-#: ../polkitgtk/polkitlockbutton.c:524
-msgid "The text to display when prompting the user to unlock."
-msgstr "El text que es mostrarà a l'usuari per a desbloquejar."
-
-#: ../polkitgtk/polkitlockbutton.c:525
-msgid "Click to make changes"
-msgstr "Feu clic per a fer canvis"
-
-#: ../polkitgtk/polkitlockbutton.c:540 ../polkitgtk/polkitlockbutton.c:642
-msgid "Unlock Tooltip"
-msgstr "Indicador de funció per a desbloquejar"
-
-#: ../polkitgtk/polkitlockbutton.c:541
-msgid "The tooltip to display when prompting the user to unlock."
-msgstr "L'indicador de funció que es mostrarà a l'usuari per a desbloquejar."
-
-#: ../polkitgtk/polkitlockbutton.c:542
-msgid "Authentication is needed to make changes."
-msgstr "Cal l'autenticació per a realitzar canvis."
-
-#: ../polkitgtk/polkitlockbutton.c:557
-msgid "Lock Text"
-msgstr "Text de bloqueig"
-
-#: ../polkitgtk/polkitlockbutton.c:558
-msgid "The text to display when prompting the user to lock."
-msgstr "El text que es mostrarà a l'usuari per a bloquejar."
-
-#: ../polkitgtk/polkitlockbutton.c:559
-msgid "Click to prevent changes"
-msgstr "Feu clic per a evitar canvis"
-
-#: ../polkitgtk/polkitlockbutton.c:574
-msgid "Lock Tooltip"
-msgstr "Indicador de funció per a bloquejar"
-
-#: ../polkitgtk/polkitlockbutton.c:575
-msgid "The tooltip to display when prompting the user to lock."
-msgstr "L'indicador de funció que es mostrarà a l'usuari per bloquejar."
-
-#: ../polkitgtk/polkitlockbutton.c:576
-msgid "To prevent further changes, click the lock."
-msgstr "Per a evitar més canvis, feu clic a bloquejar."
-
-#: ../polkitgtk/polkitlockbutton.c:591
-msgid "Lock Down Text"
-msgstr "Text de restricció"
-
-#: ../polkitgtk/polkitlockbutton.c:592
-msgid ""
-"The text to display when prompting the user to lock down the action for all "
-"users."
-msgstr ""
-"El text que es mostrarà a l'usuari per a restringir l'acció per a tots els "
-"usuaris."
-
-#: ../polkitgtk/polkitlockbutton.c:593
-msgid "Click to lock down"
-msgstr "Feu clic per a restringir"
-
-#: ../polkitgtk/polkitlockbutton.c:608
-msgid "Lock Down Tooltip"
-msgstr "Indicador de funció per a restringir"
-
-#: ../polkitgtk/polkitlockbutton.c:609
-msgid ""
-"The tooltip to display when prompting the user to lock down the action for "
-"all users."
-msgstr ""
-"L'indicador de funció que es mostrarà a l'usuari per a restringir l'acció "
-"per a tots els usuaris."
-
-#: ../polkitgtk/polkitlockbutton.c:610
-msgid ""
-"To prevent users without administrative privileges from making changes, "
-"click the lock."
-msgstr ""
-"Per a evitar que els usuaris sense permisos d'administració facin canvis feu "
-"clic a restringir."
-
-#: ../polkitgtk/polkitlockbutton.c:626
-msgid ""
-"The text to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"El text que es mostrarà a l'usuari quan no pugui obtenir l'autorització tot "
-"i autenticar-se."
-
-#: ../polkitgtk/polkitlockbutton.c:627
-msgid "Not authorized to make changes"
-msgstr "No esteu autoritzat a fer canvis"
-
-#: ../polkitgtk/polkitlockbutton.c:643
-msgid ""
-"The tooltip to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"L'indicador de funció que es mostrarà a l'usuari quan no pugui obtenir "
-"l'autorització tot i autenticar-se."
-
-#: ../polkitgtk/polkitlockbutton.c:644
-msgid "System policy prevents changes. Contact your system administator."
-msgstr ""
-"La política del sistema impedeix fer canvis. Contacteu amb l'administrador "
-"del sistema."
+"Content-Transfer-Encoding: 8bits\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -194,10 +54,10 @@ msgid ""
 "Authentication as the super user is required to perform this action."
 msgstr ""
 "Una aplicació està intentant realitzar una acció que requereix privilegis. "
-"Cal autenticar-se com a usuari primari per a dur a terme l'acció."
+"Cal autenticar-se com a l'usuari primari per a dur a terme l'acció."
 
 #: ../src/polkitgnomeauthenticationdialog.c:625
-#: ../src/polkitgnomeauthenticator.c:301
+#: ../src/polkitgnomeauthenticator.c:300
 msgid "_Password:"
 msgstr "_Contrasenya:"
 
@@ -228,18 +88,131 @@ msgstr "Feu clic per a obrir %s"
 msgid "Authenticate"
 msgstr "Autentica"
 
-#: ../src/polkitgnomeauthenticator.c:297
+#: ../src/polkitgnomeauthenticator.c:296
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Contrasenya per a %s:"
 
-#: ../src/polkitgnomeauthenticator.c:457
+#: ../src/polkitgnomeauthenticator.c:456
 msgid "Authentication Failure"
-msgstr "Fallada d'autenticació"
+msgstr "Ha fallat l'autenticació"
 
 #: ../src/polkitgnomelistener.c:164
-msgid "Authentation dialog was dismissed by the user"
+msgid "Authentication dialog was dismissed by the user"
 msgstr "L'usuari ha descartat el diàleg d'autenticació"
+
+#~ msgid "Action Identifier"
+#~ msgstr "Identificador de l'acció"
+
+#~ msgid "The action identifier to use for the button"
+#~ msgstr "L'identificador de l'acció a utilitzar pel botó"
+
+#~ msgid "Is Authorized"
+#~ msgstr "És autoritzat"
+
+#~ msgid "Whether the process is authorized"
+#~ msgstr "Si el procés és autoritzat"
+
+#~ msgid "Is Visible"
+#~ msgstr "És visible"
+
+#~ msgid "Whether the widget is visible"
+#~ msgstr "Si el giny és visible"
+
+#~ msgid "Can Obtain"
+#~ msgstr "Pot obtenir"
+
+#~ msgid "Whether authorization can be obtained"
+#~ msgstr "Si es pot obtenir l'autorització"
+
+#~ msgid "Unlock Text"
+#~ msgstr "Text de desbloqueig"
+
+#~ msgid "The text to display when prompting the user to unlock."
+#~ msgstr "El text que es mostrarà a l'usuari per a desbloquejar."
+
+#~ msgid "Click to make changes"
+#~ msgstr "Feu clic per a fer canvis"
+
+#~ msgid "Unlock Tooltip"
+#~ msgstr "Indicador de funció per a desbloquejar"
+
+#~ msgid "The tooltip to display when prompting the user to unlock."
+#~ msgstr ""
+#~ "L'indicador de funció que es mostrarà a l'usuari per a desbloquejar."
+
+#~ msgid "Authentication is needed to make changes."
+#~ msgstr "Cal l'autenticació per a realitzar canvis."
+
+#~ msgid "Lock Text"
+#~ msgstr "Text de bloqueig"
+
+#~ msgid "The text to display when prompting the user to lock."
+#~ msgstr "El text que es mostrarà a l'usuari per a bloquejar."
+
+#~ msgid "Click to prevent changes"
+#~ msgstr "Feu clic per a evitar canvis"
+
+#~ msgid "Lock Tooltip"
+#~ msgstr "Indicador de funció per a bloquejar"
+
+#~ msgid "The tooltip to display when prompting the user to lock."
+#~ msgstr "L'indicador de funció que es mostrarà a l'usuari per bloquejar."
+
+#~ msgid "To prevent further changes, click the lock."
+#~ msgstr "Per a evitar més canvis, feu clic a bloquejar."
+
+#~ msgid "Lock Down Text"
+#~ msgstr "Text de restricció"
+
+#~ msgid ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+#~ msgstr ""
+#~ "El text que es mostrarà a l'usuari per a restringir l'acció per a tots "
+#~ "els usuaris."
+
+#~ msgid "Click to lock down"
+#~ msgstr "Feu clic per a restringir"
+
+#~ msgid "Lock Down Tooltip"
+#~ msgstr "Indicador de funció per a restringir"
+
+#~ msgid ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+#~ msgstr ""
+#~ "L'indicador de funció que es mostrarà a l'usuari per a restringir l'acció "
+#~ "per a tots els usuaris."
+
+#~ msgid ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+#~ msgstr ""
+#~ "Per a evitar que els usuaris sense permisos d'administració facin canvis "
+#~ "feu clic a restringir."
+
+#~ msgid ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "El text que es mostrarà a l'usuari quan no pugui obtenir l'autorització "
+#~ "tot i autenticar-se."
+
+#~ msgid "Not authorized to make changes"
+#~ msgstr "No esteu autoritzat a fer canvis"
+
+#~ msgid ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "L'indicador de funció que es mostrarà a l'usuari quan no pugui obtenir "
+#~ "l'autorització tot i autenticar-se."
+
+#~ msgid "System policy prevents changes. Contact your system administator."
+#~ msgstr ""
+#~ "La política del sistema impedeix fer canvis. Contacteu amb "
+#~ "l'administrador del sistema."
 
 #~ msgid ""
 #~ "This button is locked down so only users with administrative privileges "
