@@ -7,136 +7,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-04-03 17:47+0200\n"
-"PO-Revision-Date: 2011-04-03 17:48+0100\n"
+"POT-Creation-Date: 2011-10-08 07:28+0200\n"
+"PO-Revision-Date: 2011-10-08 07:28+0100\n"
 "Last-Translator: Daniel Nylander <po@danielnylander.se>\n"
 "Language-Team: Swedish <tp-sv@listor.tp-sv.se>\n"
 "Language: sv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: ../polkitgtk/polkitlockbutton.c:458
-msgid "Action Identifier"
-msgstr "Åtgärdsidentifierare"
-
-#: ../polkitgtk/polkitlockbutton.c:459
-msgid "The action identifier to use for the button"
-msgstr "Åtgärdsidentifierare att använda för knappen"
-
-#: ../polkitgtk/polkitlockbutton.c:475
-msgid "Is Authorized"
-msgstr "Är behörig"
-
-#: ../polkitgtk/polkitlockbutton.c:476
-msgid "Whether the process is authorized"
-msgstr "Huruvida processen är behörig"
-
-#: ../polkitgtk/polkitlockbutton.c:491
-msgid "Is Visible"
-msgstr "Är synlig"
-
-#: ../polkitgtk/polkitlockbutton.c:492
-msgid "Whether the widget is visible"
-msgstr "Huruvida widgeten är synlig"
-
-#: ../polkitgtk/polkitlockbutton.c:507
-msgid "Can Obtain"
-msgstr "Kan erhålla"
-
-#: ../polkitgtk/polkitlockbutton.c:508
-msgid "Whether authorization can be obtained"
-msgstr "Huruvida behörighet kan erhållas"
-
-#: ../polkitgtk/polkitlockbutton.c:523
-#: ../polkitgtk/polkitlockbutton.c:625
-msgid "Unlock Text"
-msgstr "Upplåsningstext"
-
-#: ../polkitgtk/polkitlockbutton.c:524
-msgid "The text to display when prompting the user to unlock."
-msgstr "Texten att visa när användaren tillfrågas att låsa upp."
-
-#: ../polkitgtk/polkitlockbutton.c:525
-msgid "Click to make changes"
-msgstr "Klicka för att göra ändringar"
-
-#: ../polkitgtk/polkitlockbutton.c:540
-#: ../polkitgtk/polkitlockbutton.c:642
-msgid "Unlock Tooltip"
-msgstr "Verktygstips för upplåsning"
-
-#: ../polkitgtk/polkitlockbutton.c:541
-msgid "The tooltip to display when prompting the user to unlock."
-msgstr "Verktygstipset att visa när användaren tillfrågas att låsa upp."
-
-#: ../polkitgtk/polkitlockbutton.c:542
-msgid "Authentication is needed to make changes."
-msgstr "Autentisering krävs för att göra ändringar."
-
-#: ../polkitgtk/polkitlockbutton.c:557
-msgid "Lock Text"
-msgstr "Låsningstext"
-
-#: ../polkitgtk/polkitlockbutton.c:558
-msgid "The text to display when prompting the user to lock."
-msgstr "Texten att visa när användaren tillfrågas att låsa."
-
-#: ../polkitgtk/polkitlockbutton.c:559
-msgid "Click to prevent changes"
-msgstr "Klicka för att förhindra ändringar"
-
-#: ../polkitgtk/polkitlockbutton.c:574
-msgid "Lock Tooltip"
-msgstr "Verktygstips för låsning"
-
-#: ../polkitgtk/polkitlockbutton.c:575
-msgid "The tooltip to display when prompting the user to lock."
-msgstr "Verktygstipset att visa när användaren tillfrågas att låsa."
-
-#: ../polkitgtk/polkitlockbutton.c:576
-msgid "To prevent further changes, click the lock."
-msgstr "Klicka på låset för att förhindra ytterligare ändringar."
-
-#: ../polkitgtk/polkitlockbutton.c:591
-msgid "Lock Down Text"
-msgstr "Nedlåsningstext"
-
-#: ../polkitgtk/polkitlockbutton.c:592
-msgid "The text to display when prompting the user to lock down the action for all users."
-msgstr "Texten att visa när användaren tillfrågas att låsa ned åtgärden för alla användare."
-
-#: ../polkitgtk/polkitlockbutton.c:593
-msgid "Click to lock down"
-msgstr "Klicka för att låsa ned"
-
-#: ../polkitgtk/polkitlockbutton.c:608
-msgid "Lock Down Tooltip"
-msgstr "Verktygstips för nedlåsning"
-
-#: ../polkitgtk/polkitlockbutton.c:609
-msgid "The tooltip to display when prompting the user to lock down the action for all users."
-msgstr "Verktygstipset att visa när användaren tillfrågas att låsa ned åtgärden för alla användare."
-
-#: ../polkitgtk/polkitlockbutton.c:610
-msgid "To prevent users without administrative privileges from making changes, click the lock."
-msgstr "Klicka på låset för att förhindra användare som inte har administrativ behörighet att göra ändringar."
-
-#: ../polkitgtk/polkitlockbutton.c:626
-msgid "The text to display when the user cannot obtain authorization through authentication."
-msgstr "Texten att visa när användaren inte kan erhålla behörighet genom autentisering."
-
-#: ../polkitgtk/polkitlockbutton.c:627
-msgid "Not authorized to make changes"
-msgstr "Inte behörig att göra ändringar"
-
-#: ../polkitgtk/polkitlockbutton.c:643
-msgid "The tooltip to display when the user cannot obtain authorization through authentication."
-msgstr "Verktygstipset att visa när användaren inte kan erhålla behörighet genom autentisering."
-
-#: ../polkitgtk/polkitlockbutton.c:644
-msgid "System policy prevents changes. Contact your system administator."
-msgstr "Systemets policy förhindrar ändringar. Kontakta din systemadministatör."
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -164,7 +42,7 @@ msgid "An application is attempting to perform an action that requires privilege
 msgstr "Ett program försöker genomföra en åtgärd som kräver privilegier. Autentisering som superanvändaren krävs för att genomföra denna åtgärd."
 
 #: ../src/polkitgnomeauthenticationdialog.c:625
-#: ../src/polkitgnomeauthenticator.c:301
+#: ../src/polkitgnomeauthenticator.c:300
 msgid "_Password:"
 msgstr "_Lösenord:"
 
@@ -195,19 +73,100 @@ msgstr "Klicka för att öppna %s"
 msgid "Authenticate"
 msgstr "Autentisera"
 
-#: ../src/polkitgnomeauthenticator.c:297
+#: ../src/polkitgnomeauthenticator.c:296
 #, c-format
 msgid "_Password for %s:"
 msgstr "_Lösenord för %s:"
 
-#: ../src/polkitgnomeauthenticator.c:457
+#: ../src/polkitgnomeauthenticator.c:456
 msgid "Authentication Failure"
 msgstr "Autentiseringsfel"
 
 #: ../src/polkitgnomelistener.c:164
-msgid "Authentation dialog was dismissed by the user"
+msgid "Authentication dialog was dismissed by the user"
 msgstr "Dialogrutan för autentisering stängdes av användaren"
 
+#~ msgid "Action Identifier"
+#~ msgstr "Åtgärdsidentifierare"
+#~ msgid "The action identifier to use for the button"
+#~ msgstr "Åtgärdsidentifierare att använda för knappen"
+#~ msgid "Is Authorized"
+#~ msgstr "Är behörig"
+#~ msgid "Whether the process is authorized"
+#~ msgstr "Huruvida processen är behörig"
+#~ msgid "Is Visible"
+#~ msgstr "Är synlig"
+#~ msgid "Whether the widget is visible"
+#~ msgstr "Huruvida widgeten är synlig"
+#~ msgid "Can Obtain"
+#~ msgstr "Kan erhålla"
+#~ msgid "Whether authorization can be obtained"
+#~ msgstr "Huruvida behörighet kan erhållas"
+#~ msgid "Unlock Text"
+#~ msgstr "Upplåsningstext"
+#~ msgid "The text to display when prompting the user to unlock."
+#~ msgstr "Texten att visa när användaren tillfrågas att låsa upp."
+#~ msgid "Click to make changes"
+#~ msgstr "Klicka för att göra ändringar"
+#~ msgid "Unlock Tooltip"
+#~ msgstr "Verktygstips för upplåsning"
+#~ msgid "The tooltip to display when prompting the user to unlock."
+#~ msgstr "Verktygstipset att visa när användaren tillfrågas att låsa upp."
+#~ msgid "Authentication is needed to make changes."
+#~ msgstr "Autentisering krävs för att göra ändringar."
+#~ msgid "Lock Text"
+#~ msgstr "Låsningstext"
+#~ msgid "The text to display when prompting the user to lock."
+#~ msgstr "Texten att visa när användaren tillfrågas att låsa."
+#~ msgid "Click to prevent changes"
+#~ msgstr "Klicka för att förhindra ändringar"
+#~ msgid "Lock Tooltip"
+#~ msgstr "Verktygstips för låsning"
+#~ msgid "The tooltip to display when prompting the user to lock."
+#~ msgstr "Verktygstipset att visa när användaren tillfrågas att låsa."
+#~ msgid "To prevent further changes, click the lock."
+#~ msgstr "Klicka på låset för att förhindra ytterligare ändringar."
+#~ msgid "Lock Down Text"
+#~ msgstr "Nedlåsningstext"
+#~ msgid ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+#~ msgstr ""
+#~ "Texten att visa när användaren tillfrågas att låsa ned åtgärden för alla "
+#~ "användare."
+#~ msgid "Click to lock down"
+#~ msgstr "Klicka för att låsa ned"
+#~ msgid "Lock Down Tooltip"
+#~ msgstr "Verktygstips för nedlåsning"
+#~ msgid ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+#~ msgstr ""
+#~ "Verktygstipset att visa när användaren tillfrågas att låsa ned åtgärden "
+#~ "för alla användare."
+#~ msgid ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+#~ msgstr ""
+#~ "Klicka på låset för att förhindra användare som inte har administrativ "
+#~ "behörighet att göra ändringar."
+#~ msgid ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Texten att visa när användaren inte kan erhålla behörighet genom "
+#~ "autentisering."
+#~ msgid "Not authorized to make changes"
+#~ msgstr "Inte behörig att göra ändringar"
+#~ msgid ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Verktygstipset att visa när användaren inte kan erhålla behörighet genom "
+#~ "autentisering."
+#~ msgid "System policy prevents changes. Contact your system administator."
+#~ msgstr ""
+#~ "Systemets policy förhindrar ändringar. Kontakta din systemadministatör."
 #~ msgid ""
 #~ "This button is locked down so only users with administrative privileges "
 #~ "can unlock it. Right-click the button to remove the lock down."
