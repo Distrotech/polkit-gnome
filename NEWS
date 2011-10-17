@@ -11,8 +11,14 @@ Build requirements
 
 Changes since 0.103:
 
+Andika Triwidada (1):
+      Added Indonesian translation
+
 Carles Ferrando (1):
       [l10n]Updated Catalan (Valencian) translation
+
+Daniel Nylander (1):
+      Updated Swedish translation
 
 David Zeuthen (1):
       Post-release version bump to 0.104
