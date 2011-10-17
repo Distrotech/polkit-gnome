@@ -11,12 +11,28 @@ Build requirements
 
 Changes since 0.103:
 
- TODO: git shortlog 0.103...
+Carles Ferrando (1):
+      [l10n]Updated Catalan (Valencian) translation
+
+David Zeuthen (1):
+      Post-release version bump to 0.104
+
+Gianvito Cavasoli (1):
+      l10n: Updated Italian translation
+
+Gil Forcada (1):
+      [l10n]Updated Catalan translation
+
+Inaki Larranaga Murgoitio (1):
+      Updated Basque language
+
+Olav Vitters (1):
+      add download link to doap file
 
 Thanks to our contributors.
 
-YOUR NAME,
-DATE
+Matthias Clasen,
+October 17, 2011
 
 ==========
 polkit-gnome 0.103
