@@ -24,6 +24,7 @@ polkit_gnome_authentication_agent_1_CPPFLAGS = 		\
 
 polkit_gnome_authentication_agent_1_CFLAGS = 		\
 	$(GTK_CFLAGS)					\
+	$(GLIB_CFLAGS)					\
 	$(GCONF_CFLAGS)					\
 	$(POLKIT_AGENT_CFLAGS)				\
 	$(POLKIT_GOBJECT_CFLAGS)			\
@@ -35,6 +36,7 @@ polkit_gnome_authentication_agent_1_LDFLAGS = 		\
 
 polkit_gnome_authentication_agent_1_LDADD = 		\
 	$(GTK_LIBS)					\
+	$(GLIB_LIBS)					\
 	$(GCONF_LIBS)					\
 	$(POLKIT_AGENT_LIBS)				\
 	$(POLKIT_GOBJECT_LIBS)				\
