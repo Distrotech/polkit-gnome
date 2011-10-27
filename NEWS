@@ -1,4 +1,52 @@
 ==========
+polkit-gnome 0.105
+==========
+
+This is polkit-gnome version 0.105.
+
+Build requirements
+
+ polkit    >= 0.96
+ gtk+-3.0  >= 3.0
+
+Changes since 0.104:
+
+Andika Triwidada (1):
+      Added Indonesian translation
+
+Daniel Nylander (1):
+      Updated Swedish translation
+
+David Zeuthen (1):
+      Update NEWS for release
+
+Javier Jardón (5):
+      build: Do not use GNOME_COMMON_INIT
+      configure.ac: Use maintainer mode by default
+      configure.ac: Do not use GNOME_MAINTAINER_MODE_DEFINES macro
+      configure.ac: Do not use deprecated macros
+      configure.ac: Use new libtool syntax
+
+Matthias Clasen (3):
+      Updates
+      Bump version to 0.105
+      Updates
+
+Michael Biebl (3):
+      Remove obsolete configure checks
+      Using the generic marshaller from GLib requires GLib >= 2.30
+      Fix typo in glib-2.0 configure check
+
+Seong-ho, Cho (1):
+      Added Korean translation
+
+
+Thanks to our contributors.
+
+David Zeuthen,
+October 27, 2011
+
+==========
 polkit-gnome 0.104
 ==========
 
