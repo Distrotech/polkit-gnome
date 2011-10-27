@@ -24,8 +24,10 @@ AC_SUBST(LT_AGE)
 # Check for programs
 AC_PROG_CC
 AC_HEADER_STDC
-AC_PROG_LIBTOOL
 
+# Initialize libtool
+LT_PREREQ([2.2.6])
+LT_INIT
 
 # *****
 # GNOME
