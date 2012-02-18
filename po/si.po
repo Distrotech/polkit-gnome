@@ -1,0 +1,102 @@
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Danishka Navin <danishka@gmail.com>, 2012.
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-01-17 00:54+0000\n"
+"PO-Revision-Date: 2012-02-18 18:06+0530\n"
+"Last-Translator: Danishka Navin <danishka@gmail.com>\n"
+"Language-Team: Sinhala <info@hanthana.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: si\n"
+"X-Generator: Lokalize 1.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "පරිශීලකයා තෝරන්න..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:537
+msgid "_Authenticate"
+msgstr "සත්‍යාපනය (_A)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:576
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"විශේෂ නිදහස අවශ්‍ය වන යෙදවුමක් ධාවනය වීමට සැරසෙයි. පහත පරිශීලකයන් ගෙන් "
+"කෙනෙකුගේ සහතික කිරීම "
+"අවශ්‍ය වේ."
+
+#: ../src/polkitgnomeauthenticationdialog.c:584
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"විශේෂ නිදහස අවශ්‍ය වන යෙදවුමක් ධාවනය වීමට සැරසෙයි. සහතික කිරීම අවශ්‍ය වේ."
+
+#: ../src/polkitgnomeauthenticationdialog.c:590
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"විශේෂ නිදහස අවශ්‍ය වන යෙදවුමක් ධාවනය වීමට සැරසෙයි. ප්‍රධාන පරිශීලකගේ සහතික "
+"කිරීම අවශ්‍ය වේ."
+
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:300
+msgid "_Password:"
+msgstr "මුරපදය (_P):"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>විස්තර (_D)</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>ක්‍රියා:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+#, c-format
+msgid "Click to edit %s"
+msgstr "%s වෙනස් කිරීමට ක්ලික් කරන්න "
+
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>වෙළඳ නියෝජිත:</b></small>"
+
+#: ../src/polkitgnomeauthenticationdialog.c:718
+#, c-format
+msgid "Click to open %s"
+msgstr "විවෘත කිරීම සඳහා ඔබන්න %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:881
+msgid "Authenticate"
+msgstr "සත්‍යාපනය"
+
+#: ../src/polkitgnomeauthenticator.c:296
+#, c-format
+msgid "_Password for %s:"
+msgstr "%s සඳහා මුරපදය (_P): "
+
+#: ../src/polkitgnomeauthenticator.c:456
+msgid "Authentication Failure"
+msgstr "සහතික කිරීම අසර්තකයි"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "සහතික කිරීම පරිශීලකයා විසින් මගහරින ලදී."
+
