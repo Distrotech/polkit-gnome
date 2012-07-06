@@ -521,6 +521,7 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   GtkWidget *action_area;
   gboolean have_user_combobox;
   gchar *s;
+  gchar *message;
   guint rows;
 
   dialog = POLKIT_GNOME_AUTHENTICATION_DIALOG (object);
@@ -640,7 +641,9 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   dialog->priv->info_label = label;
 
   /* Details */
-  details_expander = gtk_expander_new_with_mnemonic (_("<small><b>_Details</b></small>"));
+  message = g_strdup_printf("<small><b>%s</b></small>", _("_Details"));
+  details_expander = gtk_expander_new_with_mnemonic (message);
+  g_free (message);
   gtk_expander_set_use_markup (GTK_EXPANDER (details_expander), TRUE);
   gtk_box_pack_start (GTK_BOX (content_area), details_expander, FALSE, FALSE, 0);
 
@@ -696,7 +699,9 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   gtk_label_set_markup (GTK_LABEL (label), s);
   g_free (s);
   gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
-  add_row (table, rows++, _("<small><b>Action:</b></small>"), label);
+  message = g_strdup_printf ("<small><b>%s</b></small>", _("Action:"));
+  add_row (table, rows++, message, label);
+  g_free (message);
   g_signal_connect (label, "activate-link", G_CALLBACK (action_id_activated), NULL);
 
   s = g_strdup_printf (_("Click to edit %s"), dialog->priv->action_id);
@@ -713,7 +718,9 @@ polkit_gnome_authentication_dialog_constructed (GObject *object)
   gtk_label_set_markup (GTK_LABEL (label), s);
   g_free (s);
   gtk_misc_set_alignment (GTK_MISC (label), 0, 1.0);
-  add_row (table, rows++, _("<small><b>Vendor:</b></small>"), label);
+  message = g_strdup_printf ("<small><b>%s</b></small>", _("Vendor:"));
+  add_row (table, rows++, message, label);
+  g_free (message);
 
   s = g_strdup_printf (_("Click to open %s"), dialog->priv->vendor_url);
   gtk_widget_set_tooltip_markup (label, s);
