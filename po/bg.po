@@ -1,0 +1,102 @@
+# Bulgarian translation of PolicyKit-gnome po-file.
+# Copyright (C) 2012 Free Software Foundation, Inc.
+# This file is distributed under the same license as the PolicyKit-gnome package.
+# Alexander Shopov <ash@kambanaria.org>, 2012.
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PolicyKit-gnome master\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-07 11:31+0300\n"
+"PO-Revision-Date: 2012-07-07 11:31+0300\n"
+"Last-Translator: Alexander Shopov <ash@kambanaria.org>\n"
+"Language-Team: Bulgarian <dict@fsa-bg.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Избор на потребител…"
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:538
+msgid "_Authenticate"
+msgstr "_Идентификация"
+
+#: ../src/polkitgnomeauthenticationdialog.c:577
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Програма се опитва да извърши действие, което изисква повече права. "
+"Идентифицирайте се като някой от потребителите изброени отдолу, за да "
+"извършите действието."
+
+#: ../src/polkitgnomeauthenticationdialog.c:585
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Програма се опитва да извърши действие, което изисква повече права. "
+"Идентифицирайте се, за да извършите действието."
+
+#: ../src/polkitgnomeauthenticationdialog.c:591
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Програма се опитва да извърши действие, което изисква повече права. "
+"Идентифицирайте се като системен администратор, за да извършите действието."
+
+#: ../src/polkitgnomeauthenticationdialog.c:626
+#: ../src/polkitgnomeauthenticator.c:300
+msgid "_Password:"
+msgstr "_Парола:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:644
+msgid "_Details"
+msgstr "По_дробности:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+msgid "Action:"
+msgstr "Действие:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:707
+#, c-format
+msgid "Click to edit %s"
+msgstr "Натиснете, за да редактирате %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:721
+msgid "Vendor:"
+msgstr "Производител:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:725
+#, c-format
+msgid "Click to open %s"
+msgstr "Натиснете, за да отворите %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:888
+msgid "Authenticate"
+msgstr "Идентификация"
+
+#: ../src/polkitgnomeauthenticator.c:296
+#, c-format
+msgid "_Password for %s:"
+msgstr "_Парола за %s:"
+
+#: ../src/polkitgnomeauthenticator.c:456
+msgid "Authentication Failure"
+msgstr "Грешка при идентификацията"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "Потребителят затвори диалога за идентификация"
