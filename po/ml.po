@@ -204,12 +204,12 @@ msgstr "_അടയാളവാക്ക്:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_വിശദവിവരങ്ങള്‍</b></small>"
+msgid "_Details"
+msgstr "_വിശദവിവരങ്ങള്‍"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>പ്രവര്‍ത്തി:</b></small>"
+msgid "Action:"
+msgstr "പ്രവര്‍ത്തി:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -217,8 +217,8 @@ msgid "Click to edit %s"
 msgstr "%s ചിട്ടപ്പെടുത്തുന്നതിനായി ക്ലിക്ക് ചെയ്യുക"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>വില്‍പ്പനക്കാരന്‍:</b></small>"
+msgid "Vendor:"
+msgstr "വില്‍പ്പനക്കാരന്‍:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

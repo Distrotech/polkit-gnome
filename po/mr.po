@@ -197,12 +197,12 @@ msgstr "पासवर्ड (_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>तपशील (_D)</b></small>"
+msgid "_Details"
+msgstr "तपशील (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>कृती:</b></small>"
+msgid "Action:"
+msgstr "कृती:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -210,8 +210,8 @@ msgid "Click to edit %s"
 msgstr "%s संपादीत करण्यासाठी क्लिक करा"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>विक्रेता:</b></small>"
+msgid "Vendor:"
+msgstr "विक्रेता:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

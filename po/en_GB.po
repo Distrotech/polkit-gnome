@@ -64,12 +64,12 @@ msgstr "_Password:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Details</b></small>"
+msgid "_Details"
+msgstr "_Details"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Action:</b></small>"
+msgid "Action:"
+msgstr "Action:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -77,8 +77,8 @@ msgid "Click to edit %s"
 msgstr "Click to edit %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Vendor:</b></small>"
+msgid "Vendor:"
+msgstr "Vendor:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

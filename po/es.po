@@ -210,12 +210,12 @@ msgstr "Contrase_ña:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detalles</b></small>"
+msgid "_Details"
+msgstr "_Detalles"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Acción:</b></small>"
+msgid "Action:"
+msgstr "Acción:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -223,8 +223,8 @@ msgid "Click to edit %s"
 msgstr "Pulse para editar %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Proveedor:</b></small>"
+msgid "Vendor:"
+msgstr "Proveedor:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

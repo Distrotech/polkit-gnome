@@ -61,12 +61,12 @@ msgstr "암호(_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>상세(_D)</b></small>"
+msgid "_Details"
+msgstr "상세(_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>동작:</b></small>"
+msgid "Action:"
+msgstr "동작:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -74,8 +74,8 @@ msgid "Click to edit %s"
 msgstr "%s을(를) 편집하려면 누릅니다"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>공급자:</b></small>"
+msgid "Vendor:"
+msgstr "공급자:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

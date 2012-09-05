@@ -210,12 +210,12 @@ msgstr "_كلمة السر:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>ال_تفاصيل</b></small>"
+msgid "_Details"
+msgstr "ال_تفاصيل"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>الإجراء:</b></small>"
+msgid "Action:"
+msgstr "الإجراء:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -223,8 +223,8 @@ msgid "Click to edit %s"
 msgstr "انقر لتحرير %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>المُنتِج:</b></small>"
+msgid "Vendor:"
+msgstr "المُنتِج:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

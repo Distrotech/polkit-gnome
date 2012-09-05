@@ -67,12 +67,12 @@ msgstr "_Συνθηματικό:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Λεπτομέρειες</b></small>"
+msgid "_Details"
+msgstr "_Λεπτομέρειες"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Ενέργεια:</b></small>"
+msgid "Action:"
+msgstr "Ενέργεια:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -80,8 +80,8 @@ msgid "Click to edit %s"
 msgstr "Κάντε κλικ για να επεξεργαστείτε το %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Προμηθευτής:</b></small>"
+msgid "Vendor:"
+msgstr "Προμηθευτής:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

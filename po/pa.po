@@ -66,12 +66,12 @@ msgstr "_ਪਾਸਵਰਡ:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_ਵੇਰਵਾ</b></small>"
+msgid "_Details"
+msgstr "_ਵੇਰਵਾ"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>ਐਕਸ਼ਨ:</b></small>"
+msgid "Action:"
+msgstr "ਐਕਸ਼ਨ:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -79,8 +79,8 @@ msgid "Click to edit %s"
 msgstr "%s ਸੋਧਣ ਲਈ ਕਲਿੱਕ ਕਰੋ"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>ਵੇਂਡਰ:</b></small>"
+msgid "Vendor:"
+msgstr "ਵੇਂਡਰ:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

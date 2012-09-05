@@ -47,12 +47,12 @@ msgstr "_Sandi:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Rincian</b></small>"
+msgid "_Details"
+msgstr "_Rincian"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Aksi:</b></small>"
+msgid "Action:"
+msgstr "Aksi:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -60,8 +60,8 @@ msgid "Click to edit %s"
 msgstr "Klik untuk menyunting %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Vendor:</b></small>"
+msgid "Vendor:"
+msgstr "Vendor:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

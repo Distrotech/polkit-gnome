@@ -175,12 +175,12 @@ msgstr "_Geslo:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Podrobnosti</b></small>"
+msgid "_Details"
+msgstr "_Podrobnosti"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Dejanje:</b></small>"
+msgid "Action:"
+msgstr "Dejanje:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -188,8 +188,8 @@ msgid "Click to edit %s"
 msgstr "Kliknite za urejanje %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Ponudnik:</b></small>"
+msgid "Vendor:"
+msgstr "Ponudnik:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

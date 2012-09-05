@@ -186,12 +186,12 @@ msgstr "密码(_P)："
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>详情(_D)</b></small>"
+msgid "_Details"
+msgstr "详情(_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>动作：</b></small>"
+msgid "Action:"
+msgstr "动作："
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -199,8 +199,8 @@ msgid "Click to edit %s"
 msgstr "单击以编辑 %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>提供者：</b></small>"
+msgid "Vendor:"
+msgstr "提供者："
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

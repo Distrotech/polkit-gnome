@@ -207,12 +207,12 @@ msgstr "_Senha:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detalhes</b></small>"
+msgid "_Details"
+msgstr "_Detalhes"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Acção:</b></small>"
+msgid "Action:"
+msgstr "Acção:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -220,8 +220,8 @@ msgid "Click to edit %s"
 msgstr "Clique para editar %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Fornecedor:</b></small>"
+msgid "Vendor:"
+msgstr "Fornecedor:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

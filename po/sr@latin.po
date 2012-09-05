@@ -62,12 +62,12 @@ msgstr "_Lozinka:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detalji</b></small>"
+msgid "_Details"
+msgstr "_Detalji"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Radnja:</b></small>"
+msgid "Action:"
+msgstr "Radnja:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -75,8 +75,8 @@ msgid "Click to edit %s"
 msgstr "Kliknite da uredite %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Prodavac:</b></small>"
+msgid "Vendor:"
+msgstr "Prodavac:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

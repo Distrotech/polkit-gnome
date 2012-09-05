@@ -63,12 +63,12 @@ msgstr "パスワード(_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>詳細(_D)</b></small>"
+msgid "_Details"
+msgstr "詳細(_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>アクション:</b></small>"
+msgid "Action:"
+msgstr "アクション:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -76,8 +76,8 @@ msgid "Click to edit %s"
 msgstr "ここをクリックして %s を編集してください"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>ベンダー:</b></small>"
+msgid "Vendor:"
+msgstr "ベンダー:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

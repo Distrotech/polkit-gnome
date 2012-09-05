@@ -203,12 +203,12 @@ msgstr "পাসওয়ার্ড: (_P)"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>বিবরণ (_D)</b></small>"
+msgid "_Details"
+msgstr "বিবরণ (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>কর্ম:</b></small>"
+msgid "Action:"
+msgstr "কর্ম:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -216,8 +216,8 @@ msgid "Click to edit %s"
 msgstr "%s সম্পাদনার জন্য ক্লিক করুন"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>বিক্রেতা:</b></small>"
+msgid "Vendor:"
+msgstr "বিক্রেতা:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

@@ -65,12 +65,12 @@ msgstr "_Пароль:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>Д_эталі</b></small>"
+msgid "_Details"
+msgstr "Д_эталі"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Дзеяньне:</b></small>"
+msgid "Action:"
+msgstr "Дзеяньне:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -78,8 +78,8 @@ msgid "Click to edit %s"
 msgstr "Пстрыкніце, каб рэдагаваць %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Вытворца:</b></small>"
+msgid "Vendor:"
+msgstr "Вытворца:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

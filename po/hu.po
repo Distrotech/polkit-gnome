@@ -66,12 +66,12 @@ msgstr "Jel_szó:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Részletek</b></small>"
+msgid "_Details"
+msgstr "_Részletek"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Művelet:</b></small>"
+msgid "Action:"
+msgstr "Művelet:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -79,8 +79,8 @@ msgid "Click to edit %s"
 msgstr "Kattintson %s művelet jogosultságbeállításainak módosításához"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Gyártó:</b></small>"
+msgid "Vendor:"
+msgstr "Gyártó:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

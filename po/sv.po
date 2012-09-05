@@ -48,12 +48,12 @@ msgstr "_Lösenord:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detaljer</b></small>"
+msgid "_Details"
+msgstr "_Detaljer"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Åtgärd:</b></small>"
+msgid "Action:"
+msgstr "Åtgärd:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -61,8 +61,8 @@ msgid "Click to edit %s"
 msgstr "Klicka för att redigera %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Leverantör:</b></small>"
+msgid "Vendor:"
+msgstr "Leverantör:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

@@ -185,12 +185,12 @@ msgstr "_Pasvorto:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detaloj</b></small>"
+msgid "_Details"
+msgstr "_Detaloj"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Ago:</b></small>"
+msgid "Action:"
+msgstr "Ago:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -198,8 +198,8 @@ msgid "Click to edit %s"
 msgstr "Klaki por redakti %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Vendisto:</b></small>"
+msgid "Vendor:"
+msgstr "Vendisto:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

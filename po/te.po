@@ -65,12 +65,12 @@ msgstr "సంకేతపదము (_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>వివరములు (_D)</b></small>"
+msgid "_Details"
+msgstr "వివరములు (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>చర్య:</b></small>"
+msgid "Action:"
+msgstr "చర్య:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -78,8 +78,8 @@ msgid "Click to edit %s"
 msgstr "%s సరికూర్చుటకు నొక్కుము"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>అమ్మకందారు:</b></small>"
+msgid "Vendor:"
+msgstr "అమ్మకందారు:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

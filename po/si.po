@@ -62,12 +62,12 @@ msgstr "මුරපදය (_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>විස්තර (_D)</b></small>"
+msgid "_Details"
+msgstr "විස්තර (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>ක්‍රියා:</b></small>"
+msgid "Action:"
+msgstr "ක්‍රියා:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -75,8 +75,8 @@ msgid "Click to edit %s"
 msgstr "%s වෙනස් කිරීමට ක්ලික් කරන්න "
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>වෙළඳ නියෝජිත:</b></small>"
+msgid "Vendor:"
+msgstr "වෙළඳ නියෝජිත:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

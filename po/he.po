@@ -50,12 +50,12 @@ msgstr "_ססמה:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_פרטים</b></small>"
+msgid "_Details"
+msgstr "_פרטים"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>פעולה:</b></small>"
+msgid "Action:"
+msgstr "פעולה:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -63,8 +63,8 @@ msgid "Click to edit %s"
 msgstr "יש ללחוץ לעריכת %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>ספק:</b></small>"
+msgid "Vendor:"
+msgstr "ספק:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

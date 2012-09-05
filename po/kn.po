@@ -68,12 +68,12 @@ msgstr "ಗುಪ್ತಪದ(_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>ವಿವರಗಳು(_D)</b></small>"
+msgid "_Details"
+msgstr "ವಿವರಗಳು(_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>ಕ್ರಿಯೆ:</b></small>"
+msgid "Action:"
+msgstr "ಕ್ರಿಯೆ:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -81,8 +81,8 @@ msgid "Click to edit %s"
 msgstr "%s ಅನ್ನು ಸಂಪಾದಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>ಮಾರಾಟಗಾರ:</b></small>"
+msgid "Vendor:"
+msgstr "ಮಾರಾಟಗಾರ:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

@@ -202,12 +202,12 @@ msgstr "_รหัสผ่าน:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:636
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_รายละเอียด</b></small>"
+msgid "_Details"
+msgstr "_รายละเอียด"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>การกระทำ:</b></small>"
+msgid "Action:"
+msgstr "การกระทำ:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:692
 #, c-format
@@ -215,8 +215,8 @@ msgid "Click to edit %s"
 msgstr "คลิกเพื่อแก้ไข %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:706
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>ผู้จำหน่าย:</b></small>"
+msgid "Vendor:"
+msgstr "ผู้จำหน่าย:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:708
 #, c-format

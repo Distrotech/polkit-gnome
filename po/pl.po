@@ -69,12 +69,12 @@ msgstr "_Hasło:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>S_zczegóły</b></small>"
+msgid "_Details"
+msgstr "S_zczegóły"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Działanie:</b></small>"
+msgid "Action:"
+msgstr "Działanie:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -82,8 +82,8 @@ msgid "Click to edit %s"
 msgstr "Kliknięcie otworzy %s do modyfikacji"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Dostawca:</b></small>"
+msgid "Vendor:"
+msgstr "Dostawca:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

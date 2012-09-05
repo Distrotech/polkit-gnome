@@ -67,12 +67,12 @@ msgstr "পাছৱাৰ্ড (_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>বিৱৰণসমূহ (_D)</b></small>"
+msgid "_Details"
+msgstr "বিৱৰণসমূহ (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>কাৰ্য্য:</b></small>"
+msgid "Action:"
+msgstr "কাৰ্য্য:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -80,8 +80,8 @@ msgid "Click to edit %s"
 msgstr "%s সম্পাদন কৰিবলে ক্লিক কৰক"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>বিক্ৰেতা:</b></small>"
+msgid "Vendor:"
+msgstr "বিক্ৰেতা:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

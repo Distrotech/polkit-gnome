@@ -216,12 +216,12 @@ msgstr "கடவுச்சொல் (_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>விவரங்கள் (_D)</b></small>"
+msgid "_Details"
+msgstr "விவரங்கள் (_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>செயல்:</b></small>"
+msgid "Action:"
+msgstr "செயல்:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:689
 #, c-format
@@ -229,8 +229,8 @@ msgid "Click to edit %s"
 msgstr "%sஐ திருத்த கிளிக் செய்"
 
 #: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>விற்பனையாளர்:</b></small>"
+msgid "Vendor:"
+msgstr "விற்பனையாளர்:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:705
 #, c-format

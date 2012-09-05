@@ -67,12 +67,12 @@ msgstr "_Parola:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Detalii</b></small>"
+msgid "_Details"
+msgstr "_Detalii"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Acțiune:</b></small>"
+msgid "Action:"
+msgstr "Acțiune:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -80,8 +80,8 @@ msgid "Click to edit %s"
 msgstr "Clic pentru a edita %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Producător:</b></small>"
+msgid "Vendor:"
+msgstr "Producător:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

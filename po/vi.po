@@ -64,12 +64,12 @@ msgstr "_Mật khẩu:"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Chi tiết</b></small>"
+msgid "_Details"
+msgstr "_Chi tiết"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Hành động:</b></small>"
+msgid "Action:"
+msgstr "Hành động:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -77,8 +77,8 @@ msgid "Click to edit %s"
 msgstr "Nhấn để sửa %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Nhà cung cấp:</b></small>"
+msgid "Vendor:"
+msgstr "Nhà cung cấp:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format

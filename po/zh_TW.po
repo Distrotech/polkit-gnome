@@ -188,12 +188,12 @@ msgstr "密碼(_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:638
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>詳細資料(_D)</b></small>"
+msgid "_Details"
+msgstr "詳細資料(_D)"
 
 #: ../src/polkitgnomeauthenticationdialog.c:691
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>動作:</b></small>"
+msgid "Action:"
+msgstr "動作:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:694
 #, c-format
@@ -201,8 +201,8 @@ msgid "Click to edit %s"
 msgstr "按下這裡編輯 %s"
 
 #: ../src/polkitgnomeauthenticationdialog.c:708
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>廠商:</b></small>"
+msgid "Vendor:"
+msgstr "廠商:"
 
 #: ../src/polkitgnomeauthenticationdialog.c:710
 #, c-format
