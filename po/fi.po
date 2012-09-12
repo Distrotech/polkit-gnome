@@ -3,186 +3,22 @@
 # This file is distributed under the same license as the PolicyKit-gnome package.
 # Timo Jyrinki <timo.jyrinki@iki.fi>
 # Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>, 2009.
+# Jiri Grönroos <jiri.gronroos@iki.fi>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: policykit-gnome\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product"
-"=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2009-09-12 20:13+0000\n"
-"PO-Revision-Date: 2009-09-15 14:17+0300\n"
-"Last-Translator: Ville-Pekka Vainio <vpivaini@cs.helsinki.fi>\n"
-"Language-Team: Finnish <laatu@lokalisointi.org>\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
+"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2012-07-07 08:37+0000\n"
+"PO-Revision-Date: 2012-09-06 10:34+0300\n"
+"Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
+"Language-Team: Finnish <>\n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: ../polkitgtk/polkitlockbutton.c:460
-msgid "Action Identifier"
-msgstr "Toiminnon tunniste"
-
-#: ../polkitgtk/polkitlockbutton.c:461
-msgid "The action identifier to use for the button"
-msgstr "Painikkeelle käytettävä toiminnon tunniste"
-
-#: ../polkitgtk/polkitlockbutton.c:477
-msgid "Is Authorized"
-msgstr "On valtuutus"
-
-#: ../polkitgtk/polkitlockbutton.c:478
-msgid "Whether the process is authorized"
-msgstr "Onko prosessilla valtuutus"
-
-#: ../polkitgtk/polkitlockbutton.c:493
-msgid "Is Visible"
-msgstr "On näkyvissä"
-
-#: ../polkitgtk/polkitlockbutton.c:494
-msgid "Whether the widget is visible"
-msgstr "Onko elementti näkyvissä"
-
-#: ../polkitgtk/polkitlockbutton.c:509
-msgid "Can Obtain"
-msgstr "Voi hankkia"
-
-#: ../polkitgtk/polkitlockbutton.c:510
-msgid "Whether authorization can be obtained"
-msgstr "Voiko valtuutuksen hankkia"
-
-#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
-msgid "Unlock Text"
-msgstr "Avausteksti"
-
-#: ../polkitgtk/polkitlockbutton.c:526
-msgid "The text to display when prompting the user to unlock."
-msgstr "Lukituksen avaamista pyydettäessä näytettävä teksti."
-
-#: ../polkitgtk/polkitlockbutton.c:527
-msgid "Click to make changes"
-msgstr "Tee muutoksia napsauttamalla"
-
-#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
-#| msgid "Unlock Text"
-msgid "Unlock Tooltip"
-msgstr "Avauksen työkaluvihje"
-
-#: ../polkitgtk/polkitlockbutton.c:543
-#| msgid "The text to display when prompting the user to unlock."
-msgid "The tooltip to display when prompting the user to unlock."
-msgstr "Lukituksen avaamista pyydettäessä näytettävä työkaluvihje."
-
-#: ../polkitgtk/polkitlockbutton.c:544
-#| msgid "Not authorized to make changes"
-msgid "Authentication is needed to make changes."
-msgstr "Muutoksien tekeminen vaatii todennuksen."
-
-#: ../polkitgtk/polkitlockbutton.c:559
-msgid "Lock Text"
-msgstr "Lukitusteksti"
-
-#: ../polkitgtk/polkitlockbutton.c:560
-msgid "The text to display when prompting the user to lock."
-msgstr "Lukitusta pyydettäessä näytettävä teksti."
-
-#: ../polkitgtk/polkitlockbutton.c:561
-msgid "Click to prevent changes"
-msgstr "Estä muutokset napsauttamalla"
-
-#: ../polkitgtk/polkitlockbutton.c:576
-#| msgid "Lock Text"
-msgid "Lock Tooltip"
-msgstr "Lukituksen työkaluvihje"
-
-#: ../polkitgtk/polkitlockbutton.c:577
-#| msgid "The text to display when prompting the user to lock."
-msgid "The tooltip to display when prompting the user to lock."
-msgstr "Lukitusta pyydettäessä näytettävä työkaluvihje."
-
-#: ../polkitgtk/polkitlockbutton.c:578
-msgid "To prevent further changes, click the lock."
-msgstr "Estä muutokset napsauttamalla lukkoa."
-
-#: ../polkitgtk/polkitlockbutton.c:593
-#| msgid "Lock Text"
-msgid "Lock Down Text"
-msgstr "Lukitusteksti"
-
-#: ../polkitgtk/polkitlockbutton.c:594
-#| msgid "The text to display when prompting the user to lock."
-msgid ""
-"The text to display when prompting the user to lock down the action for all "
-"users."
-msgstr ""
-"Näytettävä teksti, kun pyydetään lukitsemaan toiminto kaikilta käyttäjiltä."
-
-#: ../polkitgtk/polkitlockbutton.c:595
-#| msgid "Click to open %s"
-msgid "Click to lock down"
-msgstr "Lukitse napsauttamalla"
-
-#: ../polkitgtk/polkitlockbutton.c:610
-msgid "Lock Down Tooltip"
-msgstr "Lukituksen työkaluvihje"
-
-#: ../polkitgtk/polkitlockbutton.c:611
-#| msgid "The text to display when prompting the user to lock."
-msgid ""
-"The tooltip to display when prompting the user to lock down the action for "
-"all users."
-msgstr ""
-"Näytettävä työkaluvihje, kun pyydetään lukitsemaan toiminto kaikilta "
-"käyttäjiltä."
-
-#: ../polkitgtk/polkitlockbutton.c:612
-msgid ""
-"To prevent users without administrative privileges from making changes, "
-"click the lock."
-msgstr ""
-"Napsauta lukkoa estääksesi ilman ylläpito-oikeuksia olevia käyttäjiä "
-"tekemästä muutoksia."
-
-#: ../polkitgtk/polkitlockbutton.c:628
-msgid ""
-"The text to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"Teksti joka näytetään, kun käyttäjä ei voi hankkia valtuutusta "
-"tunnistautumalla."
-
-#: ../polkitgtk/polkitlockbutton.c:629
-msgid "Not authorized to make changes"
-msgstr "Ei valtuutusta tehdä muutoksia"
-
-#: ../polkitgtk/polkitlockbutton.c:645
-#| msgid ""
-#| "The text to display when the user cannot obtain authorization through "
-#| "authentication."
-msgid ""
-"The tooltip to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"Työkaluvihje joka näytetään, kun käyttäjä ei voi hankkia valtuutusta "
-"tunnistautumalla."
-
-#: ../polkitgtk/polkitlockbutton.c:646
-msgid "System policy prevents changes. Contact your system administator."
-msgstr ""
-"Järjestelmän käytäntö estää muutosten tekemisen. Ota yhteyttä ylläpitäjään."
-
-#. Translators: this string is appended to the tooltip if the action is
-#. * currently locked down
-#: ../polkitgtk/polkitlockbutton.c:767
-msgid ""
-"This button is locked down so only users with administrative privileges can "
-"unlock it. Right-click the button to remove the lock down."
-msgstr ""
-"Tämä painike on lukittu, vain käyttäjät, joilla on ylläpito-oikeudet voivat "
-"avata lukituksen. Poista lukitus napsauttamalla painiketta hiiren "
-"oikeanpuoleisella napilla."
-
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "Napsauta kuvaketta kaikkien korotettujen oikeuksien hylkäämiseksi"
+"X-Generator: Lokalize 1.5\n"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -193,11 +29,11 @@ msgstr "Valitse käyttäjä..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:529
+#: ../src/polkitgnomeauthenticationdialog.c:537
 msgid "_Authenticate"
 msgstr "_Tunnistaudu"
 
-#: ../src/polkitgnomeauthenticationdialog.c:566
+#: ../src/polkitgnomeauthenticationdialog.c:576
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -205,7 +41,7 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista jonakuna alla olevista käyttäjistä."
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:584
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -213,7 +49,7 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista."
 
-#: ../src/polkitgnomeauthenticationdialog.c:580
+#: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -221,50 +57,189 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista pääkäyttäjänä."
 
-#: ../src/polkitgnomeauthenticationdialog.c:615
-#: ../src/polkitgnomeauthenticator.c:289
+#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticator.c:300
 msgid "_Password:"
 msgstr "_Salasana:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:633
-msgid "_Details"
-msgstr "_Tiedot"
+#: ../src/polkitgnomeauthenticationdialog.c:643
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>_Tiedot</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:686
-msgid "Action:"
-msgstr "Toiminto:"
+#: ../src/polkitgnomeauthenticationdialog.c:699
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>Toiminto:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:689
+#: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
 msgid "Click to edit %s"
 msgstr "Muokkaa kohdetta %s napsauttamalla"
 
-#: ../src/polkitgnomeauthenticationdialog.c:703
-msgid "Vendor:"
-msgstr "Valmistaja:"
+#: ../src/polkitgnomeauthenticationdialog.c:716
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>Valmistaja:</b></small>"
 
-#: ../src/polkitgnomeauthenticationdialog.c:705
+#: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
 msgid "Click to open %s"
 msgstr "Avaa %s napsauttamalla"
 
-#: ../src/polkitgnomeauthenticationdialog.c:868
+#: ../src/polkitgnomeauthenticationdialog.c:881
 msgid "Authenticate"
 msgstr "Tunnistaudu"
 
-#: ../src/polkitgnomeauthenticator.c:285
+#: ../src/polkitgnomeauthenticator.c:296
 #, c-format
 msgid "_Password for %s:"
 msgstr "Käyttäjän %s _salasana:"
 
-#: ../src/polkitgnomeauthenticator.c:445
+#: ../src/polkitgnomeauthenticator.c:456
 msgid "Authentication Failure"
 msgstr "Tunnistus epäonnistui"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "PolicytKit-tunnistautumisohjelma"
+#: ../src/polkitgnomelistener.c:164
+#| msgid "Whether the authentication dialog should grab the keyboard"
+msgid "Authentication dialog was dismissed by the user"
+msgstr "Tunnistautumisikkuna ohitettiin käyttäjän toimesta"
+
+#~ msgid "Action Identifier"
+#~ msgstr "Toiminnon tunniste"
+
+#~ msgid "The action identifier to use for the button"
+#~ msgstr "Painikkeelle käytettävä toiminnon tunniste"
+
+#~ msgid "Is Authorized"
+#~ msgstr "On valtuutus"
+
+#~ msgid "Whether the process is authorized"
+#~ msgstr "Onko prosessilla valtuutus"
+
+#~ msgid "Is Visible"
+#~ msgstr "On näkyvissä"
+
+#~ msgid "Whether the widget is visible"
+#~ msgstr "Onko elementti näkyvissä"
+
+#~ msgid "Can Obtain"
+#~ msgstr "Voi hankkia"
+
+#~ msgid "Whether authorization can be obtained"
+#~ msgstr "Voiko valtuutuksen hankkia"
+
+#~ msgid "Unlock Text"
+#~ msgstr "Avausteksti"
+
+#~ msgid "The text to display when prompting the user to unlock."
+#~ msgstr "Lukituksen avaamista pyydettäessä näytettävä teksti."
+
+#~ msgid "Click to make changes"
+#~ msgstr "Tee muutoksia napsauttamalla"
+
+#~| msgid "Unlock Text"
+#~ msgid "Unlock Tooltip"
+#~ msgstr "Avauksen työkaluvihje"
+
+#~| msgid "The text to display when prompting the user to unlock."
+#~ msgid "The tooltip to display when prompting the user to unlock."
+#~ msgstr "Lukituksen avaamista pyydettäessä näytettävä työkaluvihje."
+
+#~| msgid "Not authorized to make changes"
+#~ msgid "Authentication is needed to make changes."
+#~ msgstr "Muutoksien tekeminen vaatii todennuksen."
+
+#~ msgid "Lock Text"
+#~ msgstr "Lukitusteksti"
+
+#~ msgid "The text to display when prompting the user to lock."
+#~ msgstr "Lukitusta pyydettäessä näytettävä teksti."
+
+#~ msgid "Click to prevent changes"
+#~ msgstr "Estä muutokset napsauttamalla"
+
+#~| msgid "Lock Text"
+#~ msgid "Lock Tooltip"
+#~ msgstr "Lukituksen työkaluvihje"
+
+#~| msgid "The text to display when prompting the user to lock."
+#~ msgid "The tooltip to display when prompting the user to lock."
+#~ msgstr "Lukitusta pyydettäessä näytettävä työkaluvihje."
+
+#~ msgid "To prevent further changes, click the lock."
+#~ msgstr "Estä muutokset napsauttamalla lukkoa."
+
+#~| msgid "Lock Text"
+#~ msgid "Lock Down Text"
+#~ msgstr "Lukitusteksti"
+
+#~| msgid "The text to display when prompting the user to lock."
+#~ msgid ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+#~ msgstr ""
+#~ "Näytettävä teksti, kun pyydetään lukitsemaan toiminto kaikilta "
+#~ "käyttäjiltä."
+
+#~| msgid "Click to open %s"
+#~ msgid "Click to lock down"
+#~ msgstr "Lukitse napsauttamalla"
+
+#~ msgid "Lock Down Tooltip"
+#~ msgstr "Lukituksen työkaluvihje"
+
+#~| msgid "The text to display when prompting the user to lock."
+#~ msgid ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+#~ msgstr ""
+#~ "Näytettävä työkaluvihje, kun pyydetään lukitsemaan toiminto kaikilta "
+#~ "käyttäjiltä."
+
+#~ msgid ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+#~ msgstr ""
+#~ "Napsauta lukkoa estääksesi ilman ylläpito-oikeuksia olevia käyttäjiä "
+#~ "tekemästä muutoksia."
+
+#~ msgid ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Teksti joka näytetään, kun käyttäjä ei voi hankkia valtuutusta "
+#~ "tunnistautumalla."
+
+#~ msgid "Not authorized to make changes"
+#~ msgstr "Ei valtuutusta tehdä muutoksia"
+
+#~| msgid ""
+#~| "The text to display when the user cannot obtain authorization through "
+#~| "authentication."
+#~ msgid ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "Työkaluvihje joka näytetään, kun käyttäjä ei voi hankkia valtuutusta "
+#~ "tunnistautumalla."
+
+#~ msgid "System policy prevents changes. Contact your system administator."
+#~ msgstr ""
+#~ "Järjestelmän käytäntö estää muutosten tekemisen. Ota yhteyttä "
+#~ "ylläpitäjään."
+
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "Tämä painike on lukittu, vain käyttäjät, joilla on ylläpito-oikeudet "
+#~ "voivat avata lukituksen. Poista lukitus napsauttamalla painiketta hiiren "
+#~ "oikeanpuoleisella napilla."
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Napsauta kuvaketta kaikkien korotettujen oikeuksien hylkäämiseksi"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "PolicytKit-tunnistautumisohjelma"
 
 #~ msgid "Authorizations"
 #~ msgstr "Valtuutukset"
@@ -315,9 +290,6 @@ msgstr "PolicytKit-tunnistautumisohjelma"
 #~ "on valittu oletuksena todennusikkunassa, paitsi jos toiminto on "
 #~ "luetteloitu ”/desktop/gnome/policykit/"
 #~ "auth_dialog_retain_authorization_blacklist”-avaimessa."
-
-#~ msgid "Whether the authentication dialog should grab the keyboard"
-#~ msgstr "Kaappaako todennusikkuna näppäimistösyötteen"
 
 #~ msgid "Whether the retain authorization check box is checked by default"
 #~ msgstr "Onko säilytä todennus -valintaruutu valittu oletuksena"
