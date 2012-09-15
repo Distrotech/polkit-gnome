@@ -9,10 +9,10 @@ msgstr ""
 "Project-Id-Version: policykit-gnome\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=policykit-gnome&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-07 08:37+0000\n"
-"PO-Revision-Date: 2012-09-06 10:34+0300\n"
+"POT-Creation-Date: 2012-09-12 15:51+0000\n"
+"PO-Revision-Date: 2012-09-13 22:26+0300\n"
 "Last-Translator: Jiri Grönroos <jiri.gronroos@iki.fi>\n"
-"Language-Team: Finnish <>\n"
+"Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -29,11 +29,11 @@ msgstr "Valitse käyttäjä..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:537
+#: ../src/polkitgnomeauthenticationdialog.c:538
 msgid "_Authenticate"
 msgstr "_Tunnistaudu"
 
-#: ../src/polkitgnomeauthenticationdialog.c:576
+#: ../src/polkitgnomeauthenticationdialog.c:577
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -41,7 +41,7 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista jonakuna alla olevista käyttäjistä."
 
-#: ../src/polkitgnomeauthenticationdialog.c:584
+#: ../src/polkitgnomeauthenticationdialog.c:585
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -49,7 +49,7 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista."
 
-#: ../src/polkitgnomeauthenticationdialog.c:590
+#: ../src/polkitgnomeauthenticationdialog.c:591
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -57,35 +57,37 @@ msgstr ""
 "Sovellus yrittää suorittaa etuoikeuksia vaativan toiminnon. Sen "
 "suorittaminen vaatii tunnistautumista pääkäyttäjänä."
 
-#: ../src/polkitgnomeauthenticationdialog.c:625
+#: ../src/polkitgnomeauthenticationdialog.c:626
 #: ../src/polkitgnomeauthenticator.c:300
 msgid "_Password:"
 msgstr "_Salasana:"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "<small><b>_Details</b></small>"
-msgstr "<small><b>_Tiedot</b></small>"
-
-#: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "<small><b>Action:</b></small>"
-msgstr "<small><b>Toiminto:</b></small>"
+#: ../src/polkitgnomeauthenticationdialog.c:644
+msgid "_Details"
+msgstr "_Tiedot"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
+#| msgid "_Actions"
+msgid "Action:"
+msgstr "Toiminto:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:707
 #, c-format
 msgid "Click to edit %s"
 msgstr "Muokkaa kohdetta %s napsauttamalla"
 
-#: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "<small><b>Vendor:</b></small>"
-msgstr "<small><b>Valmistaja:</b></small>"
+#: ../src/polkitgnomeauthenticationdialog.c:721
+#| msgid "<i>Vendor:</i>"
+msgid "Vendor:"
+msgstr "Toimittaja:"
 
-#: ../src/polkitgnomeauthenticationdialog.c:718
+#: ../src/polkitgnomeauthenticationdialog.c:725
 #, c-format
 msgid "Click to open %s"
 msgstr "Avaa %s napsauttamalla"
 
-#: ../src/polkitgnomeauthenticationdialog.c:881
+#: ../src/polkitgnomeauthenticationdialog.c:888
 msgid "Authenticate"
 msgstr "Tunnistaudu"
 
@@ -99,9 +101,17 @@ msgid "Authentication Failure"
 msgstr "Tunnistus epäonnistui"
 
 #: ../src/polkitgnomelistener.c:164
-#| msgid "Whether the authentication dialog should grab the keyboard"
 msgid "Authentication dialog was dismissed by the user"
 msgstr "Tunnistautumisikkuna ohitettiin käyttäjän toimesta"
+
+#~ msgid "<small><b>_Details</b></small>"
+#~ msgstr "<small><b>_Tiedot</b></small>"
+
+#~ msgid "<small><b>Action:</b></small>"
+#~ msgstr "<small><b>Toiminto:</b></small>"
+
+#~ msgid "<small><b>Vendor:</b></small>"
+#~ msgstr "<small><b>Valmistaja:</b></small>"
 
 #~ msgid "Action Identifier"
 #~ msgstr "Toiminnon tunniste"
@@ -308,9 +318,6 @@ msgstr "Tunnistautumisikkuna ohitettiin käyttäjän toimesta"
 
 #~ msgid "_File"
 #~ msgstr "_Tiedosto"
-
-#~ msgid "_Actions"
-#~ msgstr "T_oiminnot"
 
 #~ msgid "_Help"
 #~ msgstr "O_hje"
@@ -737,9 +744,6 @@ msgstr "Tunnistautumisikkuna ohitettiin käyttäjän toimesta"
 
 #~ msgid "<i>Description:</i>"
 #~ msgstr "<i>Kuvaus:</i>"
-
-#~ msgid "<i>Vendor:</i>"
-#~ msgstr "<i>Toimittaja:</i>"
 
 #~ msgid "<b>Implicit Authorizations</b>"
 #~ msgstr "<b>Epäsuorat valtuutukset</b>"
