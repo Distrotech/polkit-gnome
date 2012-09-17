@@ -10,8 +10,8 @@ msgstr ""
 "Project-Id-Version: policykit-gnome HEAD\n"
 "Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
 "product=policykit-gnome&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-09-05 20:57+0000\n"
-"PO-Revision-Date: 2012-09-10 11:24+0200\n"
+"POT-Creation-Date: 2012-09-10 09:25+0000\n"
+"PO-Revision-Date: 2012-09-17 10:55+0200\n"
 "Last-Translator: Claude Paroz <claude@2xlibre.net>\n"
 "Language-Team: GNOME French Team <gnomefr@traduc.org>\n"
 "Language: \n"
@@ -100,136 +100,5 @@ msgstr "Échec d'authentification"
 
 #: ../src/polkitgnomelistener.c:164
 msgid "Authentication dialog was dismissed by the user"
-msgstr "L'utilisateur a fermé la boite de dialogue d'authentification"
+msgstr "L'utilisateur a fermé la boîte de dialogue d'authentification"
 
-#~ msgid "Action Identifier"
-#~ msgstr "Identificateur d'action"
-
-#~ msgid "The action identifier to use for the button"
-#~ msgstr "L'identificateur d'action à utiliser pour le bouton"
-
-#~ msgid "Is Authorized"
-#~ msgstr "Est autorisé"
-
-#~ msgid "Whether the process is authorized"
-#~ msgstr "Indique si le processus est autorisé"
-
-#~ msgid "Is Visible"
-#~ msgstr "Est visible"
-
-#~ msgid "Whether the widget is visible"
-#~ msgstr "Indique si le composant graphique est visible"
-
-#~ msgid "Can Obtain"
-#~ msgstr "Peut obtenir"
-
-#~ msgid "Whether authorization can be obtained"
-#~ msgstr "Indique si l'autorisation peut être obtenue"
-
-#~ msgid "Unlock Text"
-#~ msgstr "Texte de déverrouillage"
-
-#~ msgid "The text to display when prompting the user to unlock."
-#~ msgstr ""
-#~ "Le texte à afficher à l'utilisateur lors de la demande de déverrouillage."
-
-#~ msgid "Click to make changes"
-#~ msgstr "Cliquez pour effectuer des modifications"
-
-#~ msgid "Unlock Tooltip"
-#~ msgstr "Infobulle de déverrouillage"
-
-#~ msgid "The tooltip to display when prompting the user to unlock."
-#~ msgstr ""
-#~ "L'infobulle à afficher à l'utilisateur lors de la demande de "
-#~ "déverrouillage."
-
-#~ msgid "Authentication is needed to make changes."
-#~ msgstr "Une authentification est nécessaire avant toute modification."
-
-#~ msgid "Lock Text"
-#~ msgstr "Texte de verrouillage"
-
-#~ msgid "The text to display when prompting the user to lock."
-#~ msgstr ""
-#~ "Le texte à afficher à l'utilisateur lors de la demande de verrouillage."
-
-#~ msgid "Click to prevent changes"
-#~ msgstr "Cliquez pour empêcher des modifications"
-
-#~ msgid "Lock Tooltip"
-#~ msgstr "Infobulle de verrouillage"
-
-#~ msgid "The tooltip to display when prompting the user to lock."
-#~ msgstr ""
-#~ "L'infobullee à afficher à l'utilisateur lors de la demande de "
-#~ "verrouillage."
-
-#~ msgid "To prevent further changes, click the lock."
-#~ msgstr "Pour empêcher d'autres modifications, cliquez sur le verrou."
-
-#~ msgid "Lock Down Text"
-#~ msgstr "Texte de verrouillage"
-
-#~ msgid ""
-#~ "The text to display when prompting the user to lock down the action for "
-#~ "all users."
-#~ msgstr ""
-#~ "Le texte à afficher à l'utilisateur lors de la demande de verrouillage de "
-#~ "l'action pour tous les utilisateurs."
-
-#~ msgid "Click to lock down"
-#~ msgstr "Cliquez pour verrouiller"
-
-#~ msgid "Lock Down Tooltip"
-#~ msgstr "Infobulle de verrouillage"
-
-#~ msgid ""
-#~ "The tooltip to display when prompting the user to lock down the action "
-#~ "for all users."
-#~ msgstr ""
-#~ "L'infobulle à afficher à l'utilisateur lors de la demande de verrouillage "
-#~ "de l'action pour tous les utilisateurs."
-
-#~ msgid ""
-#~ "To prevent users without administrative privileges from making changes, "
-#~ "click the lock."
-#~ msgstr ""
-#~ "Pour empêcher toute modification par des utilisateurs sans droits "
-#~ "d'administration, cliquez sur le verrou."
-
-#~ msgid ""
-#~ "The text to display when the user cannot obtain authorization through "
-#~ "authentication."
-#~ msgstr ""
-#~ "Le texte à afficher lorsque l'utilisateur ne peut pas obtenir "
-#~ "l'autorisation en s'authentifiant."
-
-#~ msgid "Not authorized to make changes"
-#~ msgstr "Les modifications ne sont pas autorisées"
-
-#~ msgid ""
-#~ "The tooltip to display when the user cannot obtain authorization through "
-#~ "authentication."
-#~ msgstr ""
-#~ "L'infobulle à afficher lorsque l'utilisateur ne peut pas obtenir "
-#~ "l'autorisation en s'authentifiant."
-
-#~ msgid "System policy prevents changes. Contact your system administator."
-#~ msgstr ""
-#~ "Une politique système empêche les modifications. Contactez votre "
-#~ "administrateur système."
-
-#~ msgid ""
-#~ "This button is locked down so only users with administrative privileges "
-#~ "can unlock it. Right-click the button to remove the lock down."
-#~ msgstr ""
-#~ "Ce bouton est verrouillé de manière à ce que seuls des utilisateurs ayant "
-#~ "des privilèges d'administration puissent le déverrouiller. Cliquez avec "
-#~ "le bouton droit pour enlever le verrou."
-
-#~ msgid "Click the icon to drop all elevated privileges"
-#~ msgstr "Cliquez sur l'icône pour abandonner tous les privilèges obtenus"
-
-#~ msgid "PolicyKit Authentication Agent"
-#~ msgstr "Agent d'authentification de PolicyKit"
