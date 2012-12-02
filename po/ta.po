@@ -2,175 +2,21 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # I. Felix <ifelix@redhat.com>, 2010.
+# Dr.T.Vasudevan <drtvasudevan@gmail.com>, 2012.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug."
-"cgi?product=policykit-gnome&component=general\n"
-"POT-Creation-Date: 2010-01-15 19:26+0000\n"
-"PO-Revision-Date: 2010-01-29 13:39+0530\n"
-"Last-Translator: I. Felix <ifelix@redhat.com>\n"
-"Language-Team: ta_IN <kde-i18n-doc@kde.org>\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-12-02 19:37+0530\n"
+"PO-Revision-Date: 2012-12-02 19:38+0530\n"
+"Last-Translator: Dr.T.Vasudevan <drtvasudevan@gmail.com>\n"
+"Language-Team: Tamil <gnome-tamil-translation@googlegroups.com>\n"
+"Language: ta\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
+"X-Generator: Lokalize 1.5\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-
-#: ../polkitgtk/polkitlockbutton.c:460
-msgid "Action Identifier"
-msgstr "செயல் அடையாளங்காட்டி"
-
-#: ../polkitgtk/polkitlockbutton.c:461
-msgid "The action identifier to use for the button"
-msgstr "செயல்பாட்டு அடையாளங்காட்டியை இந்த பொத்தனுக்காக பயன்படுத்து"
-
-#: ../polkitgtk/polkitlockbutton.c:477
-msgid "Is Authorized"
-msgstr "அங்கீகரிக்கப்பட்டது"
-
-#: ../polkitgtk/polkitlockbutton.c:478
-msgid "Whether the process is authorized"
-msgstr "இந்த செயல்பாடானது அங்கீகரிக்கப்படுமானால்"
-
-#: ../polkitgtk/polkitlockbutton.c:493
-msgid "Is Visible"
-msgstr "பார்க்ககூடியது"
-
-#: ../polkitgtk/polkitlockbutton.c:494
-msgid "Whether the widget is visible"
-msgstr "இந்த விட்ஜெட் பார்க்ககூடியதாக இருக்குமானால்"
-
-#: ../polkitgtk/polkitlockbutton.c:509
-msgid "Can Obtain"
-msgstr "செய்ய முடியும்"
-
-#: ../polkitgtk/polkitlockbutton.c:510
-msgid "Whether authorization can be obtained"
-msgstr "Whether authorization can be obtained"
-
-#: ../polkitgtk/polkitlockbutton.c:525 ../polkitgtk/polkitlockbutton.c:627
-msgid "Unlock Text"
-msgstr "பூட்டப்படாத உரை"
-
-#: ../polkitgtk/polkitlockbutton.c:526
-msgid "The text to display when prompting the user to unlock."
-msgstr "The text to display when prompting the user to unlock."
-
-#: ../polkitgtk/polkitlockbutton.c:527
-msgid "Click to make changes"
-msgstr "மாற்றங்களை செய்ய கிளிக் செய்"
-
-#: ../polkitgtk/polkitlockbutton.c:542 ../polkitgtk/polkitlockbutton.c:644
-msgid "Unlock Tooltip"
-msgstr "பூட்டப்படாத கருவிதுணுக்கு"
-
-#: ../polkitgtk/polkitlockbutton.c:543
-msgid "The tooltip to display when prompting the user to unlock."
-msgstr "The tooltip to display when prompting the user to unlock."
-
-#: ../polkitgtk/polkitlockbutton.c:544
-msgid "Authentication is needed to make changes."
-msgstr "அங்கீகாரம் மாற்றங்கள் செய்ய வேண்டும்."
-
-#: ../polkitgtk/polkitlockbutton.c:559
-msgid "Lock Text"
-msgstr "பூட்டப்பட்ட உரை"
-
-#: ../polkitgtk/polkitlockbutton.c:560
-msgid "The text to display when prompting the user to lock."
-msgstr "The text to display when prompting the user to lock."
-
-#: ../polkitgtk/polkitlockbutton.c:561
-msgid "Click to prevent changes"
-msgstr "மாற்றங்களைத் தடுக்க கிளிக் செய்"
-
-#: ../polkitgtk/polkitlockbutton.c:576
-msgid "Lock Tooltip"
-msgstr "பூட்டப்பட்ட கருவித்துணுக்கு"
-
-#: ../polkitgtk/polkitlockbutton.c:577
-msgid "The tooltip to display when prompting the user to lock."
-msgstr "The tooltip to display when prompting the user to lock."
-
-#: ../polkitgtk/polkitlockbutton.c:578
-msgid "To prevent further changes, click the lock."
-msgstr "மற்ற மாற்றங்களை தடுப்பதற்கு, பூட்டை கிளிக் செய்"
-
-#: ../polkitgtk/polkitlockbutton.c:593
-msgid "Lock Down Text"
-msgstr "கீழ் உரையை பூட்டு"
-
-#: ../polkitgtk/polkitlockbutton.c:594
-msgid ""
-"The text to display when prompting the user to lock down the action for all "
-"users."
-msgstr ""
-"The text to display when prompting the user to lock down the action for all "
-"users."
-
-#: ../polkitgtk/polkitlockbutton.c:595
-msgid "Click to lock down"
-msgstr "கீழே பூட்டுவதற்கு கிளிக் செய்"
-
-#: ../polkitgtk/polkitlockbutton.c:610
-msgid "Lock Down Tooltip"
-msgstr "கீழ் கருவித்துணுக்கை பூட்டு"
-
-#: ../polkitgtk/polkitlockbutton.c:611
-msgid ""
-"The tooltip to display when prompting the user to lock down the action for "
-"all users."
-msgstr ""
-"The tooltip to display when prompting the user to lock down the action for "
-"all users."
-
-#: ../polkitgtk/polkitlockbutton.c:612
-msgid ""
-"To prevent users without administrative privileges from making changes, "
-"click the lock."
-msgstr ""
-"To prevent users without administrative privileges from making changes, "
-"click the lock."
-
-#: ../polkitgtk/polkitlockbutton.c:628
-msgid ""
-"The text to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"The text to display when the user cannot obtain authorization through "
-"authentication."
-
-#: ../polkitgtk/polkitlockbutton.c:629
-msgid "Not authorized to make changes"
-msgstr "மாற்றங்களைச் செய்ய அங்கீகாரமில்லை"
-
-#: ../polkitgtk/polkitlockbutton.c:645
-msgid ""
-"The tooltip to display when the user cannot obtain authorization through "
-"authentication."
-msgstr ""
-"The tooltip to display when the user cannot obtain authorization through "
-"authentication."
-
-#: ../polkitgtk/polkitlockbutton.c:646
-msgid "System policy prevents changes. Contact your system administator."
-msgstr ""
-"கணினி பாலிசி மாற்றங்களை தடுக்கிறது. உங்கள் கணினி நிர்வாகியைத் தொடர்பு கொள்."
-
-#. Translators: this string is appended to the tooltip if the action is
-#. * currently locked down
-#: ../polkitgtk/polkitlockbutton.c:767
-msgid ""
-"This button is locked down so only users with administrative privileges can "
-"unlock it. Right-click the button to remove the lock down."
-msgstr ""
-"This button is locked down so only users with administrative privileges can "
-"unlock it. Right-click the button to remove the lock down."
-
-#: ../src/main.c:128
-msgid "Click the icon to drop all elevated privileges"
-msgstr "Click the icon to drop all elevated privileges"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -181,11 +27,11 @@ msgstr "பயனரைத் தேர்ந்தெடு..."
 msgid "%s (%s)"
 msgstr "%s (%s)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:529
+#: ../src/polkitgnomeauthenticationdialog.c:538
 msgid "_Authenticate"
 msgstr "அங்கீகாரம் (_A)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:566
+#: ../src/polkitgnomeauthenticationdialog.c:577
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
@@ -193,7 +39,7 @@ msgstr ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as one of the users below is required to perform this action."
 
-#: ../src/polkitgnomeauthenticationdialog.c:574
+#: ../src/polkitgnomeauthenticationdialog.c:585
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
@@ -201,7 +47,7 @@ msgstr ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication is required to perform this action."
 
-#: ../src/polkitgnomeauthenticationdialog.c:580
+#: ../src/polkitgnomeauthenticationdialog.c:591
 msgid ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
@@ -209,49 +55,170 @@ msgstr ""
 "An application is attempting to perform an action that requires privileges. "
 "Authentication as the super user is required to perform this action."
 
-#: ../src/polkitgnomeauthenticationdialog.c:615
-#: ../src/polkitgnomeauthenticator.c:289
+#: ../src/polkitgnomeauthenticationdialog.c:626
+#: ../src/polkitgnomeauthenticator.c:300
 msgid "_Password:"
 msgstr "கடவுச்சொல் (_P):"
 
 #. Details
-#: ../src/polkitgnomeauthenticationdialog.c:633
+#: ../src/polkitgnomeauthenticationdialog.c:644
 msgid "_Details"
 msgstr "விவரங்கள் (_D)"
 
-#: ../src/polkitgnomeauthenticationdialog.c:686
+#: ../src/polkitgnomeauthenticationdialog.c:702
 msgid "Action:"
 msgstr "செயல்:"
 
-#: ../src/polkitgnomeauthenticationdialog.c:689
+#: ../src/polkitgnomeauthenticationdialog.c:707
 #, c-format
 msgid "Click to edit %s"
 msgstr "%sஐ திருத்த கிளிக் செய்"
 
-#: ../src/polkitgnomeauthenticationdialog.c:703
+#: ../src/polkitgnomeauthenticationdialog.c:721
 msgid "Vendor:"
 msgstr "விற்பனையாளர்:"
 
-#: ../src/polkitgnomeauthenticationdialog.c:705
+#: ../src/polkitgnomeauthenticationdialog.c:725
 #, c-format
 msgid "Click to open %s"
 msgstr "%sஐ திறப்பதற்கு கிளிக் செய்"
 
-#: ../src/polkitgnomeauthenticationdialog.c:868
+#: ../src/polkitgnomeauthenticationdialog.c:888
 msgid "Authenticate"
 msgstr "அங்கீகாரம்"
 
-#: ../src/polkitgnomeauthenticator.c:285
+#: ../src/polkitgnomeauthenticator.c:296
 #, c-format
 msgid "_Password for %s:"
 msgstr "%sக்கான கடவுச்சொல் (_P):"
 
-#: ../src/polkitgnomeauthenticator.c:445
+#: ../src/polkitgnomeauthenticator.c:456
 msgid "Authentication Failure"
 msgstr "அங்கீகரிக்க முடியவில்லை"
 
-#: ../src/polkit-gnome-authentication-agent-1.desktop.in.in.h:1
-msgid "PolicyKit Authentication Agent"
-msgstr "PolicyKit அங்கீகார முகவர்"
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "பயனர் உறுதிப்படுத்தல் உரையாடலை விலக்கிவிட்டார்."
 
+#~ msgid "Action Identifier"
+#~ msgstr "செயல் அடையாளங்காட்டி"
 
+#~ msgid "The action identifier to use for the button"
+#~ msgstr "செயல்பாட்டு அடையாளங்காட்டியை இந்த பொத்தனுக்காக பயன்படுத்து"
+
+#~ msgid "Is Authorized"
+#~ msgstr "அங்கீகரிக்கப்பட்டது"
+
+#~ msgid "Whether the process is authorized"
+#~ msgstr "இந்த செயல்பாடானது அங்கீகரிக்கப்படுமானால்"
+
+#~ msgid "Is Visible"
+#~ msgstr "பார்க்ககூடியது"
+
+#~ msgid "Whether the widget is visible"
+#~ msgstr "இந்த விட்ஜெட் பார்க்ககூடியதாக இருக்குமானால்"
+
+#~ msgid "Can Obtain"
+#~ msgstr "செய்ய முடியும்"
+
+#~ msgid "Whether authorization can be obtained"
+#~ msgstr "Whether authorization can be obtained"
+
+#~ msgid "Unlock Text"
+#~ msgstr "பூட்டப்படாத உரை"
+
+#~ msgid "The text to display when prompting the user to unlock."
+#~ msgstr "The text to display when prompting the user to unlock."
+
+#~ msgid "Click to make changes"
+#~ msgstr "மாற்றங்களை செய்ய கிளிக் செய்"
+
+#~ msgid "Unlock Tooltip"
+#~ msgstr "பூட்டப்படாத கருவிதுணுக்கு"
+
+#~ msgid "The tooltip to display when prompting the user to unlock."
+#~ msgstr "The tooltip to display when prompting the user to unlock."
+
+#~ msgid "Authentication is needed to make changes."
+#~ msgstr "அங்கீகாரம் மாற்றங்கள் செய்ய வேண்டும்."
+
+#~ msgid "Lock Text"
+#~ msgstr "பூட்டப்பட்ட உரை"
+
+#~ msgid "The text to display when prompting the user to lock."
+#~ msgstr "The text to display when prompting the user to lock."
+
+#~ msgid "Click to prevent changes"
+#~ msgstr "மாற்றங்களைத் தடுக்க கிளிக் செய்"
+
+#~ msgid "Lock Tooltip"
+#~ msgstr "பூட்டப்பட்ட கருவித்துணுக்கு"
+
+#~ msgid "The tooltip to display when prompting the user to lock."
+#~ msgstr "The tooltip to display when prompting the user to lock."
+
+#~ msgid "To prevent further changes, click the lock."
+#~ msgstr "மற்ற மாற்றங்களை தடுப்பதற்கு, பூட்டை கிளிக் செய்"
+
+#~ msgid "Lock Down Text"
+#~ msgstr "கீழ் உரையை பூட்டு"
+
+#~ msgid ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+#~ msgstr ""
+#~ "The text to display when prompting the user to lock down the action for "
+#~ "all users."
+
+#~ msgid "Click to lock down"
+#~ msgstr "கீழே பூட்டுவதற்கு கிளிக் செய்"
+
+#~ msgid "Lock Down Tooltip"
+#~ msgstr "கீழ் கருவித்துணுக்கை பூட்டு"
+
+#~ msgid ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+#~ msgstr ""
+#~ "The tooltip to display when prompting the user to lock down the action "
+#~ "for all users."
+
+#~ msgid ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+#~ msgstr ""
+#~ "To prevent users without administrative privileges from making changes, "
+#~ "click the lock."
+
+#~ msgid ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "The text to display when the user cannot obtain authorization through "
+#~ "authentication."
+
+#~ msgid "Not authorized to make changes"
+#~ msgstr "மாற்றங்களைச் செய்ய அங்கீகாரமில்லை"
+
+#~ msgid ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+#~ msgstr ""
+#~ "The tooltip to display when the user cannot obtain authorization through "
+#~ "authentication."
+
+#~ msgid "System policy prevents changes. Contact your system administator."
+#~ msgstr "கணினி பாலிசி மாற்றங்களை தடுக்கிறது. உங்கள் கணினி நிர்வாகியைத் தொடர்பு கொள்."
+
+#~ msgid ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+#~ msgstr ""
+#~ "This button is locked down so only users with administrative privileges "
+#~ "can unlock it. Right-click the button to remove the lock down."
+
+#~ msgid "Click the icon to drop all elevated privileges"
+#~ msgstr "Click the icon to drop all elevated privileges"
+
+#~ msgid "PolicyKit Authentication Agent"
+#~ msgstr "PolicyKit அங்கீகார முகவர்"
