@@ -65,7 +65,7 @@ example_LDADD = 					\
 	$(POLKIT_GOBJECT_LIBS)				\
 	$(GTK_LIBS)					\
 	$(INTLLIBS)					\
-	libpolkit-gtk-1.la				\
+	-L./.libs -lpolkit-gtk-1			\
 	$(NULL)
 
 if ENABLE_INTROSPECTION

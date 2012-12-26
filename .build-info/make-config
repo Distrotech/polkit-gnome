@@ -1,0 +1,6 @@
+#!/bin/bash
+
+unset CC
+make ${MAKE_J} V=1 || make V=1 || exit 1
+make DESTDIR=${3} install
+
