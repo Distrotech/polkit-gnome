@@ -1,6 +1,8 @@
 #!/bin/bash
 
-unset CC
-make ${MAKE_J} V=1 || make V=1 || exit 1
-make DESTDIR=${3} install
+export CC=/usr/bin/${4}-gcc
+echo ${CC}
 
+make ${MAKE_J} V=1 CC=${CC} INTROSPECTION_SCANNER=/build/${5}/usr/bin/g-ir-scanner || \
+  make V=1 CC=${CC} INTROSPECTION_SCANNER=/build/${5}/usr/bin/g-ir-scanner || exit 1
+make DESTDIR=${3} install
