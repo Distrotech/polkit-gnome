@@ -1,0 +1,102 @@
+# Gaelic; Scottish translation for policykit-1-gnome
+# Copyright (c) 2013 Rosetta Contributors and Canonical Ltd 2013
+# This file is distributed under the same license as the policykit-1-gnome package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2013.
+# alasdair caimbeul <alexd@garrit.freeserve.co.uk>, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: policykit-1-gnome\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2013-01-19 01:17+0000\n"
+"PO-Revision-Date: 2013-09-17 14:44+0100\n"
+"Last-Translator: GunChleoc <fios@foramnagaidhlig.net>\n"
+"Language-Team: Sgioba na Ubuntu na Gàidhlig\n"
+"Language: gd\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2013-09-15 06:24+0000\n"
+"X-Generator: Launchpad (build 16761)\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Tagh cleachdaiche..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:538
+msgid "_Authenticate"
+msgstr "_Dearbhaich"
+
+#: ../src/polkitgnomeauthenticationdialog.c:577
+msgid "An application is attempting to perform an action that requires privileges. Authentication as one of the users below is required to perform this action."
+msgstr "Tha prògram a' feuchainn ri gnìomh a dhèanamh air a bheil pribhleidean a dhìth. Feumaidh tu d' aithne a dhearbhadh mar aon dhe na cleachdaichean gu h-ìosal gus an gnìomh seo a dhèanamh."
+
+#: ../src/polkitgnomeauthenticationdialog.c:585
+msgid "An application is attempting to perform an action that requires privileges. Authentication is required to perform this action."
+msgstr "Tha prògram a' feuchainn ri gnìomh a dhèanamh air a bheil pribhleidean a dhìth. Feumaidh tu d' aithne a dhearbhadh gus an gnìomh seo a dhèanamh."
+
+#: ../src/polkitgnomeauthenticationdialog.c:591
+msgid "An application is attempting to perform an action that requires privileges. Authentication as the super user is required to perform this action."
+msgstr "Tha prògram a' feuchainn ri gnìomh a dhèanamh air a bheil pribhleidean a dhìth. Feumaidh tu d' aithne a dhearbhadh mar a' super user gus an gnìomh seo a dhèanamh."
+
+#: ../src/polkitgnomeauthenticationdialog.c:626
+#: ../src/polkitgnomeauthenticator.c:300
+msgid "_Password:"
+msgstr "_Facal-faire:"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:644
+msgid "_Details"
+msgstr "_Mion-fhiosrachadh"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+msgid "Action:"
+msgstr "Gnìomh:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:707
+#, c-format
+msgid "Click to edit %s"
+msgstr "Briog gus %s a dheasachadh"
+
+#: ../src/polkitgnomeauthenticationdialog.c:721
+msgid "Vendor:"
+msgstr "Reiceadair:"
+
+#: ../src/polkitgnomeauthenticationdialog.c:725
+#, c-format
+msgid "Click to open %s"
+msgstr "Briog gus %s fhosgladh"
+
+#: ../src/polkitgnomeauthenticationdialog.c:888
+msgid "Authenticate"
+msgstr "Dearbhaich"
+
+#: ../src/polkitgnomeauthenticator.c:296
+#, c-format
+msgid "_Password for %s:"
+msgstr "am _facal-faire airson %s:"
+
+#: ../src/polkitgnomeauthenticator.c:456
+msgid "Authentication Failure"
+msgstr "Dh'fhàillig leis an dearbhadh"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "Chaidh còmhradh an dearbhaidh a leigeil seachad leis a' chleachdaiche."
+
+#~ msgid "<small><b>_Details</b></small>"
+#~ msgstr "<small><b>Mion-fhiosracha_dh</b></small>"
+
+#~ msgid "<small><b>Action:</b></small>"
+#~ msgstr "<small><b>Gnìomh:</b></small>"
+
+#~ msgid "<small><b>Vendor:</b></small>"
+#~ msgstr "<small><b>Reiceadair:</b></small>"
+
+#~ msgid "Your authentication attempt was unsuccessful. Please try again."
+#~ msgstr "Dh'fhàillig leis an dearbhadh agad. Am feuch thu ris a-rithist?"
