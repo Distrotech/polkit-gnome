@@ -1,24 +1,23 @@
 # Kannada translation for PolicyKit-gnome.
 # Copyright (C) 2010 PolicyKit-gnome's COPYRIGHT HOLDER
 # This file is distributed under the same license as the PolicyKit-gnome package.
-#
+# 
 # Shankar Prasad <svenkate@redhat.com>, 2010.
-# Shankar Prasad <svenkate@redhat.co,>, 2012.
+# Shankar Prasad <svenkate@redhat.com>, 2010, 2013.
 msgid ""
 msgstr ""
-"Project-Id-Version: PolicyKit-gnome master\n"
-"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?"
-"product=policykit-gnome&keywords=I18N+L10N&component=general\n"
-"POT-Creation-Date: 2012-07-07 08:37+0000\n"
-"PO-Revision-Date: 2012-08-09 17:49+0530\n"
-"Last-Translator: Shankar Prasad <svenkate@redhat.co,>\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-06 14:46+0530\n"
+"PO-Revision-Date: 2013-10-28 02:13-0400\n"
+"Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <kde-i18n-doc@kde.org>\n"
-"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.2\n"
+"Language: kn\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Zanata 3.2.3\n"
 
 #: ../src/polkitgnomeauthenticationdialog.c:159
 msgid "Select user..."
@@ -39,8 +38,7 @@ msgid ""
 "Authentication as one of the users below is required to perform this action."
 msgstr ""
 "ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. "
-"ಈ "
-"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಈ ಕೆಳಗಿನ ಬಳಕೆದಾರರಲ್ಲಿ ಒಬ್ಬರಾಗಿ ದೃಢೀಕರಿಸುವ "
+"ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಈ ಕೆಳಗಿನ ಬಳಕೆದಾರರಲ್ಲಿ ಒಬ್ಬರಾಗಿ ದೃಢೀಕರಿಸುವ "
 "ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:584
@@ -49,8 +47,7 @@ msgid ""
 "Authentication is required to perform this action."
 msgstr ""
 "ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. "
-"ಈ "
-"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ದೃಢೀಕರಣದ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:590
 msgid ""
@@ -58,8 +55,7 @@ msgid ""
 "Authentication as the super user is required to perform this action."
 msgstr ""
 "ಒಂದು ಅನ್ವಯವು ಅಧಿಕಾರದ ಅಗತ್ಯವಿರುವ ಒಂದು ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಪ್ರಯತ್ನಿಸುತ್ತಿದೆ. "
-"ಈ "
-"ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಸೂಪರ್ ಯೂಸರ್ ಆಗಿ ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
+"ಈ ಕಾರ್ಯವನ್ನು ನಿರ್ವಹಿಸಲು ಸೂಪರ್ ಯೂಸರ್ ಆಗಿ ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
 
 #: ../src/polkitgnomeauthenticationdialog.c:625
 #: ../src/polkitgnomeauthenticator.c:300
@@ -68,12 +64,12 @@ msgstr "ಗುಪ್ತಪದ(_P):"
 
 #. Details
 #: ../src/polkitgnomeauthenticationdialog.c:643
-msgid "_Details"
-msgstr "ವಿವರಗಳು(_D)"
+msgid "<small><b>_Details</b></small>"
+msgstr "<small><b>ವಿವರಗಳು(_D)</b></small>"
 
 #: ../src/polkitgnomeauthenticationdialog.c:699
-msgid "Action:"
-msgstr "ಕ್ರಿಯೆ:"
+msgid "<small><b>Action:</b></small>"
+msgstr "<small><b>ಕ್ರಿಯೆ:</b></small>"
 
 #: ../src/polkitgnomeauthenticationdialog.c:702
 #, c-format
@@ -81,8 +77,8 @@ msgid "Click to edit %s"
 msgstr "%s ಅನ್ನು ಸಂಪಾದಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
 
 #: ../src/polkitgnomeauthenticationdialog.c:716
-msgid "Vendor:"
-msgstr "ಮಾರಾಟಗಾರ:"
+msgid "<small><b>Vendor:</b></small>"
+msgstr "<small><b>ಮಾರಾಟಗಾರ:</b></small>"
 
 #: ../src/polkitgnomeauthenticationdialog.c:718
 #, c-format
@@ -105,129 +101,3 @@ msgstr "ಧೃಡೀಕರಣ ವಿಫಲ"
 #: ../src/polkitgnomelistener.c:164
 msgid "Authentication dialog was dismissed by the user"
 msgstr "ದೃಢೀಕರಣ ಸಂವಾದ ಚೌಕವನ್ನು ಬಳಕೆದಾರರಿಂದ ವಜಾಮಾಡಲಾಗಿದೆ"
-
-#~ msgid "Action Identifier"
-#~ msgstr "ಕ್ರಿಯೆಯ ಪತ್ತೆಗಾರ"
-
-#~ msgid "The action identifier to use for the button"
-#~ msgstr "ಗುಂಡಿಯಲ್ಲಿ ಬಳಸಬೇಕಿರುವ ಕ್ರಿಯೆಯ ಪತ್ತೆಗಾರ"
-
-#~ msgid "Is Authorized"
-#~ msgstr "ಇವರಿಗೆ ಅಧಿಕಾರವನ್ನು ನೀಡಲಾಗಿದೆ"
-
-#~ msgid "Whether the process is authorized"
-#~ msgstr "ಪ್ರಕ್ರಿಯೆಗೆ ಅಧಿಕಾರವನ್ನು ನೀಡಲಾಗಿದೆಯೆ"
-
-#~ msgid "Is Visible"
-#~ msgstr "ಇದು ಗೋಚರಿಸುತ್ತಿದೆ"
-
-#~ msgid "Whether the widget is visible"
-#~ msgstr "ವಿಡ್ಗೆಟ್‌ ಗೋಚರಿಸುತ್ತಿದೆಯೆ"
-
-#~ msgid "Can Obtain"
-#~ msgstr "ಹೊಂದಬಹುದು"
-
-#~ msgid "Whether authorization can be obtained"
-#~ msgstr "ಅಧಿಕಾರವನ್ನು ಹೊಂದಬಹುದೆ"
-
-#~ msgid "Unlock Text"
-#~ msgstr "ಪಠ್ಯವನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡು"
-
-#~ msgid "The text to display when prompting the user to unlock."
-#~ msgstr "ಅನ್‌ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ ಪಠ್ಯ."
-
-#~ msgid "Click to make changes"
-#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
-
-#~ msgid "Unlock Tooltip"
-#~ msgstr "ಉಪಕರಣಸಲಹೆಯನ್ನು ಅನ್‌ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid "The tooltip to display when prompting the user to unlock."
-#~ msgstr "ಅನ್‌ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ ಉಪಕರಣಸಲಹೆ."
-
-#~ msgid "Authentication is needed to make changes."
-#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡಲು ದೃಢೀಕರಿಸುವ ಅಗತ್ಯವಿರುತ್ತದೆ."
-
-#~ msgid "Lock Text"
-#~ msgstr "ಪಠ್ಯವನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid "The text to display when prompting the user to lock."
-#~ msgstr "ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ ಪಠ್ಯ."
-
-#~ msgid "Click to prevent changes"
-#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ತಡೆಗಟ್ಟಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
-
-#~ msgid "Lock Tooltip"
-#~ msgstr "ಉಪಕರಣಸಲಹೆಯನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid "The tooltip to display when prompting the user to lock."
-#~ msgstr "ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ ತೋರಿಸಬೇಕಿರುವ ಉಪಕರಣಸಲಹೆ."
-
-#~ msgid "To prevent further changes, click the lock."
-#~ msgstr "ಇನ್ನಷ್ಟು ಬದಲಾವಣೆಗಳು ಆಗದಂತೆ ತಡೆಗಟ್ಟಲು, ಲಾಕ್ ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
-
-#~ msgid "Lock Down Text"
-#~ msgstr "ಪಠ್ಯವನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid ""
-#~ "The text to display when prompting the user to lock down the action for "
-#~ "all users."
-#~ msgstr ""
-#~ "ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ "
-#~ "ತೋರಿಸಬೇಕಿರುವ ಪಠ್ಯ."
-
-#~ msgid "Click to lock down"
-#~ msgstr "ಲಾಕ್ ಮಾಡಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
-
-#~ msgid "Lock Down Tooltip"
-#~ msgstr "ಉಪಕರಣಸಲಹೆಯನ್ನು ಲಾಕ್ ಮಾಡಿ"
-
-#~ msgid ""
-#~ "The tooltip to display when prompting the user to lock down the action "
-#~ "for all users."
-#~ msgstr ""
-#~ "ಎಲ್ಲಾ ಬಳಕೆದಾರರಿಗಾಗಿನ ಕ್ರಿಯೆಗಳನ್ನು ಲಾಕ್ ಮಾಡುವಂತೆ ಬಳಕೆದಾರರನ್ನು ಕೇಳಿದಾಗ "
-#~ "ತೋರಿಸಬೇಕಿರುವ ಉಪಕರಣಸಲಹೆ."
-
-#~ msgid ""
-#~ "To prevent users without administrative privileges from making changes, "
-#~ "click the lock."
-#~ msgstr ""
-#~ "ನಿರ್ವಹಣಾ ಅಧಿಕಾರಗಳನ್ನು ಹೊಂದಿರದ ಬಳಕೆದಾರರು ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡುವುದನ್ನು ತಡೆಯಲು, ಲಾಕ್ "
-#~ "ಅನ್ನು ಕ್ಲಿಕ್ ಮಾಡಿ."
-
-#~ msgid ""
-#~ "The text to display when the user cannot obtain authorization through "
-#~ "authentication."
-#~ msgstr ""
-#~ "ದೃಢೀಕರಣದ ಮೂಲಕ ಬಳಕೆದಾರರು ಅಧಿಕಾರವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗದೆ ಇದ್ದಾಗ ತೋರಿಸಬೇಕಿರುವ "
-#~ "ಪಠ್ಯ."
-
-#~ msgid "Not authorized to make changes"
-#~ msgstr "ಬದಲಾವಣೆಗಳನ್ನು ಮಾಡಲು ಅಧಿಕಾರವಿಲ್ಲ"
-
-#~ msgid ""
-#~ "The tooltip to display when the user cannot obtain authorization through "
-#~ "authentication."
-#~ msgstr ""
-#~ "ದೃಢೀಕರಣದ ಮೂಲಕ ಬಳಕೆದಾರರು ಅಧಿಕಾರವನ್ನು ಪಡೆಯಲು ಸಾಧ್ಯವಾಗದೆ ಇದ್ದಾಗ ತೋರಿಸಬೇಕಿರುವ "
-#~ "ಉಪಕರಣಸಲಹೆ."
-
-#~ msgid "System policy prevents changes. Contact your system administator."
-#~ msgstr ""
-#~ "ವ್ಯವಸ್ಥೆಯ ನಿಯಮಗಳು ಬದಲಾವಣೆಯನ್ನು ನಿರ್ಬಂಧಿಸುತ್ತವೆ. ನಿಮ್ಮ ವ್ಯವಸ್ಥೆಯ ನಿರ್ವಾಹಕರನ್ನು "
-#~ "ಸಂಪರ್ಕಿಸಿ."
-
-#~ msgid ""
-#~ "This button is locked down so only users with administrative privileges "
-#~ "can unlock it. Right-click the button to remove the lock down."
-#~ msgstr ""
-#~ "ಕೇವಲ ನಿರ್ವಾಹಕ ಅಧಿಕಾರಗಳನ್ನು ಹೊಂದಿರುವ ಬಳಕೆದಾರರು ಮಾತ್ರ ಅನ್‌ಲಾಕ್ ಮಾಡಲಾಗುವಂತೆ ಈ "
-#~ "ಗುಂಡಿಯನ್ನು ಲಾಕ್ ಮಾಡಲಾಗಿರುತ್ತದೆ. ಲಾಕ್ ಅನ್ನು ತೆಗೆದು ಹಾಕಲು ಮೌಸ್‌ನ ಬಲಗುಂಡಿಯನ್ನು ಕ್ಲಿಕ್‌ "
-#~ "ಮಾಡಿ."
-
-#~ msgid "Click the icon to drop all elevated privileges"
-#~ msgstr "ಎಲ್ಲಾ ಉನ್ನತ ಅಧಿಕಾರಗಳನ್ನು ತೆಗೆದು ಹಾಕಲು ಕ್ಲಿಕ್ ಮಾಡಿ"
-
-#~ msgid "PolicyKit Authentication Agent"
-#~ msgstr "PolicyKit ದೃಢೀಕರಣ ಮಧ್ಯವರ್ತಿ"
