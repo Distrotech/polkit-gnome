@@ -1,0 +1,105 @@
+# Occitan translation for policykit-gnome
+# Copyright (c) 2008-2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the policykit-gnome package.
+# 
+# 
+# Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>, 2015.
+msgid ""
+msgstr ""
+"Project-Id-Version: policykit-gnome HEAD\n"
+"Report-Msgid-Bugs-To: http://bugzilla.gnome.org/enter_bug.cgi?product"
+"=policykit-gnome&keywords=I18N+L10N&component=general\n"
+"POT-Creation-Date: 2014-01-22 20:20+0000\n"
+"PO-Revision-Date: 2015-05-30 19:11+0200\n"
+"Last-Translator: Cédric Valmary (Tot en òc) <cvalmary@yahoo.fr>\n"
+"Language-Team: Tot en òc (totenoc.eu)\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Virtaal 0.7.1\n"
+"X-Project-Style: gnome\n"
+
+#: ../src/polkitgnomeauthenticationdialog.c:159
+msgid "Select user..."
+msgstr "Seleccionar un utilizaire..."
+
+#: ../src/polkitgnomeauthenticationdialog.c:194
+#, c-format
+msgid "%s (%s)"
+msgstr "%s (%s)"
+
+#: ../src/polkitgnomeauthenticationdialog.c:538
+msgid "_Authenticate"
+msgstr "S'_autentificar"
+
+#: ../src/polkitgnomeauthenticationdialog.c:577
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as one of the users below is required to perform this action."
+msgstr ""
+"Una aplicacion ensaja d'efectuar una accion que necessita de privilègis. Per "
+"efectuar aquesta accion, un utilizaire de la lista çaijós se deu "
+"autentificar."
+
+#: ../src/polkitgnomeauthenticationdialog.c:585
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication is required to perform this action."
+msgstr ""
+"Una aplicacion ensaja d'efectuar una accion que necessita de privilègis. Per "
+"efectuar aquesta accion, es necessari de s'autentificar."
+
+#: ../src/polkitgnomeauthenticationdialog.c:591
+msgid ""
+"An application is attempting to perform an action that requires privileges. "
+"Authentication as the super user is required to perform this action."
+msgstr ""
+"Una aplicacion ensaja d'efectuar una accion que necessita de privilègis. Per "
+"efectuar aquesta accion, l'utilizaire principal se deu autentificar."
+
+#: ../src/polkitgnomeauthenticationdialog.c:626
+#: ../src/polkitgnomeauthenticator.c:300
+msgid "_Password:"
+msgstr "Sen_hal :"
+
+#. Details
+#: ../src/polkitgnomeauthenticationdialog.c:644
+msgid "_Details"
+msgstr "_Detalhs"
+
+#: ../src/polkitgnomeauthenticationdialog.c:702
+msgid "Action:"
+msgstr "Accion :"
+
+#: ../src/polkitgnomeauthenticationdialog.c:707
+#, c-format
+msgid "Click to edit %s"
+msgstr "Clicatz per modificar %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:721
+msgid "Vendor:"
+msgstr "Provesidor :"
+
+#: ../src/polkitgnomeauthenticationdialog.c:725
+#, c-format
+msgid "Click to open %s"
+msgstr "Clicatz per dobrir %s"
+
+#: ../src/polkitgnomeauthenticationdialog.c:888
+msgid "Authenticate"
+msgstr "S'autentificar"
+
+#: ../src/polkitgnomeauthenticator.c:296
+#, c-format
+msgid "_Password for %s:"
+msgstr "Sen_hal per %s :"
+
+#: ../src/polkitgnomeauthenticator.c:456
+msgid "Authentication Failure"
+msgstr "Fracàs d'autentificacion"
+
+#: ../src/polkitgnomelistener.c:164
+msgid "Authentication dialog was dismissed by the user"
+msgstr "L'utilizaire a tampat la bóstia de dialòg d'autentificacion"
